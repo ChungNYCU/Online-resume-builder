@@ -8,6 +8,10 @@ using ContosoCrafts.WebSite.Services;
 
 namespace ContosoCrafts.WebSite.Pages
 {
+    //
+    //
+    //
+
     public class IndexModel : PageModel
     {
         private readonly ILogger<IndexModel> _logger;
