@@ -11,7 +11,7 @@ namespace ContosoCrafts.WebSite.Pages
     public class IndexModel : PageModel
     {
         /// <summary>
-        /// 
+        /// Jesse Chung
         /// </summary>
         private readonly ILogger<IndexModel> _logger;
 
