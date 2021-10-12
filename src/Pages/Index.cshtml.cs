@@ -5,7 +5,7 @@ using Microsoft.Extensions.Logging;
 
 using ContosoCrafts.WebSite.Models;
 using ContosoCrafts.WebSite.Services;
-//I love seattle winter 
+//I do not love seattle winter 
 namespace ContosoCrafts.WebSite.Pages
 {
     public class IndexModel : PageModel
