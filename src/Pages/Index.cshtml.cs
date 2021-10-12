@@ -8,9 +8,6 @@ using ContosoCrafts.WebSite.Services;
 //I love seattle winter 
 namespace ContosoCrafts.WebSite.Pages
 {
-    /// <summary>
-    /// Jun Liao
-    /// </summary>
     public class IndexModel : PageModel
     {
         private readonly ILogger<IndexModel> _logger;
