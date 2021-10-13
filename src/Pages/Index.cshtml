@@ -23,4 +23,6 @@
 <p>  </p>
 <p>Are you looking for a Job?</p>
 <button>Contact Us</button>
+
+@(await Html.RenderComponentAsync<ProductList>(RenderMode.ServerPrerendered))
 <script src="_framework/blazor.server.js"></script>
