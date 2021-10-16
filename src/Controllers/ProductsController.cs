@@ -18,6 +18,7 @@ namespace ContosoCrafts.WebSite.Controllers
 
         public JsonFileProductService ProductService { get; }
 
+
         [HttpGet]
         public IEnumerable<ProductModel> Get()
         {
@@ -28,7 +29,7 @@ namespace ContosoCrafts.WebSite.Controllers
         public ActionResult Patch([FromBody] RatingRequest request)
         {
             ProductService.AddRating(request.ProductId, request.Rating);
-            
+
             return Ok();
         }
 

@@ -1,6 +1,7 @@
 @using ContosoCrafts.WebSite.Models
 @using ContosoCrafts.WebSite.Services
 @using Microsoft.AspNetCore.Components.Web
+@using System.Web
 
 @inject JsonFileProductService ProductService
 
@@ -47,11 +48,15 @@
                     </div>
                 </div>
                 <div class="card-footer">
-                    <form action="">
-                        <input name="First" type="text" /><br>
-                        <input name="Last" type="text" /><br>
-                        <button @onclick="(e => SubmitName(FirstName, LastName))" data-toggle="modal" data-target="#productModal" class="btn btn-primary"> Update Name </button>
-                    </form>
+                    <p>
+                        <label>
+                            First Name:
+                            <input @bind="FirstName" /><br>
+                            Last Name:
+                            <input @bind="LastName" />
+                        </label>
+                    </p>
+                    <button @onclick="(e => SubmitName(FirstName, LastName))" data-toggle="modal" data-target="#productModal" class="btn btn-primary"> Update Name </button>
                 </div>
                 <div class="modal-footer">
                     @if (voteCount == 0)
@@ -93,8 +98,9 @@
         selectedProduct = ProductService.GetProducts().First(x => x.Id == productId);
         GetCurrentRating();
     }
-
-    string FirstName = "Jesse", LastName= "Chung";
+    public string FirstName { get; set; }
+    public string LastName { get; set; }
+    //string FirstName = "Jesse", LastName = "Chung";
 
     void SubmitName(string FirstName, string LastName)
     {
