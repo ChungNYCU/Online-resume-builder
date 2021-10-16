@@ -69,18 +69,21 @@ namespace ContosoCrafts.WebSite.Services
 
             products.First(x => x.Id == productId).FirstName = FirstName;
             products.First(x => x.Id == productId).LastName = LastName;
-
-            using (var outputStream = File.OpenWrite(JsonFileName))
+            lock (this)
             {
-                JsonSerializer.Serialize<IEnumerable<ProductModel>>(
-                    new Utf8JsonWriter(outputStream, new JsonWriterOptions
-                    {
-                        SkipValidation = true,
-                        Indented = true
-                    }),
-                    products
-                );
+                using (var outputStream = File.OpenWrite(JsonFileName))
+                {
+                    JsonSerializer.Serialize<IEnumerable<ProductModel>>(
+                        new Utf8JsonWriter(outputStream, new JsonWriterOptions
+                        {
+                            SkipValidation = true,
+                            Indented = true
+                        }),
+                        products
+                    );
+                }
             }
+            
         }
     }
 }
