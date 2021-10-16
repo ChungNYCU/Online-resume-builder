@@ -9,7 +9,7 @@ using Microsoft.AspNetCore.Hosting;
 
 namespace ContosoCrafts.WebSite.Services
 {
-   public class JsonFileProductService
+    public class JsonFileProductService
     {
         public JsonFileProductService(IWebHostEnvironment webHostEnvironment)
         {
@@ -25,7 +25,7 @@ namespace ContosoCrafts.WebSite.Services
 
         public IEnumerable<ProductModel> GetProducts()
         {
-            using(var jsonFileReader = File.OpenText(JsonFileName))
+            using (var jsonFileReader = File.OpenText(JsonFileName))
             {
                 return JsonSerializer.Deserialize<ProductModel[]>(jsonFileReader.ReadToEnd(),
                     new JsonSerializerOptions
@@ -39,7 +39,7 @@ namespace ContosoCrafts.WebSite.Services
         {
             var products = GetProducts();
 
-            if(products.First(x => x.Id == productId).Ratings == null)
+            if (products.First(x => x.Id == productId).Ratings == null)
             {
                 products.First(x => x.Id == productId).Ratings = new int[] { rating };
             }
@@ -50,14 +50,34 @@ namespace ContosoCrafts.WebSite.Services
                 products.First(x => x.Id == productId).Ratings = ratings.ToArray();
             }
 
-            using(var outputStream = File.OpenWrite(JsonFileName))
+            using (var outputStream = File.OpenWrite(JsonFileName))
             {
                 JsonSerializer.Serialize<IEnumerable<ProductModel>>(
                     new Utf8JsonWriter(outputStream, new JsonWriterOptions
                     {
                         SkipValidation = true,
                         Indented = true
-                    }), 
+                    }),
+                    products
+                );
+            }
+        }
+
+        public void UpdateName(string productId, string FirstName, string LastName)
+        {
+            var products = GetProducts();
+
+            products.First(x => x.Id == productId).FirstName = FirstName;
+            products.First(x => x.Id == productId).LastName = LastName;
+
+            using (var outputStream = File.OpenWrite(JsonFileName))
+            {
+                JsonSerializer.Serialize<IEnumerable<ProductModel>>(
+                    new Utf8JsonWriter(outputStream, new JsonWriterOptions
+                    {
+                        SkipValidation = true,
+                        Indented = true
+                    }),
                     products
                 );
             }
