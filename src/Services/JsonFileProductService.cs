@@ -66,24 +66,32 @@ namespace ContosoCrafts.WebSite.Services
         public void UpdateName(string productId, string FirstName, string LastName)
         {
             var products = GetProducts();
+            int beforeLength;
+            int afterLength;
+
+            if (products.First(x => x.Id == productId).FirstName != null && products.First(x => x.Id == productId).LastName != null)
+                beforeLength = products.First(x => x.Id == productId).FirstName.Length + products.First(x => x.Id == productId).LastName.Length;
+            else
+                beforeLength = 0;
+
+            if (FirstName == null || LastName == null)
+                return;
+            else
+                afterLength = FirstName.Length + LastName.Length;
 
             products.First(x => x.Id == productId).FirstName = FirstName;
             products.First(x => x.Id == productId).LastName = LastName;
-            lock (this)
+
+            using FileStream outputStream = File.OpenWrite(JsonFileName);
+            JsonSerializer.Serialize
+            (new Utf8JsonWriter(outputStream, new JsonWriterOptions { SkipValidation = true, Indented = true }), products);
+            outputStream.Close();
+            if (afterLength < beforeLength)
             {
-                using (var outputStream = File.OpenWrite(JsonFileName))
-                {
-                    JsonSerializer.Serialize<IEnumerable<ProductModel>>(
-                        new Utf8JsonWriter(outputStream, new JsonWriterOptions
-                        {
-                            SkipValidation = true,
-                            Indented = true
-                        }),
-                        products
-                    );
-                }
+                string jsonString = File.ReadAllText(JsonFileName);
+                string updatedJsonString = jsonString.Substring(0, jsonString.Length - (beforeLength - afterLength));
+                File.WriteAllText(JsonFileName, updatedJsonString);
             }
-            
         }
     }
 }
