@@ -7,7 +7,9 @@ namespace ContosoCrafts.WebSite.Models
     {
         public string Id { get; set; }
         public string Maker { get; set; }
-        
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
+
         [JsonPropertyName("img")]
         public string Image { get; set; }
         public string Url { get; set; }
