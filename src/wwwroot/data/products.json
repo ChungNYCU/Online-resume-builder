@@ -1,8 +1,8 @@
 [
   {
     "Id": "jenlooper-cactus",
-    "FirstName": "333",
-    "LastName": "444",
+    "FirstName": " ",
+    "LastName": " ",
     "Maker": "@jenlooper",
     "img": "https://user-images.githubusercontent.com/41929050/61567048-13938600-aa33-11e9-9cfd-712191013192.jpeg",
     "Url": "https://www.hackster.io/agent-hawking-1/the-quantified-cactus-an-easy-plant-soil-moisture-sensor-e65393",
@@ -56,8 +56,8 @@
   },
   {
     "Id": "sailorhg-corsage",
-    "FirstName": "",
-    "LastName": "",
+    "FirstName": " ",
+    "LastName": " ",
     "Maker": "sailorhg",
     "img": "https://user-images.githubusercontent.com/41929050/61567055-142c1c80-aa33-11e9-96ff-9fbac6413625.png",
     "Url": "https://twitter.com/sailorhg/status/1090113666911891456",

@@ -57,6 +57,7 @@
                         </label>
                     </p>
                     <button @onclick="(e => SubmitName(FirstName, LastName))" data-toggle="modal" data-target="#productModal" class="btn btn-primary"> Update Name </button>
+                    <button @onclick="(e => SubmitName(' '.ToString(), ' '.ToString()))" data-toggle="modal" data-target="#productModal" class="btn btn-primary"> Delete Name </button>
                 </div>
                 <div class="modal-footer">
                     @if (voteCount == 0)
