@@ -63,6 +63,25 @@ namespace ContosoCrafts.WebSite.Services
             }
         }
 
+        public ProductModel UpdateData(ProductModel data)
+        {
+            var products = GetProducts();
+            var productData = products.FirstOrDefault(x => x.Id.Equals(data.Id));
+            if (productData == null)
+            {
+                return null;
+            }
+
+            productData.Title = data.Title;
+            productData.Description = data.Description;
+            productData.Url = data.Url;
+            productData.Image = data.Image;
+
+            SaveProducts(products);
+
+            return productData;
+        }
+
         public void UpdateName(string productId, string FirstName, string LastName)
         {
             var products = GetProducts();
