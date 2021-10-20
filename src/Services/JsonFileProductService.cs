@@ -82,6 +82,19 @@ namespace ContosoCrafts.WebSite.Services
             return data;
         }
 
+        public ProductModel DeleteData(string id)
+        {
+            // Get the current set, and append the new record to it
+            var dataSet = GetProducts();
+            var data = dataSet.FirstOrDefault(m => m.Id.Equals(id));
+
+            var newDataSet = GetProducts().Where(m => m.Id.Equals(id) == false);
+
+            SaveProducts(newDataSet);
+
+            return data;
+        }
+
         public ProductModel UpdateData(ProductModel data)
         {
             var products = GetProducts();
@@ -105,7 +118,7 @@ namespace ContosoCrafts.WebSite.Services
         {
             var products = GetProducts();
             var productData = products.FirstOrDefault(x => x.Id.Equals(productId));
-            if (productData.FirstName==null || productData.LastName == null)
+            if (FirstName==null || LastName == null)
                 return;
 
             products.First(x => x.Id == productId).FirstName = FirstName;
