@@ -9,9 +9,9 @@ using ContosoCrafts.WebSite.Services;
 namespace ContosoCrafts.WebSite.Pages.Product
 {
     /// <summary>
-    /// Manage the Update of the data for a single record
+    /// Manage the Delete of the data for a single record
     /// </summary>
-    public class UpdateModel : PageModel
+    public class DeleteModel : PageModel
     {
         // Data middletier
         public JsonFileProductService ProductService { get; }
@@ -21,7 +21,7 @@ namespace ContosoCrafts.WebSite.Pages.Product
         /// </summary>
         /// <param name="logger"></param>
         /// <param name="productService"></param>
-        public UpdateModel(JsonFileProductService productService)
+        public DeleteModel(JsonFileProductService productService)
         {
             ProductService = productService;
         }
@@ -37,13 +37,13 @@ namespace ContosoCrafts.WebSite.Pages.Product
         /// <param name="id"></param>
         public void OnGet(string id)
         {
-            Product = ProductService.GetProducts().FirstOrDefault(m => m.Id.Equals(id));
+            Product  = ProductService.GetProducts().FirstOrDefault(m => m.Id.Equals(id));
         }
 
         /// <summary>
         /// Post the model back to the page
         /// The model is in the class variable Product
-        /// Call the data layer to Update that data
+        /// Call the data layer to Delete that data
         /// Then return to the index page
         /// </summary>
         /// <returns></returns>
@@ -54,7 +54,7 @@ namespace ContosoCrafts.WebSite.Pages.Product
                 return Page();
             }
 
-            ProductService.UpdateData(Product);
+            ProductService.DeleteData(Product.Id);
 
             return RedirectToPage("./Index");
         }
