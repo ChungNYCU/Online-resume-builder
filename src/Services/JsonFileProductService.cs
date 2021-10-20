@@ -62,6 +62,25 @@ namespace ContosoCrafts.WebSite.Services
                 );
             }
         }
+        public ProductModel CreateProduct()
+        {
+            var data = new ProductModel()
+            {
+                Id = System.Guid.NewGuid().ToString(),
+                Title = "Enter Title",
+                Description = "Enter Description",
+                Url = "Enter URL",
+                Image = "",
+            };
+
+            // Get the current set, and append the new record to it
+            var dataSet = GetProducts();
+            dataSet = dataSet.Append(data);
+
+            SaveProducts(dataSet);
+
+            return data;
+        }
 
         public ProductModel UpdateData(ProductModel data)
         {
