@@ -6,12 +6,13 @@
 
 <div class="container">
 
-    <a asp-page="Create" class="btn btn-link">+ Create</a>
+    <a asp-page="Create" class="btn btn-link">+ Add</a>
 
     <table class="table table-bordered table-striped">
         <thead>
             <tr>
-                <th>Title</th>
+                <!-- June Liao modified "Title" to "Candidate Name"-->
+                <th>Candidate Name</th>
                 <th>Action</th>
             </tr>
         </thead>
@@ -19,7 +20,7 @@
             @foreach (var product in Model.Products)
             {
                 <tr>
-                    <td>@product.Title</td>
+                    <td>@product.FullName</td>
                     <td><a asp-page="Read" asp-route-id="@product.Id">Read</a></td>
                 </tr>
             }

@@ -73,7 +73,7 @@ namespace ContosoCrafts.WebSite.Services
             var data = new ProductModel()
             {
                 Id = System.Guid.NewGuid().ToString(),
-                Title = "Enter Title",
+                FullName = "Enter FullName",
                 Description = "Enter Description",
                 LinkedinUrl = "Enter URL",
                 Photo = "",
@@ -110,7 +110,7 @@ namespace ContosoCrafts.WebSite.Services
                 return null;
             }
 
-            productData.Title = data.Title;
+            productData.FullName = data.FullName;
             productData.Description = data.Description;
             productData.LinkedinUrl = data.LinkedinUrl;
             productData.Photo = data.Photo;
