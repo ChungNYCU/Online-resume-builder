@@ -23,7 +23,7 @@ namespace ContosoCrafts.WebSite.Services
             get { return Path.Combine(WebHostEnvironment.WebRootPath, "data", "products.json"); }
         }
 
-        public IEnumerable<ProductModel> GetProducts()
+        public IEnumerable<ProductModel> GetAllData()
         {
             using (var jsonFileReader = File.OpenText(JsonFileName))
             {
@@ -35,9 +35,11 @@ namespace ContosoCrafts.WebSite.Services
             }
         }
 
-        public void AddRating(string productId, int rating)
+        public bool AddRating(string productId, int rating)
         {
-            var products = GetProducts();
+            if (productId == null)
+                return false;
+            var products = GetAllData();
 
             if (products.First(x => x.Id == productId).Ratings == null)
             {
@@ -61,8 +63,9 @@ namespace ContosoCrafts.WebSite.Services
                     products
                 );
             }
+            return true;
         }
-        public ProductModel CreateProduct()
+        public ProductModel CreateData()
         {
             var data = new ProductModel()
             {
@@ -74,7 +77,7 @@ namespace ContosoCrafts.WebSite.Services
             };
 
             // Get the current set, and append the new record to it
-            var dataSet = GetProducts();
+            var dataSet = GetAllData();
             dataSet = dataSet.Append(data);
 
             SaveProducts(dataSet);
@@ -85,10 +88,10 @@ namespace ContosoCrafts.WebSite.Services
         public ProductModel DeleteData(string id)
         {
             // Get the current set, and append the new record to it
-            var dataSet = GetProducts();
+            var dataSet = GetAllData();
             var data = dataSet.FirstOrDefault(m => m.Id.Equals(id));
 
-            var newDataSet = GetProducts().Where(m => m.Id.Equals(id) == false);
+            var newDataSet = GetAllData().Where(m => m.Id.Equals(id) == false);
 
             SaveProducts(newDataSet);
 
@@ -97,7 +100,7 @@ namespace ContosoCrafts.WebSite.Services
 
         public ProductModel UpdateData(ProductModel data)
         {
-            var products = GetProducts();
+            var products = GetAllData();
             var productData = products.FirstOrDefault(x => x.Id.Equals(data.Id));
             if (productData == null)
             {
@@ -116,7 +119,7 @@ namespace ContosoCrafts.WebSite.Services
 
         public void UpdateName(string productId, string FirstName, string LastName)
         {
-            var products = GetProducts();
+            var products = GetAllData();
             var productData = products.FirstOrDefault(x => x.Id.Equals(productId));
             if (FirstName==null || LastName == null)
                 return;
