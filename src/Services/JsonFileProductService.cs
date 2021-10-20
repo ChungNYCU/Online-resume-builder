@@ -69,8 +69,8 @@ namespace ContosoCrafts.WebSite.Services
                 Id = System.Guid.NewGuid().ToString(),
                 Title = "Enter Title",
                 Description = "Enter Description",
-                Url = "Enter URL",
-                Image = "",
+                LinkedinUrl = "Enter URL",
+                Photo = "",
             };
 
             // Get the current set, and append the new record to it
@@ -106,8 +106,8 @@ namespace ContosoCrafts.WebSite.Services
 
             productData.Title = data.Title;
             productData.Description = data.Description;
-            productData.Url = data.Url;
-            productData.Image = data.Image;
+            productData.LinkedinUrl = data.LinkedinUrl;
+            productData.Photo = data.Photo;
 
             SaveProducts(products);
 
