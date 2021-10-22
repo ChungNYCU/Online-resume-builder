@@ -17,6 +17,7 @@ namespace ContosoCrafts.WebSite.Models
         public string LinkedinUrl { get; set; }
         // June Liao modifited "Title" to "FullName"
         public string FullName { get; set; }
+        public string Awards { get; set; }
         public string Description { get; set; }
         public int[] Ratings { get; set; }
         
