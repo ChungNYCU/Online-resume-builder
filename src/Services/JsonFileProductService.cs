@@ -112,6 +112,7 @@ namespace ContosoCrafts.WebSite.Services
 
             productData.FullName = data.FullName;
             productData.Description = data.Description;
+            productData.Awards = data.Awards;
             productData.LinkedinUrl = data.LinkedinUrl;
             productData.Photo = data.Photo;
 
