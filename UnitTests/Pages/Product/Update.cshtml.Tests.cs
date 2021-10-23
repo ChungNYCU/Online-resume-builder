@@ -34,7 +34,7 @@ namespace UnitTests.Pages.Product.Update
 
             // Assert
             Assert.AreEqual(true, pageModel.ModelState.IsValid);
-            Assert.AreEqual("Floppy Crop", pageModel.Product.Title);
+            Assert.AreEqual("Floppy Crop", pageModel.Product.FullName);
         }
         #endregion OnGet
 
@@ -46,7 +46,7 @@ namespace UnitTests.Pages.Product.Update
             pageModel.Product = new ProductModel
             {
                 Id = "selinazawacki-moon",
-                Title = "title",
+                FullName = "FullName",
                 Description = "description",
                 LinkedinUrl = "url",
                 Photo = "image"

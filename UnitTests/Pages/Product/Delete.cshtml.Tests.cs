@@ -35,7 +35,7 @@ namespace UnitTests.Pages.Product.Delete
 
             // Assert
             Assert.AreEqual(true, pageModel.ModelState.IsValid);
-            Assert.AreEqual("Floppy Crop", pageModel.Product.Title);
+            Assert.AreEqual("Floppy Crop", pageModel.Product.FullName);
         }
         #endregion OnGet
 
@@ -47,7 +47,7 @@ namespace UnitTests.Pages.Product.Delete
 
             // First Create the product to delete
             pageModel.Product = TestHelper.ProductService.CreateData();
-            pageModel.Product.Title = "Example to Delete";
+            pageModel.Product.FullName = "Example to Delete";
             TestHelper.ProductService.UpdateData(pageModel.Product);
 
             // Act
