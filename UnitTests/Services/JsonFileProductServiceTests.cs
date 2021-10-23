@@ -20,6 +20,7 @@ namespace UnitTests.Pages.Product.AddRating
 
         #endregion TestSetup
 
+
         #region AddRating
         [Test]
         public void AddRating_InValid_Product_Null_Should_Return_False()
@@ -51,10 +52,12 @@ namespace UnitTests.Pages.Product.AddRating
         public void AddRating_Valid_Product_Valid_Rating_Valid_Should_Return_True()
         {
             // Arrange
+            
 
             // Get the First data item
             var data = TestHelper.ProductService.GetAllData().First();
-            var countOriginal = data.Ratings.Length;
+            //var countOriginal = data.Ratings.Length;
+            var countOriginal = data.Ratings==null? 0: data.Ratings.Length;
 
             // Act
             var result = TestHelper.ProductService.AddRating(data.Id, 5);
