@@ -121,15 +121,14 @@ namespace ContosoCrafts.WebSite.Services
             return productData;
         }
 
-        public void UpdateName(string productId, string FirstName, string LastName)
+        public void UpdatePersonalStatus(string productId, string PersonalStatus)
         {
             var products = GetAllData();
             var productData = products.FirstOrDefault(x => x.Id.Equals(productId));
-            if (FirstName==null || LastName == null)
+            if (PersonalStatus == null)
                 return;
 
-            products.First(x => x.Id == productId).FirstName = FirstName;
-            products.First(x => x.Id == productId).LastName = LastName;
+            products.First(x => x.Id == productId).PersonalStatus = PersonalStatus;
 
             SaveProducts(products);
         }
