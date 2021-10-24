@@ -6,6 +6,12 @@
 @inject JsonFileProductService ProductService
 
 <div class="card-columns">
+    <style>
+        .card {
+            margin: 20px;
+            padding: 20px;
+        }
+    </style>
     @foreach (var product in ProductService.GetAllData())
     {
         <div class="card">
