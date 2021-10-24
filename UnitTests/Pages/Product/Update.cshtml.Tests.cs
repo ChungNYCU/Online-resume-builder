@@ -30,11 +30,11 @@ namespace UnitTests.Pages.Product.Update
             // Arrange
 
             // Act
-            pageModel.OnGet("selinazawacki-shirt");
+            pageModel.OnGet("1");
 
             // Assert
             Assert.AreEqual(true, pageModel.ModelState.IsValid);
-            Assert.AreEqual("Floppy Crop", pageModel.Product.FullName);
+            Assert.AreEqual("June Liao", pageModel.Product.FullName);
         }
         #endregion OnGet
 
