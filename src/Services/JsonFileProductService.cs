@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text.Json;
+using System;
 
 using ContosoCrafts.WebSite.Models;
 
@@ -23,11 +24,28 @@ namespace ContosoCrafts.WebSite.Services
             get { return Path.Combine(WebHostEnvironment.WebRootPath, "data", "products.json"); }
         }
 
+        private string WorkExperienceFileName
+        {
+            get { return Path.Combine(WebHostEnvironment.WebRootPath, "data", "workExperience.json"); }
+        }
+
         public IEnumerable<ProductModel> GetAllData()
         {
             using (var jsonFileReader = File.OpenText(JsonFileName))
             {
                 return JsonSerializer.Deserialize<ProductModel[]>(jsonFileReader.ReadToEnd(),
+                    new JsonSerializerOptions
+                    {
+                        PropertyNameCaseInsensitive = true
+                    });
+            }
+        }
+
+        public IEnumerable<WorkExperienceModel> GetAllWorkData()
+        {
+            using (var jsonFileReader = File.OpenText(WorkExperienceFileName))
+            {
+                return JsonSerializer.Deserialize<WorkExperienceModel[]>(jsonFileReader.ReadToEnd(),
                     new JsonSerializerOptions
                     {
                         PropertyNameCaseInsensitive = true
@@ -121,6 +139,27 @@ namespace ContosoCrafts.WebSite.Services
             return productData;
         }
 
+        public WorkExperienceModel[] UpdateWorkData(WorkExperienceModel[] data)
+        {
+            var works = GetAllWorkData().ToDictionary(w => w.Id, w => w);
+            foreach (WorkExperienceModel work in data)
+            {
+                if (!works.ContainsKey(work.Id)) {
+                    return null;
+                }
+                works[work.Id].Employer = work.Employer;
+                works[work.Id].Title = work.Title;
+                works[work.Id].StartDate = work.StartDate;
+                works[work.Id].EndDate = work.EndDate;
+                works[work.Id].RoleDescription = work.RoleDescription;
+            }
+            WorkExperienceModel[] updatedWorks = (new List<WorkExperienceModel>(works.Values)).ToArray();
+
+            SaveWorks(updatedWorks);
+
+            return updatedWorks;
+        }
+
         public void UpdatePersonalStatus(string productId, string PersonalStatus)
         {
             var products = GetAllData();
@@ -145,6 +184,22 @@ namespace ContosoCrafts.WebSite.Services
                         Indented = true
                     }),
                     products
+                );
+            }
+        }
+
+        private void SaveWorks(IEnumerable<WorkExperienceModel> works)
+        {
+
+            using (var outputStream = File.Create(WorkExperienceFileName))
+            {
+                JsonSerializer.Serialize<IEnumerable<WorkExperienceModel>>(
+                    new Utf8JsonWriter(outputStream, new JsonWriterOptions
+                    {
+                        SkipValidation = true,
+                        Indented = true
+                    }),
+                    works
                 );
             }
         }
