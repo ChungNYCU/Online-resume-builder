@@ -17,7 +17,18 @@
     <h5 class="title" id="productTitle">Awards</h5>
     <p>@Model.Product.Awards</p><br>
 
-    <p class="card-text">@Model.Product.Description</p>
+    <p class="card-text">About me: @Model.Product.Description</p>
+
+    @foreach (var work in @Model.WorkExperience)
+    {
+        <div>
+            <div>@work.Employer</div>
+            <div>@work.Title</div>
+            <div>@work.StartDate</div>
+            <div>@work.EndDate</div>
+            <div>@work.RoleDescription</div>
+        </div>
+    }
 
 </div>
 
