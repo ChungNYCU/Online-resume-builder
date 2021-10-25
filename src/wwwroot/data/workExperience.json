@@ -1,0 +1,20 @@
+[
+  {
+    "Id": "1",
+    "CandidateId": "1",
+    "Employer": "Apple",
+    "Title": "Senior SDE",
+    "StartDate": "2018-08-24",
+    "EndDate": "2022-05-04",
+    "RoleDescription": "Backend"
+  },
+  {
+    "Id": "2",
+    "CandidateId": "1",
+    "Employer": "Expedia",
+    "Title": "SDE II",
+    "StartDate": "2017-01-01",
+    "EndDate": "2018-04-04",
+    "RoleDescription": "Frontend"
+  }
+]
