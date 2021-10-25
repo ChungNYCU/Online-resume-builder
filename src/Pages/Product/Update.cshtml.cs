@@ -30,6 +30,9 @@ namespace ContosoCrafts.WebSite.Pages.Product
         [BindProperty]
         public ProductModel Product { get; set; }
 
+        [BindProperty]
+        public WorkExperienceModel[] WorkExperience { get; set; }
+
         /// <summary>
         /// REST Get request
         /// Loads the Data
@@ -38,6 +41,7 @@ namespace ContosoCrafts.WebSite.Pages.Product
         public void OnGet(string id)
         {
             Product  = ProductService.GetAllData().FirstOrDefault(m => m.Id.Equals(id));
+            WorkExperience = ProductService.GetAllWorkData().Where(c => c.CandidateId.Equals(id)).ToArray();
         }
 
         /// <summary>
@@ -55,6 +59,7 @@ namespace ContosoCrafts.WebSite.Pages.Product
             }
 
             ProductService.UpdateData(Product);
+            ProductService.UpdateWorkData(WorkExperience);
 
             return RedirectToPage("./Index");
         }
