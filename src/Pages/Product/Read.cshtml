@@ -12,7 +12,8 @@
 <div class="container">
     <h5 class="title" id="productTitle">@Model.Product.FullName</h5>
 
-    <img src='@Model.Product.Photo' alt='Image for @Model.Product.FullName' width="60" height="60">
+
+    <img src='@Model.Product.Photo' alt='Image for @Model.Product.FullName' width="150" height="150">
 
     <p class="card-text">About Me: @Model.Product.Description</p>
 
@@ -20,14 +21,15 @@
 
     @foreach (var work in @Model.WorkExperience)
     {
-    <div> <hr class="dashed"> </div>
+        <div> <hr class="dashed"> </div>
 
-    <div><strong>Title: @work.Title </strong> at <strong>@work.Employer</strong>     <small> From @work.StartDate To @work.EndDate </small></div>
-    <div> @work.RoleDescription </div>
+        <div><strong>Title: @work.Title </strong> at <strong>@work.Employer</strong>     <small> From @work.StartDate To @work.EndDate </small></div>
+        <div> @work.RoleDescription </div>
     }
 
     <p class="card-text"></p>
     <h5 class="title" id="productTitle">Awards</h5>
+    <div> <hr class="dashed"> </div>
     <p>@Model.Product.Awards</p><br>
 
 </div>

@@ -3,18 +3,18 @@
     "Id": "1",
     "CandidateId": "1",
     "Employer": "Bashpole Software, Inc.",
-    "Title": null,
-    "StartDate": "2018-08-24",
-    "EndDate": "2022-05-04",
-    "RoleDescription": "\u2022 Develop client and server software that automates Nonprofit online advertising and helps evaluate their general marketing performance \u2022 Work as a full-stack developer adding frontend and backend to landing pages"
+    "Title": "Software Engineer Intern",
+    "StartDate": "2015-08-24",
+    "EndDate": "2016-05-04",
+    "RoleDescription": "\u2022 Develop client and server software that automates Nonprofit online advertising and helps evaluate their general marketing performance \r\n\u2022 Work as a full-stack developer adding frontend and backend to landing pages"
   },
   {
     "Id": "2",
     "CandidateId": "1",
-    "Employer": "Expedia",
-    "Title": "SDE II",
-    "StartDate": "2017-01-01",
-    "EndDate": "2018-04-04",
-    "RoleDescription": "Frontend"
+    "Employer": "Muyuan Digital Technology Co., Ltd.",
+    "Title": "Web Software Engineer intern",
+    "StartDate": "2021-01",
+    "EndDate": "2021-05",
+    "RoleDescription": "\u2022 Involved in the transformation of Internal management system from Enterprise WeChat to Dingding Platform using dingding developers and JavaScript\r\n\u2022 Developed some Wechat mini apps such as business travel request and review, compliant report system, etc.\r\n\u2022 Developed Data visualization with Echarts and 3d pigsty area models with three.js"
   }
 ]
