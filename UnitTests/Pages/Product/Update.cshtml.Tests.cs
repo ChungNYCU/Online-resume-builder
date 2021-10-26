@@ -47,7 +47,7 @@ namespace UnitTests.Pages.Product.Update
             {
                 Id = "selinazawacki-moon",
                 FullName = "FullName",
-                Description = "description",
+                AboutMe = "description",
                 LinkedinUrl = "url",
                 Photo = "image"
             };

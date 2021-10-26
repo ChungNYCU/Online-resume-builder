@@ -92,7 +92,7 @@ namespace ContosoCrafts.WebSite.Services
             {
                 Id = System.Guid.NewGuid().ToString(),
                 FullName = "Enter FullName",
-                Description = "Enter Description",
+                AboutMe = "Enter Description",
                 LinkedinUrl = "Enter URL",
                 Photo = "",
             };
@@ -129,7 +129,7 @@ namespace ContosoCrafts.WebSite.Services
             }
 
             productData.FullName = data.FullName;
-            productData.Description = data.Description;
+            productData.AboutMe = data.AboutMe;
             productData.Awards = data.Awards;
             productData.LinkedinUrl = data.LinkedinUrl;
             productData.Photo = data.Photo;
@@ -160,16 +160,20 @@ namespace ContosoCrafts.WebSite.Services
             return updatedWorks;
         }
 
-        public void UpdatePersonalStatus(string productId, string PersonalStatus)
+        public bool UpdatePersonalStatus(string productId, string PersonalStatus)
         {
             var products = GetAllData();
             var productData = products.FirstOrDefault(x => x.Id.Equals(productId));
+            if (productId == null)
+                return false;
             if (PersonalStatus == null)
-                return;
+                return false;
 
             products.First(x => x.Id == productId).PersonalStatus = PersonalStatus;
 
             SaveProducts(products);
+
+            return true;
         }
 
         private void SaveProducts(IEnumerable<ProductModel> products)
