@@ -10,7 +10,25 @@
   },
   {
     "Id": "2",
-    "CandidateId": "1",
+    "CandidateId": "2",
+    "Employer": "Muyuan Digital Technology Co., Ltd.",
+    "Title": "Web Software Engineer intern",
+    "StartDate": "2021-01",
+    "EndDate": "2021-05",
+    "RoleDescription": "\u2022 Involved in the transformation of Internal management system from Enterprise WeChat to Dingding Platform using dingding developers and JavaScript\r\n\u2022 Developed some Wechat mini apps such as business travel request and review, compliant report system, etc.\r\n\u2022 Developed Data visualization with Echarts and 3d pigsty area models with three.js"
+  },
+  {
+    "Id": "2",
+    "CandidateId": "3",
+    "Employer": "Muyuan Digital Technology Co., Ltd.",
+    "Title": "Web Software Engineer intern",
+    "StartDate": "2021-01",
+    "EndDate": "2021-05",
+    "RoleDescription": "\u2022 Involved in the transformation of Internal management system from Enterprise WeChat to Dingding Platform using dingding developers and JavaScript\r\n\u2022 Developed some Wechat mini apps such as business travel request and review, compliant report system, etc.\r\n\u2022 Developed Data visualization with Echarts and 3d pigsty area models with three.js"
+  },
+  {
+    "Id": "2",
+    "CandidateId": "4",
     "Employer": "Muyuan Digital Technology Co., Ltd.",
     "Title": "Web Software Engineer intern",
     "StartDate": "2021-01",

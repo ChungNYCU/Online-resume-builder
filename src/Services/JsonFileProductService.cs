@@ -92,7 +92,7 @@ namespace ContosoCrafts.WebSite.Services
             {
                 Id = System.Guid.NewGuid().ToString(),
                 FullName = "Enter FullName",
-                Description = "Enter Description",
+                AboutMe = "Enter Description",
                 LinkedinUrl = "Enter URL",
                 Photo = "",
             };
@@ -129,7 +129,7 @@ namespace ContosoCrafts.WebSite.Services
             }
 
             productData.FullName = data.FullName;
-            productData.Description = data.Description;
+            productData.AboutMe = data.AboutMe;
             productData.Awards = data.Awards;
             productData.LinkedinUrl = data.LinkedinUrl;
             productData.Photo = data.Photo;
