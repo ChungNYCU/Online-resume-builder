@@ -1,12 +1,15 @@
-﻿/* Dashed border */
+/* Dashed border */
 hr.dashed {
     border-top: 3px dashed #bbb;
 }
 
+﻿.reg_name {
+    max-width: 200px;
+}
 
 /* Rounded border */
 hr.rounded {
-    border-top: 8px solid #bbb;
+    border-top: 5px solid #bbb;
     border-radius: 5px;
 }
 
