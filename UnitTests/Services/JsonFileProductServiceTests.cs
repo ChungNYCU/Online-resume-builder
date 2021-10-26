@@ -20,7 +20,6 @@ namespace UnitTests.Pages.Product.AddRating
 
         #endregion TestSetup
 
-
         #region AddRating
         [Test]
         public void AddRating_InValid_Product_Null_Should_Return_False()
@@ -35,29 +34,64 @@ namespace UnitTests.Pages.Product.AddRating
         }
 
         [Test]
-        public void AddRating_InValid_()
+        public void AddRating_InValid_Product_Id_Should_Return_False()
         {
             // Arrange
 
             // Act
-            //var result = TestHelper.ProductService.AddRating(null, 1);
+            var result = TestHelper.ProductService.AddRating("not a product id", 1);
 
             // Assert
-            //Assert.AreEqual(false, result);
+            Assert.AreEqual(false, result);
         }
 
-        // ....
+        [Test]
+        public void AddRating_InValid_Rating_Below_Zero_Should_Return_False()
+        {
+            // Arrange
+            var data = TestHelper.ProductService.GetAllData().First();
+
+            // Act
+            var result = TestHelper.ProductService.AddRating(data.Id, -1);
+
+            // Assert
+            Assert.AreEqual(false, result);
+        }
+
+        [Test]
+        public void AddRating_InValid_Rating_Above_Five_Should_Return_False()
+        {
+            // Arrange
+            var data = TestHelper.ProductService.GetAllData().First();
+
+            // Act
+            var result = TestHelper.ProductService.AddRating(data.Id, 6);
+
+            // Assert
+            Assert.AreEqual(false, result);
+        }
+
+        [Test]
+        public void AddRating_Valid_Rating_Is_Null_Should_Make_New_Rating()
+        {
+            // Arrange
+            var data = TestHelper.ProductService.CreateData();
+
+            // Act
+            var result = TestHelper.ProductService.AddRating(data.Id, 1);
+
+            // Assert
+            Assert.AreEqual(true, result);
+        }
 
         [Test]
         public void AddRating_Valid_Product_Valid_Rating_Valid_Should_Return_True()
         {
             // Arrange
-            
 
             // Get the First data item
             var data = TestHelper.ProductService.GetAllData().First();
-            //var countOriginal = data.Ratings.Length;
-            var countOriginal = data.Ratings==null? 0: data.Ratings.Length;
+            var countOriginal = data.Ratings.Length;
 
             // Act
             var result = TestHelper.ProductService.AddRating(data.Id, 5);
@@ -70,42 +104,5 @@ namespace UnitTests.Pages.Product.AddRating
         }
         #endregion AddRating
 
-        #region UpdatePersonalStatus
-        [Test]
-        public void UpdatePersonalStatus_InValid_productId_Null_Should_Return_False()
-        {
-            // Arrange
-            
-            // Act
-            var result = TestHelper.ProductService.UpdatePersonalStatus(null, "test");
-
-            // Assert
-            Assert.AreEqual(false, result);
-        }
-
-        [Test]
-        public void UpdatePersonalStatus_InValid_PersonalStatus_Null_Should_Return_False()
-        {
-            // Arrange
-            var data = TestHelper.ProductService.GetAllData().First().Id;
-            // Act
-            var result = TestHelper.ProductService.UpdatePersonalStatus(data, null);
-
-            // Assert
-            Assert.AreEqual(false, result);
-        }
-
-        [Test]
-        public void UpdatePersonalStatus_Valid_productId_Valid_PersonalStatus_Should_Return_True()
-        {
-            // Arrange
-            var data = TestHelper.ProductService.GetAllData().First().Id;
-            // Act
-            var result = TestHelper.ProductService.UpdatePersonalStatus(data, "test");
-            // Assert
-            Assert.AreEqual(true, result);
-        }
-
-        #endregion UpdatePersonalStatus
     }
 }
