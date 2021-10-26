@@ -33,6 +33,12 @@
         </div>
 
         <div class="form-group">
+            <label asp-for="Product.PersonalSkill" class="control-label"></label>
+            <textarea rows="3" asp-for="Product.PersonalSkill" class="form-control"></textarea>
+            <span asp-validation-for="Product.PersonalSkill" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
             <label asp-for="Product.AboutMe" class="control-label"></label>
             <input asp-for="Product.AboutMe" class="form-control" />
             <span asp-validation-for="Product.AboutMe" class="text-danger"></span>
