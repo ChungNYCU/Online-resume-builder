@@ -1,4 +1,16 @@
-﻿.checked {
+﻿/* Dashed border */
+hr.dashed {
+    border-top: 3px dashed #bbb;
+}
+
+
+/* Rounded border */
+hr.rounded {
+    border-top: 8px solid #bbb;
+    border-radius: 5px;
+}
+
+.checked {
   color: orange;
 }
 

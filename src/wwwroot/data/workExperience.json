@@ -2,11 +2,11 @@
   {
     "Id": "1",
     "CandidateId": "1",
-    "Employer": "Apple",
-    "Title": "Senior SDE",
+    "Employer": "Bashpole Software, Inc.",
+    "Title": null,
     "StartDate": "2018-08-24",
     "EndDate": "2022-05-04",
-    "RoleDescription": "Backend"
+    "RoleDescription": "\u2022 Develop client and server software that automates Nonprofit online advertising and helps evaluate their general marketing performance \u2022 Work as a full-stack developer adding frontend and backend to landing pages"
   },
   {
     "Id": "2",
