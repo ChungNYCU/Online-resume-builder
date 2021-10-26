@@ -14,7 +14,7 @@ namespace ContosoCrafts.WebSite.Models
         public string LinkedinUrl { get; set; }
         public string FullName { get; set; }
         public string Awards { get; set; }
-        public string Educationhistory { get; set; }
+        public string EducationHistory { get; set; }
         public string PersonalSkill { get; set; }
         public string AboutMe { get; set; }
         public int[] Ratings { get; set; }
