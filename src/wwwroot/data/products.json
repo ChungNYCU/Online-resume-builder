@@ -7,6 +7,8 @@
     "LinkedinUrl": "https://www.linkedin.com/in/june-liao/",
     "FullName": "June Liao",
     "Awards": "Seattle university graduate scholarship \u2022 Aug 2020 ",
+    "EducationHistory": "Seattle University",
+    "PersonalSkill": "Java, Python, C\u002B\u002B",
     "AboutMe": "Seeking for 2022 intern\uFF01",
     "Ratings": null
   },
@@ -18,6 +20,8 @@
     "LinkedinUrl": "https://www.linkedin.com/in/jessetw/",
     "FullName": "Chung, Wei-Che",
     "Awards": "Seattle University Scholarship",
+    "EducationHistory": null,
+    "PersonalSkill": null,
     "AboutMe": "Seeking for 2022 intern\uFF01",
     "Ratings": null
   },
@@ -29,6 +33,8 @@
     "LinkedinUrl": "https://www.linkedin.com/in/benny-wong-ab71b8160/",
     "FullName": "Benny Wong",
     "Awards": "Seattle University Scholarship",
+    "EducationHistory": null,
+    "PersonalSkill": null,
     "AboutMe": "Seeking for 2022 intern\uFF01",
     "Ratings": null
   },
@@ -40,6 +46,8 @@
     "LinkedinUrl": "https://www.linkedin.com/in/bart-joseph-nadala-517b01a0/",
     "FullName": "Nadala, Bart Joseph",
     "Awards": "Seattle University Scholarship",
+    "EducationHistory": null,
+    "PersonalSkill": null,
     "AboutMe": "Seeking for 2022 intern\uFF01",
     "Ratings": null
   },
@@ -51,7 +59,9 @@
     "LinkedinUrl": "https://www.linkedin.com/in/xinyu-qiu-46b064176/",
     "FullName": "Xinyu, Qiu",
     "Awards": "Seattle University Scholarship",
-    "Description": "Seeking software engineer intern for 2022!",
+    "EducationHistory": null,
+    "PersonalSkill": null,
+    "AboutMe": null,
     "Ratings": null
   }
 ]
