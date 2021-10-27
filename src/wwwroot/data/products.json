@@ -63,5 +63,18 @@
     "PersonalSkill": null,
     "AboutMe": null,
     "Ratings": null
+  },
+  {
+    "Id": "9b1b20b9-a865-43c8-83ff-5eec7c873213",
+    "PersonalStatus": null,
+    "Maker": null,
+    "img": "",
+    "LinkedinUrl": "Enter URL",
+    "FullName": "Enter FullName",
+    "Awards": null,
+    "EducationHistory": null,
+    "PersonalSkill": null,
+    "AboutMe": "Enter Description",
+    "Ratings": null
   }
 ]

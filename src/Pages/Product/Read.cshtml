@@ -17,6 +17,13 @@
 
     <p class="card-text">About Me: @Model.Product.AboutMe</p>
 
+
+    <p class="card-text"></p>
+    <h5 class="title" id="productTitle">Education</h5>
+    <div> <hr class="dashed"> </div>
+    <p>@Model.Product.EducationHistory</p><br>
+
+
     <h5 class="title" id="productTitle">Work Experience</h5>
 
     @foreach (var work in @Model.WorkExperience)
@@ -28,6 +35,11 @@
     }
 
     <p class="card-text"></p>
+    <h5 class="title" id="productTitle">Skills</h5>
+    <div> <hr class="dashed"> </div>
+    <p>@Model.Product.PersonalSkill</p><br>
+
+
     <h5 class="title" id="productTitle">Awards</h5>
     <div> <hr class="dashed"> </div>
     <p>@Model.Product.Awards</p><br>
