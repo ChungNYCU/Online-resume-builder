@@ -91,11 +91,7 @@ namespace UnitTests.Pages.Product.AddRating
 
             // Get the First data item
             var data = TestHelper.ProductService.GetAllData().First();
-            var countOriginal = 0;
-            if(data.Ratings != null)
-            {
-                countOriginal = data.Ratings.Length;
-            }
+            data.Ratings = new int[] { };
 
             // Act
             var result = TestHelper.ProductService.AddRating(data.Id, 5);
@@ -103,7 +99,7 @@ namespace UnitTests.Pages.Product.AddRating
 
             // Assert
             Assert.AreEqual(true, result);
-            Assert.AreEqual(countOriginal + 1, dataNewList.Ratings.Length);
+            Assert.AreEqual(1, dataNewList.Ratings.Length);
             Assert.AreEqual(5, dataNewList.Ratings.Last());
         }
         #endregion AddRating
