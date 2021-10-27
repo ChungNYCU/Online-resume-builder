@@ -133,6 +133,8 @@ namespace ContosoCrafts.WebSite.Services
             productData.Awards = data.Awards;
             productData.LinkedinUrl = data.LinkedinUrl;
             productData.Photo = data.Photo;
+            productData.EducationHistory = data.EducationHistory;
+            productData.PersonalSkill = data.PersonalSkill;
 
             SaveProducts(products);
 
