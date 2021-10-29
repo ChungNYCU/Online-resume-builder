@@ -9,6 +9,9 @@ namespace ContosoCrafts.WebSite.Controllers
 {
     [ApiController]
     [Route("[controller]")]
+    /// <summary>
+    /// A base class for an MVC controller without view support.
+    /// </summary>
     public class ProductsController : ControllerBase
     {
         public ProductsController(JsonFileProductService productService)
@@ -16,10 +19,13 @@ namespace ContosoCrafts.WebSite.Controllers
             ProductService = productService;
         }
 
+        // getting data from jasonFileProductService.cs
         public JsonFileProductService ProductService { get; }
 
 
         [HttpGet]
+        /// <summary>Returns an enumerator that iterates through the collection.</summary>
+        /// <returns>An enumerator that can be used to iterate through the collection.</returns>
         public IEnumerable<ProductModel> Get()
         {
             return ProductService.GetAllData();
@@ -33,7 +39,7 @@ namespace ContosoCrafts.WebSite.Controllers
 
             return Ok();
         }
-
+        // asking for rating
         public class RatingRequest
         {
             public string ProductId { get; set; }
