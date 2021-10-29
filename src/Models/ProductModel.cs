@@ -1,8 +1,12 @@
 using System.Text.Json;
 using System.Text.Json.Serialization;
-
+/// <summary>
+/// This is our user's resumes control page
+/// Allow the viewer to see the profile of the resume
+/// </summary>
 namespace ContosoCrafts.WebSite.Models
 {
+    // getting the personal information from the json
     public class ProductModel
     {
         public string Id { get; set; }
