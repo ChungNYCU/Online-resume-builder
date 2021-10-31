@@ -33,6 +33,7 @@ namespace ContosoCrafts.WebSite.Pages
         /// <returns>The current operation for the current thread.</returns>
         public void OnGet()
         {
+            // Get current system diagnostics
             RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier;
         }
     }
