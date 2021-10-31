@@ -6,7 +6,10 @@
     "img": "https://media-exp1.licdn.com/dms/image/D4E35AQF3uxay1IVcmQ/profile-framedphoto-shrink_200_200/0/1630128875079?e=1635318000\u0026v=beta\u0026t=Uoc1eZlAE3-9uVTGxIQU_LpUkP2RS07iOwb4jAMiT6c",
     "LinkedinUrl": "https://www.linkedin.com/in/june-liao/",
     "FullName": "June Liao",
-    "Awards": "Seattle university graduate scholarship \u2022 Aug 2020 ",
+    "Awards": {
+      "Award": "",
+      "AwardDate": ""
+    },
     "EducationHistory": "Seattle University",
     "PersonalSkill": "Java, Python, C\u002B\u002B",
     "AboutMe": "Seeking for 2022 intern\uFF01",
@@ -19,7 +22,10 @@
     "img": "https://media.discordapp.net/attachments/541396502262579227/900161062836523049/IMG_0998.jpg?width=752\u0026height=1002",
     "LinkedinUrl": "https://www.linkedin.com/in/jessetw/",
     "FullName": "Chung, Wei-Che",
-    "Awards": "Seattle University Scholarship",
+    "Awards": {
+      "Award": "",
+      "AwardDate": ""
+    },
     "EducationHistory": null,
     "PersonalSkill": null,
     "AboutMe": "Seeking for 2022 intern\uFF01",
@@ -32,7 +38,10 @@
     "img": "https://media-exp1.licdn.com/dms/image/C5603AQEYVsZV6aTsdg/profile-displayphoto-shrink_200_200/0/1602465475326?e=1640217600\u0026v=beta\u0026t=grmM4aBqgzXlYz-4NbyihC7OiBpgRbvWDxPGtM8WmZU",
     "LinkedinUrl": "https://www.linkedin.com/in/benny-wong-ab71b8160/",
     "FullName": "Benny Wong",
-    "Awards": "Seattle University Scholarship",
+    "Awards": {
+      "Award": "",
+      "AwardDate": ""
+    },
     "EducationHistory": null,
     "PersonalSkill": null,
     "AboutMe": "Seeking for 2022 intern\uFF01",
@@ -45,7 +54,10 @@
     "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Seattle_Redhawks_logo.svg/1200px-Seattle_Redhawks_logo.svg.png",
     "LinkedinUrl": "https://www.linkedin.com/in/bart-joseph-nadala-517b01a0/",
     "FullName": "Nadala, Bart Joseph",
-    "Awards": "Seattle University Scholarship",
+    "Awards": {
+      "Award": "",
+      "AwardDate": ""
+    },
     "EducationHistory": null,
     "PersonalSkill": null,
     "AboutMe": "Seeking for 2022 intern\uFF01",
@@ -58,23 +70,13 @@
     "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Seattle_Redhawks_logo.svg/1200px-Seattle_Redhawks_logo.svg.png",
     "LinkedinUrl": "https://www.linkedin.com/in/xinyu-qiu-46b064176/",
     "FullName": "Xinyu, Qiu",
-    "Awards": "Seattle University Scholarship",
+    "Awards": {
+      "Award": "",
+      "AwardDate": ""
+    },
     "EducationHistory": null,
     "PersonalSkill": null,
     "AboutMe": null,
-    "Ratings": null
-  },
-  {
-    "Id": "9b1b20b9-a865-43c8-83ff-5eec7c873213",
-    "PersonalStatus": null,
-    "Maker": null,
-    "img": "",
-    "LinkedinUrl": "Enter URL",
-    "FullName": "Enter FullName",
-    "Awards": null,
-    "EducationHistory": null,
-    "PersonalSkill": null,
-    "AboutMe": "Enter Description",
     "Ratings": null
   }
 ]
