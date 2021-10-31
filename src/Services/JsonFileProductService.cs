@@ -232,7 +232,7 @@ namespace ContosoCrafts.WebSite.Services
                 return false;
 
             // Overwrite old data by new data
-            products.First(x => x.Id == productId).PersonalStatus = PersonalStatus;
+            productData.PersonalStatus = PersonalStatus;
 
             // Update product to JSON file
             SaveProducts(products);
