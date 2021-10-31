@@ -37,7 +37,8 @@ namespace ContosoCrafts.WebSite.Pages.Product
         /// <param name="id"></param>
         public void OnGet(string id)
         {
-            Product  = ProductService.GetAllData().FirstOrDefault(m => m.Id.Equals(id));
+            //Get product by id in JSON file
+            Product = ProductService.GetAllData().FirstOrDefault(m => m.Id.Equals(id));
         }
 
         /// <summary>
@@ -49,13 +50,16 @@ namespace ContosoCrafts.WebSite.Pages.Product
         /// <returns></returns>
         public IActionResult OnPost()
         {
+            //If ModelState is not valid, return Page()
             if (!ModelState.IsValid)
             {
                 return Page();
             }
 
+            //If ModelState is valid, delete data to JSON file
             ProductService.DeleteData(Product.Id);
 
+            //Redirect to Product/Index page
             return RedirectToPage("./Index");
         }
     }
