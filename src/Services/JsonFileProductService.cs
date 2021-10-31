@@ -21,16 +21,23 @@ namespace ContosoCrafts.WebSite.Services
 
         private string JsonFileName
         {
+            // Return string included absolute path to the web-servable, data, and products.json
             get { return Path.Combine(WebHostEnvironment.WebRootPath, "data", "products.json"); }
         }
 
         private string WorkExperienceFileName
         {
+            // Return string included absolute path to the web-servable, data, and workExperience.json
             get { return Path.Combine(WebHostEnvironment.WebRootPath, "data", "workExperience.json"); }
         }
 
+        /// <summary>
+        /// Get all data
+        /// </summary>
+        /// <returns>IEnumerable<ProductModel></returns>
         public IEnumerable<ProductModel> GetAllData()
         {
+            // Read data from JSON file
             using (var jsonFileReader = File.OpenText(JsonFileName))
             {
                 return JsonSerializer.Deserialize<ProductModel[]>(jsonFileReader.ReadToEnd(),
@@ -41,6 +48,10 @@ namespace ContosoCrafts.WebSite.Services
             }
         }
 
+        /// <summary>
+        /// Get all work experience data
+        /// </summary>
+        /// <returns>IEnumerable<WorkExperienceModel></returns>
         public IEnumerable<WorkExperienceModel> GetAllWorkData()
         {
             using (var jsonFileReader = File.OpenText(WorkExperienceFileName))
@@ -53,6 +64,12 @@ namespace ContosoCrafts.WebSite.Services
             }
         }
 
+        /// <summary>
+        /// Add rating to product
+        /// </summary>
+        /// <param name="productId"></param>
+        /// <param name="rating"></param>
+        /// <returns></returns>
         public bool AddRating(string productId, int rating)
         {
             if (string.IsNullOrEmpty(productId))
@@ -86,8 +103,14 @@ namespace ContosoCrafts.WebSite.Services
 
             return true;
         }
+
+        /// <summary>
+        /// Create product and update to JSON file
+        /// </summary>
+        /// <returns></returns>
         public ProductModel CreateData()
         {
+            // Initialize product
             var data = new ProductModel()
             {
                 Id = System.Guid.NewGuid().ToString(),
@@ -101,26 +124,40 @@ namespace ContosoCrafts.WebSite.Services
             var dataSet = GetAllData();
             dataSet = dataSet.Append(data);
 
+            // Update product to JSON file
             SaveProducts(dataSet);
 
             return data;
         }
 
+        /// <summary>
+        /// Delete product
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         public ProductModel DeleteData(string id)
         {
-            // Get the current set, and append the new record to it
+            // Get the current set, and select product by id
             var dataSet = GetAllData();
             var data = dataSet.FirstOrDefault(m => m.Id.Equals(id));
 
+            // Make sure the product id is not exist  in JSON file
             var newDataSet = GetAllData().Where(m => m.Id.Equals(id) == false);
 
+            // Update product to JSON file
             SaveProducts(newDataSet);
 
             return data;
         }
 
+        /// <summary>
+        /// Update data
+        /// </summary>
+        /// <param name="data"></param>
+        /// <returns></returns>
         public ProductModel UpdateData(ProductModel data)
         {
+            // Get all product list, and select product by id
             var products = GetAllData();
             var productData = products.FirstOrDefault(x => x.Id.Equals(data.Id));
             if (productData == null)
@@ -128,6 +165,7 @@ namespace ContosoCrafts.WebSite.Services
                 return null;
             }
 
+            // Overwrite old data by new data
             productData.FullName = data.FullName;
             productData.AboutMe = data.AboutMe;
             productData.Awards = data.Awards;
@@ -136,51 +174,79 @@ namespace ContosoCrafts.WebSite.Services
             productData.EducationHistory = data.EducationHistory;
             productData.PersonalSkill = data.PersonalSkill;
 
+            // Update product to JSON file
             SaveProducts(products);
 
             return productData;
         }
 
+        /// <summary>
+        /// Update work experience
+        /// </summary>
+        /// <param name="data"></param>
+        /// <returns></returns>
         public WorkExperienceModel[] UpdateWorkData(WorkExperienceModel[] data)
         {
+            // Get all work experience
             var works = GetAllWorkData().ToDictionary(w => w.Id, w => w);
+
+            // Make sure id in JSON file
             foreach (WorkExperienceModel work in data)
             {
                 if (!works.ContainsKey(work.Id)) {
                     return null;
                 }
+
+                // Overwrite old data by new data
                 works[work.Id].Employer = work.Employer;
                 works[work.Id].Title = work.Title;
                 works[work.Id].StartDate = work.StartDate;
                 works[work.Id].EndDate = work.EndDate;
                 works[work.Id].RoleDescription = work.RoleDescription;
             }
+
             WorkExperienceModel[] updatedWorks = (new List<WorkExperienceModel>(works.Values)).ToArray();
 
+            // Update work experience to JSON file
             SaveWorks(updatedWorks);
 
             return updatedWorks;
         }
 
+        /// <summary>
+        /// Update personal status
+        /// </summary>
+        /// <param name="productId"></param>
+        /// <param name="PersonalStatus"></param>
+        /// <returns></returns>
         public bool UpdatePersonalStatus(string productId, string PersonalStatus)
         {
+            // Get all product list, and select product by id
             var products = GetAllData();
             var productData = products.FirstOrDefault(x => x.Id.Equals(productId));
+
+            // If productID or PersonalStatus is null, return false
             if (productId == null)
                 return false;
             if (PersonalStatus == null)
                 return false;
 
+            // Overwrite old data by new data
             products.First(x => x.Id == productId).PersonalStatus = PersonalStatus;
 
+            // Update product to JSON file
             SaveProducts(products);
 
             return true;
         }
 
+        /// <summary>
+        /// Write JSON file
+        /// </summary>
+        /// <param name="products"></param>
         private void SaveProducts(IEnumerable<ProductModel> products)
         {
-
+            // Write JSON file
             using (var outputStream = File.Create(JsonFileName))
             {
                 JsonSerializer.Serialize<IEnumerable<ProductModel>>(
@@ -194,9 +260,14 @@ namespace ContosoCrafts.WebSite.Services
             }
         }
 
+
+        /// <summary>
+        /// Write JSON file
+        /// </summary>
+        /// <param name="works"></param>
         private void SaveWorks(IEnumerable<WorkExperienceModel> works)
         {
-
+            // Write JSON file
             using (var outputStream = File.Create(WorkExperienceFileName))
             {
                 JsonSerializer.Serialize<IEnumerable<WorkExperienceModel>>(
