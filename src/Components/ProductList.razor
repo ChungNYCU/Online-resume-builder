@@ -5,33 +5,104 @@
 
 @inject JsonFileProductService ProductService
 
-<div class="card-columns">
-    <style>
-        .card {
-            margin: 20px;
-            padding: 20px;
-        }
-    </style>
-    @foreach (var product in ProductService.GetAllData())
-    {
-        <div class="card">
-            <div class="card-img" style="background-image: url('@product.Photo');">
-            </div>
-            <div class="card-body">
-                <h5 class="card-title">@product.FullName</h5>
-                <h5 class="card-title">@product.PersonalStatus</h5>
-            </div>
-            <div class="card-footer">
-                <small class="text-muted">
-                    <button @onclick="(e => SelectProduct(product.Id))"
-                            data-toggle="modal" data-target="#productModal" class="btn btn-primary">
-                        More Info
-                    </button>
-                </small>
-            </div>
-        </div>
-    }
+<div class="search-bar">
+    <input @bind="searchCriteria" style="width:100%; margin-top:10px;"><br>
+    <button @onclick="(e => Search(searchCriteria))" style="margin-top:10px;" class="btn btn-primary" data-toggle="cardRefresh" data-target="#cardRefresh">
+        Search
+    </button>
 </div>
+
+@if (searchResult.Count() != 0)
+{
+    <div class="card-columns cardRefresh" id="#cardRefresh">
+        <style>
+            .card {
+                margin: 20px;
+                padding: 20px;
+            }
+        </style>
+        @foreach (var product in returnList)
+        {
+            <div class="card">
+                <div class="card-img" style="background-image: url('@product.Photo');">
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">@product.FullName</h5>
+                    <h5 class="card-title">@product.PersonalStatus</h5>
+                </div>
+                <div class="card-footer">
+                    <small class="text-muted">
+                        <button @onclick="(e => SelectProduct(product.Id))"
+                                data-toggle="modal" data-target="#productModal" class="btn btn-primary">
+                            More Info
+                        </button>
+                    </small>
+                </div>
+            </div>
+        }
+    </div>
+
+    <hr style="height:2px;border-width:0;color:gray;background-color:gray">
+
+    <div class="card-columns cardRefresh" id="#cardRefresh">
+        <style>
+            .card {
+                margin: 20px;
+                padding: 20px;
+            }
+        </style>
+        @foreach (var product in missedList)
+        {
+            <div class="card">
+                <div class="card-img" style="background-image: url('@product.Photo');">
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">@product.FullName</h5>
+                    <h5 class="card-title">@product.PersonalStatus</h5>
+                </div>
+                <div class="card-footer">
+                    <small class="text-muted">
+                        <button @onclick="(e => SelectProduct(product.Id))"
+                                data-toggle="modal" data-target="#productModal" class="btn btn-primary">
+                            More Info
+                        </button>
+                    </small>
+                </div>
+            </div>
+        }
+    </div>
+}
+else
+{
+    <div class="card-columns cardRefresh" id="#cardRefresh">
+        <style>
+            .card {
+                margin: 20px;
+                padding: 20px;
+            }
+        </style>
+        @foreach (var product in ProductService.GetAllData())
+        {
+            <div class="card">
+                <div class="card-img" style="background-image: url('@product.Photo');">
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">@product.FullName</h5>
+                    <h5 class="card-title">@product.PersonalStatus</h5>
+                </div>
+                <div class="card-footer">
+                    <small class="text-muted">
+                        <button @onclick="(e => SelectProduct(product.Id))"
+                                data-toggle="modal" data-target="#productModal" class="btn btn-primary">
+                            More Info
+                        </button>
+                    </small>
+                </div>
+            </div>
+        }
+    </div>
+}
+
 
 @if (selectedProduct != null)
 {
@@ -98,6 +169,11 @@
 {
     ProductModel selectedProduct;
     string selectedProductId;
+    string searchCriteria = "";
+    List<ProductModel> searchResult = new List<ProductModel>();
+    List<ProductModel> returnList = new List<ProductModel>();
+    List<ProductModel> missedList = new List<ProductModel>();
+
 
     void SelectProduct(string productId)
     {
@@ -105,6 +181,7 @@
         selectedProduct = ProductService.GetAllData().First(x => x.Id == productId);
         GetCurrentRating();
     }
+
     public string PersonalStatus { get; set; }
 
     void SubmitPersonalStatus(string PersonalStatus)
@@ -139,5 +216,128 @@
         System.Console.WriteLine($"Rating received for {selectedProduct.Id}: {rating}");
         ProductService.AddRating(selectedProductId, rating);
         SelectProduct(selectedProductId);
+    }
+
+    void Search(string criteria)
+    {
+        string[] words = criteria.Split(' ');
+        returnList = new List<ProductModel>();
+        missedList = new List<ProductModel>();
+
+        if (words.Length <= 0)
+        {
+            return;
+        }
+
+        foreach (var product in ProductService.GetAllData())
+        {
+            bool found = false;
+            foreach (var word in words)
+            {
+                if (product.PersonalStatus != null && product.PersonalStatus.Contains(word))
+                {
+                    returnList.Add(product);
+                    found = true;
+                    break;
+                }
+                if (product.Photo != null && product.Photo.Contains(word))
+                {
+                    returnList.Add(product);
+                    found = true;
+                    break;
+                }
+                if (product.LinkedinUrl != null && product.LinkedinUrl.Contains(word))
+                {
+                    returnList.Add(product);
+                    found = true;
+                    break;
+                }
+                if (product.FullName != null && product.FullName.Contains(word))
+                {
+                    returnList.Add(product);
+                    found = true;
+                    break;
+                }
+                if (product.Awards != null && product.Awards.Award != null && product.Awards.Award.Contains(word))
+                {
+                    returnList.Add(product);
+                    found = true;
+                    break;
+                }
+                if (product.Awards != null && product.Awards.Issuer != null && product.Awards.Issuer.Contains(word))
+                {
+                    returnList.Add(product);
+                    found = true;
+                    break;
+                }
+                if (product.Awards != null && product.Awards.AwardDate != null && product.Awards.AwardDate.Contains(word))
+                {
+                    returnList.Add(product);
+                    found = true;
+                    break;
+                }
+                if (product.EducationHistory != null && product.EducationHistory.University != null && product.EducationHistory.University.Contains(word))
+                {
+                    returnList.Add(product);
+                    found = true;
+                    break;
+                }
+                if (product.EducationHistory != null && product.EducationHistory.Location != null && product.EducationHistory.Location.Contains(word))
+                {
+                    returnList.Add(product);
+                    found = true;
+                    break;
+                }
+                if (product.EducationHistory != null && product.EducationHistory.Degree != null && product.EducationHistory.Degree.Contains(word))
+                {
+                    returnList.Add(product);
+                    found = true;
+                    break;
+                }
+                if (product.EducationHistory != null && product.EducationHistory.Major != null && product.EducationHistory.Major.Contains(word))
+                {
+                    returnList.Add(product);
+                    found = true;
+                    break;
+                }
+                if (product.EducationHistory != null && product.EducationHistory.GPA != null && product.EducationHistory.GPA.Contains(word))
+                {
+                    returnList.Add(product);
+                    found = true;
+                    break;
+                }
+                if (product.EducationHistory != null && product.EducationHistory.StartDate != null && product.EducationHistory.StartDate.Contains(word))
+                {
+                    returnList.Add(product);
+                    found = true;
+                    break;
+                }
+                if (product.EducationHistory != null && product.EducationHistory.EndDate != null && product.EducationHistory.EndDate.Contains(word))
+                {
+                    returnList.Add(product);
+                    found = true;
+                    break;
+                }
+                if (product.PersonalSkill != null && product.PersonalSkill.Contains(word))
+                {
+                    returnList.Add(product);
+                    found = true;
+                    break;
+                }
+                if (product.AboutMe != null && product.AboutMe.Contains(word))
+                {
+                    returnList.Add(product);
+                    found = true;
+                    break;
+                }
+            }
+
+            if (!found)
+            {
+                missedList.Add(product);
+            }
+        }
+        searchResult = new List<ProductModel>(returnList);
+        searchResult.AddRange(missedList);
     }
 }
