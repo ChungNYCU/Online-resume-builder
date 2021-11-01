@@ -18,7 +18,7 @@ namespace ContosoCrafts.WebSite.Models
         public string LinkedinUrl { get; set; }
         public string FullName { get; set; }
         public AwardModel Awards { get; set; }
-        public string EducationHistory { get; set; }
+        public Education EducationHistory { get; set; }
         public string PersonalSkill { get; set; }
         public string AboutMe { get; set; }
         public int[] Ratings { get; set; }
@@ -32,10 +32,26 @@ namespace ContosoCrafts.WebSite.Models
     public class AwardModel
     {
         public string Award { get; set; }
-        public string Authority { get; set; }
+        public string Issuer { get; set; }
         public string AwardDate { get; set; }
 
         public override string ToString() => JsonSerializer.Serialize<AwardModel>(this);
+    }
+
+    /// <summary>
+    /// A model to represent Award information
+    /// </summary>
+    public class Education
+    {
+        public string University { get; set; }
+        public string Location { get; set; }
+        public string Degree { get; set; }
+        public string Major { get; set; }
+        public string GPA { get; set; }
+        public string StartDate { get; set; }
+        public string EndDate { get; set; }
+
+        public override string ToString() => JsonSerializer.Serialize<Education>(this);
     }
 
 }

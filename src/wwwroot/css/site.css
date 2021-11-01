@@ -1,3 +1,8 @@
+/* Center Text */
+.divcss5 {
+    text-align: center
+} 
+
 /* Dashed border */
 hr.dashed {
     border-top: 3px dashed #bbb;

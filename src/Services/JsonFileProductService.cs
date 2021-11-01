@@ -25,11 +25,6 @@ namespace ContosoCrafts.WebSite.Services
             get { return Path.Combine(WebHostEnvironment.WebRootPath, "data", "products.json"); }
         }
 
-        private string WorkExperienceFileName
-        {
-            // Return string included absolute path to the web-servable, data, and workExperience.json
-            get { return Path.Combine(WebHostEnvironment.WebRootPath, "data", "workExperience.json"); }
-        }
 
         /// <summary>
         /// Get all data
@@ -48,21 +43,6 @@ namespace ContosoCrafts.WebSite.Services
             }
         }
 
-        /// <summary>
-        /// Get all work experience data
-        /// </summary>
-        /// <returns>IEnumerable<WorkExperienceModel></returns>
-        public IEnumerable<WorkExperienceModel> GetAllWorkData()
-        {
-            using (var jsonFileReader = File.OpenText(WorkExperienceFileName))
-            {
-                return JsonSerializer.Deserialize<WorkExperienceModel[]>(jsonFileReader.ReadToEnd(),
-                    new JsonSerializerOptions
-                    {
-                        PropertyNameCaseInsensitive = true
-                    });
-            }
-        }
 
         /// <summary>
         /// Add rating to product
@@ -180,38 +160,6 @@ namespace ContosoCrafts.WebSite.Services
             return productData;
         }
 
-        /// <summary>
-        /// Update work experience
-        /// </summary>
-        /// <param name="data"></param>
-        /// <returns></returns>
-        public WorkExperienceModel[] UpdateWorkData(WorkExperienceModel[] data)
-        {
-            // Get all work experience
-            var works = GetAllWorkData().ToDictionary(w => w.Id, w => w);
-
-            // Make sure id in JSON file
-            foreach (WorkExperienceModel work in data)
-            {
-                if (!works.ContainsKey(work.Id)) {
-                    return null;
-                }
-
-                // Overwrite old data by new data
-                works[work.Id].Employer = work.Employer;
-                works[work.Id].Title = work.Title;
-                works[work.Id].StartDate = work.StartDate;
-                works[work.Id].EndDate = work.EndDate;
-                works[work.Id].RoleDescription = work.RoleDescription;
-            }
-
-            WorkExperienceModel[] updatedWorks = (new List<WorkExperienceModel>(works.Values)).ToArray();
-
-            // Update work experience to JSON file
-            SaveWorks(updatedWorks);
-
-            return updatedWorks;
-        }
 
         /// <summary>
         /// Update personal status
@@ -260,26 +208,6 @@ namespace ContosoCrafts.WebSite.Services
             }
         }
 
-
-        /// <summary>
-        /// Write JSON file
-        /// </summary>
-        /// <param name="works"></param>
-        private void SaveWorks(IEnumerable<WorkExperienceModel> works)
-        {
-            // Write JSON file
-            using (var outputStream = File.Create(WorkExperienceFileName))
-            {
-                JsonSerializer.Serialize<IEnumerable<WorkExperienceModel>>(
-                    new Utf8JsonWriter(outputStream, new JsonWriterOptions
-                    {
-                        SkipValidation = true,
-                        Indented = true
-                    }),
-                    works
-                );
-            }
-        }
 
     }
 }

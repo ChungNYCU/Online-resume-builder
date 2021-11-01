@@ -24,7 +24,6 @@ namespace ContosoCrafts.WebSite.Pages.Product
 
         // The data to show
         public ProductModel Product;
-        public WorkExperienceModel[] WorkExperience;
 
         /// <summary>
         /// REST Get request
@@ -33,7 +32,6 @@ namespace ContosoCrafts.WebSite.Pages.Product
         public void OnGet(string id)
         {
             Product  = ProductService.GetAllData().FirstOrDefault(m => m.Id.Equals(id));
-            WorkExperience = ProductService.GetAllWorkData().Where(c => c.CandidateId.Equals(id)).ToArray();
         }
     }
 }

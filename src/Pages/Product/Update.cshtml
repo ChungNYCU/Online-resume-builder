@@ -14,11 +14,13 @@
         <div asp-validation-summary="ModelOnly" class="text-danger"></div>
         @Html.HiddenFor(x => x.Product.Id)
 
+
         <div class="form-group">
             <label asp-for="Product.FullName" class="control-label"></label>
             <input asp-for="Product.FullName" class="form-control" />
             <span asp-validation-for="Product.FullName" class="text-danger"></span>
         </div>
+
 
         <div class="form-group">
             <label asp-for="Product.Photo" class="control-label"></label>
@@ -26,11 +28,6 @@
             <span asp-validation-for="Product.Photo" class="text-danger"></span>
         </div>
 
-        <div class="form-group">
-            <label asp-for="Product.AboutMe" class="control-label"></label>
-            <input asp-for="Product.AboutMe" class="form-control" />
-            <span asp-validation-for="Product.AboutMe" class="text-danger"></span>
-        </div>
 
         <div class="form-group">
             <label asp-for="Product.LinkedinUrl" class="control-label"></label>
@@ -39,24 +36,80 @@
         </div>
 
         <div class="form-group">
+            <label asp-for="Product.AboutMe" class="control-label"></label>
+            <textarea rows="2" asp-for="Product.AboutMe" class="form-control"></textarea>
+            <span asp-validation-for="Product.AboutMe" class="text-danger"></span>
+        </div>
+
+
+        <div class="form-group">
             <label asp-for="Product.PersonalSkill" class="control-label"></label>
-            <textarea rows="3" asp-for="Product.PersonalSkill" class="form-control"></textarea>
+            <textarea rows="2" asp-for="Product.PersonalSkill" class="form-control"></textarea>
             <span asp-validation-for="Product.PersonalSkill" class="text-danger"></span>
         </div>
 
+
         <hr class="rounded">
+        <div class="divcss5">EDUCATION</div>
+        <div class="form-group">
+            <label asp-for="Product.EducationHistory.University" class="control-label"></label>
+            <input asp-for="Product.EducationHistory.University" class="form-control" />
+            <span asp-validation-for="Product.EducationHistory.University" class="text-danger"></span>
+        </div>
         <div class="container">
             <div class="row">
                 <div class="form-group col-xs-6">
-                    <label asp-for="Product.Awards.Award" class="control-label"></label>
-                    <input asp-for="Product.Awards.Award" class="form-control" input-group-lg reg_name />
-                    <span asp-validation-for="Product.Awards.Award" class="text-danger"></span>
+                    <label asp-for="Product.EducationHistory.Degree" class="control-label"></label>
+                    <input asp-for="Product.EducationHistory.Degree" class="form-control" input-group-lg reg_name />
+                    <span asp-validation-for="Product.EducationHistory.Degree" class="text-danger"></span>
                 </div>
 
                 <div class="form-group col-xs-6">
-                    <label asp-for="Product.Awards.Authority" class="control-label"></label>
-                    <input asp-for="Product.Awards.Authority" class="form-control" input-group-lg reg_name />
-                    <span asp-validation-for="Product.Awards.Authority" class="text-danger"></span>
+                    <label asp-for="Product.EducationHistory.Major" class="control-label"></label>
+                    <input asp-for="Product.EducationHistory.Major" class="form-control" input-group-lg reg_name />
+                    <span asp-validation-for="Product.EducationHistory.Major" class="text-danger"></span>
+                </div>
+
+                <div class="form-group col-xs-6">
+                    <label asp-for="Product.EducationHistory.GPA" class="control-label"></label>
+                    <input asp-for="Product.EducationHistory.GPA" class="form-control" input-group-lg reg_name />
+                    <span asp-validation-for="Product.EducationHistory.GPA" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group col-xs-6">
+                    <label asp-for="Product.EducationHistory.Location" class="control-label"></label>
+                    <input asp-for="Product.EducationHistory.Location" class="form-control" input-group-lg reg_name />
+                    <span asp-validation-for="Product.EducationHistory.Location" class="text-danger"></span>
+                </div>
+
+                <div class="form-group col-xs-6">
+                    <label asp-for="Product.EducationHistory.StartDate" class="control-label"></label>
+                    <input asp-for="Product.EducationHistory.StartDate" class="form-control" input-group-lg reg_name />
+                    <span asp-validation-for="Product.EducationHistory.StartDate" class="text-danger"></span>
+                </div>
+                <div class="form-group col-xs-6">
+                    <label asp-for="Product.EducationHistory.EndDate" class="control-label"></label>
+                    <input asp-for="Product.EducationHistory.EndDate" class="form-control" input-group-lg reg_name />
+                    <span asp-validation-for="Product.EducationHistory.EndDate" class="text-danger"></span>
+                </div>
+            </div>
+        </div>
+
+
+        <hr class="rounded">
+        <div class="divcss5">AWARD</div>
+        <div class="form-group">
+            <label asp-for="Product.Awards.Award" class="control-label"></label>
+            <input asp-for="Product.Awards.Award" class="form-control" />
+            <span asp-validation-for="Product.Awards.Award" class="text-danger"></span>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="form-group col-xs-6">
+                    <label asp-for="Product.Awards.Issuer" class="control-label"></label>
+                    <input asp-for="Product.Awards.Issuer" class="form-control" input-group-lg reg_name />
+                    <span asp-validation-for="Product.Awards.Issuer" class="text-danger"></span>
                 </div>
 
                 <div class="form-group col-xs-6">
@@ -67,63 +120,8 @@
             </div>
         </div>
 
-        <div class="form-group">
-            <label asp-for="Product.EducationHistory" class="control-label"></label>
-            <textarea rows="5" asp-for="Product.EducationHistory" class="form-control"></textarea>
-            <span asp-validation-for="Product.EducationHistory" class="text-danger"></span>
-        </div>
 
 
-
-
-
-        @for (int i = 0; i < Model.WorkExperience.Length; i++)
-        {
-            <hr class="rounded">
-            <div class="form-group" style="display: none;">
-                <label asp-for="@Model.WorkExperience[i].Id" class="control-label"></label>
-                <input asp-for="@Model.WorkExperience[i].Id" class="form-control" />
-                <span asp-validation-for="@Model.WorkExperience[i].Id" class="text-danger"></span>
-            </div>
-            <div class="container">
-
-                <div class="row">
-                    <div class="form-group col-xs-6">
-                        <label asp-for="@Model.WorkExperience[i].Employer" class="control-label"></label>
-                        <input asp-for="@Model.WorkExperience[i].Employer" class="form-control" input-group-lg reg_name />
-                        <span asp-validation-for="@Model.WorkExperience[i].Employer" class="text-danger"></span>
-                    </div>
-
-                    <div class="form-group col-xs-6">
-                        <label asp-for="@Model.WorkExperience[i].Title" class="control-label"></label>
-                        <input asp-for="@Model.WorkExperience[i].Title" class="form-control" input-group-lg reg_name />
-                        <span asp-validation-for="@Model.WorkExperience[i].Title" class="text-danger"></span>
-                    </div>
-                </div>
-
-
-                <div class="row">
-                    <div class="form-group col-xs-6">
-                        <label asp-for="@Model.WorkExperience[i].StartDate" class="control-label"></label>
-                        <input asp-for="@Model.WorkExperience[i].StartDate" class="form-control" input-group-lg reg_name />
-                        <span asp-validation-for="@Model.WorkExperience[i].StartDate" class="text-danger"></span>
-                    </div>
-
-                    <div class="form-group col-xs-6">
-                        <label asp-for="@Model.WorkExperience[i].EndDate" class="control-label"></label>
-                        <input asp-for="@Model.WorkExperience[i].EndDate" class="form-control" input-group-lg reg_name />
-                        <span asp-validation-for="@Model.WorkExperience[i].EndDate" class="text-danger"></span>
-                    </div>
-                </div>
-
-
-                <div class="form-group row">
-                    <label asp-for="@Model.WorkExperience[i].RoleDescription" class="control-label"></label>
-                    <textarea rows="5" asp-for="@Model.WorkExperience[i].RoleDescription" class="form-control"></textarea>
-                    <span asp-validation-for="@Model.WorkExperience[i].RoleDescription" class="text-danger"></span>
-                </div>
-            </div>
-        }
 
         <div class="form-group">
             <input type="submit" value="Save" class="btn btn-primary" />

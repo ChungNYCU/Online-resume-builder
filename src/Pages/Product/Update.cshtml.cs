@@ -30,8 +30,6 @@ namespace ContosoCrafts.WebSite.Pages.Product
         [BindProperty]
         public ProductModel Product { get; set; }
 
-        [BindProperty]
-        public WorkExperienceModel[] WorkExperience { get; set; }
 
         /// <summary>
         /// REST Get request
@@ -42,7 +40,6 @@ namespace ContosoCrafts.WebSite.Pages.Product
         {
             //Get product by id in JSON file
             Product  = ProductService.GetAllData().FirstOrDefault(m => m.Id.Equals(id));
-            WorkExperience = ProductService.GetAllWorkData().Where(c => c.CandidateId.Equals(id)).ToArray();
         }
 
         /// <summary>
@@ -62,7 +59,6 @@ namespace ContosoCrafts.WebSite.Pages.Product
 
             //If ModelState is valid, update data to JSON file
             ProductService.UpdateData(Product);
-            ProductService.UpdateWorkData(WorkExperience);
 
             //Redirect to Product/Index page
             return RedirectToPage("./Index");
