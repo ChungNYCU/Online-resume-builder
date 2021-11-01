@@ -3,12 +3,13 @@
     "Id": "1",
     "PersonalStatus": null,
     "Maker": "@jenlooper",
-    "img": "https://media-exp1.licdn.com/dms/image/D4E35AQF3uxay1IVcmQ/profile-framedphoto-shrink_200_200/0/1630128875079?e=1635318000\u0026v=beta\u0026t=Uoc1eZlAE3-9uVTGxIQU_LpUkP2RS07iOwb4jAMiT6c",
+    "img": "https://media-exp1.licdn.com/dms/image/D4E35AQF3uxay1IVcmQ/profile-framedphoto-shrink_200_200/0/1630128875079?e=1635843600\u0026v=beta\u0026t=ykuEnK4qGd9gsR22CG_ES3Gu6zUbebDVCQdZWBL8DuQ",
     "LinkedinUrl": "https://www.linkedin.com/in/june-liao/",
     "FullName": "June Liao",
     "Awards": {
-      "Award": "",
-      "AwardDate": ""
+      "Award": "Graduate Scholarship",
+      "Authority": "Seattle University",
+      "AwardDate": "Aug 2021"
     },
     "EducationHistory": "Seattle University",
     "PersonalSkill": "Java, Python, C\u002B\u002B",
@@ -23,8 +24,9 @@
     "LinkedinUrl": "https://www.linkedin.com/in/jessetw/",
     "FullName": "Chung, Wei-Che",
     "Awards": {
-      "Award": "",
-      "AwardDate": ""
+      "Award": "Graduate Scholarship",
+      "Authority": "Seattle University ",
+      "AwardDate": "Aug 2021"
     },
     "EducationHistory": null,
     "PersonalSkill": null,
@@ -39,8 +41,9 @@
     "LinkedinUrl": "https://www.linkedin.com/in/benny-wong-ab71b8160/",
     "FullName": "Benny Wong",
     "Awards": {
-      "Award": "",
-      "AwardDate": ""
+      "Award": "Graduate Scholarship",
+      "Authority": "Seattle University ",
+      "AwardDate": "Aug 2021"
     },
     "EducationHistory": null,
     "PersonalSkill": null,
@@ -55,8 +58,9 @@
     "LinkedinUrl": "https://www.linkedin.com/in/bart-joseph-nadala-517b01a0/",
     "FullName": "Nadala, Bart Joseph",
     "Awards": {
-      "Award": "",
-      "AwardDate": ""
+      "Award": "Graduate Scholarship",
+      "Authority": "Seattle University ",
+      "AwardDate": "Aug 2021"
     },
     "EducationHistory": null,
     "PersonalSkill": null,
@@ -71,8 +75,9 @@
     "LinkedinUrl": "https://www.linkedin.com/in/xinyu-qiu-46b064176/",
     "FullName": "Xinyu, Qiu",
     "Awards": {
-      "Award": "",
-      "AwardDate": ""
+      "Award": "Graduate Scholarship",
+      "Authority": "Seattle University ",
+      "AwardDate": "Aug 2021"
     },
     "EducationHistory": null,
     "PersonalSkill": null,
