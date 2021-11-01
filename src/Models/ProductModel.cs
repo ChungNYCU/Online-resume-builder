@@ -25,13 +25,14 @@ namespace ContosoCrafts.WebSite.Models
 
         public override string ToString() => JsonSerializer.Serialize<ProductModel>(this);
     }
-    
+
     /// <summary>
-    /// A model to storge Award information
+    /// A model to represent Award information
     /// </summary>
     public class AwardModel
     {
         public string Award { get; set; }
+        public string Authority { get; set; }
         public string AwardDate { get; set; }
 
         public override string ToString() => JsonSerializer.Serialize<AwardModel>(this);
