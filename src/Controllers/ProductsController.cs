@@ -14,6 +14,10 @@ namespace ContosoCrafts.WebSite.Controllers
     /// </summary>
     public class ProductsController : ControllerBase
     {
+        /// <summary>
+        /// Default controller
+        /// </summary>
+        /// <param name="productService"></param>
         public ProductsController(JsonFileProductService productService)
         {
             ProductService = productService;
@@ -39,10 +43,14 @@ namespace ContosoCrafts.WebSite.Controllers
 
             return Ok();
         }
-        // asking for rating
+        /// <summary>
+        /// Asking for rating of the product
+        /// </summary>
         public class RatingRequest
         {
+            // Id of the product
             public string ProductId { get; set; }
+            // Rating of the product
             public int Rating { get; set; }
         }
     }
