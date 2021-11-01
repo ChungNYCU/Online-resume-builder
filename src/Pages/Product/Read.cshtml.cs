@@ -7,6 +7,9 @@ using ContosoCrafts.WebSite.Services;
 
 namespace ContosoCrafts.WebSite.Pages.Product
 {
+    /// <summary>
+    /// Read page will return all the data of selected user to show
+    /// </summary>
     public class ReadModel : PageModel
     {
         // Data middletier

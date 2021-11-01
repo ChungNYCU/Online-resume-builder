@@ -86,7 +86,15 @@
       "Issuer": "Seattle University ",
       "AwardDate": "Aug 2021"
     },
-    "EducationHistory": null,
+    "EducationHistory": {
+      "University": "Seattle University",
+      "Location": "Seattle, WA",
+      "Degree": "Master",
+      "Major": "Computer Science",
+      "GPA": "4.0",
+      "StartDate": "Sept 2016",
+      "EndDate": "May 2018"
+    },
     "PersonalSkill": null,
     "AboutMe": "Seeking for 2022 intern\uFF01",
     "Ratings": null
@@ -128,7 +136,15 @@
       "Authority": "Seattle University ",
       "AwardDate": "Aug 2021"
     },
-    "EducationHistory": "Cape Coral School for Boys",
+    "EducationHistory": {
+      "University": "Cape Coral School for Boys",
+      "Location": "Seattle, WA",
+      "Degree": "Master",
+      "Major": "Computer Science",
+      "GPA": "4.0",
+      "StartDate": "Sept 2021",
+      "EndDate": "May 2023"
+    },
     "PersonalSkill": "Carpentry",
     "AboutMe": "Im just a normal person",
     "Ratings": [ 1, 3 ]
@@ -145,7 +161,15 @@
       "Authority": "",
       "AwardDate": ""
     },
-    "EducationHistory": "Stonewall Kindergarten",
+    "EducationHistory": {
+      "University": "Stonewall Kindergarten",
+      "Location": "Seattle, WA",
+      "Degree": "Master",
+      "Major": "Computer Science",
+      "GPA": "4.0",
+      "StartDate": "Sept 2021",
+      "EndDate": "May 2023"
+    },
     "PersonalSkill": "Juggling",
     "AboutMe": "I like juggling",
     "Ratings": null
@@ -162,7 +186,15 @@
       "Authority": null,
       "AwardDate": null
     },
-    "EducationHistory": "Elk Creek School for Boys",
+    "EducationHistory": {
+      "University": "Elk Creek School for Boys",
+      "Location": "Seattle, WA",
+      "Degree": "Master",
+      "Major": "Computer Science",
+      "GPA": "4.0",
+      "StartDate": "Sept 2021",
+      "EndDate": "May 2023"
+    },
     "PersonalSkill": "Wood cutting",
     "AboutMe": "I like cutting wood",
     "Ratings": null
@@ -179,7 +211,15 @@
       "Authority": "Seattle University ",
       "AwardDate": "Aug 2021"
     },
-    "EducationHistory": "Desert Sands School for Girls",
+    "EducationHistory": {
+      "University": "Desert Sands School for Girls",
+      "Location": "Seattle, WA",
+      "Degree": "Master",
+      "Major": "Computer Science",
+      "GPA": "4.0",
+      "StartDate": "Sept 2021",
+      "EndDate": "May 2023"
+    },
     "PersonalSkill": "Jogging",
     "AboutMe": "I jog everyday!",
     "Ratings": null
@@ -196,7 +236,15 @@
       "Authority": "",
       "AwardDate": ""
     },
-    "EducationHistory": "Littlewood Secondary School",
+    "EducationHistory": {
+      "University": "Littlewood Secondary School",
+      "Location": "Seattle, WA",
+      "Degree": "Master",
+      "Major": "Computer Science",
+      "GPA": "4.0",
+      "StartDate": "Sept 2021",
+      "EndDate": "May 2023"
+    },
     "PersonalSkill": "Knife throwing",
     "AboutMe": "I throw knives at trees when I am bored.",
     "Ratings": null
@@ -213,7 +261,15 @@
       "Authority": "",
       "AwardDate": ""
     },
-    "EducationHistory": "Upper Lake University",
+    "EducationHistory": {
+      "University": "Upper Lake University",
+      "Location": "Seattle, WA",
+      "Degree": "Master",
+      "Major": "Computer Science",
+      "GPA": "4.0",
+      "StartDate": "Sept 2021",
+      "EndDate": "May 2023"
+    },
     "PersonalSkill": "Paper folding",
     "AboutMe": "Origami is my passion.",
     "Ratings": null
@@ -230,7 +286,15 @@
       "Authority": "",
       "AwardDate": ""
     },
-    "EducationHistory": "Oak Park Elementary",
+    "EducationHistory": {
+      "University": "Oak Park Elementary",
+      "Location": "Seattle, WA",
+      "Degree": "Master",
+      "Major": "Computer Science",
+      "GPA": "4.0",
+      "StartDate": "Sept 2021",
+      "EndDate": "May 2023"
+    },
     "PersonalSkill": "Gaming",
     "AboutMe": "Gamer",
     "Ratings": null
@@ -247,7 +311,15 @@
       "Authority": "",
       "AwardDate": ""
     },
-    "EducationHistory": "Laguna Creek University",
+    "EducationHistory": {
+      "University": "Laguna Creek University",
+      "Location": "Seattle, WA",
+      "Degree": "Master",
+      "Major": "Computer Science",
+      "GPA": "4.0",
+      "StartDate": "Sept 2021",
+      "EndDate": "May 2023"
+    },
     "PersonalSkill": "Fire breather",
     "AboutMe": "No i am not a dragon. Yes it always smells like a firepit.",
     "Ratings": null
@@ -264,7 +336,15 @@
       "Authority": "Seattle University ",
       "AwardDate": "Aug 2021"
     },
-    "EducationHistory": "River Fork Secondary School",
+    "EducationHistory": {
+      "University": "River Fork Secondary School",
+      "Location": "Seattle, WA",
+      "Degree": "Master",
+      "Major": "Computer Science",
+      "GPA": "4.0",
+      "StartDate": "Sept 2021",
+      "EndDate": "May 2023"
+    },
     "PersonalSkill": "Reading very fast",
     "AboutMe": "I like reading",
     "Ratings": null
@@ -281,7 +361,15 @@
       "Authority": "Seattle University ",
       "AwardDate": "Aug 2021"
     },
-    "EducationHistory": "Ravenwood Academy",
+    "EducationHistory": {
+      "University": "Ravenwood Academy",
+      "Location": "Seattle, WA",
+      "Degree": "Master",
+      "Major": "Computer Science",
+      "GPA": "4.0",
+      "StartDate": "Sept 2021",
+      "EndDate": "May 2023"
+    },
     "PersonalSkill": "Technomancer",
     "AboutMe": "I am a mechanical engineer",
     "Ratings": null
@@ -298,7 +386,15 @@
       "Authority": "Seattle University ",
       "AwardDate": "Aug 2021"
     },
-    "EducationHistory": "Coral Springs Institute",
+    "EducationHistory": {
+      "University": "Coral Springs Institute",
+      "Location": "Seattle, WA",
+      "Degree": "Master",
+      "Major": "Computer Science",
+      "GPA": "4.0",
+      "StartDate": "Sept 2021",
+      "EndDate": "May 2023"
+    },
     "PersonalSkill": "Manipulates electricity",
     "AboutMe": "I am an electrician",
     "Ratings": null
@@ -315,7 +411,15 @@
       "Authority": "",
       "AwardDate": ""
     },
-    "EducationHistory": "Eagle Mountain School for Girls",
+    "EducationHistory": {
+      "University": "Eagle Mountain School for Girls",
+      "Location": "Seattle, WA",
+      "Degree": "Master",
+      "Major": "Computer Science",
+      "GPA": "4.0",
+      "StartDate": "Sept 2021",
+      "EndDate": "May 2023"
+    },
     "PersonalSkill": "Gymnastics",
     "AboutMe": "I go to the gym on the weekends",
     "Ratings": null
@@ -332,7 +436,15 @@
       "Authority": "Seattle University ",
       "AwardDate": "Aug 2021"
     },
-    "EducationHistory": "Oceanside Conservatory",
+    "EducationHistory": {
+      "University": "Oceanside Conservatory",
+      "Location": "Seattle, WA",
+      "Degree": "Master",
+      "Major": "Computer Science",
+      "GPA": "4.0",
+      "StartDate": "Sept 2021",
+      "EndDate": "May 2023"
+    },
     "PersonalSkill": "Leatherworking",
     "AboutMe": "My leatherworking skill is 100",
     "Ratings": null
@@ -349,7 +461,15 @@
       "Authority": "Seattle University ",
       "AwardDate": "Aug 2021"
     },
-    "EducationHistory": "Riverbank School of Fine Arts",
+    "EducationHistory": {
+      "University": "Riverbank School of Fine Arts",
+      "Location": "Seattle, WA",
+      "Degree": "Master",
+      "Major": "Computer Science",
+      "GPA": "4.0",
+      "StartDate": "Sept 2021",
+      "EndDate": "May 2023"
+    },
     "PersonalSkill": "Dog walking",
     "AboutMe": "I like cats but I was born to walk dogs",
     "Ratings": null
@@ -366,7 +486,15 @@
       "Authority": "Seattle University ",
       "AwardDate": "Aug 2021"
     },
-    "EducationHistory": "Sunnyside University",
+    "EducationHistory": {
+      "University": "Sunnyside University",
+      "Location": "Seattle, WA",
+      "Degree": "Master",
+      "Major": "Computer Science",
+      "GPA": "4.0",
+      "StartDate": "Sept 2021",
+      "EndDate": "May 2023"
+    },
     "PersonalSkill": "Typing",
     "AboutMe": "Im that person who sits next to the judge with a really small typewriter in courts.",
     "Ratings": null
