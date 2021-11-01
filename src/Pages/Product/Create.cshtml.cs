@@ -8,7 +8,7 @@ using ContosoCrafts.WebSite.Services;
 namespace ContosoCrafts.WebSite.Pages.Product
 {
     /// <summary>
-    /// Create Page
+    /// Create Page that takes in data about a user
     /// </summary>
     public class CreateModel : PageModel
     {
@@ -29,7 +29,7 @@ namespace ContosoCrafts.WebSite.Pages.Product
         public ProductModel Product;
 
         /// <summary>
-        /// REST Get request
+        /// REST Get request 
         /// </summary>
         /// <param name="id"></param>
         public IActionResult OnGet()
