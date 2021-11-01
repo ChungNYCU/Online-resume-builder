@@ -33,13 +33,7 @@
 
     <p class="card-text"></p>
     <h5 class="title" id="productTitle">Work Experience</h5>
-    @foreach (var work in @Model.WorkExperience)
-    {
-        <div> <hr class="dashed"> </div>
 
-        <div><strong>Title: @work.Title </strong> at <strong>@work.Employer</strong>     <small> From @work.StartDate To @work.EndDate </small></div>
-        <div> @work.RoleDescription </div>
-    }
 
     <p class="card-text"></p>
     <h5 class="title" id="productTitle">Awards</h5>
