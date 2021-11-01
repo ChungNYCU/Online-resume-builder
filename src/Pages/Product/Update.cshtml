@@ -121,55 +121,7 @@
         </div>
 
 
-        @for (int i = 0; i < Model.WorkExperience.Length; i++)
-        {
-            <hr class="rounded">
-            <div class="form-group" style="display: none;">
-                <label asp-for="@Model.WorkExperience[i].Id" class="control-label"></label>
-                <input asp-for="@Model.WorkExperience[i].Id" class="form-control" />
-                <span asp-validation-for="@Model.WorkExperience[i].Id" class="text-danger"></span>
-            </div>
-            <div class="container">
 
-                <div class="row">
-                    <div class="form-group col-xs-6">
-                        <label asp-for="@Model.WorkExperience[i].Employer" class="control-label"></label>
-                        <input asp-for="@Model.WorkExperience[i].Employer" class="form-control" input-group-lg reg_name />
-                        <span asp-validation-for="@Model.WorkExperience[i].Employer" class="text-danger"></span>
-                    </div>
-
-                    <div class="form-group col-xs-6">
-                        <label asp-for="@Model.WorkExperience[i].Title" class="control-label"></label>
-                        <input asp-for="@Model.WorkExperience[i].Title" class="form-control" input-group-lg reg_name />
-                        <span asp-validation-for="@Model.WorkExperience[i].Title" class="text-danger"></span>
-                    </div>
-                </div>
-
-
-                <div class="row">
-                    <div class="form-group col-xs-6">
-                        <label asp-for="@Model.WorkExperience[i].StartDate" class="control-label"></label>
-                        <input asp-for="@Model.WorkExperience[i].StartDate" class="form-control" input-group-lg reg_name />
-                        <span asp-validation-for="@Model.WorkExperience[i].StartDate" class="text-danger"></span>
-                    </div>
-
-                    <div class="form-group col-xs-6">
-                        <label asp-for="@Model.WorkExperience[i].EndDate" class="control-label"></label>
-                        <input asp-for="@Model.WorkExperience[i].EndDate" class="form-control" input-group-lg reg_name />
-                        <span asp-validation-for="@Model.WorkExperience[i].EndDate" class="text-danger"></span>
-                    </div>
-                </div>
-
-
-                <div class="form-group row">
-                    <label asp-for="@Model.WorkExperience[i].RoleDescription" class="control-label"></label>
-                    <textarea rows="5" asp-for="@Model.WorkExperience[i].RoleDescription" class="form-control"></textarea>
-                    <span asp-validation-for="@Model.WorkExperience[i].RoleDescription" class="text-danger"></span>
-                </div>
-
-
-            </div>
-        }
 
         <div class="form-group">
             <input type="submit" value="Save" class="btn btn-primary" />
