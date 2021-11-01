@@ -8,11 +8,19 @@
     "FullName": "June Liao",
     "Awards": {
       "Award": "Graduate Scholarship",
-      "Authority": "Seattle University",
+      "Issuer": "Seattle University",
       "AwardDate": "Aug 2021"
     },
-    "EducationHistory": "Seattle University",
-    "PersonalSkill": "Java, Python, C\u002B\u002B",
+    "EducationHistory": {
+      "University": "Seattle University",
+      "Location": "Seattle, WA",
+      "Degree": "Master",
+      "Major": "Computer Science",
+      "GPA": "4.0",
+      "StartDate": "Sept 2021",
+      "EndDate": "May 2023"
+    },
+    "PersonalSkill": "Java, Python, C\u002B\u002B, C#, SQL, Unix, Windows, AWS RDS",
     "AboutMe": "Seeking for 2022 intern\uFF01",
     "Ratings": null
   },
@@ -25,10 +33,18 @@
     "FullName": "Chung, Wei-Che",
     "Awards": {
       "Award": "Graduate Scholarship",
-      "Authority": "Seattle University ",
+      "Issuer": "Seattle University",
       "AwardDate": "Aug 2021"
     },
-    "EducationHistory": null,
+    "EducationHistory": {
+      "University": "Seattle University",
+      "Location": "Seattle, WA",
+      "Degree": "Master",
+      "Major": "Computer Science",
+      "GPA": "4.0",
+      "StartDate": "Sept 2021",
+      "EndDate": "May 2023"
+    },
     "PersonalSkill": null,
     "AboutMe": "Seeking for 2022 intern\uFF01",
     "Ratings": null
@@ -42,10 +58,18 @@
     "FullName": "Benny Wong",
     "Awards": {
       "Award": "Graduate Scholarship",
-      "Authority": "Seattle University ",
+      "Issuer": "Seattle University ",
       "AwardDate": "Aug 2021"
     },
-    "EducationHistory": null,
+    "EducationHistory": {
+      "University": "Seattle University",
+      "Location": "Seattle, WA",
+      "Degree": "Master",
+      "Major": "Computer Science",
+      "GPA": "4.0",
+      "StartDate": "Sept 2021",
+      "EndDate": "May 2023"
+    },
     "PersonalSkill": null,
     "AboutMe": "Seeking for 2022 intern\uFF01",
     "Ratings": null
@@ -59,10 +83,18 @@
     "FullName": "Nadala, Bart Joseph",
     "Awards": {
       "Award": "Graduate Scholarship",
-      "Authority": "Seattle University ",
+      "Issuer": "Seattle University ",
       "AwardDate": "Aug 2021"
     },
-    "EducationHistory": null,
+    "EducationHistory": {
+      "University": "Seattle University",
+      "Location": "Seattle, WA",
+      "Degree": "Master",
+      "Major": "Computer Science",
+      "GPA": "4.0",
+      "StartDate": "Sept 2021",
+      "EndDate": "May 2023"
+    },
     "PersonalSkill": null,
     "AboutMe": "Seeking for 2022 intern\uFF01",
     "Ratings": null
@@ -76,10 +108,18 @@
     "FullName": "Xinyu, Qiu",
     "Awards": {
       "Award": "Graduate Scholarship",
-      "Authority": "Seattle University ",
+      "Issuer": "Seattle University ",
       "AwardDate": "Aug 2021"
     },
-    "EducationHistory": null,
+    "EducationHistory": {
+      "University": "Seattle University",
+      "Location": "Seattle, WA",
+      "Degree": "Master",
+      "Major": "Computer Science",
+      "GPA": "4.0",
+      "StartDate": "Sept 2021",
+      "EndDate": "May 2023"
+    },
     "PersonalSkill": null,
     "AboutMe": null,
     "Ratings": null
