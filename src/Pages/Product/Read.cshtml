@@ -20,17 +20,18 @@
 
 
     <p class="card-text"></p>
-    <h5 class="title" id="productTitle">Education</h5>
-    <div> <hr class="dashed"> </div>
-    <p>@Model.Product.EducationHistory</p><br>
-
-
-    <p class="card-text"></p>
     <h5 class="title" id="productTitle">Skills</h5>
     <div> <hr class="dashed"> </div>
     <p>@Model.Product.PersonalSkill</p><br>
 
 
+    <p class="card-text"></p>
+    <h5 class="title" id="productTitle">Education</h5>
+    <div> <hr class="dashed"> </div>
+    <div> @Model.Product.EducationHistory.University ,  <strong>@Model.Product.EducationHistory.Degree Degree </strong>  in  <strong>@Model.Product.EducationHistory.Major</strong> </div>
+    <div> From @Model.Product.EducationHistory.StartDate to @Model.Product.EducationHistory.EndDate, @Model.Product.EducationHistory.Location</div>
+
+    <p class="card-text"></p>
     <h5 class="title" id="productTitle">Work Experience</h5>
     @foreach (var work in @Model.WorkExperience)
     {
@@ -43,7 +44,7 @@
     <p class="card-text"></p>
     <h5 class="title" id="productTitle">Awards</h5>
     <div> <hr class="dashed"> </div>
-    <p>Award: @Model.Product.Awards.Award   &nbsp   Athority: @Model.Product.Awards.Authority   &nbsp    Date: @Model.Product.Awards.AwardDate</p>
+    <p>Award: @Model.Product.Awards.Award   &nbsp   Issuer: @Model.Product.Awards.Issuer   &nbsp    Date: @Model.Product.Awards.AwardDate</p>
 
 </div>
 
