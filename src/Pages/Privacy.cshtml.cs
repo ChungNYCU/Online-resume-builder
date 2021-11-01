@@ -10,15 +10,26 @@ using Microsoft.Extensions.Logging;
 /// </summary>
 namespace ContosoCrafts.WebSite.Pages
 {
+    /// <summary>
+    /// Privacy Page displays privacy clause
+    /// </summary>
     public class PrivacyModel : PageModel
     {
+        // Logger for input 
         private readonly ILogger<PrivacyModel> _logger;
 
+        /// <summary>
+        /// Default constructor
+        /// </summary>
+        /// <param name="logger"></param>
         public PrivacyModel(ILogger<PrivacyModel> logger)
         {
             _logger = logger;
         }
 
+        /// <summary>
+        /// Empty method because page does no actions
+        /// </summary>
         public void OnGet()
         {
         }
