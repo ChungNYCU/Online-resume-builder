@@ -52,20 +52,20 @@
   },
   {
     "Id": "4",
-    "PersonalStatus": null,
+    "PersonalStatus": "Fine I guess",
     "Maker": "jenlooper",
-    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Seattle_Redhawks_logo.svg/1200px-Seattle_Redhawks_logo.svg.png",
+    "img": "https://scontent-sea1-1.xx.fbcdn.net/v/t31.18172-8/614359_3805111441040_1022959363_o.jpg?_nc_cat=107&ccb=1-5&_nc_sid=de6eea&_nc_ohc=ci5FtlvNUDQAX-3XzxO&_nc_ht=scontent-sea1-1.xx&oh=203dd530235bee131ae4d0351502ae5b&oe=61A4FE47",
     "LinkedinUrl": "https://www.linkedin.com/in/bart-joseph-nadala-517b01a0/",
     "FullName": "Nadala, Bart Joseph",
     "Awards": {
-      "Award": "Graduate Scholarship",
-      "Authority": "Seattle University ",
-      "AwardDate": "Aug 2021"
+      "Award": "Phi Theta Kappa Scholarship",
+      "Authority": "Phi Theta Kappa Honor Society",
+      "AwardDate": "Aug 2012"
     },
-    "EducationHistory": null,
-    "PersonalSkill": null,
-    "AboutMe": "Seeking for 2022 intern\uFF01",
-    "Ratings": null
+    "EducationHistory": "Westminster College - Bachelor of Science in Computer Science\nSeattle University - Master's in Computer Science'",
+    "PersonalSkill": "Web development",
+    "AboutMe": "I like dogs",
+    "Ratings": [1]
   },
   {
     "Id": "5",
@@ -82,6 +82,261 @@
     "EducationHistory": null,
     "PersonalSkill": null,
     "AboutMe": null,
+    "Ratings": null
+  },
+  {
+    "Id": "6",
+    "PersonalStatus": "Happy",
+    "Maker": "jenlooper",
+    "img": "https://media.istockphoto.com/photos/handsome-afro-student-posing-on-bookshelves-background-picture-id1171062918?k=20&m=1171062918&s=612x612&w=0&h=I6djuMs92BCgJaBv5iIsPALt2oZ8mYQU7ttF1hmhPkE=",
+    "LinkedinUrl": "",
+    "FullName": "Jamar Baird",
+    "Awards": {
+      "Award": "Graduate Scholarship",
+      "Authority": "Seattle University ",
+      "AwardDate": "Aug 2021"
+    },
+    "EducationHistory": "Cape Coral School for Boys",
+    "PersonalSkill": "Carpentry",
+    "AboutMe": "Im just a normal person",
+    "Ratings": [ 1, 3 ]
+  },
+  {
+    "Id": "7",
+    "PersonalStatus": "Disconnected",
+    "Maker": "jenlooper",
+    "img": "https://media.istockphoto.com/photos/portrait-of-a-young-african-american-male-student-going-to-a-picture-id1269950687?b=1&k=20&m=1269950687&s=170667a&w=0&h=6iM9cnKCBJvOxjiMqRNdXd1Mr7Ngspq2FxRgU2gebac=",
+    "LinkedinUrl": "",
+    "FullName": "Zavier Mercer",
+    "Awards": {
+      "Award": "",
+      "Authority": "",
+      "AwardDate": ""
+    },
+    "EducationHistory": "Stonewall Kindergarten",
+    "PersonalSkill": "Juggling",
+    "AboutMe": "I like juggling",
+    "Ratings": null
+  },
+  {
+    "Id": "8",
+    "PersonalStatus": "Hospital",
+    "Maker": "jenlooper",
+    "img": "https://media.gettyimages.com/photos/happy-student-in-class-picture-id539246041?s=612x612",
+    "LinkedinUrl": "",
+    "FullName": "Wade Nguyen",
+    "Awards": {
+      "Award": null,
+      "Authority": null,
+      "AwardDate": null
+    },
+    "EducationHistory": "Elk Creek School for Boys",
+    "PersonalSkill": "Wood cutting",
+    "AboutMe": "I like cutting wood",
+    "Ratings": null
+  },
+  {
+    "Id": "9",
+    "PersonalStatus": "Ready",
+    "Maker": "jenlooper",
+    "img": "https://img.freepik.com/free-photo/front-view-male-student-wearing-black-backpack-holding-copybooks-files-blue-wall_140725-42636.jpg?size=626&ext=jpg",
+    "LinkedinUrl": "",
+    "FullName": "Brynn Scott",
+    "Awards": {
+      "Award": "Graduate Scholarship",
+      "Authority": "Seattle University ",
+      "AwardDate": "Aug 2021"
+    },
+    "EducationHistory": "Desert Sands School for Girls",
+    "PersonalSkill": "Jogging",
+    "AboutMe": "I jog everyday!",
+    "Ratings": null
+  },
+  {
+    "Id": "10",
+    "PersonalStatus": "Offline",
+    "Maker": "jenlooper",
+    "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUkbbKkIwHB5qCx2P9XdpdDfM1XXbQEsKYgQ&usqp=CAU",
+    "LinkedinUrl": "",
+    "FullName": "Toby Mccullough",
+    "Awards": {
+      "Award": "",
+      "Authority": "",
+      "AwardDate": ""
+    },
+    "EducationHistory": "Littlewood Secondary School",
+    "PersonalSkill": "Knife throwing",
+    "AboutMe": "I throw knives at trees when I am bored.",
+    "Ratings": null
+  },
+  {
+    "Id": "11",
+    "PersonalStatus": "Single",
+    "Maker": "jenlooper",
+    "img": "https://static8.depositphotos.com/1008303/880/i/600/depositphotos_8803246-stock-photo-asian-college-student.jpg",
+    "LinkedinUrl": "",
+    "FullName": "Aliyah Riddle",
+    "Awards": {
+      "Award": "",
+      "Authority": "",
+      "AwardDate": ""
+    },
+    "EducationHistory": "Upper Lake University",
+    "PersonalSkill": "Paper folding",
+    "AboutMe": "Origami is my passion.",
+    "Ratings": null
+  },
+  {
+    "Id": "12",
+    "PersonalStatus": "Horses",
+    "Maker": "jenlooper",
+    "img": "https://images.unsplash.com/photo-1544717305-2782549b5136?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8c3R1ZGVudHxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&w=1000&q=80",
+    "LinkedinUrl": "",
+    "FullName": "Jewel Blackburn",
+    "Awards": {
+      "Award": "",
+      "Authority": "",
+      "AwardDate": ""
+    },
+    "EducationHistory": "Oak Park Elementary",
+    "PersonalSkill": "Gaming",
+    "AboutMe": "Gamer",
+    "Ratings": null
+  },
+  {
+    "Id": "13",
+    "PersonalStatus": "Walking",
+    "Maker": "jenlooper",
+    "img": "https://st.depositphotos.com/1594308/2419/i/600/depositphotos_24196475-stock-photo-student-with-copybook.jpg",
+    "LinkedinUrl": "",
+    "FullName": "Emery Richards",
+    "Awards": {
+      "Award": "",
+      "Authority": "",
+      "AwardDate": ""
+    },
+    "EducationHistory": "Laguna Creek University",
+    "PersonalSkill": "Fire breather",
+    "AboutMe": "No i am not a dragon. Yes it always smells like a firepit.",
+    "Ratings": null
+  },
+  {
+    "Id": "14",
+    "PersonalStatus": "60mph",
+    "Maker": "jenlooper",
+    "img": "https://img.favpng.com/2/24/9/stock-photography-student-university-royalty-free-college-png-favpng-s8TJuUCFXdgcWThfCJpLSNyKb.jpg",
+    "LinkedinUrl": "",
+    "FullName": "Henry Pineda",
+    "Awards": {
+      "Award": "Graduate Scholarship",
+      "Authority": "Seattle University ",
+      "AwardDate": "Aug 2021"
+    },
+    "EducationHistory": "River Fork Secondary School",
+    "PersonalSkill": "Reading very fast",
+    "AboutMe": "I like reading",
+    "Ratings": null
+  },
+  {
+    "Id": "15",
+    "PersonalStatus": "This is fine",
+    "Maker": "jenlooper",
+    "img": "https://petapixel.com/assets/uploads/2020/03/student-800x534.jpg",
+    "LinkedinUrl": "",
+    "FullName": "Trevor Dunlap",
+    "Awards": {
+      "Award": "Graduate Scholarship",
+      "Authority": "Seattle University ",
+      "AwardDate": "Aug 2021"
+    },
+    "EducationHistory": "Ravenwood Academy",
+    "PersonalSkill": "Technomancer",
+    "AboutMe": "I am a mechanical engineer",
+    "Ratings": null
+  },
+  {
+    "Id": "16",
+    "PersonalStatus": "Im fine",
+    "Maker": "jenlooper",
+    "img": "https://pngimg.com/uploads/student/student_PNG62560.png",
+    "LinkedinUrl": "",
+    "FullName": "Amiya Peters",
+    "Awards": {
+      "Award": "Graduate Scholarship",
+      "Authority": "Seattle University ",
+      "AwardDate": "Aug 2021"
+    },
+    "EducationHistory": "Coral Springs Institute",
+    "PersonalSkill": "Manipulates electricity",
+    "AboutMe": "I am an electrician",
+    "Ratings": null
+  },
+  {
+    "Id": "17",
+    "PersonalStatus": "Is okey",
+    "Maker": "jenlooper",
+    "img": "https://image.shutterstock.com/image-photo/redirected-250nw-18085504.jpg",
+    "LinkedinUrl": "",
+    "FullName": "Layla Roberts",
+    "Awards": {
+      "Award": "",
+      "Authority": "",
+      "AwardDate": ""
+    },
+    "EducationHistory": "Eagle Mountain School for Girls",
+    "PersonalSkill": "Gymnastics",
+    "AboutMe": "I go to the gym on the weekends",
+    "Ratings": null
+  },
+  {
+    "Id": "18",
+    "PersonalStatus": "Sad",
+    "Maker": "jenlooper",
+    "img": "https://image.shutterstock.com/image-photo/confident-handsome-student-holding-books-260nw-366568778.jpg",
+    "LinkedinUrl": "",
+    "FullName": "Conner Romero",
+    "Awards": {
+      "Award": "Graduate Scholarship",
+      "Authority": "Seattle University ",
+      "AwardDate": "Aug 2021"
+    },
+    "EducationHistory": "Oceanside Conservatory",
+    "PersonalSkill": "Leatherworking",
+    "AboutMe": "My leatherworking skill is 100",
+    "Ratings": null
+  },
+  {
+    "Id": "19",
+    "PersonalStatus": "Waiting for love",
+    "Maker": "jenlooper",
+    "img": "https://image.shutterstock.com/image-photo/confident-handsome-student-holding-books-260nw-366568778.jpg",
+    "LinkedinUrl": "",
+    "FullName": "Kennedy Lee",
+    "Awards": {
+      "Award": "Graduate Scholarship",
+      "Authority": "Seattle University ",
+      "AwardDate": "Aug 2021"
+    },
+    "EducationHistory": "Riverbank School of Fine Arts",
+    "PersonalSkill": "Dog walking",
+    "AboutMe": "I like cats but I was born to walk dogs",
+    "Ratings": null
+  },
+  {
+    "Id": "20",
+    "PersonalStatus": "Online",
+    "Maker": "jenlooper",
+    "img": "https://www.uib.no/sites/w3.uib.no/files/styles/content_main/public/media/copy_of_artur_rubinat_lacuesta_08.jpg?itok=DXq782LH&timestamp=1567547098",
+    "LinkedinUrl": "",
+    "FullName": "Johnathan King",
+    "Awards": {
+      "Award": "Graduate Scholarship",
+      "Authority": "Seattle University ",
+      "AwardDate": "Aug 2021"
+    },
+    "EducationHistory": "Sunnyside University",
+    "PersonalSkill": "Typing",
+    "AboutMe": "Im that person who sits next to the judge with a really small typewriter in courts.",
     "Ratings": null
   }
 ]
