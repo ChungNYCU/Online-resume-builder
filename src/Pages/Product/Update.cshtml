@@ -21,27 +21,9 @@
         </div>
 
         <div class="form-group">
-            <label asp-for="Product.Awards.Award" class="control-label"></label>
-            <textarea rows="5" asp-for="Product.Awards.Award" class="form-control"></textarea>
-            <span asp-validation-for="Product.Awards.Award" class="text-danger"></span>
-        </div>
-
-        <div class="form-group">
-            <label asp-for="Product.Awards.AwardDate" class="control-label"></label>
-            <input asp-for="Product.Awards.AwardDate" class="form-control" />
-            <span asp-validation-for="Product.Awards.AwardDate" class="text-danger"></span>
-        </div>
-
-        <div class="form-group">
-            <label asp-for="Product.EducationHistory" class="control-label"></label>
-            <textarea rows="5" asp-for="Product.EducationHistory" class="form-control"></textarea>
-            <span asp-validation-for="Product.EducationHistory" class="text-danger"></span>
-        </div>
-
-        <div class="form-group">
-            <label asp-for="Product.PersonalSkill" class="control-label"></label>
-            <textarea rows="3" asp-for="Product.PersonalSkill" class="form-control"></textarea>
-            <span asp-validation-for="Product.PersonalSkill" class="text-danger"></span>
+            <label asp-for="Product.Photo" class="control-label"></label>
+            <input asp-for="Product.Photo" class="form-control" />
+            <span asp-validation-for="Product.Photo" class="text-danger"></span>
         </div>
 
         <div class="form-group">
@@ -57,10 +39,43 @@
         </div>
 
         <div class="form-group">
-            <label asp-for="Product.Photo" class="control-label"></label>
-            <input asp-for="Product.Photo" class="form-control" />
-            <span asp-validation-for="Product.Photo" class="text-danger"></span>
+            <label asp-for="Product.PersonalSkill" class="control-label"></label>
+            <textarea rows="3" asp-for="Product.PersonalSkill" class="form-control"></textarea>
+            <span asp-validation-for="Product.PersonalSkill" class="text-danger"></span>
         </div>
+
+        <hr class="rounded">
+        <div class="container">
+            <div class="row">
+                <div class="form-group col-xs-6">
+                    <label asp-for="Product.Awards.Award" class="control-label"></label>
+                    <input asp-for="Product.Awards.Award" class="form-control" input-group-lg reg_name />
+                    <span asp-validation-for="Product.Awards.Award" class="text-danger"></span>
+                </div>
+
+                <div class="form-group col-xs-6">
+                    <label asp-for="Product.Awards.Authority" class="control-label"></label>
+                    <input asp-for="Product.Awards.Authority" class="form-control" input-group-lg reg_name />
+                    <span asp-validation-for="Product.Awards.Authority" class="text-danger"></span>
+                </div>
+
+                <div class="form-group col-xs-6">
+                    <label asp-for="Product.Awards.AwardDate" class="control-label"></label>
+                    <input asp-for="Product.Awards.AwardDate" class="form-control" input-group-lg reg_name />
+                    <span asp-validation-for="Product.Awards.AwardDate" class="text-danger"></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="Product.EducationHistory" class="control-label"></label>
+            <textarea rows="5" asp-for="Product.EducationHistory" class="form-control"></textarea>
+            <span asp-validation-for="Product.EducationHistory" class="text-danger"></span>
+        </div>
+
+
+
+
 
         @for (int i = 0; i < Model.WorkExperience.Length; i++)
         {
