@@ -52,8 +52,7 @@ namespace UnitTests.Pages.Product.Update
                 Photo = "image"
             };
 
-            pageModel.WorkExperience = new WorkExperienceModel[] {};
-
+    
             // Act
             var result = pageModel.OnPost() as RedirectToPageResult;
 
