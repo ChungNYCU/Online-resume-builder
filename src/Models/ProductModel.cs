@@ -19,6 +19,7 @@ namespace ContosoCrafts.WebSite.Models
         public string FullName { get; set; }
         public AwardModel Awards { get; set; }
         public Education EducationHistory { get; set; }
+        public Experience Experiences { get; set; }
         public string PersonalSkill { get; set; }
         public string AboutMe { get; set; }
         public int[] Ratings { get; set; }
@@ -52,6 +53,19 @@ namespace ContosoCrafts.WebSite.Models
         public string EndDate { get; set; }
 
         public override string ToString() => JsonSerializer.Serialize<Education>(this);
+    }
+
+    /// <summary>
+    /// A model to represent Award information
+    /// </summary>
+    public class Experience
+    {
+        public string Title { get; set; }
+        public string Employer { get; set; }
+        public string StartDate { get; set; }
+        public string EndDate { get; set; }
+        public string Description { get; set; }
+        public override string ToString() => JsonSerializer.Serialize<Experience>(this);
     }
 
 }
