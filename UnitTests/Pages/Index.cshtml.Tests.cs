@@ -8,6 +8,7 @@ using NUnit.Framework;
 
 using ContosoCrafts.WebSite.Pages;
 
+/// Establish Unit Test for all functions on the Index Page
 namespace UnitTests.Pages.Index
 {
     public class IndexTests
@@ -30,6 +31,8 @@ namespace UnitTests.Pages.Index
 
         #region OnGet
         [Test]
+        /// This unit test will ensure the OnGet on the Index Page
+        /// will return the searching product/resume information
         public void OnGet_Valid_Should_Return_Products()
         {
             // Arrange
