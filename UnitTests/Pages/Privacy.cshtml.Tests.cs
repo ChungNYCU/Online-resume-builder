@@ -6,6 +6,7 @@ using Moq;
 
 using ContosoCrafts.WebSite.Pages;
 
+/// Unit Tests for all functions on Privacy Page
 namespace UnitTests.Pages.Privacy
 {
     public class PrivacyTests
@@ -13,6 +14,7 @@ namespace UnitTests.Pages.Privacy
         #region TestSetup
         public static PrivacyModel pageModel;
 
+        //To initialize the unit test for privacy page
         [SetUp]
         public void TestInitialize()
         {
@@ -28,6 +30,8 @@ namespace UnitTests.Pages.Privacy
         #endregion TestSetup
 
         #region OnGet
+        /// Curently no new function is created in the Privacy Page so no
+        /// new unit testing is created yet.
         [Test]
         public void OnGet_Valid_Activity_Set_Should_Return_RequestId()
         {
