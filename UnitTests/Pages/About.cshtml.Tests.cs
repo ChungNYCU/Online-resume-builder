@@ -6,6 +6,9 @@ using Moq;
 
 using ContosoCrafts.WebSite.Pages;
 
+/// <summary>
+/// Establish a Unit Test for all functions on About Page
+/// </summary>
 namespace UnitTests.Pages.About
 {
     public class AboutTests
@@ -29,6 +32,7 @@ namespace UnitTests.Pages.About
 
         #region OnGet
         [Test]
+        /// Currently no function is craeted on About page so no unit testing function yet.
         public void OnGet_Valid_Activity_Set_Should_Return_RequestId()
         {
             // Arrange
