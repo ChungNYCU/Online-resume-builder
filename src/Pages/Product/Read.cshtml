@@ -22,7 +22,7 @@
     <p class="card-text"></p>
     <h5 class="title" id="productTitle">Skills</h5>
     <div> <hr class="dashed"> </div>
-    <p>@Model.Product.PersonalSkill</p><br>
+    <div> @Model.Product.PersonalSkill</div>
 
 
     <p class="card-text"></p>
@@ -31,8 +31,12 @@
     <div> @Model.Product.EducationHistory.University ,  <strong>@Model.Product.EducationHistory.Degree Degree </strong>  in  <strong>@Model.Product.EducationHistory.Major</strong> </div>
     <div> From @Model.Product.EducationHistory.StartDate to @Model.Product.EducationHistory.EndDate, @Model.Product.EducationHistory.Location</div>
 
+
     <p class="card-text"></p>
     <h5 class="title" id="productTitle">Work Experience</h5>
+    <div> <hr class="dashed"> </div>
+    <div> <strong>@Model.Product.Experiences.Title</strong> at <strong>@Model.Product.Experiences.Employer</strong> from @Model.Product.Experiences.StartDate to @Model.Product.Experiences.EndDate</div>
+    <div> @Model.Product.Experiences.Description </div>
 
 
     <p class="card-text"></p>
