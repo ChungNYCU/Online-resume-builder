@@ -153,6 +153,7 @@ namespace ContosoCrafts.WebSite.Services
             productData.Photo = data.Photo;
             productData.EducationHistory = data.EducationHistory;
             productData.PersonalSkill = data.PersonalSkill;
+            productData.Experiences = data.Experiences;
 
             // Update product to JSON file
             SaveProducts(products);
