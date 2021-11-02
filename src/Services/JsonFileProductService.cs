@@ -8,17 +8,27 @@ using ContosoCrafts.WebSite.Models;
 
 using Microsoft.AspNetCore.Hosting;
 
+/// <summary>
+/// declarative region that provides a scope to the identifiers
+/// (the names of types, functions, variables, etc) inside it.
+/// </summary>
 namespace ContosoCrafts.WebSite.Services
 {
     public class JsonFileProductService
     {
+        /// <summary>
+        /// Default constructor
+        /// </summary>
+        /// <param name="webHostEnvironment"></param>
         public JsonFileProductService(IWebHostEnvironment webHostEnvironment)
         {
             WebHostEnvironment = webHostEnvironment;
         }
 
+        /// getting the data for WebHostEnvironment
         public IWebHostEnvironment WebHostEnvironment { get; }
 
+        /// private function, getting data fomr json
         private string JsonFileName
         {
             // Return string included absolute path to the web-servable, data, and products.json
@@ -35,6 +45,7 @@ namespace ContosoCrafts.WebSite.Services
             // Read data from JSON file
             using (var jsonFileReader = File.OpenText(JsonFileName))
             {
+                // return data from Json file
                 return JsonSerializer.Deserialize<ProductModel[]>(jsonFileReader.ReadToEnd(),
                     new JsonSerializerOptions
                     {
@@ -52,12 +63,17 @@ namespace ContosoCrafts.WebSite.Services
         /// <returns></returns>
         public bool AddRating(string productId, int rating)
         {
+            // return false when ID is null or nothing
             if (string.IsNullOrEmpty(productId))
                 return false;
 
+            // variable, assign all data
             var products = GetAllData();
 
+            // variable, searching data ID
             var data = products.FirstOrDefault(x => x.Id.Equals(productId));
+
+            // return false when data is null
             if (data == null)
                 return false;
 
@@ -75,7 +91,9 @@ namespace ContosoCrafts.WebSite.Services
 
             // Add the Rating to the Array
             var ratings = data.Ratings.ToList();
+            // adding new rate
             ratings.Add(rating);
+            // return the rating in to array
             data.Ratings = ratings.ToArray();
 
             // Save the data back to the data store
@@ -162,6 +180,32 @@ namespace ContosoCrafts.WebSite.Services
         }
 
 
+        /// <summary>
+        /// Update personal status
+        /// </summary>
+        /// <param name="productId"></param>
+        /// <param name="PersonalStatus"></param>
+        /// <returns></returns>
+        public bool UpdatePersonalStatus(string productId, string PersonalStatus)
+        {
+            // Get all product list, and select product by id
+            var products = GetAllData();
+            var productData = products.FirstOrDefault(x => x.Id.Equals(productId));
+
+            // If productID or PersonalStatus is null, return false
+            if (productId == null)
+                return false;
+            if (PersonalStatus == null)
+                return false;
+
+            // Overwrite old data by new data
+            productData.PersonalStatus = PersonalStatus;
+
+            // Update product to JSON file
+            SaveProducts(products);
+
+            return true;
+        }
 
         /// <summary>
         /// Write JSON file
