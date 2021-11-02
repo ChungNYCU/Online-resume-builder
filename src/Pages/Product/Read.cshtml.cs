@@ -12,7 +12,7 @@ namespace ContosoCrafts.WebSite.Pages.Product
     /// </summary>
     public class ReadModel : PageModel
     {
-        // Data middletier
+        /// Data middletier
         public JsonFileProductService ProductService { get; }
 
         /// <summary>
@@ -22,10 +22,11 @@ namespace ContosoCrafts.WebSite.Pages.Product
         /// <param name="productService"></param>
         public ReadModel(JsonFileProductService productService)
         {
+            // assign data
             ProductService = productService;
         }
 
-        // The data to show
+        /// The data to show
         public ProductModel Product;
 
         /// <summary>
@@ -34,6 +35,7 @@ namespace ContosoCrafts.WebSite.Pages.Product
         /// <param name="id"></param>
         public void OnGet(string id)
         {
+            // getting product service data from ID
             Product  = ProductService.GetAllData().FirstOrDefault(m => m.Id.Equals(id));
         }
     }

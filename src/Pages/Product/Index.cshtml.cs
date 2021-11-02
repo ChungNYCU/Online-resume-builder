@@ -18,13 +18,14 @@ namespace ContosoCrafts.WebSite.Pages.Product
         /// <param name="productService"></param>
         public IndexModel(JsonFileProductService productService)
         {
+            // assign data 
             ProductService = productService;
         }
 
-        // Data Service
+        /// Getting data service
         public JsonFileProductService ProductService { get; }
         
-        // Collection of the Data
+        /// Collection of the Data
         public IEnumerable<ProductModel> Products { get; private set; }
 
         /// <summary>
@@ -32,6 +33,7 @@ namespace ContosoCrafts.WebSite.Pages.Product
         /// </summary>
         public void OnGet()
         {
+            // return data
             Products = ProductService.GetAllData();
         }
     }

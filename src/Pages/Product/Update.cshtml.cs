@@ -13,7 +13,7 @@ namespace ContosoCrafts.WebSite.Pages.Product
     /// </summary>
     public class UpdateModel : PageModel
     {
-        // Data middletier
+        /// Data middletier
         public JsonFileProductService ProductService { get; }
 
         /// <summary>

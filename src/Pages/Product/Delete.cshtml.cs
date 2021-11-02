@@ -13,7 +13,7 @@ namespace ContosoCrafts.WebSite.Pages.Product
     /// </summary>
     public class DeleteModel : PageModel
     {
-        // Data middletier
+        /// Data middletier
         public JsonFileProductService ProductService { get; }
 
         /// <summary>
@@ -28,6 +28,8 @@ namespace ContosoCrafts.WebSite.Pages.Product
 
         // The data to show, bind to it for the post
         [BindProperty]
+
+        /// getting the product(resume) 
         public ProductModel Product { get; set; }
 
         /// <summary>
