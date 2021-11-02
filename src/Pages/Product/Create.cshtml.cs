@@ -12,7 +12,7 @@ namespace ContosoCrafts.WebSite.Pages.Product
     /// </summary>
     public class CreateModel : PageModel
     {
-        // Data middle tier
+        /// Data middle tier
         public JsonFileProductService ProductService { get; }
 
         /// <summary>
@@ -25,7 +25,7 @@ namespace ContosoCrafts.WebSite.Pages.Product
             ProductService = productService;
         }
 
-        // The data to show
+        /// The data to show
         public ProductModel Product;
 
         /// <summary>
@@ -36,7 +36,8 @@ namespace ContosoCrafts.WebSite.Pages.Product
         {
             Product  = ProductService.CreateData();
 
-            // Redirect the webpage to the Update page populated with the data so the user can fill in the fields
+            // Redirect the webpage to the Update page populated with the data
+            // so the user can fill in the fields
             return RedirectToPage("./Update", new { Id = Product.Id });
         }
     }
