@@ -23,7 +23,7 @@ namespace ContosoCrafts.WebSite.Controllers
             ProductService = productService;
         }
 
-        // getting data from jasonFileProductService.cs
+        /// getting data from jasonFileProductService.cs
         public JsonFileProductService ProductService { get; }
 
 
@@ -48,9 +48,9 @@ namespace ContosoCrafts.WebSite.Controllers
         /// </summary>
         public class RatingRequest
         {
-            // Id of the product
+            /// Id of the product
             public string ProductId { get; set; }
-            // Rating of the product
+            /// Rating of the product
             public int Rating { get; set; }
         }
     }
