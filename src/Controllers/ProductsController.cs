@@ -5,6 +5,9 @@ using Microsoft.AspNetCore.Mvc;
 using ContosoCrafts.WebSite.Models;
 using ContosoCrafts.WebSite.Services;
 
+/// <summary>
+/// This conrolls the interaction between the pages and the services
+/// </summary>
 namespace ContosoCrafts.WebSite.Controllers
 {
     [ApiController]
