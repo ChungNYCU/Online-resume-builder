@@ -24,6 +24,10 @@ namespace ContosoCrafts.WebSite.Pages
             _logger = logger;
         }
 
+        /// <summary>
+        /// Should handle data when retrieving information.
+        /// Unused due to not requiring data
+        /// </summary>
         public void OnGet()
         {
         }
