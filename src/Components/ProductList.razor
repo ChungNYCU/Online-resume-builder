@@ -12,7 +12,7 @@
     </button>
 </div>
 
-@if (searchResult.Count() != 0)
+@if (searchCriteria != null && searchCriteria.Length > 0)
 {
     <div class="card-columns cardRefresh" id="#cardRefresh">
         <style>
@@ -167,9 +167,12 @@ else
 {
     ProductModel selectedProduct;
     string selectedProductId;
+
+    // Contents of the search bar
     string searchCriteria = "";
-    List<ProductModel> searchResult = new List<ProductModel>();
+    // Contains all matched products
     List<ProductModel> returnList = new List<ProductModel>();
+    // Contains all unmatched products
     List<ProductModel> missedList = new List<ProductModel>();
 
 
@@ -211,20 +214,33 @@ else
         SelectProduct(selectedProductId);
     }
 
+    /// <summary>
+    /// Search function that searches the product list for any words that may be found from the search bar
+    /// </summary>
+    /// <param name="criteria"></param>
     void Search(string criteria)
     {
+        // Words from the search bar to be split into individual words
         string[] words = criteria.Split(' ');
+        // List of products found that contain a word from the search bar
         returnList = new List<ProductModel>();
+        // List of products left that had not been matched to a word fromthe search bar
         missedList = new List<ProductModel>();
 
+        // Eliminate search bar without contents
         if (words.Length <= 0)
         {
             return;
         }
 
+        // Run through all products stored in the products.json
         foreach (var product in ProductService.GetAllData())
         {
+            // Flag to store the product when no products are matched
             bool found = false;
+
+            // Run through all individual words found in the search bar
+            // When a match is found in any data found is flagged and the foreach loop is broken to continue
             foreach (var word in words)
             {
                 if (product.PersonalStatus != null && product.PersonalStatus.ToLower().Contains(word.ToLower()))
@@ -355,12 +371,11 @@ else
                 }
             }
 
+            // Activated when no match is found
             if (!found)
             {
                 missedList.Add(product);
             }
         }
-        searchResult = new List<ProductModel>(returnList);
-        searchResult.AddRange(missedList);
     }
 }
