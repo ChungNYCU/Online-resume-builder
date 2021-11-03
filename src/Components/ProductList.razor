@@ -227,97 +227,127 @@ else
             bool found = false;
             foreach (var word in words)
             {
-                if (product.PersonalStatus != null && product.PersonalStatus.Contains(word))
+                if (product.PersonalStatus != null && product.PersonalStatus.ToLower().Contains(word.ToLower()))
                 {
                     returnList.Add(product);
                     found = true;
                     break;
                 }
-                if (product.Photo != null && product.Photo.Contains(word))
+                if (product.Photo != null && product.Photo.ToLower().Contains(word.ToLower()))
                 {
                     returnList.Add(product);
                     found = true;
                     break;
                 }
-                if (product.LinkedinUrl != null && product.LinkedinUrl.Contains(word))
+                if (product.LinkedinUrl != null && product.LinkedinUrl.ToLower().Contains(word.ToLower()))
                 {
                     returnList.Add(product);
                     found = true;
                     break;
                 }
-                if (product.FullName != null && product.FullName.Contains(word))
+                if (product.FullName != null && product.FullName.ToLower().Contains(word.ToLower()))
                 {
                     returnList.Add(product);
                     found = true;
                     break;
                 }
-                if (product.Awards != null && product.Awards.Award != null && product.Awards.Award.Contains(word))
+                if (product.Awards != null && product.Awards.Award != null && product.Awards.Award.ToLower().Contains(word.ToLower()))
                 {
                     returnList.Add(product);
                     found = true;
                     break;
                 }
-                if (product.Awards != null && product.Awards.Issuer != null && product.Awards.Issuer.Contains(word))
+                if (product.Awards != null && product.Awards.Issuer != null && product.Awards.Issuer.ToLower().Contains(word.ToLower()))
                 {
                     returnList.Add(product);
                     found = true;
                     break;
                 }
-                if (product.Awards != null && product.Awards.AwardDate != null && product.Awards.AwardDate.Contains(word))
+                if (product.Awards != null && product.Awards.AwardDate != null && product.Awards.AwardDate.ToLower().Contains(word.ToLower()))
                 {
                     returnList.Add(product);
                     found = true;
                     break;
                 }
-                if (product.EducationHistory != null && product.EducationHistory.University != null && product.EducationHistory.University.Contains(word))
+                if (product.EducationHistory != null && product.EducationHistory.University != null && product.EducationHistory.University.ToLower().Contains(word.ToLower()))
                 {
                     returnList.Add(product);
                     found = true;
                     break;
                 }
-                if (product.EducationHistory != null && product.EducationHistory.Location != null && product.EducationHistory.Location.Contains(word))
+                if (product.EducationHistory != null && product.EducationHistory.Location != null && product.EducationHistory.Location.ToLower().Contains(word.ToLower()))
                 {
                     returnList.Add(product);
                     found = true;
                     break;
                 }
-                if (product.EducationHistory != null && product.EducationHistory.Degree != null && product.EducationHistory.Degree.Contains(word))
+                if (product.EducationHistory != null && product.EducationHistory.Degree != null && product.EducationHistory.Degree.ToLower().Contains(word.ToLower()))
                 {
                     returnList.Add(product);
                     found = true;
                     break;
                 }
-                if (product.EducationHistory != null && product.EducationHistory.Major != null && product.EducationHistory.Major.Contains(word))
+                if (product.EducationHistory != null && product.EducationHistory.Major != null && product.EducationHistory.Major.ToLower().Contains(word.ToLower()))
                 {
                     returnList.Add(product);
                     found = true;
                     break;
                 }
-                if (product.EducationHistory != null && product.EducationHistory.GPA != null && product.EducationHistory.GPA.Contains(word))
+                if (product.EducationHistory != null && product.EducationHistory.GPA != null && product.EducationHistory.GPA.ToLower().Contains(word.ToLower()))
                 {
                     returnList.Add(product);
                     found = true;
                     break;
                 }
-                if (product.EducationHistory != null && product.EducationHistory.StartDate != null && product.EducationHistory.StartDate.Contains(word))
+                if (product.EducationHistory != null && product.EducationHistory.StartDate != null && product.EducationHistory.StartDate.ToLower().Contains(word.ToLower()))
                 {
                     returnList.Add(product);
                     found = true;
                     break;
                 }
-                if (product.EducationHistory != null && product.EducationHistory.EndDate != null && product.EducationHistory.EndDate.Contains(word))
+                if (product.EducationHistory != null && product.EducationHistory.EndDate != null && product.EducationHistory.EndDate.ToLower().Contains(word.ToLower()))
                 {
                     returnList.Add(product);
                     found = true;
                     break;
                 }
-                if (product.PersonalSkill != null && product.PersonalSkill.Contains(word))
+                if (product.Experiences != null && product.Experiences.Title != null && product.Experiences.Title.ToLower().Contains(word.ToLower()))
                 {
                     returnList.Add(product);
                     found = true;
                     break;
                 }
-                if (product.AboutMe != null && product.AboutMe.Contains(word))
+                if (product.Experiences != null && product.Experiences.Employer != null && product.Experiences.Employer.ToLower().Contains(word.ToLower()))
+                {
+                    returnList.Add(product);
+                    found = true;
+                    break;
+                }
+                if (product.Experiences != null && product.Experiences.StartDate != null && product.Experiences.StartDate.ToLower().Contains(word.ToLower()))
+                {
+                    returnList.Add(product);
+                    found = true;
+                    break;
+                }
+                if (product.Experiences != null && product.Experiences.EndDate != null && product.Experiences.EndDate.ToLower().Contains(word.ToLower()))
+                {
+                    returnList.Add(product);
+                    found = true;
+                    break;
+                }
+                if (product.Experiences != null && product.Experiences.Description != null && product.Experiences.Description.ToLower().Contains(word.ToLower()))
+                {
+                    returnList.Add(product);
+                    found = true;
+                    break;
+                }
+                if (product.PersonalSkill != null && product.PersonalSkill.ToLower().Contains(word.ToLower()))
+                {
+                    returnList.Add(product);
+                    found = true;
+                    break;
+                }
+                if (product.AboutMe != null && product.AboutMe.ToLower().Contains(word.ToLower()))
                 {
                     returnList.Add(product);
                     found = true;
