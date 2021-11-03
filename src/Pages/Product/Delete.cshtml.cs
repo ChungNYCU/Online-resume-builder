@@ -6,6 +6,9 @@ using Microsoft.AspNetCore.Mvc;
 using ContosoCrafts.WebSite.Models;
 using ContosoCrafts.WebSite.Services;
 
+/// <summary>
+/// Contains pages with the product CRUDi
+/// </summary>
 namespace ContosoCrafts.WebSite.Pages.Product
 {
     /// <summary>
