@@ -5,15 +5,27 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 
+/// <summary>
+/// Contains all parts of the website
+/// </summary>
 namespace ContosoCrafts.WebSite
 {
+    /// <summary>
+    /// Startup procedure when the website is run
+    /// </summary>
     public class Startup
     {
+        /// <summary>
+        /// Default constructor of the class
+        /// Stores the configuration
+        /// </summary>
+        /// <param name="configuration"></param>
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
         }
 
+        // Configuration for the startup
         public IConfiguration Configuration { get; }
 
         /// This method gets called by the runtime. Use this method to add services to the container.
