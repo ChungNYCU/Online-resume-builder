@@ -37,8 +37,6 @@ namespace ContosoCrafts.WebSite.Models
         /// getting resum rating from ID in json
         public int[] Ratings { get; set; }
 
-        /// return a string list from the data above
-        public override string ToString() => JsonSerializer.Serialize<ProductModel>(this);
     }
 
     /// <summary>
@@ -53,8 +51,6 @@ namespace ContosoCrafts.WebSite.Models
         /// getting award date from json
         public string AwardDate { get; set; }
 
-        /// return a string list from the data above
-        public override string ToString() => JsonSerializer.Serialize<AwardModel>(this);
     }
 
     /// <summary>
@@ -77,8 +73,6 @@ namespace ContosoCrafts.WebSite.Models
         /// getting  the ending date for the university
         public string EndDate { get; set; }
 
-        /// return those in a string from the data above
-        public override string ToString() => JsonSerializer.Serialize<Education>(this);
     }
 
     /// <summary>
@@ -97,8 +91,6 @@ namespace ContosoCrafts.WebSite.Models
         /// getting the description for the work experience
         public string Description { get; set; }
 
-        /// return those data into a string list 
-        public override string ToString() => JsonSerializer.Serialize<Experience>(this);
     }
 
 }
