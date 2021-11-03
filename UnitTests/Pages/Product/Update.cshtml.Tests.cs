@@ -1,18 +1,25 @@
-
 using Microsoft.AspNetCore.Mvc;
-
 using NUnit.Framework;
-
 using ContosoCrafts.WebSite.Pages.Product;
 using ContosoCrafts.WebSite.Models;
 
+/// <summary>
+/// Unit Tests for Product.Update page
+/// </summary>
 namespace UnitTests.Pages.Product.Update
 {
+    /// <summary>
+    /// Unit Tests for Product.Update page
+    /// </summary>
     public class UpdateTests
     {
         #region TestSetup
+        // Page model to be tested
         public static UpdateModel pageModel;
 
+        /// <summary>
+        /// Initializes for all tests to be conducted
+        /// </summary>
         [SetUp]
         public void TestInitialize()
         {
@@ -20,10 +27,12 @@ namespace UnitTests.Pages.Product.Update
             {
             };
         }
-
         #endregion TestSetup
 
         #region OnGet
+        /// <summary>
+        /// Valid OnGet should return products
+        /// </summary>
         [Test]
         public void OnGet_Valid_Should_Return_Products()
         {
@@ -39,6 +48,9 @@ namespace UnitTests.Pages.Product.Update
         #endregion OnGet
 
         #region OnPost
+        /// <summary>
+        /// Valid OnPost should return products
+        /// </summary>
         [Test]
         public void OnPost_Valid_Should_Return_Products()
         {
@@ -54,6 +66,7 @@ namespace UnitTests.Pages.Product.Update
 
     
             // Act
+            // Expected result for runnning OnPost
             var result = pageModel.OnPost() as RedirectToPageResult;
 
             // Assert
@@ -61,6 +74,9 @@ namespace UnitTests.Pages.Product.Update
             Assert.AreEqual(true, result.PageName.Contains("Index"));
         }
 
+        /// <summary>
+        /// Invalid OnPost with invalid model should return the page
+        /// </summary>
         [Test]
         public void OnPost_InValid_Model_NotValid_Return_Page()
         {
@@ -70,6 +86,7 @@ namespace UnitTests.Pages.Product.Update
             pageModel.ModelState.AddModelError("bogus", "bogus error");
 
             // Act
+            // Expected result from running the OnPost
             var result = pageModel.OnPost() as ActionResult;
 
             // Assert
