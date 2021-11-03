@@ -8,6 +8,9 @@ using ContosoCrafts.WebSite.Models;
 using NUnit.Framework;
 using Microsoft.AspNetCore.Mvc;
 
+/// <summary>
+/// Tests for Controllers folder
+/// </summary>
 namespace UnitTests.Controllers
 {
     /// <summary>
@@ -37,6 +40,7 @@ namespace UnitTests.Controllers
             TestInitialize();
 
             // Act
+            // Expected results for the test
             var result = productsController.ProductService;
 
             // Assert
@@ -53,12 +57,14 @@ namespace UnitTests.Controllers
             TestInitialize();
 
             // Act
+            // Expected results for the test
             var result = productsController.Get();
+            // Count to iterate through the product list being retrieved for Asserts
             var count = 0;
             List<ProductModel> getAllData = new List<ProductModel>(TestHelper.ProductService.GetAllData());
-            
+
             // Assert
-            foreach(var product in getAllData)
+            foreach (var product in getAllData)
             {
                 Assert.AreEqual(product.Id, result.ElementAt(count).Id);
                 count++;
@@ -73,15 +79,17 @@ namespace UnitTests.Controllers
         {
             // Arrange
             TestInitialize();
+
+            // Sample request to run the Patch method 
             ProductsController.RatingRequest request = new ProductsController.RatingRequest();
             request.ProductId = "yes";
             request.Rating = 1;
 
             // Act
             var result = productsController.Patch(request);
-            
+
             // Assert
-           Assert.IsNotNull(result);
+            Assert.IsNotNull(result);
         }
     }
 }
