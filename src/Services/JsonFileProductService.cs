@@ -3,22 +3,33 @@ using System.IO;
 using System.Linq;
 using System.Text.Json;
 using System;
-
 using ContosoCrafts.WebSite.Models;
-
 using Microsoft.AspNetCore.Hosting;
 
+/// <summary>
+/// Handles the actions to be taken with any model from the controller
+/// </summary>
 namespace ContosoCrafts.WebSite.Services
 {
+    /// <summary>
+    /// Handles the data exchange between the database and the web services
+    /// </summary>
     public class JsonFileProductService
     {
+        /// <summary>
+        /// Default constructor
+        /// Builds the Web host environment
+        /// </summary>
+        /// <param name="webHostEnvironment"></param>
         public JsonFileProductService(IWebHostEnvironment webHostEnvironment)
         {
             WebHostEnvironment = webHostEnvironment;
         }
 
+        // Web host environment to be used
         public IWebHostEnvironment WebHostEnvironment { get; }
 
+        // Return string included absolute path to the web-servable, data, and products.json
         private string JsonFileName
         {
             // Return string included absolute path to the web-servable, data, and products.json
@@ -55,6 +66,7 @@ namespace ContosoCrafts.WebSite.Services
             if (string.IsNullOrEmpty(productId))
                 return false;
 
+            // List of all products from the database
             var products = GetAllData();
 
             var data = products.FirstOrDefault(x => x.Id.Equals(productId));
@@ -119,6 +131,7 @@ namespace ContosoCrafts.WebSite.Services
         {
             // Get the current set, and select product by id
             var dataSet = GetAllData();
+            // Get specific data from the dataset by Id
             var data = dataSet.FirstOrDefault(m => m.Id.Equals(id));
 
             // Make sure the product id is not exist  in JSON file
@@ -139,6 +152,7 @@ namespace ContosoCrafts.WebSite.Services
         {
             // Get all product list, and select product by id
             var products = GetAllData();
+            // Get specific product from the productList by Id
             var productData = products.FirstOrDefault(x => x.Id.Equals(data.Id));
             if (productData == null)
             {
@@ -182,7 +196,5 @@ namespace ContosoCrafts.WebSite.Services
                 );
             }
         }
-
-
     }
 }
