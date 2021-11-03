@@ -6,10 +6,12 @@ using System.Text.Json.Serialization;
 /// </summary>
 namespace ContosoCrafts.WebSite.Models
 {
-    /// getting the personal information from the json
+    /// <summary>
+    /// This class define/represent a candidate resume
+    /// </summary>
     public class ProductModel
     {
-        /// getting resumes id
+        /// getting resumes id. Id is identification for resume
         public string Id { get; set; }
         /// getting resumes status
         public string PersonalStatus { get; set; }
@@ -20,21 +22,21 @@ namespace ContosoCrafts.WebSite.Models
         [JsonPropertyName("img")]
         /// getting photo from ID in json
         public string Photo { get; set; }
-        /// getting Linkedin data from ID in json
+        /// getting Linkedin data
         public string LinkedinUrl { get; set; }
-        /// getting user name from ID in json
+        /// getting user name
         public string FullName { get; set; }
-        /// getting user awards from ID in json
+        /// getting user awards 
         public AwardModel Awards { get; set; }
-        /// getting resume education history from ID in json
+        /// getting resume education history 
         public Education EducationHistory { get; set; }
-        /// getting resume experience from ID in json
+        /// getting resume experience 
         public Experience Experiences { get; set; }
-        /// getting resume personal skill from ID in json
+        /// getting resume personal skill 
         public string PersonalSkill { get; set; }
-        /// getting resume about me from ID in json
+        /// getting resume about me 
         public string AboutMe { get; set; }
-        /// getting resum rating from ID in json
+        /// getting resum rating 
         public int[] Ratings { get; set; }
 
     }
@@ -44,11 +46,11 @@ namespace ContosoCrafts.WebSite.Models
     /// </summary>
     public class AwardModel
     {
-        /// getting resume award from json
+        /// getting resume award 
         public string Award { get; set; }
-        /// getting award issuer from json
+        /// getting award issuer
         public string Issuer { get; set; }
-        /// getting award date from json
+        /// getting award date 
         public string AwardDate { get; set; }
 
     }
