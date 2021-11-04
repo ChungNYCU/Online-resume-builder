@@ -163,7 +163,14 @@ namespace ContosoCrafts.WebSite.Services
                 return null;
             }
 
-            
+            if (productData.Password == null)
+            {
+                productData.Password = data.Password;
+            }
+            else if (productData.Password != data.Password)
+            {
+                return null;
+            }
 
             // Overwrite old data by new data
             productData.FullName = data.FullName;
