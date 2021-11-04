@@ -65,10 +65,6 @@ namespace ContosoCrafts.WebSite.Pages.Product
             {
                 return RedirectToPage("./Update");
             }
-            else 
-            {
-                ProductService.UpdateData(Product);
-            }
 
             //Redirect to Product/Index page
             return RedirectToPage("./Index");
