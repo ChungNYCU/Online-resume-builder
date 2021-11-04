@@ -93,6 +93,24 @@ namespace UnitTests.Pages.Product.Delete
             // Assert
             Assert.AreEqual(false, pageModel.ModelState.IsValid);
         }
+
+        [Test]
+        public void OnPost_InValid_Should_RedirectTo_Delete_Page()
+        {
+            // Arrange
+
+            // First Create the product to delete
+            pageModel.Product = TestHelper.ProductService.CreateData();
+            pageModel.Product.FullName = "Unit Test";
+            TestHelper.ProductService.UpdateData(pageModel.Product);
+
+            // Act
+            // Expected result from running OnPost
+            var result = pageModel.OnPost() as RedirectToPageResult;
+
+            // Assert
+            Assert.AreEqual(true, result.PageName.Contains("Delete"));
+        }
         #endregion OnPost
     }
 }
