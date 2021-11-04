@@ -127,12 +127,16 @@ namespace ContosoCrafts.WebSite.Services
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
-        public ProductModel DeleteData(string id)
+        public ProductModel DeleteData(string id, string password)
         {
             // Get the current set, and select product by id
             var dataSet = GetAllData();
             // Get specific data from the dataset by Id
             var data = dataSet.FirstOrDefault(m => m.Id.Equals(id));
+            if (data.Password != password) 
+            {
+                return null;
+            }
 
             // Make sure the product id is not exist  in JSON file
             var newDataSet = GetAllData().Where(m => m.Id.Equals(id) == false);
@@ -158,6 +162,8 @@ namespace ContosoCrafts.WebSite.Services
             {
                 return null;
             }
+
+            
 
             // Overwrite old data by new data
             productData.FullName = data.FullName;
