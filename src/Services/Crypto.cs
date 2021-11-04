@@ -72,7 +72,7 @@ namespace ContosoCrafts.WebSite.Services
             /// <param name="InitialVector">Needs to be 16 ASCII characters long</param>
             /// <param name="KeySize">Can be 128, 192, or 256</param>
             /// <returns>A decrypted string</returns>
-            public static string Decrypt(string CipherText, string Password,
+            /*public static string Decrypt(string CipherText, string Password,
                 string Salt = "Chung", string HashAlgorithm = "SHA1",
                 int PasswordIterations = 2, string InitialVector = "tYfdJ4OCsl8TWNEf",
                 int KeySize = 256)
@@ -102,7 +102,7 @@ namespace ContosoCrafts.WebSite.Services
                 }
                 SymmetricKey.Clear();
                 return Encoding.UTF8.GetString(PlainTextBytes, 0, ByteCount);
-            }
+            }*/
             #endregion
         }
     }
