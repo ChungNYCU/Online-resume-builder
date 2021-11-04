@@ -136,5 +136,38 @@ namespace UnitTests.Pages.Product.AddRating
             Assert.AreEqual(5, dataNewList.Ratings.Last());
         }
         #endregion AddRating
+
+        #region UpdatePersonalStatus
+        [Test]
+        public void UpdatePersonalStatus_InValid_productId_Null_Should_Return_False()
+        {
+            // Act
+            var result = TestHelper.ProductService.UpdatePersonalStatus(null, "test");
+            // Assert
+            Assert.AreEqual(false, result);
+        }
+
+        [Test]
+        public void UpdatePersonalStatus_InValid_PersonalStatus_Null_Should_Return_False()
+        {
+            // Arrange
+            var data = TestHelper.ProductService.GetAllData().First().Id;
+            // Act
+            var result = TestHelper.ProductService.UpdatePersonalStatus(data, null);
+            // Assert
+            Assert.AreEqual(false, result);
+        }
+
+        [Test]
+        public void UpdatePersonalStatus_Valid_productId_Valid_PersonalStatus_Should_Return_True()
+        {
+            // Arrange
+            var data = TestHelper.ProductService.GetAllData().First().Id;
+            // Act
+            var result = TestHelper.ProductService.UpdatePersonalStatus(data, "test");
+            // Assert
+            Assert.AreEqual(true, result);
+        }
+        #endregion UpdatePersonalStatus
     }
 }
