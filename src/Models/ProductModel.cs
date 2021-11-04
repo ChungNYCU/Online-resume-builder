@@ -36,9 +36,10 @@ namespace ContosoCrafts.WebSite.Models
         public string PersonalSkill { get; set; }
         /// getting resume about me 
         public string AboutMe { get; set; }
-        /// getting resum rating 
+        /// getting resume rating 
         public int[] Ratings { get; set; }
-
+        // get user password 
+        public string Password { get; set; }
     }
 
     /// <summary>
