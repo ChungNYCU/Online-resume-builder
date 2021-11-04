@@ -40,7 +40,7 @@ namespace ContosoCrafts.WebSite.Pages.Product
         public void OnGet(string id)
         {
             //Get product by id in JSON file
-            Product  = ProductService.GetAllData().FirstOrDefault(m => m.Id.Equals(id));
+            Product = ProductService.GetAllData().FirstOrDefault(m => m.Id.Equals(id));
         }
 
         /// <summary>
@@ -52,14 +52,23 @@ namespace ContosoCrafts.WebSite.Pages.Product
         /// <returns></returns>
         public IActionResult OnPost()
         {
-            //If ModelState is not valid, return Page()
+            // encrypt password
+            Product.Password = Crypto.AESEncryption.Encrypt(Product.Password, Product.Id);
+            // If ModelState is not valid, return Page()
             if (!ModelState.IsValid)
             {
                 return Page();
             }
 
-            //If ModelState is valid, update data to JSON file
-            ProductService.UpdateData(Product);
+            // If password match, update data. If not, go back to update page
+            if (ProductService.UpdateData(Product) == null)
+            {
+                return RedirectToPage("./Update");
+            }
+            else 
+            {
+                ProductService.UpdateData(Product);
+            }
 
             //Redirect to Product/Index page
             return RedirectToPage("./Index");
