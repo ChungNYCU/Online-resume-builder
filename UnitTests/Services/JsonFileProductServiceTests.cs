@@ -169,5 +169,24 @@ namespace UnitTests.Pages.Product.AddRating
             Assert.AreEqual(true, result);
         }
         #endregion UpdatePersonalStatus
+
+        #region DeleteData
+        [Test]
+        public void DeleteData_Valid_productId_Valid_Password_Should_Return_data()
+        {
+            // Arrange
+            var data = new ProductModel
+            {
+                Id = "2",
+                Password = "/Lh0SDXf6f9nyy8eejvOqg=="
+            };
+            // Act
+            var result = TestHelper.ProductService.DeleteData(data.Id, data.Password);
+            // Assert
+            Assert.AreEqual(result, result);
+        }
+        #endregion DeleteData
+
+
     }
 }
