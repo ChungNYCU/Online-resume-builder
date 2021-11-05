@@ -7,9 +7,9 @@
     "LinkedinUrl": "https://www.linkedin.com/in/june-liao/",
     "FullName": "June Liao",
     "Awards": {
-      "Award": "Graduate Scholarship",
-      "Issuer": "Seattle University",
-      "AwardDate": "Aug 2021"
+      "Award": "0",
+      "Issuer": "0",
+      "AwardDate": "0"
     },
     "EducationHistory": {
       "University": "Seattle University",
@@ -30,7 +30,7 @@
     "PersonalSkill": "Java, Python, C\u002B\u002B, C#, SQL, Unix, Windows, AWS RDS",
     "AboutMe": "Seeking for 2022 intern\uFF01",
     "Ratings": null,
-    "Password": null
+    "Password": "/Oo1nScwK04Vf\u002ByeC2P3Yw=="
   },
   {
     "Id": "2",
@@ -40,9 +40,9 @@
     "LinkedinUrl": "https://www.linkedin.com/in/jessetw/",
     "FullName": "Chung, Wei-Che",
     "Awards": {
-      "Award": "123",
-      "Issuer": "123",
-      "AwardDate": "123"
+      "Award": "1st in APEX",
+      "Issuer": "APEX",
+      "AwardDate": "11/05/2021"
     },
     "EducationHistory": {
       "University": "Seattle University",
@@ -96,7 +96,7 @@
     "PersonalSkill": "C\u002B\u002B, Python, Java",
     "AboutMe": "Seeking for 2022 intern\uFF01",
     "Ratings": null,
-    "Password": null
+    "Password": "9UrJvTdIuE6DvqOpFzB3/w=="
   },
   {
     "Id": "4",
