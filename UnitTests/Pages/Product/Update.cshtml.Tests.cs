@@ -2,6 +2,7 @@ using Microsoft.AspNetCore.Mvc;
 using NUnit.Framework;
 using ContosoCrafts.WebSite.Pages.Product;
 using ContosoCrafts.WebSite.Models;
+using System.Linq;
 
 /// <summary>
 /// Unit Tests for Product.Update page
@@ -48,11 +49,35 @@ namespace UnitTests.Pages.Product.Update
         #endregion OnGet
 
         #region OnPost
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [Test]
+        public void OnPost_Valid_Should_Redirect_to_Index()
+        {
+            // Arrange
+            pageModel.Product = new ProductModel
+            {
+                Id = "1",
+                Password = "0"
+            };
+
+
+            // Act
+            // Expected result for runnning OnPost
+            var result = pageModel.OnPost() as RedirectToPageResult;
+
+            // Assert
+            //Assert.AreEqual(true, pageModel.ModelState.IsValid);
+            Assert.AreEqual(true, result.PageName.Contains("Index"));
+        }
+        
         /// <summary>
         /// Valid OnPost should return products
         /// </summary>
         [Test]
-        public void OnPost_Valid_Should_Return_Products()
+        public void OnPost_InValid_password_Should_ReDirect_to_Update_page()
         {
             // Arrange
             pageModel.Product = new ProductModel
@@ -71,7 +96,7 @@ namespace UnitTests.Pages.Product.Update
 
             // Assert
             Assert.AreEqual(true, pageModel.ModelState.IsValid);
-            Assert.AreEqual(true, result.PageName.Contains("Index"));
+            Assert.AreEqual(true, result.PageName.Contains("Update"));
         }
 
         /// <summary>
@@ -92,6 +117,9 @@ namespace UnitTests.Pages.Product.Update
             // Assert
             Assert.AreEqual(false, pageModel.ModelState.IsValid);
         }
+
+
+        
         #endregion OnPost
     }
 }
