@@ -7,7 +7,7 @@ using System.Linq;
 /// <summary>
 /// Unit Test for all JsonFileProductServiceTests.cs blocks
 /// </summary>
-namespace UnitTests.Pages.Product.AddRating
+namespace UnitTests.Services.JsonFileProductServiceTests
 {
     /// <summary>
     /// Unit Test for all JsonFileProductServiceTests.cs blocks
@@ -172,21 +172,86 @@ namespace UnitTests.Pages.Product.AddRating
 
         #region DeleteData
         [Test]
-        public void DeleteData_Valid_productId_Valid_Password_Should_Return_data()
+        //[Ignore("Ignore a test")]
+        public void DeleteData_Valid_productId_Valid_Password_Should_Return_True()
+        {
+            // Arrange
+
+            // Act
+            var result = TestHelper.ProductService.DeleteData("Unit Test", "abc123");
+            Assert.AreEqual(true, result);
+        }
+
+        [Test]
+        //[Ignore("Ignore a test")]
+        public void DeleteData_Valid_productId_Valid_Password_Should_Return_False()
+        {
+            // Arrange
+
+            // Act
+            var result = TestHelper.ProductService.DeleteData("2", "9UrJvTdIuE6DvqOpFzB3/w==");
+            Assert.AreEqual(false, result);
+        }
+        #endregion DeleteData
+
+        #region UpdateData
+        [Test]
+        public void UpdateData_null_data_Should_Return_false()
+        {
+            // Arrange
+            var data = TestHelper.ProductService.GetAllData().First();
+            data.Id = "zzzzz";
+
+            // Act
+            var result = TestHelper.ProductService.UpdateData(data);
+            // Assert
+            Assert.AreEqual(false, result);
+        }
+
+        [Test]
+        public void UpdateData_InValid_Password_Should_Return_false()
         {
             // Arrange
             var data = new ProductModel
             {
                 Id = "2",
-                Password = "/Lh0SDXf6f9nyy8eejvOqg=="
+                Password = "aaa"
+            };
+
+            // Act
+            var result = TestHelper.ProductService.UpdateData(data);
+            // Assert
+            Assert.AreEqual(false, result);
+        }
+
+        [Test]
+        public void UpdateData_Valid_Password_Should_Return_true()
+        {
+            // Arrange
+            var data = new ProductModel
+            {
+                Id = "Unit Test2",
+                Password = "abc123"
             };
             // Act
-            var result = TestHelper.ProductService.DeleteData(data.Id, data.Password);
+            var result = TestHelper.ProductService.UpdateData(data);
             // Assert
-            Assert.AreEqual(result, result);
+            Assert.AreEqual(true, result);
         }
-        #endregion DeleteData
+
+        [Test]
+        public void UpdateData_null_Password_Should_Return_true()
+        {
+            // Arrange
+            var data = TestHelper.ProductService.GetAllData().First(x => x.Password == null);
+
+            // Act
+            var result = TestHelper.ProductService.UpdateData(data);
+            // Assert
+            Assert.AreEqual(true, result);
+        }
 
 
+        #endregion UpdateData
     }
 }
