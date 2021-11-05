@@ -127,7 +127,7 @@ namespace ContosoCrafts.WebSite.Services
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
-        public ProductModel DeleteData(string id, string password)
+        public bool DeleteData(string id, string password)
         {
             // Get the current set, and select product by id
             var dataSet = GetAllData();
@@ -135,7 +135,7 @@ namespace ContosoCrafts.WebSite.Services
             var data = dataSet.FirstOrDefault(m => m.Id.Equals(id));
             if (data.Password != password) 
             {
-                return null;
+                return false;
             }
 
             // Make sure the product id is not exist  in JSON file
@@ -144,7 +144,7 @@ namespace ContosoCrafts.WebSite.Services
             // Update product to JSON file
             SaveProducts(newDataSet);
 
-            return data;
+            return true;
         }
 
         /// <summary>
@@ -152,24 +152,24 @@ namespace ContosoCrafts.WebSite.Services
         /// </summary>
         /// <param name="data"></param>
         /// <returns></returns>
-        public ProductModel UpdateData(ProductModel data)
+        public bool UpdateData(ProductModel data)
         {
             // Get all product list, and select product by id
             var products = GetAllData();
             // Get specific product from the productList by Id
             var productData = products.FirstOrDefault(x => x.Id.Equals(data.Id));
+
             if (productData == null)
             {
-                return null;
+                return false;
             }
 
-            if (productData.Password == null)
+            if (productData.Password != null) 
             {
-                productData.Password = data.Password;
-            }
-            else if (productData.Password != data.Password)
-            {
-                return null;
+                if (productData.Password != data.Password)
+                {
+                    return false;
+                }
             }
 
             // Overwrite old data by new data
@@ -181,11 +181,12 @@ namespace ContosoCrafts.WebSite.Services
             productData.EducationHistory = data.EducationHistory;
             productData.PersonalSkill = data.PersonalSkill;
             productData.Experiences = data.Experiences;
+            productData.Password = data.Password;
 
             // Update product to JSON file
             SaveProducts(products);
 
-            return productData;
+            return true;
         }
 
 
