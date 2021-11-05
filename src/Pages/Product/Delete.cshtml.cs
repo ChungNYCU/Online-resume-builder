@@ -55,16 +55,17 @@ namespace ContosoCrafts.WebSite.Pages.Product
         /// <returns></returns>
         public IActionResult OnPost()
         {
-            // encrypt password
-            Product.Password = Crypto.AESEncryption.Encrypt(Product.Password, Product.Id);
             //If ModelState is not valid, return Page()
             if (!ModelState.IsValid)
             {
                 return Page();
             }
 
+            // encrypt password
+            Product.Password = Crypto.AESEncryption.Encrypt(Product.Password, Product.Id);
+
             // If password match, delete data. If not, go back to delete page
-            if (ProductService.DeleteData(Product.Id, Product.Password) == null)
+            if (ProductService.DeleteData(Product.Id, Product.Password) == false)
             {
                 return RedirectToPage("./Delete");
             }
