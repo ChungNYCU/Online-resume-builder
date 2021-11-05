@@ -52,16 +52,18 @@ namespace ContosoCrafts.WebSite.Pages.Product
         /// <returns></returns>
         public IActionResult OnPost()
         {
-            // encrypt password
-            Product.Password = Crypto.AESEncryption.Encrypt(Product.Password, Product.Id);
+            
             // If ModelState is not valid, return Page()
             if (!ModelState.IsValid)
             {
                 return Page();
             }
 
+            // encrypt password
+            Product.Password = Crypto.AESEncryption.Encrypt(Product.Password, Product.Id);
+
             // If password match, update data. If not, go back to update page
-            if (ProductService.UpdateData(Product) == null)
+            if (ProductService.UpdateData(Product) == false)
             {
                 return RedirectToPage("./Update");
             }
