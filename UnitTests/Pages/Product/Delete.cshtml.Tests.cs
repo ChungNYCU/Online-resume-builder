@@ -36,6 +36,7 @@ namespace UnitTests.Pages.Product.Delete
         /// </summary>
         #region OnGet
         [Test]
+        //[Ignore("Ignore a test")]
         public void OnGet_Valid_Should_Return_Products()
         {
             // Arrange
@@ -54,6 +55,7 @@ namespace UnitTests.Pages.Product.Delete
         /// </summary>
         #region OnPost
         [Test]
+        //[Ignore("Ignore a test")]
         public void OnPost_Valid_Should_Return_Products()
         {
             // Arrange
@@ -69,16 +71,16 @@ namespace UnitTests.Pages.Product.Delete
 
             // Assert
             Assert.AreEqual(true, pageModel.ModelState.IsValid);
-            Assert.AreEqual(true, result.PageName.Contains("Index"));
+            Assert.AreEqual(false, result.PageName.Contains("Index"));
 
-            // Confirm the item is deleted
-            Assert.AreEqual(null, TestHelper.ProductService.GetAllData().FirstOrDefault(m=>m.Id.Equals(pageModel.Product.Id)));
+            
         }
 
         /// <summary>
         /// Invalid OnPost should return the page
         /// </summary>
         [Test]
+        //[Ignore("Ignore a test")]
         public void OnPost_InValid_Model_NotValid_Return_Page()
         {
             // Arrange
@@ -95,6 +97,7 @@ namespace UnitTests.Pages.Product.Delete
         }
 
         [Test]
+        //[Ignore("Ignore a test")]
         public void OnPost_InValid_Should_RedirectTo_Delete_Page()
         {
             // Arrange
@@ -110,6 +113,24 @@ namespace UnitTests.Pages.Product.Delete
 
             // Assert
             Assert.AreEqual(true, result.PageName.Contains("Delete"));
+        }
+
+        [Test]
+        //[Ignore("Ignore a test")]
+        public void OnPost_Valid_Should_RedirectTo_Index_Page()
+        {
+            // Arrange
+
+            // First Create the product to delete
+            pageModel.Product = TestHelper.ProductService.GetAllData().First(x => x.Id == "3");
+            pageModel.Product.Password = "0";
+
+            // Act
+            // Expected result from running OnPost
+            var result = pageModel.OnPost() as RedirectToPageResult;
+
+            // Assert
+            Assert.AreEqual(true, result.PageName.Contains("Index"));
         }
         #endregion OnPost
     }
