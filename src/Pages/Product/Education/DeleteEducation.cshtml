@@ -1,0 +1,63 @@
+﻿@page "{productId}/{EducationID}"
+@using ContosoCrafts.WebSite.Services
+@inject JsonFileProductService ProductService
+@model ContosoCrafts.WebSite.Pages.Product.Education.DeleteEducationModel
+
+@{
+    ViewData["Title"] = "Delete Education";
+}
+
+<h1>Delete Education</h1>
+
+<div class="container">
+    <form method="post">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        @Html.HiddenFor(x => x.Education.ID)
+        @Html.HiddenFor(x => x.Education.ProductID)
+
+        <div class="form-group">
+            <label asp-for="Education.University" class="control-label"></label>
+            <input asp-for="Education.University" class="form-control" disabled />
+        </div>
+
+        <div class="form-group">
+            <label asp-for="Education.Location" class="control-label"></label>
+            <input asp-for="Education.Location" class="form-control" disabled />
+        </div>
+
+        <div class="form-group">
+            <label asp-for="Education.Degree" class="control-label"></label>
+            <input asp-for="Education.Degree" class="form-control" disabled />
+        </div>
+
+        <div class="form-group">
+            <label asp-for="Education.Major" class="control-label"></label>
+            <input asp-for="Education.Major" class="form-control" disabled />
+        </div>
+
+        <div class="form-group">
+            <label asp-for="Education.GPA" class="control-label"></label>
+            <input asp-for="Education.GPA" class="form-control" disabled />
+        </div>
+
+        <div class="form-group">
+            <label asp-for="Education.StartDate" class="control-label"></label>
+            <input asp-for="Education.StartDate" class="form-control" disabled />
+        </div>
+
+        <div class="form-group">
+            <label asp-for="Education.EndDate" class="control-label"></label>
+            <input asp-for="Education.EndDate" class="form-control" disabled />
+        </div>
+
+        <div class="form-group">
+            <input type="submit" value="Delete" class="btn btn-primary" />
+        </div>
+    </form>
+
+</div>
+
+@*Received HTML code from server*@
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
