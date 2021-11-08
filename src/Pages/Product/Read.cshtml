@@ -7,9 +7,7 @@
     ViewData["Title"] = "Read page";
 }
 
-<h1>Read</h1>
-
-<div class="container">
+<div class="container bg-light" style="padding-top:10px; padding-bottom:10px;">
     <h5 class="title" id="productTitle">@Model.Product.FullName</h5>
 
 
@@ -44,12 +42,12 @@
     <div> <hr class="dashed"> </div>
     <p>Award: @Model.Product.Awards.Award   &nbsp   Issuer: @Model.Product.Awards.Issuer   &nbsp    Date: @Model.Product.Awards.AwardDate</p>
 
+    <div class="row" style="margin:10px;">
+        <a asp-page="Update" asp-route-id="@Model.Product.Id" class="btn btn-primary">Update</a> &nbsp; &nbsp;
+        <a asp-page="Delete" asp-route-id="@Model.Product.Id" class="btn btn-danger">Delete</a>
+    </div>
 </div>
 
-<br />
-<br />
 
-<div class="row">
-    <a asp-page="Update" asp-route-id="@Model.Product.Id" class="btn btn-primary">Update</a> &nbsp; &nbsp;
-    <a asp-page="Delete" asp-route-id="@Model.Product.Id" class="btn btn-danger">Delete</a>
-</div>
+
+
