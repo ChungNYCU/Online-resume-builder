@@ -49,50 +49,33 @@
 
         <hr class="rounded">
         <div class="divcss5">EDUCATION</div>
-        <div class="form-group">
-            <label asp-for="Product.EducationHistory.University" class="control-label"></label>
-            <input asp-for="Product.EducationHistory.University" class="form-control" />
-            <span asp-validation-for="Product.EducationHistory.University" class="text-danger"></span>
-        </div>
-        <div class="container">
-            <div class="row">
-                <div class="form-group col-xs-6">
-                    <label asp-for="Product.EducationHistory.Degree" class="control-label"></label>
-                    <input asp-for="Product.EducationHistory.Degree" class="form-control" input-group-lg reg_name />
-                    <span asp-validation-for="Product.EducationHistory.Degree" class="text-danger"></span>
-                </div>
 
-                <div class="form-group col-xs-6">
-                    <label asp-for="Product.EducationHistory.Major" class="control-label"></label>
-                    <input asp-for="Product.EducationHistory.Major" class="form-control" input-group-lg reg_name />
-                    <span asp-validation-for="Product.EducationHistory.Major" class="text-danger"></span>
-                </div>
+        <a asp-page="./Education/AddEducation" asp-route-id="@Model.Product.Id">+ Add Education Experience</a>
 
-                <div class="form-group col-xs-6">
-                    <label asp-for="Product.EducationHistory.GPA" class="control-label"></label>
-                    <input asp-for="Product.EducationHistory.GPA" class="form-control" input-group-lg reg_name />
-                    <span asp-validation-for="Product.EducationHistory.GPA" class="text-danger"></span>
-                </div>
-            </div>
-            <div class="row">
-                <div class="form-group col-xs-6">
-                    <label asp-for="Product.EducationHistory.Location" class="control-label"></label>
-                    <input asp-for="Product.EducationHistory.Location" class="form-control" input-group-lg reg_name />
-                    <span asp-validation-for="Product.EducationHistory.Location" class="text-danger"></span>
-                </div>
+        <table class="table table-bordered table-striped">
+            <thead>
+                <tr>
+                    <th>University</th>
+                    <th>Degree</th>
+                    <th>Major</th>
+                    <th>Action</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var education in Model.Product.EducationList)
+                {
+                <tr>
+                    <td>@education.University</td>
+                    <td>@education.Degree</td>
+                    <td>@education.Major</td>
+                    <td><a asp-page="./Education/UpdateEducation" asp-route-productId="@education.ProductID" asp-route-EducationID="@education.ID">Update</a></td>
+                    <td><a asp-page="./Education/DeleteEducation" asp-route-productId="@education.ProductID" asp-route-EducationID="@education.ID">Delete</a></td>
+                </tr>
+                }
+            </tbody>
+        </table>
 
-                <div class="form-group col-xs-6">
-                    <label asp-for="Product.EducationHistory.StartDate" class="control-label"></label>
-                    <input asp-for="Product.EducationHistory.StartDate" class="form-control" input-group-lg reg_name />
-                    <span asp-validation-for="Product.EducationHistory.StartDate" class="text-danger"></span>
-                </div>
-                <div class="form-group col-xs-6">
-                    <label asp-for="Product.EducationHistory.EndDate" class="control-label"></label>
-                    <input asp-for="Product.EducationHistory.EndDate" class="form-control" input-group-lg reg_name />
-                    <span asp-validation-for="Product.EducationHistory.EndDate" class="text-danger"></span>
-                </div>
-            </div>
-        </div>
 
         <hr class="rounded">
         <div class="divcss5">EXPERIENCES</div>
@@ -161,10 +144,10 @@
             <input type="submit" value="Save" class="btn btn-primary" />
         </div>
     </form>
-</div>
+    </div>
 
-@*Received HTML code from server*@
+    @*Received HTML code from server*@
 
-@section Scripts {
-    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
-}
+    @section Scripts {
+        @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    }

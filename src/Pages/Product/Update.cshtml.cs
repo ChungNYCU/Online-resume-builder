@@ -20,7 +20,6 @@ namespace ContosoCrafts.WebSite.Pages.Product
         /// <summary>
         /// Defualt Construtor
         /// </summary>
-        /// <param name="logger"></param>
         /// <param name="productService"></param>
         public UpdateModel(JsonFileProductService productService)
         {
@@ -62,8 +61,12 @@ namespace ContosoCrafts.WebSite.Pages.Product
             // encrypt password
             Product.Password = Crypto.AESEncryption.Encrypt(Product.Password, Product.Id);
 
+            // Get EducationList
+            var TempProduct = ProductService.GetAllData().FirstOrDefault(m => m.Id.Equals(Product.Id));
+            Product.EducationList = TempProduct.EducationList;
+
             // If password match, update data. If not, go back to update page
-            if (ProductService.UpdateData(Product) == false)
+            if (ProductService.UpdateData(Product) == false) 
             {
                 return RedirectToPage("./Update");
             }
