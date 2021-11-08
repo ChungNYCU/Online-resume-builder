@@ -109,7 +109,7 @@ namespace ContosoCrafts.WebSite.Services
                 FullName = "Enter FullName",
                 AboutMe = "Enter Description",
                 LinkedinUrl = "Enter URL",
-                Photo = "",
+                Photo = "Enter Photo URL",
             };
 
             // Get the current set, and append the new record to it
@@ -154,16 +154,19 @@ namespace ContosoCrafts.WebSite.Services
         /// <returns></returns>
         public bool UpdateData(ProductModel data)
         {
-            // Get all product list, and select product by id
-            var products = GetAllData();
+            // Get the product, and select product by id
+            var product = GetAllData();
             // Get specific product from the productList by Id
-            var productData = products.FirstOrDefault(x => x.Id.Equals(data.Id));
+            var productData = product.FirstOrDefault(x => x.Id.Equals(data.Id));
 
+            // If the productData doesn't exist, return False
             if (productData == null)
             {
                 return false;
             }
 
+            // If the Password of the productData doesn't exist,
+            // or it doesn't matches data.Password, return False
             if (productData.Password != null) 
             {
                 if (productData.Password != data.Password)
@@ -172,19 +175,19 @@ namespace ContosoCrafts.WebSite.Services
                 }
             }
 
-            // Overwrite old data by new data
+            // Update old data with new data
             productData.FullName = data.FullName;
             productData.AboutMe = data.AboutMe;
             productData.Awards = data.Awards;
             productData.LinkedinUrl = data.LinkedinUrl;
             productData.Photo = data.Photo;
-            productData.EducationHistory = data.EducationHistory;
+            productData.EducationList = data.EducationList;
             productData.PersonalSkill = data.PersonalSkill;
             productData.Experiences = data.Experiences;
             productData.Password = data.Password;
 
-            // Update product to JSON file
-            SaveProducts(products);
+            // Save it to JSON file
+            SaveProducts(product);
 
             return true;
         }
