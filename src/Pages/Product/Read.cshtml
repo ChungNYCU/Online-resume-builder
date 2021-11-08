@@ -22,13 +22,16 @@
     <div> <hr class="dashed"> </div>
     <div> @Model.Product.PersonalSkill</div>
 
-
     <p class="card-text"></p>
     <h5 class="title" id="productTitle">Education</h5>
-    <div> <hr class="dashed"> </div>
-    <div> @Model.Product.EducationHistory.University ,  <strong>@Model.Product.EducationHistory.Degree Degree </strong>  in  <strong>@Model.Product.EducationHistory.Major</strong> </div>
-    <div> From @Model.Product.EducationHistory.StartDate to @Model.Product.EducationHistory.EndDate, @Model.Product.EducationHistory.Location</div>
+    @foreach (var EducationRecord in @Model.Product.EducationList)
+    {
+        <div> <hr class="dashed"> </div>
+        <div> <strong>@EducationRecord.University</strong>, <strong>@EducationRecord.Degree </strong> Degree in <strong>@EducationRecord.Major</strong> </div>
+        <div> From @EducationRecord.StartDate to @EducationRecord.EndDate, @EducationRecord.Location</div>
 
+    }
+ 
 
     <p class="card-text"></p>
     <h5 class="title" id="productTitle">Work Experience</h5>
