@@ -5,24 +5,7 @@
     ViewData["Title"] = "Home page";
 }
 
-<h1><big><strong>Dream Crushers</strong></big></h1>
 
-<marquee>
-    <p>
-        <font size="+1000" style="color:red;">
-            Welcome to our page
-        </font>
-    </p>
-</marquee>
-
-<p>
-    This is a platform that allows users to build their own profiles for job applications. It also allows recruiters to search for potential candidates.
-</p>
-<p>  </p>
-<p>  </p>
-<p>  </p>
-<p>Are you looking for a Job?</p>
-<button>Contact Us</button>
 
 @(await Html.RenderComponentAsync<ProductList>(RenderMode.ServerPrerendered))
 <script src="_framework/blazor.server.js"></script>
