@@ -1,0 +1,83 @@
+﻿@page "{productId}/{EducationID}" 
+@using ContosoCrafts.WebSite.Services
+@inject JsonFileProductService ProductService
+@model ContosoCrafts.WebSite.Pages.Product.Education.UpdateEducationExperienceModel
+
+@{
+    ViewData["Title"] = "Update Education Experience page";
+}
+
+<h1>Update Education Experience</h1>
+
+<div class="container">
+    <form method="post">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <!--
+        Add a new Education record.
+        Pass down Education.ID and ProductID, so that we know who/where this Education record belongs to
+        These are going to come down to OnGet(), send them back up when OnPost
+        When Get(), make sure the Education.ID and Education.ProductID are populated
+        -->
+        @Html.HiddenFor(x => x.Education.ID)
+        @Html.HiddenFor(x => x.Education.ProductID)
+
+        <hr class="rounded">
+        <div class="divcss5">EDUCATION</div>
+        <div class="form-group">
+            <label asp-for="Education.University" class="control-label"></label>
+            <input asp-for="Education.University" class="form-control" />
+            <span asp-validation-for="Education.University" class="text-danger"></span>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="form-group col-xs-6">
+                    <label asp-for="Education.Degree" class="control-label"></label>
+                    <input asp-for="Education.Degree" class="form-control" input-group-lg reg_name />
+                    <span asp-validation-for="Education.Degree" class="text-danger"></span>
+                </div>
+
+                <div class="form-group col-xs-6">
+                    <label asp-for="Education.Major" class="control-label"></label>
+                    <input asp-for="Education.Major" class="form-control" input-group-lg reg_name />
+                    <span asp-validation-for="Education.Major" class="text-danger"></span>
+                </div>
+
+                <div class="form-group col-xs-6">
+                    <label asp-for="Education.GPA" class="control-label"></label>
+                    <input asp-for="Education.GPA" class="form-control" input-group-lg reg_name />
+                    <span asp-validation-for="Education.GPA" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group col-xs-6">
+                    <label asp-for="Education.Location" class="control-label"></label>
+                    <input asp-for="Education.Location" class="form-control" input-group-lg reg_name />
+                    <span asp-validation-for="Education.Location" class="text-danger"></span>
+                </div>
+
+                <div class="form-group col-xs-6">
+                    <label asp-for="Education.StartDate" class="control-label"></label>
+                    <input asp-for="Education.StartDate" class="form-control" input-group-lg reg_name />
+                    <span asp-validation-for="Education.StartDate" class="text-danger"></span>
+                </div>
+                <div class="form-group col-xs-6">
+                    <label asp-for="Education.EndDate" class="control-label"></label>
+                    <input asp-for="Education.EndDate" class="form-control" input-group-lg reg_name />
+                    <span asp-validation-for="Education.EndDate" class="text-danger"></span>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="form-group">
+            <input type="submit" value="Save" class="btn btn-primary" />
+        </div>
+
+    </form>
+</div>
+
+@*Received HTML code from server*@
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
