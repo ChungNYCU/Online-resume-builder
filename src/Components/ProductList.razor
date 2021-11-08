@@ -6,7 +6,7 @@
 @inject JsonFileProductService ProductService
 
 <div class="search-bar">
-    <input @bind="searchCriteria" style="width:100%; margin-top:10px;"><br>
+    <input @bind="searchCriteria" style="width:100%; margin-top:20px; padding:5px; height:40px;" placeholder="Search"><br>
     <button @onclick="(e => Search(searchCriteria))" style="margin-top:10px;" class="btn btn-primary" data-toggle="cardRefresh" data-target="#cardRefresh">
         Search
     </button>
