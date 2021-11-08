@@ -5,7 +5,12 @@
 
 /* Dashed border */
 hr.dashed {
-    border-top: 3px dashed #bbb;
+    border: none;
+    border-top: 1px dashed #f00;
+    color: #fff;
+    background-color: #fff;
+    height: 0.5px;
+    width: 100%;
 }
 
 ﻿.reg_name {
