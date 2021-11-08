@@ -1,5 +1,6 @@
 using System.Text.Json;
 using System.Text.Json.Serialization;
+using System.Collections.Generic;
 /// <summary>
 /// This is our user's resumes control page
 /// Allow the viewer to see the profile of the resume
@@ -29,9 +30,9 @@ namespace ContosoCrafts.WebSite.Models
         // getting user awards 
         public AwardModel Awards { get; set; }
         // getting resume education history 
-        public Education EducationHistory { get; set; }
-        // getting resume experience 
         public Experience Experiences { get; set; }
+        // getting resume experience 
+        public List<EducationModel> EducationList { get; set; } = new List<EducationModel>();
         // getting resume personal skill 
         public string PersonalSkill { get; set; }
         // getting resume about me 
@@ -55,26 +56,7 @@ namespace ContosoCrafts.WebSite.Models
         public string AwardDate { get; set; }
     }
 
-    /// <summary>
-    /// A model to represent resume education information
-    /// </summary>
-    public class Education
-    {
-        // getting user's universitey from json
-        public string University { get; set; }
-        // getting the university lcation from json
-        public string Location { get; set; }
-        // getting the degree earned in university
-        public string Degree { get; set; }
-        // getting the major studied in university
-        public string Major { get; set; }
-        // getting the GPA
-        public string GPA { get; set; }
-        // getting the starting date for the university
-        public string StartDate { get; set; }
-        // getting  the ending date for the university
-        public string EndDate { get; set; }
-    }
+
 
     /// <summary>
     /// A model to represent experience information
