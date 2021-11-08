@@ -242,6 +242,8 @@ else
             return;
         }
 
+        /*
+
         // Run through all products stored in the products.json
         foreach (var product in ProductService.GetAllData())
         {
@@ -250,6 +252,7 @@ else
 
             // Run through all individual words found in the search bar
             // When a match is found in any data found is flagged and the foreach loop is broken to continue
+
             foreach (var word in words)
             {
                 if (product.PersonalStatus != null && product.PersonalStatus.ToLower().Contains(word.ToLower()))
@@ -336,6 +339,7 @@ else
                     found = true;
                     break;
                 }
+
                 if (product.Experiences != null && product.Experiences.Title != null && product.Experiences.Title.ToLower().Contains(word.ToLower()))
                 {
                     returnList.Add(product);
@@ -385,6 +389,7 @@ else
             {
                 missedList.Add(product);
             }
-        }
+            */
+    }
     }
 }
