@@ -1,0 +1,44 @@
+﻿@page "{productId}/{AwardID}"
+@using ContosoCrafts.WebSite.Services
+@inject JsonFileProductService ProductService
+@model ContosoCrafts.WebSite.Pages.Product.Award.DeleteAwardModel
+
+@{
+    ViewData["Title"] = "Delete Award";
+}
+
+<h1>Delete Award</h1>
+
+<div class="container">
+    <form method="post">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        @Html.HiddenFor(x => x.Award.ID)
+        @Html.HiddenFor(x => x.Award.ProductID)
+
+        <div class="form-group">
+            <label asp-for="Award.Award" class="control-label"></label>
+            <input asp-for="Award.Award" class="form-control" disabled />
+        </div>
+
+        <div class="form-group">
+            <label asp-for="Award.Issuer" class="control-label"></label>
+            <input asp-for="Award.Issuer" class="form-control" disabled />
+        </div>
+
+        <div class="form-group">
+            <label asp-for="Award.AwardDate" class="control-label"></label>
+            <input asp-for="Award.AwardDate" class="form-control" disabled />
+        </div>
+
+
+        <div class="form-group">
+            <input type="submit" value="Delete" class="btn btn-primary" />
+        </div>
+    </form>
+
+</div>
+
+@*Received HTML code from server*@
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
