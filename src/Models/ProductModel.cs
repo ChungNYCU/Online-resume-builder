@@ -28,7 +28,7 @@ namespace ContosoCrafts.WebSite.Models
         // getting user name
         public string FullName { get; set; }
         // getting user awards 
-        public AwardModel Awards { get; set; }
+        public List<AwardModel> AwardList { get; set; } = new List<AwardModel>();
         // getting resume education history 
         public Experience Experiences { get; set; }
         // getting resume experience 
@@ -42,20 +42,6 @@ namespace ContosoCrafts.WebSite.Models
         // get user password 
         public string Password { get; set; }
     }
-
-    /// <summary>
-    /// A model to represent Award information
-    /// </summary>
-    public class AwardModel
-    {
-        // getting resume award 
-        public string Award { get; set; }
-        // getting award issuer
-        public string Issuer { get; set; }
-        // getting award date 
-        public string AwardDate { get; set; }
-    }
-
 
 
     /// <summary>
