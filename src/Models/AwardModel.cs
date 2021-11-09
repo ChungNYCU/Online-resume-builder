@@ -10,6 +10,10 @@ namespace ContosoCrafts.WebSite.Models
     /// </summary>
     public class AwardModel
     {
+        // This is ProductID so that we know who owns this Award record 
+        public string ProductID { get; set; }
+        // This is Education ID so that we know where it is in Product.AwardList
+        public string ID { get; set; }
         // getting resume award 
         public string Award { get; set; }
         // getting award issuer
