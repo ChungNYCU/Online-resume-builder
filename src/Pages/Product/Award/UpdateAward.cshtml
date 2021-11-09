@@ -1,0 +1,60 @@
+﻿@page "{productId}/{AwardID}" 
+@using ContosoCrafts.WebSite.Services
+@inject JsonFileProductService ProductService
+@model ContosoCrafts.WebSite.Pages.Product.Award.UpdateAwardModel
+
+@{
+    ViewData["Title"] = "Update Award Experience page";
+}
+
+<h1>Update Award</h1>
+
+<div class="container">
+    <form method="post">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <!--
+    Add a new Award record.
+    Pass down Award.ID and Award, so that we know who/where this Award record belongs to
+    These are going to come down to OnGet(), send them back up when OnPost
+    When Get(), make sure the Award.ID and Award.ProductID are populated
+    -->
+        @Html.HiddenFor(x => x.Award.ID)
+        @Html.HiddenFor(x => x.Award.ProductID)
+
+        <hr class="rounded">
+        <div class="divcss5">Award</div>
+        <div class="form-group">
+            <label asp-for="Award.Award" class="control-label"></label>
+            <input asp-for="Award.Award" class="form-control" />
+            <span asp-validation-for="Award.Award" class="text-danger"></span>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="form-group col-xs-6">
+                    <label asp-for="Award.Issuer" class="control-label"></label>
+                    <input asp-for="Award.Issuer" class="form-control" input-group-lg reg_name />
+                    <span asp-validation-for="Award.Issuer" class="text-danger"></span>
+                </div>
+
+                <div class="form-group col-xs-6">
+                    <label asp-for="Award.AwardDate" class="control-label"></label>
+                    <input asp-for="Award.AwardDate" class="form-control" input-group-lg reg_name />
+                    <span asp-validation-for="Award.AwardDate" class="text-danger"></span>
+                </div>
+
+            </div>
+        </div>
+
+
+        <div class="form-group">
+            <input type="submit" value="Save" class="btn btn-primary" />
+        </div>
+
+    </form>
+</div>
+
+@*Received HTML code from server*@
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
