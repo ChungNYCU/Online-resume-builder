@@ -144,7 +144,9 @@ else
 
 @code
 {
+    // Currently selected product for viewing more info
     ProductModel selectedProduct;
+    // Id of the selected product
     string selectedProductId;
 
     // Contents of the search bar
@@ -156,6 +158,10 @@ else
     // Determines when a search is made
     bool searching = false;
 
+    /// <summary>
+    /// Used when more infor is requested from the card
+    /// </summary>
+    /// <param name="productId"></param>
     void SelectProduct(string productId)
     {
         selectedProductId = productId;
@@ -163,19 +169,29 @@ else
         GetCurrentRating();
     }
 
+    // String that signifies the card or products personal status
     public string PersonalStatus { get; set; }
 
+    /// <summary>
+    /// Saves the personal status to the database
+    /// </summary>
+    /// <param name="PersonalStatus"></param>
     void SubmitPersonalStatus(string PersonalStatus)
     {
         ProductService.UpdatePersonalStatus(selectedProductId, PersonalStatus);
         SelectProduct(selectedProductId);
     }
 
-
+    // Current rating on display
     int currentRating = 0;
+    // New rating
     int voteCount = 0;
+    // New rating name
     string voteLabel;
 
+    /// <summary>
+    /// Retreives the rating on a product
+    /// </summary>
     void GetCurrentRating()
     {
         if (selectedProduct.Ratings == null)
@@ -193,6 +209,10 @@ else
         System.Console.WriteLine($"Current rating for {selectedProduct.Id}: {currentRating}");
     }
 
+    /// <summary>
+    /// Submits the current rating to be saved to the database
+    /// </summary>
+    /// <param name="rating"></param>
     void SubmitRating(int rating)
     {
         System.Console.WriteLine($"Rating received for {selectedProduct.Id}: {rating}");
@@ -211,6 +231,7 @@ else
 
     /// <summary>
     /// Search function that searches the product list for any words that may be found from the search bar
+    /// Creates two lists, one contains the successful searches and the other the failed searches
     /// </summary>
     void Search()
     {
