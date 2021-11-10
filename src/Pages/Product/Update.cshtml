@@ -65,13 +65,13 @@
             <tbody>
                 @foreach (var education in Model.Product.EducationList)
                 {
-                <tr>
-                    <td>@education.University</td>
-                    <td>@education.Degree</td>
-                    <td>@education.Major</td>
-                    <td><a asp-page="./Education/UpdateEducation" asp-route-productId="@education.ProductID" asp-route-EducationID="@education.ID">Update</a></td>
-                    <td><a asp-page="./Education/DeleteEducation" asp-route-productId="@education.ProductID" asp-route-EducationID="@education.ID">Delete</a></td>
-                </tr>
+                    <tr>
+                        <td>@education.University</td>
+                        <td>@education.Degree</td>
+                        <td>@education.Major</td>
+                        <td><a asp-page="./Education/UpdateEducation" asp-route-productId="@education.ProductID" asp-route-EducationID="@education.ID">Update</a></td>
+                        <td><a asp-page="./Education/DeleteEducation" asp-route-productId="@education.ProductID" asp-route-EducationID="@education.ID">Delete</a></td>
+                    </tr>
                 }
             </tbody>
         </table>
@@ -113,26 +113,32 @@
 
         <hr class="rounded">
         <div class="divcss5">AWARD</div>
-        <div class="form-group">
-            <label asp-for="Product.Awards.Award" class="control-label"></label>
-            <input asp-for="Product.Awards.Award" class="form-control" />
-            <span asp-validation-for="Product.Awards.Award" class="text-danger"></span>
-        </div>
-        <div class="container">
-            <div class="row">
-                <div class="form-group col-xs-6">
-                    <label asp-for="Product.Awards.Issuer" class="control-label"></label>
-                    <input asp-for="Product.Awards.Issuer" class="form-control" input-group-lg reg_name />
-                    <span asp-validation-for="Product.Awards.Issuer" class="text-danger"></span>
-                </div>
 
-                <div class="form-group col-xs-6">
-                    <label asp-for="Product.Awards.AwardDate" class="control-label"></label>
-                    <input asp-for="Product.Awards.AwardDate" class="form-control" input-group-lg reg_name />
-                    <span asp-validation-for="Product.Awards.AwardDate" class="text-danger"></span>
-                </div>
-            </div>
-        </div>
+        <a asp-page="./Award/AddAward" asp-route-id="@Model.Product.Id">+ Add Award Experience</a>
+
+        <table class="table table-bordered table-striped">
+            <thead>
+                <tr>
+                    <th>Award</th>
+                    <th>Issuer</th>
+                    <th>AwardDate</th>
+                    <th>Action</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var award in Model.Product.AwardList)
+                {
+                    <tr>
+                        <td>@award.Award</td>
+                        <td>@award.Issuer</td>
+                        <td>@award.AwardDate</td>
+                        <td><a asp-page="./Award/UpdateAward" asp-route-productId="@award.ProductID" asp-route-EducationID="@education.ID">Update</a></td>
+                        <td><a asp-page="./Award/DeleteAward" asp-route-productId="@award.ProductID" asp-route-EducationID="@education.ID">Delete</a></td>
+                    </tr>
+                }
+            </tbody>
+        </table>
 
         <div class="form-group">
             <label asp-for="Product.Password" class="control-label"></label>

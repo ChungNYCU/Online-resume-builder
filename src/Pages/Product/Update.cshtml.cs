@@ -68,6 +68,13 @@ namespace ContosoCrafts.WebSite.Pages.Product
                 Product.EducationList = TempProduct.EducationList;
             }
 
+            // Get AwardList
+            //var TempProductAward = ProductService.GetAllData().FirstOrDefault(m => m.Id.Equals(Product.Id));
+            if (TempProduct != null)
+            {
+                Product.AwardList = TempProduct.AwardList;
+            }
+
             // If password match, update data. If not, go back to update page
             if (ProductService.UpdateData(Product) == false) 
             {
