@@ -178,7 +178,7 @@ namespace ContosoCrafts.WebSite.Services
             // Update old data with new data
             productData.FullName = data.FullName;
             productData.AboutMe = data.AboutMe;
-            productData.Awards = data.Awards;
+            productData.AwardsList = data.AwardsList;
             productData.LinkedinUrl = data.LinkedinUrl;
             productData.Photo = data.Photo;
             productData.EducationList = data.EducationList;
