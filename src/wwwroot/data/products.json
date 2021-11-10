@@ -6,46 +6,62 @@
     "img": "https://c.smartrecruiters.com/sr-smart-profile-avatars-prod-dc5/2e3404d5-15b6-4f8a-b7a1-228c3b8fb38d?r=s3-eu-central-1\u0026refresh=2ebb764d-8acf-4e58-bae8-29a77aad8035",
     "LinkedinUrl": "https://www.linkedin.com/in/june-liao/",
     "FullName": "June Liao",
-    "Awards": {
-      "Award": "1",
-      "Issuer": "0",
-      "AwardDate": "0"
-    },
-    "Experiences": {
-      "Title": "Software Engineer Intern!",
-      "Employer": "Bashpole Software, Inc.",
-      "StartDate": "Sept 2021",
-      "EndDate": "May 2023",
-      "Description": "\u2022 Develop client and server software that automates Nonprofit online advertising and helps evaluate their general marketing performance\r\n\u2022 Work as a full-stack developer adding frontend and backend to landing pages"
-    },
-    "EducationList": [
+    "AwardsList": [
       {
         "ProductID": "1",
         "ID": "80ad752a-6c74-4a0e-b7cc-8747a1f21448",
-        "University": "Seattle University",
-        "Location": "Seattle, WA",
-        "Degree": "MS",
-        "Major": "CS",
-        "GPA": "4.0",
-        "StartDate": "Sept 2011",
-        "EndDate": "June 2023"
-      },
-      {
-        "ProductID": "1",
-        "ID": "c2de906b-ae73-4820-8d8f-971fea2e3c23",
-        "University": "Seattle College",
-        "Location": "Seattle, WA",
-        "Degree": "N/A",
-        "Major": "CS",
-        "GPA": "3.7",
-        "StartDate": "Sept 2019",
-        "EndDate": "June 2023"
+        "Award": "1",
+        "Issuer": "0",
+        "AwardDate": "0"
       }
     ],
-    "PersonalSkill": "Java, Python, C\u002B\u002B, C#, SQL, Unix, Windows, AWS RDS",
-    "AboutMe": "Seeking for 2022 intern\uFF01",
-    "Ratings": null,
-    "Password": "/Oo1nScwK04Vf\u002ByeC2P3Yw=="
+      "Experiences"
+      :
+      {
+        "Title": "Software Engineer Intern!",
+        "Employer": "Bashpole Software, Inc.",
+        "StartDate": "Sept 2021",
+        "EndDate": "May 2023",
+        "Description": "\u2022 Develop client and server software that automates Nonprofit online advertising and helps evaluate their general marketing performance\r\n\u2022 Work as a full-stack developer adding frontend and backend to landing pages"
+      },
+      "EducationList"
+      :
+      [
+        {
+          "ProductID": "1",
+          "ID": "80ad752a-6c74-4a0e-b7cc-8747a1f21448",
+          "University": "Seattle University",
+          "Location": "Seattle, WA",
+          "Degree": "MS",
+          "Major": "CS",
+          "GPA": "4.0",
+          "StartDate": "Sept 2011",
+          "EndDate": "June 2023"
+        },
+        {
+          "ProductID": "1",
+          "ID": "c2de906b-ae73-4820-8d8f-971fea2e3c23",
+          "University": "Seattle College",
+          "Location": "Seattle, WA",
+          "Degree": "N/A",
+          "Major": "CS",
+          "GPA": "3.7",
+          "StartDate": "Sept 2019",
+          "EndDate": "June 2023"
+        }
+      ],
+      "PersonalSkill"
+      :
+      "Java, Python, C\u002B\u002B, C#, SQL, Unix, Windows, AWS RDS",
+      "AboutMe"
+      :
+      "Seeking for 2022 intern\uFF01",
+      "Ratings"
+      :
+      null,
+      "Password"
+      :
+      "/Oo1nScwK04Vf\u002ByeC2P3Yw=="
   },
   {
     "Id": "2",

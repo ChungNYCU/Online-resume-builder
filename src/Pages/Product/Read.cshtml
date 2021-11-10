@@ -31,7 +31,7 @@
         <div> From @EducationRecord.StartDate to @EducationRecord.EndDate, @EducationRecord.Location</div>
 
     }
- 
+
 
     <p class="card-text"></p>
     <h5 class="title" id="productTitle">Work Experience</h5>
@@ -42,9 +42,13 @@
 
     <p class="card-text"></p>
     <h5 class="title" id="productTitle">Awards</h5>
-    <div> <hr class="dashed"> </div>
-    <p>Award: @Model.Product.Awards.Award   &nbsp   Issuer: @Model.Product.Awards.Issuer   &nbsp    Date: @Model.Product.Awards.AwardDate</p>
+    @foreach (var AwardRecord in @Model.Product.AwardList)
+    {
+        <div> <hr class="dashed"> </div>
+        <div> <strong>@AwardRecord.Award</strong> </div>
+        <div> Issuer <strong>@AwardRecord.Issuer </strong> Award Date <strong>@AwardRecord.AwardDate</strong> </div>
 
+    }
     <div class="row" style="margin:10px;">
         <a asp-page="Update" asp-route-id="@Model.Product.Id" class="btn btn-primary">Update</a> &nbsp; &nbsp;
         <a asp-page="Delete" asp-route-id="@Model.Product.Id" class="btn btn-danger">Delete</a>
