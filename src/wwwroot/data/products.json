@@ -6,62 +6,50 @@
     "img": "https://c.smartrecruiters.com/sr-smart-profile-avatars-prod-dc5/2e3404d5-15b6-4f8a-b7a1-228c3b8fb38d?r=s3-eu-central-1\u0026refresh=2ebb764d-8acf-4e58-bae8-29a77aad8035",
     "LinkedinUrl": "https://www.linkedin.com/in/june-liao/",
     "FullName": "June Liao",
-    "AwardsList": [
+    "AwardList": [
+      {
+        "ProductID": "1",
+        "ID": "6031eca8-04a9-44bb-9f4d-8f34f11f0731",
+        "Award": "1",
+        "Issuer": "2",
+        "AwardDate": "3"
+      }
+    ],
+    "Experiences": {
+      "Title": "Software Engineer Intern!",
+      "Employer": "Bashpole Software, Inc.",
+      "StartDate": "Sept 2021",
+      "EndDate": "May 2023",
+      "Description": "\u2022 Develop client and server software that automates Nonprofit online advertising and helps evaluate their general marketing performance\r\n\u2022 Work as a full-stack developer adding frontend and backend to landing pages"
+    },
+    "EducationList": [
       {
         "ProductID": "1",
         "ID": "80ad752a-6c74-4a0e-b7cc-8747a1f21448",
-        "Award": "1",
-        "Issuer": "0",
-        "AwardDate": "0"
+        "University": "Seattle University",
+        "Location": "Seattle, WA",
+        "Degree": "MS",
+        "Major": "CS",
+        "GPA": "4.0",
+        "StartDate": "Sept 2011",
+        "EndDate": "June 2023"
+      },
+      {
+        "ProductID": "1",
+        "ID": "c2de906b-ae73-4820-8d8f-971fea2e3c23",
+        "University": "Seattle College",
+        "Location": "Seattle, WA",
+        "Degree": "N/A",
+        "Major": "CS",
+        "GPA": "3.7",
+        "StartDate": "Sept 2019",
+        "EndDate": "June 2023"
       }
     ],
-      "Experiences"
-      :
-      {
-        "Title": "Software Engineer Intern!",
-        "Employer": "Bashpole Software, Inc.",
-        "StartDate": "Sept 2021",
-        "EndDate": "May 2023",
-        "Description": "\u2022 Develop client and server software that automates Nonprofit online advertising and helps evaluate their general marketing performance\r\n\u2022 Work as a full-stack developer adding frontend and backend to landing pages"
-      },
-      "EducationList"
-      :
-      [
-        {
-          "ProductID": "1",
-          "ID": "80ad752a-6c74-4a0e-b7cc-8747a1f21448",
-          "University": "Seattle University",
-          "Location": "Seattle, WA",
-          "Degree": "MS",
-          "Major": "CS",
-          "GPA": "4.0",
-          "StartDate": "Sept 2011",
-          "EndDate": "June 2023"
-        },
-        {
-          "ProductID": "1",
-          "ID": "c2de906b-ae73-4820-8d8f-971fea2e3c23",
-          "University": "Seattle College",
-          "Location": "Seattle, WA",
-          "Degree": "N/A",
-          "Major": "CS",
-          "GPA": "3.7",
-          "StartDate": "Sept 2019",
-          "EndDate": "June 2023"
-        }
-      ],
-      "PersonalSkill"
-      :
-      "Java, Python, C\u002B\u002B, C#, SQL, Unix, Windows, AWS RDS",
-      "AboutMe"
-      :
-      "Seeking for 2022 intern\uFF01",
-      "Ratings"
-      :
-      null,
-      "Password"
-      :
-      "/Oo1nScwK04Vf\u002ByeC2P3Yw=="
+    "PersonalSkill": "Java, Python, C\u002B\u002B, C#, SQL, Unix, Windows, AWS RDS",
+    "AboutMe": "Seeking for 2022 intern\uFF01",
+    "Ratings": null,
+    "Password": "/Oo1nScwK04Vf\u002ByeC2P3Yw=="
   },
   {
     "Id": "2",
@@ -70,11 +58,7 @@
     "img": "https://media.discordapp.net/attachments/541396502262579227/900161062836523049/IMG_0998.jpg?width=752\u0026height=1002",
     "LinkedinUrl": "https://www.linkedin.com/in/jessetw/",
     "FullName": "Chung, Wei-Che",
-    "Awards": {
-      "Award": "1st in APEX",
-      "Issuer": "APEX",
-      "AwardDate": "11/05/2021"
-    },
+    "AwardList": [],
     "Experiences": {
       "Title": "Software development intern",
       "Employer": "Yulon Nissan Motor Co., Ltd. ",
@@ -95,11 +79,7 @@
     "img": "https://media-exp1.licdn.com/dms/image/C5603AQEYVsZV6aTsdg/profile-displayphoto-shrink_200_200/0/1602465475326?e=1640217600\u0026v=beta\u0026t=grmM4aBqgzXlYz-4NbyihC7OiBpgRbvWDxPGtM8WmZU",
     "LinkedinUrl": "https://www.linkedin.com/in/benny-wong-ab71b8160/",
     "FullName": "Benny Wong",
-    "Awards": {
-      "Award": "Graduate Scholarship",
-      "Issuer": "Seattle University ",
-      "AwardDate": "Aug 2021"
-    },
+    "AwardList": [],
     "Experiences": {
       "Title": "Accommodation Analysis",
       "Employer": "Airbnb",
@@ -120,11 +100,7 @@
     "img": "https://scontent-sea1-1.xx.fbcdn.net/v/t31.18172-8/614359_3805111441040_1022959363_o.jpg?_nc_cat=107\u0026ccb=1-5\u0026_nc_sid=de6eea\u0026_nc_ohc=ci5FtlvNUDQAX-3XzxO\u0026_nc_ht=scontent-sea1-1.xx\u0026oh=203dd530235bee131ae4d0351502ae5b\u0026oe=61A4FE47",
     "LinkedinUrl": "https://www.linkedin.com/in/bart-joseph-nadala-517b01a0/",
     "FullName": "Nadala, Bart Joseph",
-    "Awards": {
-      "Award": "Graduate Scholarship",
-      "Issuer": "Seattle University ",
-      "AwardDate": "Aug 2021"
-    },
+    "AwardList": [],
     "Experiences": {
       "Title": "Web Developer Internship",
       "Employer": "Taxi Driving",
@@ -145,11 +121,7 @@
     "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Seattle_Redhawks_logo.svg/1200px-Seattle_Redhawks_logo.svg.png",
     "LinkedinUrl": "https://www.linkedin.com/in/xinyu-qiu-46b064176/",
     "FullName": "Xinyu, Qiu",
-    "Awards": {
-      "Award": "Graduate Scholarship",
-      "Issuer": "Seattle University ",
-      "AwardDate": "Aug 2021"
-    },
+    "AwardList": [],
     "Experiences": {
       "Title": "Data Science Capstone Project",
       "Employer": "IBM",
@@ -170,11 +142,7 @@
     "img": "https://media.istockphoto.com/photos/handsome-afro-student-posing-on-bookshelves-background-picture-id1171062918?k=20\u0026m=1171062918\u0026s=612x612\u0026w=0\u0026h=I6djuMs92BCgJaBv5iIsPALt2oZ8mYQU7ttF1hmhPkE=",
     "LinkedinUrl": null,
     "FullName": "Jamar Baird",
-    "Awards": {
-      "Award": "Graduate Scholarship",
-      "Issuer": "Seattle University",
-      "AwardDate": "Aug 2021"
-    },
+    "AwardList": [],
     "Experiences": {
       "Title": "Volunteering Teacher",
       "Employer": "Bambupai Elementary School",
@@ -195,11 +163,7 @@
     "img": "https://media.istockphoto.com/photos/portrait-of-a-young-african-american-male-student-going-to-a-picture-id1269950687?b=1\u0026k=20\u0026m=1269950687\u0026s=170667a\u0026w=0\u0026h=6iM9cnKCBJvOxjiMqRNdXd1Mr7Ngspq2FxRgU2gebac=",
     "LinkedinUrl": null,
     "FullName": "Zavier Mercer",
-    "Awards": {
-      "Award": "Graduate Scholarship",
-      "Issuer": "Seattle University",
-      "AwardDate": "Aug 2021"
-    },
+    "AwardList": [],
     "Experiences": {
       "Title": "Activities Assistant",
       "Employer": " Shenzhen Ciwei Philanthropy Institute",
@@ -220,11 +184,7 @@
     "img": "https://media.gettyimages.com/photos/happy-student-in-class-picture-id539246041?s=612x612",
     "LinkedinUrl": null,
     "FullName": "Wade Nguyen",
-    "Awards": {
-      "Award": "Graduate Scholarship",
-      "Issuer": "Seattle University",
-      "AwardDate": "Aug 2021"
-    },
+    "AwardList": [],
     "Experiences": {
       "Title": "Activities Assistant",
       "Employer": "Shenzhen Ciwei Philanthropy Institute",
@@ -245,11 +205,7 @@
     "img": "https://img.freepik.com/free-photo/front-view-male-student-wearing-black-backpack-holding-copybooks-files-blue-wall_140725-42636.jpg?size=626\u0026ext=jpg",
     "LinkedinUrl": null,
     "FullName": "Brynn Scott",
-    "Awards": {
-      "Award": "Graduate Scholarship",
-      "Issuer": null,
-      "AwardDate": "Aug 2021"
-    },
+    "AwardList": [],
     "Experiences": {
       "Title": "Web Software Engineer",
       "Employer": "Muyuan Digital Technology",
@@ -270,11 +226,7 @@
     "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUkbbKkIwHB5qCx2P9XdpdDfM1XXbQEsKYgQ\u0026usqp=CAU",
     "LinkedinUrl": "",
     "FullName": "Toby Mccullough",
-    "Awards": {
-      "Award": "",
-      "Issuer": null,
-      "AwardDate": ""
-    },
+    "AwardList": [],
     "Experiences": {
       "Title": "Web Software Engineer",
       "Employer": "Muyuan Digital Technology",
@@ -295,11 +247,7 @@
     "img": "https://static8.depositphotos.com/1008303/880/i/600/depositphotos_8803246-stock-photo-asian-college-student.jpg",
     "LinkedinUrl": "",
     "FullName": "Aliyah Riddle",
-    "Awards": {
-      "Award": "",
-      "Issuer": null,
-      "AwardDate": ""
-    },
+    "AwardList": [],
     "Experiences": {
       "Title": "Web Software Engineer",
       "Employer": "Muyuan Digital Technology",
@@ -320,11 +268,7 @@
     "img": "https://images.unsplash.com/photo-1544717305-2782549b5136?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8c3R1ZGVudHxlbnwwfHwwfHw%3D\u0026ixlib=rb-1.2.1\u0026w=1000\u0026q=80",
     "LinkedinUrl": "",
     "FullName": "Jewel Blackburn",
-    "Awards": {
-      "Award": "",
-      "Issuer": null,
-      "AwardDate": ""
-    },
+    "AwardList": [],
     "Experiences": {
       "Title": "Web Software Engineer",
       "Employer": "Muyuan Digital Technology",
@@ -345,11 +289,7 @@
     "img": "https://st.depositphotos.com/1594308/2419/i/600/depositphotos_24196475-stock-photo-student-with-copybook.jpg",
     "LinkedinUrl": "",
     "FullName": "Emery Richards",
-    "Awards": {
-      "Award": "",
-      "Issuer": null,
-      "AwardDate": ""
-    },
+    "AwardList": [],
     "Experiences": {
       "Title": "Web Software Engineer",
       "Employer": "Muyuan Digital Technology",
@@ -370,11 +310,7 @@
     "img": "https://img.favpng.com/2/24/9/stock-photography-student-university-royalty-free-college-png-favpng-s8TJuUCFXdgcWThfCJpLSNyKb.jpg",
     "LinkedinUrl": "",
     "FullName": "Henry Pineda",
-    "Awards": {
-      "Award": "Graduate Scholarship",
-      "Issuer": null,
-      "AwardDate": "Aug 2021"
-    },
+    "AwardList": [],
     "Experiences": {
       "Title": "Web Software Engineer",
       "Employer": "Muyuan Digital Technology",
@@ -395,11 +331,7 @@
     "img": "https://petapixel.com/assets/uploads/2020/03/student-800x534.jpg",
     "LinkedinUrl": "",
     "FullName": "Trevor Dunlap",
-    "Awards": {
-      "Award": "Graduate Scholarship",
-      "Issuer": null,
-      "AwardDate": "Aug 2021"
-    },
+    "AwardList": [],
     "Experiences": {
       "Title": "Web Software Engineer",
       "Employer": "Muyuan Digital Technology",
@@ -420,11 +352,7 @@
     "img": "https://pngimg.com/uploads/student/student_PNG62560.png",
     "LinkedinUrl": "",
     "FullName": "Amiya Peters",
-    "Awards": {
-      "Award": "Graduate Scholarship",
-      "Issuer": null,
-      "AwardDate": "Aug 2021"
-    },
+    "AwardList": [],
     "Experiences": {
       "Title": "Web Software Engineer",
       "Employer": "Muyuan Digital Technology",
@@ -445,11 +373,7 @@
     "img": "https://image.shutterstock.com/image-photo/redirected-250nw-18085504.jpg",
     "LinkedinUrl": "",
     "FullName": "Layla Roberts",
-    "Awards": {
-      "Award": "",
-      "Issuer": null,
-      "AwardDate": ""
-    },
+    "AwardList": [],
     "Experiences": {
       "Title": "Web Software Engineer",
       "Employer": "Muyuan Digital Technology",
@@ -470,11 +394,7 @@
     "img": "https://image.shutterstock.com/image-photo/confident-handsome-student-holding-books-260nw-366568778.jpg",
     "LinkedinUrl": "",
     "FullName": "Conner Romero",
-    "Awards": {
-      "Award": "Graduate Scholarship",
-      "Issuer": null,
-      "AwardDate": "Aug 2021"
-    },
+    "AwardList": [],
     "Experiences": {
       "Title": "Web Software Engineer",
       "Employer": "Muyuan Digital Technology",
@@ -495,11 +415,7 @@
     "img": "https://image.shutterstock.com/image-photo/confident-handsome-student-holding-books-260nw-366568778.jpg",
     "LinkedinUrl": "",
     "FullName": "Kennedy Lee",
-    "Awards": {
-      "Award": "Graduate Scholarship",
-      "Issuer": null,
-      "AwardDate": "Aug 2021"
-    },
+    "AwardList": [],
     "Experiences": {
       "Title": "Web Software Engineer",
       "Employer": "Muyuan Digital Technology",
@@ -520,11 +436,7 @@
     "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQSZTl5YVnfRPBou-SYoPKin1ixm0anKr00dw\u0026usqp=CAU",
     "LinkedinUrl": "",
     "FullName": "Cute Racoon",
-    "Awards": {
-      "Award": "Graduate Scholarship",
-      "Issuer": null,
-      "AwardDate": "Aug 2021"
-    },
+    "AwardList": [],
     "Experiences": {
       "Title": "Web Software Engineer",
       "Employer": "Muyuan Digital Technology",
@@ -545,11 +457,7 @@
     "img": "https://pbs.twimg.com/profile_images/691301949640183809/BUeLHGW7_400x400.jpg",
     "LinkedinUrl": "",
     "FullName": "Cute Racoon",
-    "Awards": {
-      "Award": "Graduate Scholarship",
-      "Issuer": null,
-      "AwardDate": "Aug 2021"
-    },
+    "AwardList": [],
     "Experiences": {
       "Title": "Web Software Engineer",
       "Employer": "Muyuan Digital Technology",
@@ -570,11 +478,7 @@
     "img": null,
     "LinkedinUrl": "Enter URL",
     "FullName": "Mike",
-    "Awards": {
-      "Award": null,
-      "Issuer": null,
-      "AwardDate": null
-    },
+    "AwardList": [],
     "Experiences": {
       "Title": null,
       "Employer": null,
@@ -595,7 +499,7 @@
     "img": "Enter Photo URL",
     "LinkedinUrl": "Enter URL",
     "FullName": "Enter FullName",
-    "Awards": null,
+    "AwardList": [],
     "Experiences": null,
     "EducationList": [],
     "PersonalSkill": null,
@@ -610,11 +514,7 @@
     "img": "111",
     "LinkedinUrl": "111",
     "FullName": "Chris",
-    "Awards": {
-      "Award": "3",
-      "Issuer": null,
-      "AwardDate": null
-    },
+    "AwardList": [],
     "Experiences": {
       "Title": "5",
       "Employer": null,
@@ -635,7 +535,7 @@
     "img": "Enter Photo URL",
     "LinkedinUrl": "Enter URL",
     "FullName": "Enter FullName",
-    "Awards": null,
+    "AwardList": [],
     "Experiences": null,
     "EducationList": [],
     "PersonalSkill": null,
@@ -650,7 +550,7 @@
     "img": "Enter Photo URL",
     "LinkedinUrl": "Enter URL",
     "FullName": "Enter FullName",
-    "Awards": null,
+    "AwardList": [],
     "Experiences": null,
     "EducationList": [],
     "PersonalSkill": null,
@@ -665,7 +565,7 @@
     "img": "Enter Photo URL",
     "LinkedinUrl": "Enter URL",
     "FullName": "Enter FullName",
-    "Awards": null,
+    "AwardList": [],
     "Experiences": null,
     "EducationList": [],
     "PersonalSkill": null,
