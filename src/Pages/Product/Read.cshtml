@@ -45,10 +45,12 @@
     @foreach (var AwardRecord in @Model.Product.AwardList)
     {
         <div> <hr class="dashed"> </div>
-        <div> <strong>@AwardRecord.Award</strong> </div>
-        <div> Issuer <strong>@AwardRecord.Issuer </strong> Award Date <strong>@AwardRecord.AwardDate</strong> </div>
+        <div> Award: <strong>@AwardRecord.Award</strong> </div>
+        <div> Issuer: <strong>@AwardRecord.Issuer </strong> </div>
+        <div> Award Date: <strong>@AwardRecord.AwardDate</strong> </div>
 
     }
+
     <div class="row" style="margin:10px;">
         <a asp-page="Update" asp-route-id="@Model.Product.Id" class="btn btn-primary">Update</a> &nbsp; &nbsp;
         <a asp-page="Delete" asp-route-id="@Model.Product.Id" class="btn btn-danger">Delete</a>
