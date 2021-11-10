@@ -60,15 +60,15 @@
     "FullName": "Chung, Wei-Che",
     "AwardList": [],
     "Experiences": {
-      "Title": "Software development intern",
-      "Employer": "Yulon Nissan Motor Co., Ltd. ",
-      "StartDate": "July 2019",
-      "EndDate": "September 2019",
-      "Description": "\u2022 Developed a meal ordering web application using an existing .NET Core MVC Framework,\r\nwhich save 80% of employees\u2019s meal time, including ordering and picking meals\r\n\u2022 Proficient in tracing code and SQL Server"
+      "Title": null,
+      "Employer": null,
+      "StartDate": null,
+      "EndDate": null,
+      "Description": null
     },
     "EducationList": [],
-    "PersonalSkill": "C#, .Net, Python, scikit-learn, Java, Git, Linux, SQL, HTML/CSS, PHP, JavaScript, Blockchain",
-    "AboutMe": "Seeking for 2022 intern\uFF01",
+    "PersonalSkill": null,
+    "AboutMe": null,
     "Ratings": null,
     "Password": "/Lh0SDXf6f9nyy8eejvOqg=="
   },
