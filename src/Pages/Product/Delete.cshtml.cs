@@ -12,7 +12,7 @@ using ContosoCrafts.WebSite.Services;
 namespace ContosoCrafts.WebSite.Pages.Product
 {
     /// <summary>
-    /// Manage the Delete of the data for a single record
+    /// Delete of the data for a single record 
     /// </summary>
     public class DeleteModel : PageModel
     {
