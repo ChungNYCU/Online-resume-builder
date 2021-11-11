@@ -185,6 +185,7 @@ namespace ContosoCrafts.WebSite.Services
             productData.PersonalSkill = data.PersonalSkill;
             productData.Experiences = data.Experiences;
             productData.Password = data.Password;
+            productData.Viewed = data.Viewed;
 
             // Save it to JSON file
             SaveProducts(product);
