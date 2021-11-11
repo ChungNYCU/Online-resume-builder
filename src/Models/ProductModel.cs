@@ -41,6 +41,8 @@ namespace ContosoCrafts.WebSite.Models
         public int[] Ratings { get; set; }
         // get user password 
         public string Password { get; set; }
+        // get Viewed
+        public int Viewed { get; set; } = 0;
     }
 
 
