@@ -2,6 +2,8 @@ using System.Linq;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using ContosoCrafts.WebSite.Models;
 using ContosoCrafts.WebSite.Services;
+using Microsoft.AspNetCore.Components.Web;
+using System.Web;
 
 /// <summary>
 /// Contains pages with the product CRUDi
@@ -38,6 +40,8 @@ namespace ContosoCrafts.WebSite.Pages.Product
         {
             // getting product service data from ID
             Product  = ProductService.GetAllData().FirstOrDefault(m => m.Id.Equals(id));
+            Product.Viewed += 1;
+            ProductService.UpdateData(Product);
         }
     }
 }
