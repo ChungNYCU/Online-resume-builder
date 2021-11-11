@@ -49,7 +49,8 @@
     "PersonalSkill": "Java, Python, C\u002B\u002B, C#, SQL, Unix, Windows, AWS RDS",
     "AboutMe": "Seeking for 2022 intern\uFF01",
     "Ratings": null,
-    "Password": "/Oo1nScwK04Vf\u002ByeC2P3Yw=="
+    "Password": "/Oo1nScwK04Vf\u002ByeC2P3Yw==",
+    "Viewed": 0
   },
   {
     "Id": "2",
@@ -70,7 +71,8 @@
     "PersonalSkill": null,
     "AboutMe": null,
     "Ratings": null,
-    "Password": "/Lh0SDXf6f9nyy8eejvOqg=="
+    "Password": "/Lh0SDXf6f9nyy8eejvOqg==",
+    "Viewed": 1
   },
   {
     "Id": "3",
@@ -91,7 +93,8 @@
     "PersonalSkill": "C\u002B\u002B, Python, Java",
     "AboutMe": "Seeking for 2022 intern\uFF01",
     "Ratings": null,
-    "Password": "9UrJvTdIuE6DvqOpFzB3/w=="
+    "Password": "9UrJvTdIuE6DvqOpFzB3/w==",
+    "Viewed": 0
   },
   {
     "Id": "4",
@@ -112,7 +115,8 @@
     "PersonalSkill": "SQL, C\u002B\u002B, Python, Java, Azure",
     "AboutMe": "Seeking for 2022 intern\uFF01",
     "Ratings": null,
-    "Password": null
+    "Password": null,
+    "Viewed": 0
   },
   {
     "Id": "5",
@@ -133,7 +137,8 @@
     "PersonalSkill": "html, css, css, AWS",
     "AboutMe": "Seeking for 2022 intern!",
     "Ratings": null,
-    "Password": null
+    "Password": null,
+    "Viewed": 0
   },
   {
     "Id": "6",
@@ -154,7 +159,8 @@
     "PersonalSkill": "React, Node.JS, JavaScript",
     "AboutMe": "Im just a normal person",
     "Ratings": null,
-    "Password": null
+    "Password": null,
+    "Viewed": 0
   },
   {
     "Id": "7",
@@ -175,7 +181,8 @@
     "PersonalSkill": "Juggling",
     "AboutMe": "I like juggling",
     "Ratings": null,
-    "Password": null
+    "Password": null,
+    "Viewed": 0
   },
   {
     "Id": "8",
@@ -196,7 +203,8 @@
     "PersonalSkill": "Wood cutting",
     "AboutMe": "I like cutting wood",
     "Ratings": null,
-    "Password": null
+    "Password": null,
+    "Viewed": 0
   },
   {
     "Id": "9",
@@ -217,7 +225,8 @@
     "PersonalSkill": "C\u002B\u002B, Java, Python, C#",
     "AboutMe": "I jog everyday!",
     "Ratings": null,
-    "Password": null
+    "Password": null,
+    "Viewed": 0
   },
   {
     "Id": "10",
@@ -238,7 +247,8 @@
     "PersonalSkill": "Knife throwing, C#, .Net, Python, scikit-learn, Java, Git, Linux, SQL, HTML/CSS, PHP, JavaScript",
     "AboutMe": "I throw knives at trees when I am bored.",
     "Ratings": null,
-    "Password": null
+    "Password": null,
+    "Viewed": 0
   },
   {
     "Id": "11",
@@ -259,7 +269,8 @@
     "PersonalSkill": "Paper folding, C#, .Net, Python, scikit-learn, Java, Git, Linux, SQL, HTML/CSS, PHP, JavaScript",
     "AboutMe": "Origami is my passion.",
     "Ratings": null,
-    "Password": null
+    "Password": null,
+    "Viewed": 0
   },
   {
     "Id": "12",
@@ -280,7 +291,8 @@
     "PersonalSkill": "Gaming, C#, .Net, Python, scikit-learn, Java, Git, Linux, SQL, HTML/CSS, PHP, JavaScript",
     "AboutMe": "Gamer",
     "Ratings": null,
-    "Password": null
+    "Password": null,
+    "Viewed": 0
   },
   {
     "Id": "13",
@@ -301,7 +313,8 @@
     "PersonalSkill": "Fire breather, C#, .Net, Python, scikit-learn, Java, Git, Linux, SQL, HTML/CSS, PHP, JavaScript",
     "AboutMe": "No i am not a dragon. Yes it always smells like a firepit.",
     "Ratings": null,
-    "Password": null
+    "Password": null,
+    "Viewed": 0
   },
   {
     "Id": "14",
@@ -322,7 +335,8 @@
     "PersonalSkill": "C#, .Net, Python, scikit-learn, Java, Git, Linux, SQL, HTML/CSS, PHP, JavaScript",
     "AboutMe": "I like reading",
     "Ratings": null,
-    "Password": null
+    "Password": null,
+    "Viewed": 0
   },
   {
     "Id": "15",
@@ -343,7 +357,8 @@
     "PersonalSkill": "C#, .Net, Python, scikit-learn, Java, Git, Linux, SQL, HTML/CSS, PHP, JavaScript",
     "AboutMe": "I am a mechanical engineer",
     "Ratings": null,
-    "Password": null
+    "Password": null,
+    "Viewed": 0
   },
   {
     "Id": "16",
@@ -364,7 +379,8 @@
     "PersonalSkill": "C#, .Net, Python, scikit-learn, Java, Git, Linux, SQL, HTML/CSS, PHP, JavaScript",
     "AboutMe": "I am an electrician",
     "Ratings": null,
-    "Password": null
+    "Password": null,
+    "Viewed": 0
   },
   {
     "Id": "17",
@@ -385,7 +401,8 @@
     "PersonalSkill": "C#, .Net, Python, scikit-learn, Java, Git, Linux, SQL, HTML/CSS, PHP, JavaScript",
     "AboutMe": "I go to the gym on the weekends",
     "Ratings": null,
-    "Password": null
+    "Password": null,
+    "Viewed": 0
   },
   {
     "Id": "18",
@@ -406,7 +423,8 @@
     "PersonalSkill": "C#, .Net, Python, scikit-learn, Java, Git, Linux, SQL, HTML/CSS, PHP, JavaScript",
     "AboutMe": "My leatherworking skill is 100",
     "Ratings": null,
-    "Password": null
+    "Password": null,
+    "Viewed": 0
   },
   {
     "Id": "19",
@@ -427,7 +445,8 @@
     "PersonalSkill": "C#, .Net, Python, scikit-learn, Java, Git, Linux, SQL, HTML/CSS, PHP, JavaScript",
     "AboutMe": "I like cats but I was born to walk dogs",
     "Ratings": null,
-    "Password": null
+    "Password": null,
+    "Viewed": 0
   },
   {
     "Id": "Unit Test",
@@ -448,7 +467,8 @@
     "PersonalSkill": "",
     "AboutMe": "I like cats but I was born to walk dogs",
     "Ratings": null,
-    "Password": "abc123"
+    "Password": "abc123",
+    "Viewed": 0
   },
   {
     "Id": "Unit Test2",
@@ -469,7 +489,8 @@
     "PersonalSkill": "",
     "AboutMe": "I like cats but I was born to walk dogs",
     "Ratings": null,
-    "Password": "abc123"
+    "Password": "abc123",
+    "Viewed": 0
   },
   {
     "Id": "0e82dbc7-6b06-4426-a7cc-f4d0a3bf222c",
@@ -490,7 +511,8 @@
     "PersonalSkill": null,
     "AboutMe": "Enter Description",
     "Ratings": null,
-    "Password": "1PrzRgWesBeDukP6SHHWnncNimlQlbzdD74lCOP0M4g="
+    "Password": "1PrzRgWesBeDukP6SHHWnncNimlQlbzdD74lCOP0M4g=",
+    "Viewed": 0
   },
   {
     "Id": "79a43173-d267-4095-84cf-9bfe5e0f66c6",
@@ -505,7 +527,8 @@
     "PersonalSkill": null,
     "AboutMe": "Enter Description",
     "Ratings": null,
-    "Password": null
+    "Password": null,
+    "Viewed": 0
   },
   {
     "Id": "05368722-9f5b-4c95-b0f1-8a824d14e8c4",
@@ -526,7 +549,8 @@
     "PersonalSkill": "333",
     "AboutMe": "222",
     "Ratings": null,
-    "Password": "PBWsbwArPEzVYDbaOI88BfrpQecr5d39VYj57EmVLd0="
+    "Password": "PBWsbwArPEzVYDbaOI88BfrpQecr5d39VYj57EmVLd0=",
+    "Viewed": 0
   },
   {
     "Id": "3aed9a28-1857-4a91-9f36-c8c1a7f76614",
@@ -541,7 +565,8 @@
     "PersonalSkill": null,
     "AboutMe": "Enter Description",
     "Ratings": null,
-    "Password": null
+    "Password": null,
+    "Viewed": 0
   },
   {
     "Id": "f27811e7-13ee-4f0d-8c58-94cabab79f8f",
@@ -556,7 +581,8 @@
     "PersonalSkill": null,
     "AboutMe": "Enter Description",
     "Ratings": null,
-    "Password": null
+    "Password": null,
+    "Viewed": 0
   },
   {
     "Id": "a54f322b-c01c-4095-8fcb-697a9b9b68ae",
@@ -571,6 +597,29 @@
     "PersonalSkill": null,
     "AboutMe": "Enter Description",
     "Ratings": null,
-    "Password": null
+    "Password": null,
+    "Viewed": 0
+  },
+  {
+    "Id": "a04dc9a6-cade-49cf-a3be-947aa063f584",
+    "PersonalStatus": null,
+    "Maker": null,
+    "img": "Enter Photo URL",
+    "LinkedinUrl": "Enter URL",
+    "FullName": "Enter FullName",
+    "AwardList": [],
+    "Experiences": {
+      "Title": null,
+      "Employer": null,
+      "StartDate": null,
+      "EndDate": null,
+      "Description": null
+    },
+    "EducationList": [],
+    "PersonalSkill": null,
+    "AboutMe": "Enter Description",
+    "Ratings": null,
+    "Password": "I2dYurMvdPBW98gq5z7ekMyahHeCwz8kfkz3fEtZL8M=",
+    "Viewed": 0
   }
 ]
