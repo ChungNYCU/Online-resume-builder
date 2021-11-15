@@ -29,6 +29,7 @@
                 </div>
                 <div class="card-footer">
                     <small class="text-muted">
+                        <!-- Delete "more info" button and add the open button to redirect user to "Read" page-->
                         <a class="btn btn-primary" href="/Product/Read/@product.Id">Open</a>
                     </small>
                 </div>
@@ -50,6 +51,7 @@
                 </div>
                 <div class="card-footer">
                     <small class="text-muted">
+                        <!-- Delete "more info" button and add the open button to redirect user to "Read" page-->
                         <a class="btn btn-primary" href="/Product/Read/@product.Id">Open</a>
                     </small>
                 </div>
@@ -71,6 +73,7 @@ else
                 </div>
                 <div class="card-footer">
                     <small class="text-muted">
+                        <!-- Delete "more info" button and add the open button to redirect user to "Read" page-->
                         <a class="btn btn-primary" href="/Product/Read/@product.Id">Open</a>
                     </small>
                 </div>
@@ -149,14 +152,14 @@ else
     // Id of the selected product
     string selectedProductId;
 
-        // Contents of the search bar
-        string searchCriteria = "";
-        // Contains all matched products
-        List<ProductModel> returnList = new List<ProductModel>();
-        // Contains all unmatched products
-        List<ProductModel> missedList = new List<ProductModel>();
-        // Determines when a search is made
-        bool searching = false;
+    // Contents of the search bar
+    string searchCriteria = "";
+    // Contains all matched products
+    List<ProductModel> returnList = new List<ProductModel>();
+    // Contains all unmatched products
+    List<ProductModel> missedList = new List<ProductModel>();
+    // Determines when a search is made
+    bool searching = false;
 
     /// <summary>
     /// Used when more infor is requested from the card
@@ -166,6 +169,10 @@ else
     {
         selectedProductId = productId;
         selectedProduct = ProductService.GetAllData().First(x => x.Id == productId);
+        if (selectedProduct == null)
+        {
+            return;
+        }
         GetCurrentRating();
     }
 
@@ -318,111 +325,111 @@ else
                             found = true;
                             break;
                         }
-                        }
                     }
-                    if (product.Experiences != null && product.Experiences.Title != null && product.Experiences.Title.ToLower().Contains(word.ToLower()))
+                }
+                if (product.Experiences != null && product.Experiences.Title != null && product.Experiences.Title.ToLower().Contains(word.ToLower()))
+                {
+                    returnList.Add(product);
+                    found = true;
+                    break;
+                }
+                if (product.Experiences != null && product.Experiences.Employer != null && product.Experiences.Employer.ToLower().Contains(word.ToLower()))
+                {
+                    returnList.Add(product);
+                    found = true;
+                    break;
+                }
+                if (product.Experiences != null && product.Experiences.StartDate != null && product.Experiences.StartDate.ToLower().Contains(word.ToLower()))
+                {
+                    returnList.Add(product);
+                    found = true;
+                    break;
+                }
+                if (product.Experiences != null && product.Experiences.EndDate != null && product.Experiences.EndDate.ToLower().Contains(word.ToLower()))
+                {
+                    returnList.Add(product);
+                    found = true;
+                    break;
+                }
+                if (product.Experiences != null && product.Experiences.Description != null && product.Experiences.Description.ToLower().Contains(word.ToLower()))
+                {
+                    returnList.Add(product);
+                    found = true;
+                    break;
+                }
+                if (product.PersonalSkill != null && product.PersonalSkill.ToLower().Contains(word.ToLower()))
+                {
+                    returnList.Add(product);
+                    found = true;
+                    break;
+                }
+                if (product.AboutMe != null && product.AboutMe.ToLower().Contains(word.ToLower()))
+                {
+                    returnList.Add(product);
+                    found = true;
+                    break;
+                }
+                if (product.EducationList != null)
+                {
+                    foreach (var ed in product.EducationList)
                     {
-                        returnList.Add(product);
-                        found = true;
-                        break;
-                    }
-                    if (product.Experiences != null && product.Experiences.Employer != null && product.Experiences.Employer.ToLower().Contains(word.ToLower()))
-                    {
-                        returnList.Add(product);
-                        found = true;
-                        break;
-                    }
-                    if (product.Experiences != null && product.Experiences.StartDate != null && product.Experiences.StartDate.ToLower().Contains(word.ToLower()))
-                    {
-                        returnList.Add(product);
-                        found = true;
-                        break;
-                    }
-                    if (product.Experiences != null && product.Experiences.EndDate != null && product.Experiences.EndDate.ToLower().Contains(word.ToLower()))
-                    {
-                        returnList.Add(product);
-                        found = true;
-                        break;
-                    }
-                    if (product.Experiences != null && product.Experiences.Description != null && product.Experiences.Description.ToLower().Contains(word.ToLower()))
-                    {
-                        returnList.Add(product);
-                        found = true;
-                        break;
-                    }
-                    if (product.PersonalSkill != null && product.PersonalSkill.ToLower().Contains(word.ToLower()))
-                    {
-                        returnList.Add(product);
-                        found = true;
-                        break;
-                    }
-                    if (product.AboutMe != null && product.AboutMe.ToLower().Contains(word.ToLower()))
-                    {
-                        returnList.Add(product);
-                        found = true;
-                        break;
-                    }
-                    if (product.EducationList != null)
-                    {
-                        foreach (var ed in product.EducationList)
+                        if (ed.University != null && ed.University.ToLower().Contains(word.ToLower()))
                         {
-                            if (ed.University != null && ed.University.ToLower().Contains(word.ToLower()))
-                            {
-                                returnList.Add(product);
-                                found = true;
-                                break;
-                            }
-                            if (ed.Location != null && ed.Location.ToLower().Contains(word.ToLower()))
-                            {
-                                returnList.Add(product);
-                                found = true;
-                                break;
-                            }
-                            if (ed.Degree != null && ed.Degree.ToLower().Contains(word.ToLower()))
-                            {
-                                returnList.Add(product);
-                                found = true;
-                                break;
-                            }
-                            if (ed.Major != null && ed.Major.ToLower().Contains(word.ToLower()))
-                            {
-                                returnList.Add(product);
-                                found = true;
-                                break;
-                            }
-                            if (ed.GPA != null && ed.GPA.ToLower().Contains(word.ToLower()))
-                            {
-                                returnList.Add(product);
-                                found = true;
-                                break;
-                            }
-                            if (ed.StartDate != null && ed.StartDate.ToLower().Contains(word.ToLower()))
-                            {
-                                returnList.Add(product);
-                                found = true;
-                                break;
-                            }
-                            if (ed.EndDate != null && ed.EndDate.ToLower().Contains(word.ToLower()))
-                            {
-                                returnList.Add(product);
-                                found = true;
-                                break;
-                            }
+                            returnList.Add(product);
+                            found = true;
+                            break;
                         }
-
-                        if (found)
+                        if (ed.Location != null && ed.Location.ToLower().Contains(word.ToLower()))
                         {
+                            returnList.Add(product);
+                            found = true;
+                            break;
+                        }
+                        if (ed.Degree != null && ed.Degree.ToLower().Contains(word.ToLower()))
+                        {
+                            returnList.Add(product);
+                            found = true;
+                            break;
+                        }
+                        if (ed.Major != null && ed.Major.ToLower().Contains(word.ToLower()))
+                        {
+                            returnList.Add(product);
+                            found = true;
+                            break;
+                        }
+                        if (ed.GPA != null && ed.GPA.ToLower().Contains(word.ToLower()))
+                        {
+                            returnList.Add(product);
+                            found = true;
+                            break;
+                        }
+                        if (ed.StartDate != null && ed.StartDate.ToLower().Contains(word.ToLower()))
+                        {
+                            returnList.Add(product);
+                            found = true;
+                            break;
+                        }
+                        if (ed.EndDate != null && ed.EndDate.ToLower().Contains(word.ToLower()))
+                        {
+                            returnList.Add(product);
+                            found = true;
                             break;
                         }
                     }
 
+                    if (found)
+                    {
+                        break;
+                    }
                 }
 
-                // Activated when no match is found
-                if (!found)
-                {
-                    missedList.Add(product);
-                }
+            }
+
+            // Activated when no match is found
+            if (!found)
+            {
+                missedList.Add(product);
             }
         }
+    }
     }
