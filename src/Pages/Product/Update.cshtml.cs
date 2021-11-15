@@ -71,6 +71,7 @@ namespace ContosoCrafts.WebSite.Pages.Product
             {
                 Product.EducationList = TempProduct.EducationList;
                 Product.AwardList = TempProduct.AwardList;
+                Product.WorkExperienceList = TempProduct.WorkExperienceList;
             }
 
             // If password match, update data. If not, go back to update page

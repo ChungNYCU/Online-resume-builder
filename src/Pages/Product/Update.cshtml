@@ -13,16 +13,16 @@
         @Html.HiddenFor(x => x.Product.Id)
 
 
-    <div class="form-group">
-        <!--
-            Label – the string to display as the name
-            Input – the data to store
-            Validation – the error message to show
-         -->
-        <label asp-for="Product.FullName" class="control-label"></label>
-        <input asp-for="Product.FullName" class="form-control" />
-        <span asp-validation-for="Product.FullName" class="text-danger"></span>
-    </div>
+        <div class="form-group">
+            <!--
+               Label – the string to display as the name
+               Input – the data to store
+               Validation – the error message to show
+            -->
+            <label asp-for="Product.FullName" class="control-label"></label>
+            <input asp-for="Product.FullName" class="form-control" />
+            <span asp-validation-for="Product.FullName" class="text-danger"></span>
+        </div>
 
 
         <div class="form-group">
@@ -83,7 +83,30 @@
 
 
         <hr class="rounded">
-        <div class="divcss5">EXPERIENCES</div>
+        <div class="divcss5">WORK EXPERIENCE</div>
+        <a asp-page="./Education/AddWorkExperience" asp-route-id="@Model.Product.Id">+ Add Work Experience</a>
+
+        <table class="table table-bordered table-striped">
+            <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>Employer</th>
+                    <th>Action</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var WorkExperience in Model.Product.WorkExperienceList)
+                {
+                    <tr>
+                        <td>@WorkExperience.Title</td>
+                        <td>@WorkExperience.Employer</td>
+                        <td><a asp-page="./Education/UpdateWorkExperience" asp-route-productId="@WorkExperience.ProductID" asp-route-EducationID="@WorkExperience.ID">Update</a></td>
+                        <td><a asp-page="./Education/DeleteWorkExperience" asp-route-productId="@WorkExperience.ProductID" asp-route-EducationID="@WorkExperience.ID">Delete</a></td>
+                    </tr>
+                }
+            </tbody>
+        </table>
 
 
         <hr class="rounded">
@@ -125,10 +148,10 @@
             <input type="submit" value="Save" class="btn btn-primary" />
         </div>
     </form>
-    </div>
+</div>
 
-    @*Received HTML code from server*@
+@*Received HTML code from server*@
 
-    @section Scripts {
-        @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
-    }
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
