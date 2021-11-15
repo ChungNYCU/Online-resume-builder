@@ -1,0 +1,69 @@
+﻿@page "{productId}/{WorkExperienceId}" 
+@using ContosoCrafts.WebSite.Services
+@inject JsonFileProductService ProductService
+@model ContosoCrafts.WebSite.Pages.Product.WorkExperience.DeleteWorkExperienceModel
+
+@{
+    ViewData["Title"] = "Delete Work Experience page";
+}
+
+<h1>Delete Work Experience</h1>
+
+<div class="container">
+    <form method="post">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <!--
+    Add a new Education record.
+    Pass down Education.ID and ProductID, so that we know who/where this Education record belongs to
+    These are going to come down to OnGet(), send them back up when OnPost
+    When Get(), make sure the Education.ID and Education.ProductID are populated
+    -->
+        @Html.HiddenFor(x => x.WorkExperience.ID)
+        @Html.HiddenFor(x => x.WorkExperience.ProductID)
+
+        <hr class="rounded">
+        <div class="divcss5">Work Experience</div>
+        <div class="form-group">
+            <label asp-for="WorkExperience.Title" class="control-label"></label>
+            <input asp-for="WorkExperience.Title" class="form-control" />
+            <span asp-validation-for="WorkExperience.Title" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="WorkExperience.Employer" class="control-label"></label>
+            <input asp-for="WorkExperience.Employer" class="form-control" />
+            <span asp-validation-for="WorkExperience.Employer" class="text-danger"></span>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="form-group col-xs-6">
+                    <label asp-for="WorkExperience.StartDate" class="control-label"></label>
+                    <input asp-for="WorkExperience.StartDate" class="form-control" input-group-lg reg_name />
+                    <span asp-validation-for="WorkExperience.StartDate" class="text-danger"></span>
+                </div>
+
+                <div class="form-group col-xs-6">
+                    <label asp-for="WorkExperience.EndDate" class="control-label"></label>
+                    <input asp-for="WorkExperience.EndDate" class="form-control" input-group-lg reg_name />
+                    <span asp-validation-for="WorkExperience.EndDate" class="text-danger"></span>
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="WorkExperience.Description" class="control-label"></label>
+            <textarea rows="5" asp-for="WorkExperience.Description" class="form-control"></textarea>
+            <span asp-validation-for="WorkExperience.Description" class="text-danger"></span>
+        </div>
+
+
+        <div class="form-group">
+            <input type="submit" value="Delete" class="btn btn-primary" />
+        </div>
+    </form>
+
+</div>
+
+@*Received HTML code from server*@
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
