@@ -65,10 +65,10 @@ namespace UnitTests.Pages.Product.Education
         #region OnPost
 
         /// <summary>
-        /// Invalid OnPost with valid model should return the Index page
+        /// Invalid OnPost with valid model should return the Update page
         /// </summary>
         [Test]
-        public void OnPost_Valid_Should_Redirect_to_Index()
+        public void OnPost_Valid_Should_Redirect_to_Update()
         {
             // Arrange
             var Product = TestHelper.ProductService.GetAllData().First();
@@ -84,8 +84,7 @@ namespace UnitTests.Pages.Product.Education
             var result = pageModel.OnPost() as RedirectToPageResult;
 
             // Assert
-            //Assert.AreEqual(true, pageModel.ModelState.IsValid);
-            Assert.AreEqual(true, result.PageName.Contains("Index"));
+            Assert.AreEqual(true, result.PageName.Contains("Update"));
         }
 
         /// <summary>
