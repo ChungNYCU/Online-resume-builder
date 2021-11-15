@@ -88,7 +88,7 @@ namespace ContosoCrafts.WebSite.Pages.Product.Award
             {
                 if (Award.ID == Product.AwardList[index].ID)
                 {
-                    Product.EducationList.RemoveAt(index);
+                    Product.AwardList.RemoveAt(index);
                 }
             }
 
@@ -96,8 +96,8 @@ namespace ContosoCrafts.WebSite.Pages.Product.Award
             ProductService.UpdateData(Product);
 
 
-            // Redirect to Product/Index page
-            return RedirectToPage("/Product/Index" );
+            // Redirect to Product/update page
+            return RedirectToPage("/Product/Update", new { Id = Product.Id });
         }
     }
 }
