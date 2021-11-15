@@ -4,7 +4,7 @@ using ContosoCrafts.WebSite.Pages.Product.WorkExperience;
 using ContosoCrafts.WebSite.Models;
 using System.Linq;
 
-namespace UnitTests.Pages.Product.Education
+namespace UnitTests.Pages.Product.WorkExperience
 {
     class UpdateWorkExperienceTests
     {
