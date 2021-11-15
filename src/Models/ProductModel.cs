@@ -32,7 +32,7 @@ namespace ContosoCrafts.WebSite.Models
         // getting resume education history 
         public List<EducationModel> EducationList { get; set; } = new List<EducationModel>();
         // getting resume Work Experiences
-        public List<WorkExperienceModel> WorkExperiences { get; set; } = new List<WorkExperienceModel>();
+        public List<WorkExperienceModel> WorkExperienceList { get; set; } = new List<WorkExperienceModel>();
         // getting resume personal skill 
         public string PersonalSkill { get; set; }
         // getting resume about me 
