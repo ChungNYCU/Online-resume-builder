@@ -30,8 +30,6 @@ namespace ContosoCrafts.WebSite.Models
         // getting user awards 
         public List<AwardModel> AwardList { get; set; } = new List<AwardModel>();
         // getting resume education history 
-        public Experience Experiences { get; set; }
-        // getting resume experience 
         public List<EducationModel> EducationList { get; set; } = new List<EducationModel>();
         // getting resume personal skill 
         public string PersonalSkill { get; set; }
