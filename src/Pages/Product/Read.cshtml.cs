@@ -40,8 +40,15 @@ namespace ContosoCrafts.WebSite.Pages.Product
         {
             // getting product service data from ID
             Product  = ProductService.GetAllData().FirstOrDefault(m => m.Id.Equals(id));
+            if (Product == null)
+            {
+                RedirectToPage("./Index");
+                return;
+            }
+
             Product.Viewed += 1;
             ProductService.UpdateData(Product);
+            return ;
         }
     }
 }
