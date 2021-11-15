@@ -32,21 +32,38 @@ namespace UnitTests.Pages.Product.Delete
         #endregion TestSetup
 
         /// <summary>
-        /// Valid OnGet method should retrun products
+        /// Valid OnGet method should find the product
         /// </summary>
         #region OnGet
         [Test]
-        //[Ignore("Ignore a test")]
-        public void OnGet_Valid_Should_Return_Products()
+        public void OnGet_Valid_Should_should_find_the_Product()
         {
-            // Arrange
+            // Arrange 1 is an existing Product ID
+            string ProductID = "1";
 
             // Act
-            pageModel.OnGet("1");
+            pageModel.OnGet(ProductID);
 
             // Assert
             Assert.AreEqual(true, pageModel.ModelState.IsValid);
             Assert.AreEqual("June Liao", pageModel.Product.FullName);
+        }
+
+        /// <summary>
+        /// Invalid OnGet should go to to Index Page
+        /// </summary>
+        [Test]
+        public void OnGet_Product_NotValid_Should_Go_To_Index_Page()
+        {
+            // Arrange 11122 is a non_existing Product ID
+            string ProductID = "11122";
+
+            // Act
+            pageModel.OnGet(ProductID);
+
+            // Assert
+            Assert.AreEqual(true, pageModel.ModelState.IsValid);
+            Assert.AreEqual(null, pageModel.Product);
         }
         #endregion OnGet
 
@@ -55,7 +72,6 @@ namespace UnitTests.Pages.Product.Delete
         /// </summary>
         #region OnPost
         [Test]
-        //[Ignore("Ignore a test")]
         public void OnPost_Valid_Should_Return_Products()
         {
             // Arrange
@@ -80,7 +96,6 @@ namespace UnitTests.Pages.Product.Delete
         /// Invalid OnPost should return the page
         /// </summary>
         [Test]
-        //[Ignore("Ignore a test")]
         public void OnPost_InValid_Model_NotValid_Return_Page()
         {
             // Arrange
@@ -97,7 +112,6 @@ namespace UnitTests.Pages.Product.Delete
         }
 
         [Test]
-        //[Ignore("Ignore a test")]
         public void OnPost_InValid_Should_RedirectTo_Delete_Page()
         {
             // Arrange
@@ -116,7 +130,6 @@ namespace UnitTests.Pages.Product.Delete
         }
 
         [Test]
-        //[Ignore("Ignore a test")]
         public void OnPost_Valid_Should_RedirectTo_Index_Page()
         {
             // Arrange
