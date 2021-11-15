@@ -40,6 +40,10 @@ namespace ContosoCrafts.WebSite.Pages.Product
         {
             //Get product by id in JSON file
             Product = ProductService.GetAllData().FirstOrDefault(m => m.Id.Equals(id));
+            if (Product == null)
+            {
+                RedirectToPage("./Index");
+            }
         }
 
         /// <summary>
@@ -61,17 +65,11 @@ namespace ContosoCrafts.WebSite.Pages.Product
             // encrypt password
             Product.Password = Crypto.AESEncryption.Encrypt(Product.Password, Product.Id);
 
-            // Get EducationList
+            // Get EducationList, AwardList
             var TempProduct = ProductService.GetAllData().FirstOrDefault(m => m.Id.Equals(Product.Id));
             if (TempProduct != null)
             {
                 Product.EducationList = TempProduct.EducationList;
-            }
-
-            // Get AwardList
-            //var TempProductAward = ProductService.GetAllData().FirstOrDefault(m => m.Id.Equals(Product.Id));
-            if (TempProduct != null)
-            {
                 Product.AwardList = TempProduct.AwardList;
             }
 
