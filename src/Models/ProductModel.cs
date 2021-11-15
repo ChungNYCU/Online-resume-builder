@@ -31,6 +31,8 @@ namespace ContosoCrafts.WebSite.Models
         public List<AwardModel> AwardList { get; set; } = new List<AwardModel>();
         // getting resume education history 
         public List<EducationModel> EducationList { get; set; } = new List<EducationModel>();
+        // getting resume Work Experiences
+        public List<WorkExperienceModel> WorkExperiences { get; set; } = new List<WorkExperienceModel>();
         // getting resume personal skill 
         public string PersonalSkill { get; set; }
         // getting resume about me 
@@ -44,21 +46,5 @@ namespace ContosoCrafts.WebSite.Models
     }
 
 
-    /// <summary>
-    /// A model to represent experience information
-    /// </summary>
-    public class Experience
-    {
-        // getting the work title for the work experience
-        public string Title { get; set; }
-        // getting the employer for the work experience
-        public string Employer { get; set; }
-        // getting the starting date for the work experience
-        public string StartDate { get; set; }
-        // getting the ending date for the work experience
-        public string EndDate { get; set; }
-        // getting the description for the work experience
-        public string Description { get; set; }
-    }
 
 }
