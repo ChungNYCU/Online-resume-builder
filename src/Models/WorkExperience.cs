@@ -7,6 +7,10 @@ namespace ContosoCrafts.WebSite.Models
 {
     public class WorkExperienceModel
     {
+        // This is ProductID so that we know who owns this WorkExperience record 
+        public string ProductID { get; set; }
+        // This is WorkExperience ID so that we know where it is in Product.AwardList
+        public string ID { get; set; }
         // getting the work title for the work experience
         public string Title { get; set; }
         // getting the employer for the work experience
