@@ -95,9 +95,8 @@ namespace ContosoCrafts.WebSite.Pages.Product.Education
             // Update this Product in Json 
             ProductService.UpdateData(Product);
 
-
-            // Redirect to Product/Index page
-            return RedirectToPage("/Product/Index" );
+            // Redirect to Product/update page
+            return RedirectToPage("/Product/Update", new { Id = Product.Id });
         }
     }
 }
