@@ -41,7 +41,12 @@ namespace ContosoCrafts.WebSite.Pages.Product.Education
         {
             // Get product by looking up product id in JSON file
             var Product = ProductService.GetAllData().FirstOrDefault(m => m.Id.Equals(id));  // id comes from Update.cshtml line 55: <a asp-page="AddEducation" asp-route-id="@Model.Product.Id">+ Add</a>
-            
+            if (Product == null)
+            {
+                RedirectToPage("/Product/Index");
+                return;
+            }
+
             // Create a new Education record and populate it with default value
             Education = new EducationModel();
 
@@ -74,6 +79,10 @@ namespace ContosoCrafts.WebSite.Pages.Product.Education
             // What's going to come up is an education record who knows the product id on it
             // Get its corresponding Product by matching product id
             var Product = ProductService.GetAllData().FirstOrDefault(m => m.Id.Equals(Education.ProductID));
+            if (Product == null)
+            {
+                return RedirectToPage("/Product/Index");
+            }
 
             // Add Education record onto EducationList
             Product.EducationList.Add(Education);
