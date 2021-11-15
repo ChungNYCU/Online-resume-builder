@@ -51,10 +51,11 @@
 
     }
 
-    <div class="row" style="margin:10px;">
-        <a asp-page="Update" asp-route-id="@Model.Product.Id" class="btn btn-primary">Update</a> &nbsp; &nbsp;
-        <a asp-page="Delete" asp-route-id="@Model.Product.Id" class="btn btn-danger">Delete</a>
-    </div>
+<div class="row" style="margin:10px;">
+    <button class="btn btn-primary" onclick="window.print()" style="margin-right: 10px; width: 100px;">Print</button>
+    <a asp-page="Update" asp-route-id="@Model.Product.Id" class="btn btn-primary" style="margin-right: 10px; width: 100px;">Update</a>
+    <a asp-page="Delete" asp-route-id="@Model.Product.Id" class="btn btn-danger" style="width: 100px;">Delete</a>
+</div>
 </div>
 
 
