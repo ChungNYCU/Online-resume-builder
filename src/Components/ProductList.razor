@@ -30,10 +30,7 @@
                 <div class="card-footer">
                     <small class="text-muted">
                         <!-- Delete "more info" button and add the open button to redirect user to "Read" page-->
-                        <button @onclick="(e => SelectProduct(product.Id))" id="MoreInfoButton_@product.Id"
-                                data-toggle="modal" data-target="#productModal" class="btn btn-primary">
-                            More Info
-                        </button>
+                        <a class="btn btn-primary" href="/Product/Read/@product.Id">Open</a>
                     </small>
                 </div>
             </div>
@@ -108,7 +105,15 @@ else
                         <div class="card-body">
                             <p class="card-text">@selectedProduct.AboutMe</p>
                             <h5 class="title" id="productTitle">Awards</h5>
-                            <p>@selectedProduct.AwardList[0]</p><br>
+
+                            @if (selectedProduct.AwardList.Any())
+                            {
+                                <p>
+                                    @selectedProduct.AwardList.FirstOrDefault().Award
+                                </p>
+                            }
+                            <br>
+
                         </div>
                     </div>
                 </div>
