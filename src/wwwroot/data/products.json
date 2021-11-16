@@ -351,7 +351,7 @@
     "AboutMe": "I like cats but I was born to walk dogs",
     "Ratings": null,
     "Password": null,
-    "Viewed": 0
+    "Viewed": 1
   },
   {
     "Id": "Unit Test",
@@ -399,102 +399,7 @@
     "AboutMe": "Enter Description",
     "Ratings": null,
     "Password": "1PrzRgWesBeDukP6SHHWnncNimlQlbzdD74lCOP0M4g=",
-    "Viewed": 0
-  },
-  {
-    "Id": "79a43173-d267-4095-84cf-9bfe5e0f66c6",
-    "PersonalStatus": null,
-    "Maker": null,
-    "img": "Enter Photo URL",
-    "LinkedinUrl": "Enter URL",
-    "FullName": "Enter FullName",
-    "AwardList": [],
-    "EducationList": [],
-    "WorkExperienceList": [],
-    "PersonalSkill": null,
-    "AboutMe": "Enter Description",
-    "Ratings": null,
-    "Password": null,
-    "Viewed": 0
-  },
-  {
-    "Id": "05368722-9f5b-4c95-b0f1-8a824d14e8c4",
-    "PersonalStatus": null,
-    "Maker": null,
-    "img": "111",
-    "LinkedinUrl": "111",
-    "FullName": "Chris",
-    "AwardList": [],
-    "EducationList": [],
-    "WorkExperienceList": [],
-    "PersonalSkill": "333",
-    "AboutMe": "222",
-    "Ratings": null,
-    "Password": "PBWsbwArPEzVYDbaOI88BfrpQecr5d39VYj57EmVLd0=",
-    "Viewed": 0
-  },
-  {
-    "Id": "3aed9a28-1857-4a91-9f36-c8c1a7f76614",
-    "PersonalStatus": null,
-    "Maker": null,
-    "img": "Enter Photo URL",
-    "LinkedinUrl": "Enter URL",
-    "FullName": "Enter FullName",
-    "AwardList": [],
-    "EducationList": [],
-    "WorkExperienceList": [],
-    "PersonalSkill": null,
-    "AboutMe": "Enter Description",
-    "Ratings": null,
-    "Password": null,
-    "Viewed": 0
-  },
-  {
-    "Id": "f27811e7-13ee-4f0d-8c58-94cabab79f8f",
-    "PersonalStatus": null,
-    "Maker": null,
-    "img": "Enter Photo URL",
-    "LinkedinUrl": "Enter URL",
-    "FullName": "Enter FullName",
-    "AwardList": [],
-    "EducationList": [],
-    "WorkExperienceList": [],
-    "PersonalSkill": null,
-    "AboutMe": "Enter Description",
-    "Ratings": null,
-    "Password": null,
-    "Viewed": 0
-  },
-  {
-    "Id": "a54f322b-c01c-4095-8fcb-697a9b9b68ae",
-    "PersonalStatus": null,
-    "Maker": null,
-    "img": "Enter Photo URL",
-    "LinkedinUrl": "Enter URL",
-    "FullName": "Enter FullName",
-    "AwardList": [],
-    "EducationList": [],
-    "WorkExperienceList": [],
-    "PersonalSkill": null,
-    "AboutMe": "Enter Description",
-    "Ratings": null,
-    "Password": null,
-    "Viewed": 0
-  },
-  {
-    "Id": "a04dc9a6-cade-49cf-a3be-947aa063f584",
-    "PersonalStatus": null,
-    "Maker": null,
-    "img": "Enter Photo URL",
-    "LinkedinUrl": "Enter URL",
-    "FullName": "Enter FullName",
-    "AwardList": [],
-    "EducationList": [],
-    "WorkExperienceList": [],
-    "PersonalSkill": null,
-    "AboutMe": "Enter Description",
-    "Ratings": null,
-    "Password": "I2dYurMvdPBW98gq5z7ekMyahHeCwz8kfkz3fEtZL8M=",
-    "Viewed": 0
+    "Viewed": 4
+
   }
 ]
