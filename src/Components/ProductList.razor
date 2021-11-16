@@ -30,7 +30,10 @@
                 <div class="card-footer">
                     <small class="text-muted">
                         <!-- Delete "more info" button and add the open button to redirect user to "Read" page-->
-                        <a class="btn btn-primary" href="/Product/Read/@product.Id">Open</a>
+                        <button @onclick="(e => SelectProduct(product.Id))" id="MoreInfoButton_@product.Id"
+                                data-toggle="modal" data-target="#productModal" class="btn btn-primary">
+                            More Info
+                        </button>
                     </small>
                 </div>
             </div>
@@ -52,7 +55,8 @@
                 <div class="card-footer">
                     <small class="text-muted">
                         <!-- Delete "more info" button and add the open button to redirect user to "Read" page-->
-                        <a class="btn btn-primary" href="/Product/Read/@product.Id">Open</a>
+                        <button @onclick="(e => SelectProduct(product.Id))" id="MoreInfoButton_@product.Id" 
+                                data-toggle="modal" data-target="#productModal" class="btn btn-primary">More Info</button>
                     </small>
                 </div>
             </div>
@@ -74,7 +78,10 @@ else
                 <div class="card-footer">
                     <small class="text-muted">
                         <!-- Delete "more info" button and add the open button to redirect user to "Read" page-->
-                        <a class="btn btn-primary" href="/Product/Read/@product.Id">Open</a>
+                        <button @onclick="(e => SelectProduct(product.Id))" id="MoreInfoButton_@product.Id"
+                                data-toggle="modal" data-target="#productModal" class="btn btn-primary">
+                            More Info
+                        </button>
                     </small>
                 </div>
             </div>
@@ -114,8 +121,9 @@ else
                     </p>
                     <button @onclick="(e => SubmitPersonalStatus(PersonalStatus))" data-toggle="modal" data-target="#productModal" class="btn btn-primary"> Update Personal Status </button>
                     <button @onclick="(e => SubmitPersonalStatus(' '.ToString()))" data-toggle="modal" data-target="#productModal" class="btn btn-primary"> Delete </button>
-               
-               </div>
+                    <a class="btn btn-primary" href="/Product/Read/@selectedProduct.Id">Open</a>
+
+                </div>
                 <div class="modal-footer">
                     @if (voteCount == 0)
                     {
