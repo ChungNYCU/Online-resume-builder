@@ -172,3 +172,29 @@ ul {
     background: -moz-linear-gradient(110deg, #006680 60%, #00ccff 60%);
     background: linear-gradient(110deg, #006680 80%, #00ccff 20%);
 }
+/*Share*/
+code {
+    background-color: #eee;
+    padding: 0 3px 0 3px;
+}
+
+.links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 20px 0;
+}
+
+.links li {
+    font-size: 16px;
+    text-align: center;
+    cursor: pointer;
+}
+
+    .links li:hover {
+        text-decoration: underline;
+    }
+
+.notes {
+    width: 100%;
+    margin: 0 0 20px 0;
+}
