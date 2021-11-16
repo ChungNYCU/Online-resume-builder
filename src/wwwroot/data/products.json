@@ -10,18 +10,11 @@
       {
         "ProductID": "1",
         "ID": "6031eca8-04a9-44bb-9f4d-8f34f11f0731",
-        "Award": "1",
-        "Issuer": "2",
-        "AwardDate": "3"
+        "Award": "SU Scholarship",
+        "Issuer": "SU",
+        "AwardDate": "June2021"
       }
     ],
-    "Experiences": {
-      "Title": "Software Engineer Intern!",
-      "Employer": "Bashpole Software, Inc.",
-      "StartDate": "Sept 2021",
-      "EndDate": "May 2023",
-      "Description": "\u2022 Develop client and server software that automates Nonprofit online advertising and helps evaluate their general marketing performance\r\n\u2022 Work as a full-stack developer adding frontend and backend to landing pages"
-    },
     "EducationList": [
       {
         "ProductID": "1",
@@ -46,11 +39,31 @@
         "EndDate": "June 2023"
       }
     ],
+    "WorkExperienceList": [
+      {
+        "ProductID": "1",
+        "ID": "373d49f1-badf-4b03-949d-8f55565af4dc",
+        "Title": "PM",
+        "Employer": "OPPO",
+        "StartDate": "June 2015",
+        "EndDate": "June 2018",
+        "Description": "I\u0027m a product Manager"
+      },
+      {
+        "ProductID": "1",
+        "ID": "f24cb070-83db-4823-b8a1-28b348b6edff",
+        "Title": "SDE intern",
+        "Employer": "Bashpole",
+        "StartDate": "Sept 2021",
+        "EndDate": "Dec 2021",
+        "Description": "I\u0027m a software engineer intern"
+      }
+    ],
     "PersonalSkill": "Java, Python, C\u002B\u002B, C#, SQL, Unix, Windows, AWS RDS",
     "AboutMe": "Seeking for 2022 intern\uFF01",
     "Ratings": null,
     "Password": "/Oo1nScwK04Vf\u002ByeC2P3Yw==",
-    "Viewed": 0
+    "Viewed": 29
   },
   {
     "Id": "2",
@@ -60,14 +73,8 @@
     "LinkedinUrl": "https://www.linkedin.com/in/jessetw/",
     "FullName": "Chung, Wei-Che",
     "AwardList": [],
-    "Experiences": {
-      "Title": null,
-      "Employer": null,
-      "StartDate": null,
-      "EndDate": null,
-      "Description": null
-    },
     "EducationList": [],
+    "WorkExperienceList": [],
     "PersonalSkill": null,
     "AboutMe": null,
     "Ratings": null,
@@ -82,14 +89,8 @@
     "LinkedinUrl": "https://www.linkedin.com/in/benny-wong-ab71b8160/",
     "FullName": "Benny Wong",
     "AwardList": [],
-    "Experiences": {
-      "Title": "Accommodation Analysis",
-      "Employer": "Airbnb",
-      "StartDate": "Jul 2019",
-      "EndDate": "Dec 2019",
-      "Description": "1. Used TFIDF Vectorizer to extract the key information obtained from YELP platform and Inside Airbnb, implemented data cleaning, constructed the store feature set for further analysis\r\n\r\n2. Chose XGBoost as the base and ElasticNet as the meta to build the whole ensemble model for price predicting after comparing different regression algorithms"
-    },
     "EducationList": [],
+    "WorkExperienceList": [],
     "PersonalSkill": "C\u002B\u002B, Python, Java",
     "AboutMe": "Seeking for 2022 intern\uFF01",
     "Ratings": null,
@@ -104,14 +105,8 @@
     "LinkedinUrl": "https://www.linkedin.com/in/bart-joseph-nadala-517b01a0/",
     "FullName": "Nadala, Bart Joseph",
     "AwardList": [],
-    "Experiences": {
-      "Title": "Web Developer Internship",
-      "Employer": "Taxi Driving",
-      "StartDate": "Sept 2021",
-      "EndDate": "May 2023",
-      "Description": "1.Used the non-negative matrix decomposition to reduce the dimension of original data, drafted road matching algorithm in Python to construct the road traffic conditions visualized by GPIS\r\n\r\n2.Programmed the pipeline of clustering evaluation to evaluate roads clustering effect based on location, traffic volume, street width, etc , according to Cvalid theory, visualized the clustering result by t-SNE"
-    },
     "EducationList": [],
+    "WorkExperienceList": [],
     "PersonalSkill": "SQL, C\u002B\u002B, Python, Java, Azure",
     "AboutMe": "Seeking for 2022 intern\uFF01",
     "Ratings": null,
@@ -126,14 +121,8 @@
     "LinkedinUrl": "https://www.linkedin.com/in/xinyu-qiu-46b064176/",
     "FullName": "Xinyu, Qiu",
     "AwardList": [],
-    "Experiences": {
-      "Title": "Data Science Capstone Project",
-      "Employer": "IBM",
-      "StartDate": "Sept 2021",
-      "EndDate": "May 2023",
-      "Description": "1.Utilized NTLK tools to preprocessing text information, applied Latent Dirichlet Allocation to extract the core appeals of customers and added them in the feature set, visualized them by Intertopic Distance Map\r\n\r\n2.Used The Correlation Coefficients to conduct a preliminary feature selection, built the feature subset for neighbor clustering by implementing the wrapper method"
-    },
     "EducationList": [],
+    "WorkExperienceList": [],
     "PersonalSkill": "html, css, css, AWS",
     "AboutMe": "Seeking for 2022 intern!",
     "Ratings": null,
@@ -148,14 +137,8 @@
     "LinkedinUrl": null,
     "FullName": "Jamar Baird",
     "AwardList": [],
-    "Experiences": {
-      "Title": "Volunteering Teacher",
-      "Employer": "Bambupai Elementary School",
-      "StartDate": "Sept 2021",
-      "EndDate": "May 2023",
-      "Description": "Being as the volunteering teacher in Banbupai school, I taught children math and english;\r\nHelp hold the school\u0027s monthly English corner event;"
-    },
     "EducationList": [],
+    "WorkExperienceList": [],
     "PersonalSkill": "React, Node.JS, JavaScript",
     "AboutMe": "Im just a normal person",
     "Ratings": null,
@@ -170,19 +153,13 @@
     "LinkedinUrl": null,
     "FullName": "Zavier Mercer",
     "AwardList": [],
-    "Experiences": {
-      "Title": "Activities Assistant",
-      "Employer": " Shenzhen Ciwei Philanthropy Institute",
-      "StartDate": "Sept 2021",
-      "EndDate": "May 2023",
-      "Description": "Helped the organization hold the campus recruitment in Wuhan: Arrange bulletin board; Keep order during the presentation"
-    },
     "EducationList": [],
+    "WorkExperienceList": [],
     "PersonalSkill": "Juggling",
     "AboutMe": "I like juggling",
     "Ratings": null,
     "Password": null,
-    "Viewed": 0
+    "Viewed": 1
   },
   {
     "Id": "8",
@@ -192,14 +169,8 @@
     "LinkedinUrl": null,
     "FullName": "Wade Nguyen",
     "AwardList": [],
-    "Experiences": {
-      "Title": "Activities Assistant",
-      "Employer": "Shenzhen Ciwei Philanthropy Institute",
-      "StartDate": "Sept 2021",
-      "EndDate": "May 2023",
-      "Description": "Helped the organization hold the campus recruitment in Wuhan: Arrange bulletin board; Keep order during the presentation"
-    },
     "EducationList": [],
+    "WorkExperienceList": [],
     "PersonalSkill": "Wood cutting",
     "AboutMe": "I like cutting wood",
     "Ratings": null,
@@ -214,14 +185,8 @@
     "LinkedinUrl": null,
     "FullName": "Brynn Scott",
     "AwardList": [],
-    "Experiences": {
-      "Title": "Web Software Engineer",
-      "Employer": "Muyuan Digital Technology",
-      "StartDate": "Sept 2021",
-      "EndDate": "May 2023",
-      "Description": "Involved in the transformation of Internal management system from Enterprise WeChat to Dingding Platform using dingding developers and JavaScript\r\nDeveloped some Wechat mini apps such as business travel request and review, compliant report system, etc.\r\nDeveloped Data visualization with Echarts and 3d pigsty area models with three.js"
-    },
     "EducationList": [],
+    "WorkExperienceList": [],
     "PersonalSkill": "C\u002B\u002B, Java, Python, C#",
     "AboutMe": "I jog everyday!",
     "Ratings": null,
@@ -236,14 +201,8 @@
     "LinkedinUrl": "",
     "FullName": "Toby Mccullough",
     "AwardList": [],
-    "Experiences": {
-      "Title": "Web Software Engineer",
-      "Employer": "Muyuan Digital Technology",
-      "StartDate": "Sept 2021",
-      "EndDate": "May 2023",
-      "Description": "Involved in the transformation of Internal management system from Enterprise WeChat to Dingding Platform using dingding developers and JavaScript\r\nDeveloped some Wechat mini apps such as business travel request and review, compliant report system, etc.\r\nDeveloped Data visualization with Echarts and 3d pigsty area models with three.js"
-    },
     "EducationList": [],
+    "WorkExperienceList": [],
     "PersonalSkill": "Knife throwing, C#, .Net, Python, scikit-learn, Java, Git, Linux, SQL, HTML/CSS, PHP, JavaScript",
     "AboutMe": "I throw knives at trees when I am bored.",
     "Ratings": null,
@@ -258,14 +217,8 @@
     "LinkedinUrl": "",
     "FullName": "Aliyah Riddle",
     "AwardList": [],
-    "Experiences": {
-      "Title": "Web Software Engineer",
-      "Employer": "Muyuan Digital Technology",
-      "StartDate": "Sept 2021",
-      "EndDate": "May 2023",
-      "Description": "Involved in the transformation of Internal management system from Enterprise WeChat to Dingding Platform using dingding developers and JavaScript\r\nDeveloped some Wechat mini apps such as business travel request and review, compliant report system, etc.\r\nDeveloped Data visualization with Echarts and 3d pigsty area models with three.js"
-    },
     "EducationList": [],
+    "WorkExperienceList": [],
     "PersonalSkill": "Paper folding, C#, .Net, Python, scikit-learn, Java, Git, Linux, SQL, HTML/CSS, PHP, JavaScript",
     "AboutMe": "Origami is my passion.",
     "Ratings": null,
@@ -280,14 +233,8 @@
     "LinkedinUrl": "",
     "FullName": "Jewel Blackburn",
     "AwardList": [],
-    "Experiences": {
-      "Title": "Web Software Engineer",
-      "Employer": "Muyuan Digital Technology",
-      "StartDate": "Sept 2021",
-      "EndDate": "May 2023",
-      "Description": "Involved in the transformation of Internal management system from Enterprise WeChat to Dingding Platform using dingding developers and JavaScript\r\nDeveloped some Wechat mini apps such as business travel request and review, compliant report system, etc.\r\nDeveloped Data visualization with Echarts and 3d pigsty area models with three.js"
-    },
     "EducationList": [],
+    "WorkExperienceList": [],
     "PersonalSkill": "Gaming, C#, .Net, Python, scikit-learn, Java, Git, Linux, SQL, HTML/CSS, PHP, JavaScript",
     "AboutMe": "Gamer",
     "Ratings": null,
@@ -302,14 +249,8 @@
     "LinkedinUrl": "",
     "FullName": "Emery Richards",
     "AwardList": [],
-    "Experiences": {
-      "Title": "Web Software Engineer",
-      "Employer": "Muyuan Digital Technology",
-      "StartDate": "Sept 2021",
-      "EndDate": "May 2023",
-      "Description": "Involved in the transformation of Internal management system from Enterprise WeChat to Dingding Platform using dingding developers and JavaScript\r\nDeveloped some Wechat mini apps such as business travel request and review, compliant report system, etc.\r\nDeveloped Data visualization with Echarts and 3d pigsty area models with three.js"
-    },
     "EducationList": [],
+    "WorkExperienceList": [],
     "PersonalSkill": "Fire breather, C#, .Net, Python, scikit-learn, Java, Git, Linux, SQL, HTML/CSS, PHP, JavaScript",
     "AboutMe": "No i am not a dragon. Yes it always smells like a firepit.",
     "Ratings": null,
@@ -324,14 +265,8 @@
     "LinkedinUrl": "",
     "FullName": "Henry Pineda",
     "AwardList": [],
-    "Experiences": {
-      "Title": "Web Software Engineer",
-      "Employer": "Muyuan Digital Technology",
-      "StartDate": "Sept 2021",
-      "EndDate": "May 2023",
-      "Description": "Involved in the transformation of Internal management system from Enterprise WeChat to Dingding Platform using dingding developers and JavaScript\r\nDeveloped some Wechat mini apps such as business travel request and review, compliant report system, etc.\r\nDeveloped Data visualization with Echarts and 3d pigsty area models with three.js"
-    },
     "EducationList": [],
+    "WorkExperienceList": [],
     "PersonalSkill": "C#, .Net, Python, scikit-learn, Java, Git, Linux, SQL, HTML/CSS, PHP, JavaScript",
     "AboutMe": "I like reading",
     "Ratings": null,
@@ -346,14 +281,8 @@
     "LinkedinUrl": "",
     "FullName": "Trevor Dunlap",
     "AwardList": [],
-    "Experiences": {
-      "Title": "Web Software Engineer",
-      "Employer": "Muyuan Digital Technology",
-      "StartDate": "Sept 2021",
-      "EndDate": "May 2023",
-      "Description": "Involved in the transformation of Internal management system from Enterprise WeChat to Dingding Platform using dingding developers and JavaScript\r\nDeveloped some Wechat mini apps such as business travel request and review, compliant report system, etc.\r\nDeveloped Data visualization with Echarts and 3d pigsty area models with three.js"
-    },
     "EducationList": [],
+    "WorkExperienceList": [],
     "PersonalSkill": "C#, .Net, Python, scikit-learn, Java, Git, Linux, SQL, HTML/CSS, PHP, JavaScript",
     "AboutMe": "I am a mechanical engineer",
     "Ratings": null,
@@ -368,14 +297,8 @@
     "LinkedinUrl": "",
     "FullName": "Amiya Peters",
     "AwardList": [],
-    "Experiences": {
-      "Title": "Web Software Engineer",
-      "Employer": "Muyuan Digital Technology",
-      "StartDate": "Sept 2021",
-      "EndDate": "May 2023",
-      "Description": "Involved in the transformation of Internal management system from Enterprise WeChat to Dingding Platform using dingding developers and JavaScript\r\nDeveloped some Wechat mini apps such as business travel request and review, compliant report system, etc.\r\nDeveloped Data visualization with Echarts and 3d pigsty area models with three.js"
-    },
     "EducationList": [],
+    "WorkExperienceList": [],
     "PersonalSkill": "C#, .Net, Python, scikit-learn, Java, Git, Linux, SQL, HTML/CSS, PHP, JavaScript",
     "AboutMe": "I am an electrician",
     "Ratings": null,
@@ -390,14 +313,8 @@
     "LinkedinUrl": "",
     "FullName": "Layla Roberts",
     "AwardList": [],
-    "Experiences": {
-      "Title": "Web Software Engineer",
-      "Employer": "Muyuan Digital Technology",
-      "StartDate": "Sept 2021",
-      "EndDate": "May 2023",
-      "Description": "Involved in the transformation of Internal management system from Enterprise WeChat to Dingding Platform using dingding developers and JavaScript\r\nDeveloped some Wechat mini apps such as business travel request and review, compliant report system, etc.\r\nDeveloped Data visualization with Echarts and 3d pigsty area models with three.js"
-    },
     "EducationList": [],
+    "WorkExperienceList": [],
     "PersonalSkill": "C#, .Net, Python, scikit-learn, Java, Git, Linux, SQL, HTML/CSS, PHP, JavaScript",
     "AboutMe": "I go to the gym on the weekends",
     "Ratings": null,
@@ -412,14 +329,8 @@
     "LinkedinUrl": "",
     "FullName": "Conner Romero",
     "AwardList": [],
-    "Experiences": {
-      "Title": "Web Software Engineer",
-      "Employer": "Muyuan Digital Technology",
-      "StartDate": "Sept 2021",
-      "EndDate": "May 2023",
-      "Description": "Involved in the transformation of Internal management system from Enterprise WeChat to Dingding Platform using dingding developers and JavaScript\r\nDeveloped some Wechat mini apps such as business travel request and review, compliant report system, etc.\r\nDeveloped Data visualization with Echarts and 3d pigsty area models with three.js"
-    },
     "EducationList": [],
+    "WorkExperienceList": [],
     "PersonalSkill": "C#, .Net, Python, scikit-learn, Java, Git, Linux, SQL, HTML/CSS, PHP, JavaScript",
     "AboutMe": "My leatherworking skill is 100",
     "Ratings": null,
@@ -434,14 +345,8 @@
     "LinkedinUrl": "",
     "FullName": "Kennedy Lee",
     "AwardList": [],
-    "Experiences": {
-      "Title": "Web Software Engineer",
-      "Employer": "Muyuan Digital Technology",
-      "StartDate": "Sept 2021",
-      "EndDate": "May 2023",
-      "Description": "Involved in the transformation of Internal management system from Enterprise WeChat to Dingding Platform using dingding developers and JavaScript\r\nDeveloped some Wechat mini apps such as business travel request and review, compliant report system, etc.\r\nDeveloped Data visualization with Echarts and 3d pigsty area models with three.js"
-    },
     "EducationList": [],
+    "WorkExperienceList": [],
     "PersonalSkill": "C#, .Net, Python, scikit-learn, Java, Git, Linux, SQL, HTML/CSS, PHP, JavaScript",
     "AboutMe": "I like cats but I was born to walk dogs",
     "Ratings": null,
@@ -456,14 +361,8 @@
     "LinkedinUrl": "",
     "FullName": "Cute Racoon",
     "AwardList": [],
-    "Experiences": {
-      "Title": "Web Software Engineer",
-      "Employer": "Muyuan Digital Technology",
-      "StartDate": "Sept 2021",
-      "EndDate": "May 2023",
-      "Description": "Involved in the transformation of Internal management system from Enterprise WeChat to Dingding Platform using dingding developers and JavaScript\r\nDeveloped some Wechat mini apps such as business travel request and review, compliant report system, etc.\r\nDeveloped Data visualization with Echarts and 3d pigsty area models with three.js"
-    },
     "EducationList": [],
+    "WorkExperienceList": [],
     "PersonalSkill": "",
     "AboutMe": "I like cats but I was born to walk dogs",
     "Ratings": null,
@@ -478,14 +377,8 @@
     "LinkedinUrl": "",
     "FullName": "Cute Racoon",
     "AwardList": [],
-    "Experiences": {
-      "Title": "Web Software Engineer",
-      "Employer": "Muyuan Digital Technology",
-      "StartDate": "Sept 2021",
-      "EndDate": "May 2023",
-      "Description": "Involved in the transformation of Internal management system from Enterprise WeChat to Dingding Platform using dingding developers and JavaScript\r\nDeveloped some Wechat mini apps such as business travel request and review, compliant report system, etc.\r\nDeveloped Data visualization with Echarts and 3d pigsty area models with three.js"
-    },
     "EducationList": [],
+    "WorkExperienceList": [],
     "PersonalSkill": "",
     "AboutMe": "I like cats but I was born to walk dogs",
     "Ratings": null,
@@ -500,14 +393,8 @@
     "LinkedinUrl": "Enter URL",
     "FullName": "Mike",
     "AwardList": [],
-    "Experiences": {
-      "Title": null,
-      "Employer": null,
-      "StartDate": null,
-      "EndDate": null,
-      "Description": null
-    },
     "EducationList": [],
+    "WorkExperienceList": [],
     "PersonalSkill": null,
     "AboutMe": "Enter Description",
     "Ratings": null,
@@ -522,8 +409,8 @@
     "LinkedinUrl": "Enter URL",
     "FullName": "Enter FullName",
     "AwardList": [],
-    "Experiences": null,
     "EducationList": [],
+    "WorkExperienceList": [],
     "PersonalSkill": null,
     "AboutMe": "Enter Description",
     "Ratings": null,
@@ -538,14 +425,8 @@
     "LinkedinUrl": "111",
     "FullName": "Chris",
     "AwardList": [],
-    "Experiences": {
-      "Title": "5",
-      "Employer": null,
-      "StartDate": null,
-      "EndDate": null,
-      "Description": null
-    },
     "EducationList": [],
+    "WorkExperienceList": [],
     "PersonalSkill": "333",
     "AboutMe": "222",
     "Ratings": null,
@@ -560,8 +441,8 @@
     "LinkedinUrl": "Enter URL",
     "FullName": "Enter FullName",
     "AwardList": [],
-    "Experiences": null,
     "EducationList": [],
+    "WorkExperienceList": [],
     "PersonalSkill": null,
     "AboutMe": "Enter Description",
     "Ratings": null,
@@ -576,8 +457,8 @@
     "LinkedinUrl": "Enter URL",
     "FullName": "Enter FullName",
     "AwardList": [],
-    "Experiences": null,
     "EducationList": [],
+    "WorkExperienceList": [],
     "PersonalSkill": null,
     "AboutMe": "Enter Description",
     "Ratings": null,
@@ -592,8 +473,8 @@
     "LinkedinUrl": "Enter URL",
     "FullName": "Enter FullName",
     "AwardList": [],
-    "Experiences": null,
     "EducationList": [],
+    "WorkExperienceList": [],
     "PersonalSkill": null,
     "AboutMe": "Enter Description",
     "Ratings": null,
@@ -608,14 +489,8 @@
     "LinkedinUrl": "Enter URL",
     "FullName": "Enter FullName",
     "AwardList": [],
-    "Experiences": {
-      "Title": null,
-      "Employer": null,
-      "StartDate": null,
-      "EndDate": null,
-      "Description": null
-    },
     "EducationList": [],
+    "WorkExperienceList": [],
     "PersonalSkill": null,
     "AboutMe": "Enter Description",
     "Ratings": null,
