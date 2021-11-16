@@ -97,7 +97,7 @@ namespace ContosoCrafts.WebSite.Services
         }
 
         /// <summary>
-        /// Create product and update to JSON file
+        /// Create product and update to JSON filed
         /// </summary>
         /// <returns></returns>
         public ProductModel CreateData()
@@ -106,10 +106,10 @@ namespace ContosoCrafts.WebSite.Services
             var data = new ProductModel()
             {
                 Id = System.Guid.NewGuid().ToString(),
-                FullName = "Enter FullName",
-                AboutMe = "Enter Description",
-                LinkedinUrl = "Enter URL",
-                Photo = "Enter Photo URL",
+                FullName = "",
+                AboutMe = "",
+                LinkedinUrl = "",
+                Photo = "",
             };
 
             // Get the current set, and append the new record to it
