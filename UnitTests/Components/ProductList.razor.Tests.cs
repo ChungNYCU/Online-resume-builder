@@ -243,7 +243,7 @@ namespace UnitTests.Components
         {
             // Arrange
             Services.AddSingleton<JsonFileProductService>(TestHelper.ProductService);
-            var id = "MoreInfoButton_1";
+            var id = "Search_ID";
 
             var page = RenderComponent<ProductList>();
 
