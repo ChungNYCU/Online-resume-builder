@@ -123,7 +123,7 @@ else
                     <p>
                         <label>
                             Personal Status:
-                            <input @bind="PersonalStatus" /><br>
+                            <input @bind="PersonalStatus" id="PersonalStatus_@selectedProduct.Id"><br>
                         </label>
                     </p>
                     <button @onclick="(e => SubmitPersonalStatus(PersonalStatus))" data-toggle="modal" data-target="#productModal" class="btn btn-primary" id="UpdatePersonalStatus_@selectedProduct.Id"> Update Personal Status </button>
