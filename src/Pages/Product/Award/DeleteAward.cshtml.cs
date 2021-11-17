@@ -41,14 +41,13 @@ namespace ContosoCrafts.WebSite.Pages.Product.Award
         /// </summary>
         /// <param name="ProductId"></param>
         /// <param name="AwardId"></param>
-        public void OnGet(string ProductId, string AwardId)
+        public IActionResult OnGet(string ProductId, string AwardId)
         {
             // Get product by looking up product id in JSON file
             var Product = ProductService.GetAllData().FirstOrDefault(m => m.Id.Equals(ProductId));  // id comes from Update.cshtml line 55: <a asp-page="AddEducation" asp-route-id="@Model.Product.Id">+ Add</a>
             if (Product == null)
             {
-                RedirectToPage("/Product/Index");
-                return;
+                return RedirectToPage("/Product/Index");
             }
 
             // Find coresponding education record, assign it to Property Education
@@ -58,6 +57,8 @@ namespace ContosoCrafts.WebSite.Pages.Product.Award
                 if (AwardRecord.ID == AwardId)
                     Award = AwardRecord;
             }
+
+            return Page();
         }
 
         /// <summary>
