@@ -75,6 +75,108 @@ namespace UnitTests.Components
             // Assert
             Assert.AreEqual(true, pageMarkup.Contains("June Liao"));
         }
+
+        /// <summary>
+        /// Test for valid Select Product after a Search
+        /// </summary>
+        [Test]
+        public void SelectProduct_Valid_ID_1_From_Search_Should_Return_Content()
+        {
+            // Fill productList with Bart
+            // Arrange
+            Services.AddSingleton<JsonFileProductService>(TestHelper.ProductService);
+            var id = "Search_ID";
+            var id2 = "SearchCriteria_ID";
+            var page = RenderComponent<ProductList>();
+
+            // Find the Buttons (more info)
+            var buttonList = page.FindAll("Button");
+            var inputList = page.FindAll("input");
+
+            // Find the one that matches the ID looking for and click it
+            var button = buttonList.First(m => m.OuterHtml.Contains(id));
+            var search = inputList.First(m => m.OuterHtml.Contains(id2));
+
+            // Act
+            search.Change("Bart");
+            button.Click();
+
+            // Get the markup to use for the assert
+            var pageMarkup = page.Markup;
+
+            // Assert
+            Assert.AreEqual(true, pageMarkup.Contains("Bart Joseph"));
+
+            // Select from Missed List Selection
+            // Arrange
+            var id3 = "MoreInfoButton_4";
+
+            // Find the Buttons (more info)
+            buttonList = page.FindAll("Button");
+
+            // Find the one that matches the ID looking for and click it
+            button = buttonList.First(m => m.OuterHtml.Contains(id3));
+
+            // Act
+            button.Click();
+
+            // Get the markup to use for the assert
+            pageMarkup = page.Markup;
+
+            // Assert
+            Assert.AreEqual(true, pageMarkup.Contains("Bart Joseph"));
+        }
+
+        /// <summary>
+        /// Test for valid SelectProduct after a search on missed list
+        /// </summary>
+        [Test]
+        public void SelectProduct_Valid_ID_1_From_Missed_Search_Should_Return_Content()
+        {
+            // Fill productList with Bart
+            // Arrange
+            Services.AddSingleton<JsonFileProductService>(TestHelper.ProductService);
+            var id = "Search_ID";
+            var id2 = "SearchCriteria_ID";
+            var page = RenderComponent<ProductList>();
+
+            // Find the Buttons (more info)
+            var buttonList = page.FindAll("Button");
+            var inputList = page.FindAll("input");
+
+            // Find the one that matches the ID looking for and click it
+            var button = buttonList.First(m => m.OuterHtml.Contains(id));
+            var search = inputList.First(m => m.OuterHtml.Contains(id2));
+
+            // Act
+            search.Change("Bart");
+            button.Click();
+
+            // Get the markup to use for the assert
+            var pageMarkup = page.Markup;
+
+            // Assert
+            Assert.AreEqual(true, pageMarkup.Contains("Bart Joseph"));
+
+            // Select from Missed List Selection
+            // Arrange
+            var id3 = "MoreInfoButton_1";
+
+            // Find the Buttons (more info)
+            buttonList = page.FindAll("Button");
+
+            // Find the one that matches the ID looking for and click it
+            button = buttonList.First(m => m.OuterHtml.Contains(id3));
+
+            // Act
+            button.Click();
+
+            // Get the markup to use for the assert
+            pageMarkup = page.Markup;
+
+            // Assert
+            Assert.AreEqual(true, pageMarkup.Contains("June Liao"));
+        }
         #endregion SelectProduct
 
         #region SubmitRating
@@ -811,5 +913,53 @@ namespace UnitTests.Components
             Assert.AreEqual(true, pageMarkup.Contains("June Liao"));
         }
         #endregion Clear
+
+        #region Personal Status
+        /// <summary>
+        /// Test for valid Personal Status
+        /// </summary>
+        [Test]
+        public void PersonalStatus_Valid_Delete_Update_Should_Return_Content()
+        {
+            // Arrange
+            Services.AddSingleton<JsonFileProductService>(TestHelper.ProductService);
+            var id = "MoreInfoButton_1";
+
+            var page = RenderComponent<ProductList>();
+
+            // Find the Buttons (more info)
+            var buttonList = page.FindAll("Button");
+
+            // Find the one that matches the ID looking for and click it
+            var button = buttonList.First(m => m.OuterHtml.Contains(id));
+
+            // Act
+            button.Click();
+
+            // Get the markup to use for the assert
+            var pageMarkup = page.Markup;
+
+            // Assert
+            Assert.AreEqual(true, pageMarkup.Contains("June Liao"));
+
+            // Arrange
+            id = "MoreInfoButton_1";
+
+            // Find the Buttons (more info)
+            buttonList = page.FindAll("Button");
+
+            // Find the one that matches the ID looking for and click it
+            button = buttonList.First(m => m.OuterHtml.Contains(id));
+
+            // Act
+            button.Click();
+
+            // Get the markup to use for the assert
+            pageMarkup = page.Markup;
+
+            // Assert
+            Assert.AreEqual(true, pageMarkup.Contains("June Liao"));
+        }
+        #endregion Personal Status
     }
 }
