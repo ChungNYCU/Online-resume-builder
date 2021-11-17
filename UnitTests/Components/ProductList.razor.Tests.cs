@@ -33,16 +33,16 @@ namespace UnitTests.Components
             var result = page.Markup;
 
             // Assert
-            Assert.AreEqual(true, result.Contains("The Quantified Cactus: An Easy Plant Soil Moisture Sensor"));
+            Assert.AreEqual(true, result.Contains("June Liao"));
         }
 
         #region SelectProduct
         [Test]
-        public void SelectProduct_Valid_ID_jenlooper_Should_Return_Content()
+        public void SelectProduct_Valid_ID_1_Should_Return_Content()
         {
             // Arrange
             Services.AddSingleton<JsonFileProductService>(TestHelper.ProductService);
-            var id = "MoreInfoButton_jenlooper-cactus";
+            var id = "MoreInfoButton_1";
 
             var page = RenderComponent<ProductList>();
 
@@ -59,7 +59,7 @@ namespace UnitTests.Components
             var pageMarkup = page.Markup;
 
             // Assert
-            Assert.AreEqual(true, pageMarkup.Contains("This project is a great learning project to get comfortable with soldering and programming an Arduino."));
+            Assert.AreEqual(true, pageMarkup.Contains("June Liao"));
         }
         #endregion SelectProduct
 
@@ -82,7 +82,7 @@ namespace UnitTests.Components
 
             // Arrange
             Services.AddSingleton<JsonFileProductService>(TestHelper.ProductService);
-            var id = "MoreInfoButton_jenlooper-light";
+            var id = "MoreInfoButton_1";
 
             var page = RenderComponent<ProductList>();
 
@@ -156,7 +156,7 @@ namespace UnitTests.Components
 
             // Arrange
             Services.AddSingleton<JsonFileProductService>(TestHelper.ProductService);
-            var id = "MoreInfoButton_jenlooper-cactus";
+            var id = "MoreInfoButton_1";
 
             var page = RenderComponent<ProductList>();
 
