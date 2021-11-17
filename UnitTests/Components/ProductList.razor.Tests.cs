@@ -919,8 +919,9 @@ namespace UnitTests.Components
         /// Test for valid Personal Status
         /// </summary>
         [Test]
-        public void PersonalStatus_Valid_Delete_Update_Should_Return_Content()
+        public void PersonalStatus_Valid_Update_Delete_Should_Return_Content()
         {
+            // Click more info
             // Arrange
             Services.AddSingleton<JsonFileProductService>(TestHelper.ProductService);
             var id = "MoreInfoButton_1";
@@ -942,8 +943,31 @@ namespace UnitTests.Components
             // Assert
             Assert.AreEqual(true, pageMarkup.Contains("June Liao"));
 
+            // Update personal status
             // Arrange
             id = "UpdatePersonalStatus_1";
+            var id2 = "PersonalStatus_1";
+
+            // Find the Buttons (more info)
+            buttonList = page.FindAll("Button");
+            var inputList = page.FindAll("input");
+
+            // Find the one that matches the ID looking for and click it
+            button = buttonList.First(m => m.OuterHtml.Contains(id));
+            var search = inputList.First(m => m.OuterHtml.Contains(id2));
+
+            // Act
+            search.Change("Im doing fine!");
+            button.Click();
+
+            // Get the markup to use for the assert
+            pageMarkup = page.Markup;
+
+            // Assert
+            Assert.AreEqual(true, pageMarkup.Contains("Im doing fine!"));
+
+            // Click more info again
+            id = "MoreInfoButton_1";
 
             // Find the Buttons (more info)
             buttonList = page.FindAll("Button");
@@ -959,6 +983,29 @@ namespace UnitTests.Components
 
             // Assert
             Assert.AreEqual(true, pageMarkup.Contains("June Liao"));
+
+            // Delete Personal Status
+            // Arrange
+            id = "DeletePersonalStatus_1";
+            id2 = "PersonalStatus_1";
+
+            // Find the Buttons (more info)
+            buttonList = page.FindAll("Button");
+            inputList = page.FindAll("input");
+
+            // Find the one that matches the ID looking for and click it
+            button = buttonList.First(m => m.OuterHtml.Contains(id));
+            search = inputList.First(m => m.OuterHtml.Contains(id2));
+
+            // Act
+            search.Change("");
+            button.Click();
+
+            // Get the markup to use for the assert
+            pageMarkup = page.Markup;
+
+            // Assert
+            Assert.AreEqual(false, pageMarkup.Contains("Im doing fine!"));
         }
         #endregion Personal Status
     }
