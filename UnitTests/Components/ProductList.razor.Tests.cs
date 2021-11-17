@@ -943,7 +943,7 @@ namespace UnitTests.Components
             Assert.AreEqual(true, pageMarkup.Contains("June Liao"));
 
             // Arrange
-            id = "MoreInfoButton_1";
+            id = "UpdatePersonalStatus_1";
 
             // Find the Buttons (more info)
             buttonList = page.FindAll("Button");
