@@ -37,14 +37,13 @@ namespace ContosoCrafts.WebSite.Pages.Product.WorkExperience
         /// Loads the Data
         /// </summary>
         /// <param name="id">This is Product ID</param>
-        public void OnGet(string id)
+        public IActionResult OnGet(string id)
         {
             // Get product by looking up product id in JSON file
             var Product = ProductService.GetAllData().FirstOrDefault(m => m.Id.Equals(id));  // id comes from Update.cshtml line 55: <a asp-page="AddEducation" asp-route-id="@Model.Product.Id">+ Add</a>
             if (Product == null)
             {
-                RedirectToPage("/Product/Index");
-                return;
+                return RedirectToPage("/Product/Index");
             }
 
             // Create a new WorkExperience record and populate it with default value
@@ -55,6 +54,8 @@ namespace ContosoCrafts.WebSite.Pages.Product.WorkExperience
 
             // Put product id onto the WorkExperience record (Match )
             WorkExperience.ProductID = Product.Id;
+
+            return Page();
 
         }
 
