@@ -126,8 +126,8 @@ else
                             <input @bind="PersonalStatus" /><br>
                         </label>
                     </p>
-                    <button @onclick="(e => SubmitPersonalStatus(PersonalStatus))" data-toggle="modal" data-target="#productModal" class="btn btn-primary"> Update Personal Status </button>
-                    <button @onclick="(e => SubmitPersonalStatus(' '.ToString()))" data-toggle="modal" data-target="#productModal" class="btn btn-primary"> Delete </button>
+                    <button @onclick="(e => SubmitPersonalStatus(PersonalStatus))" data-toggle="modal" data-target="#productModal" class="btn btn-primary" id="UpdatePersonalStatus_@selectedProduct.Id"> Update Personal Status </button>
+                    <button @onclick="(e => SubmitPersonalStatus(' '.ToString()))" data-toggle="modal" data-target="#productModal" class="btn btn-primary" id="DeletePersonalStatus_@selectedProduct.Id"> Delete </button>
                     <a class="btn btn-primary" href="/Product/Read/@selectedProduct.Id">Open</a>
 
                 </div>
