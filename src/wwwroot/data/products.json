@@ -63,7 +63,7 @@
     "AboutMe": "Seeking for 2022 intern\uFF01",
     "Ratings": null,
     "Password": "/Oo1nScwK04Vf\u002ByeC2P3Yw==",
-    "Viewed": 29
+    "Viewed": 31
   },
   {
     "Id": "2",
@@ -89,13 +89,25 @@
     "LinkedinUrl": "https://www.linkedin.com/in/benny-wong-ab71b8160/",
     "FullName": "Benny Wong",
     "AwardList": [],
-    "EducationList": [],
+    "EducationList": [
+      {
+        "ProductID": "3",
+        "ID": "a626bc1a-4543-4617-beea-6d20a63fd328",
+        "University": "Seattle University",
+        "Location": null,
+        "Degree": null,
+        "Major": null,
+        "GPA": null,
+        "StartDate": null,
+        "EndDate": null
+      }
+    ],
     "WorkExperienceList": [],
     "PersonalSkill": "C\u002B\u002B, Python, Java",
     "AboutMe": "Seeking for 2022 intern\uFF01",
     "Ratings": null,
     "Password": "9UrJvTdIuE6DvqOpFzB3/w==",
-    "Viewed": 0
+    "Viewed": 2
   },
   {
     "Id": "4",
@@ -400,6 +412,5 @@
     "Ratings": null,
     "Password": "1PrzRgWesBeDukP6SHHWnncNimlQlbzdD74lCOP0M4g=",
     "Viewed": 4
-
   }
 ]
