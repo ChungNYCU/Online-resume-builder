@@ -1,5 +1,6 @@
 using System.Linq;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using Microsoft.AspNetCore.Mvc;
 using ContosoCrafts.WebSite.Models;
 using ContosoCrafts.WebSite.Services;
 using Microsoft.AspNetCore.Components.Web;
@@ -36,19 +37,19 @@ namespace ContosoCrafts.WebSite.Pages.Product
         /// REST Get request
         /// </summary>
         /// <param name="id"></param>
-        public void OnGet(string id)
+        public IActionResult OnGet(string id)
         {
             // getting product service data from ID
-            Product  = ProductService.GetAllData().FirstOrDefault(m => m.Id.Equals(id));
+            Product = ProductService.GetAllData().FirstOrDefault(m => m.Id.Equals(id));
             if (Product == null)
             {
-                RedirectToPage("./Index");
-                return;
+                return RedirectToPage("./Index");
+
             }
 
             Product.Viewed += 1;
             ProductService.UpdateData(Product);
-            return ;
+            return Page();
         }
     }
 }
