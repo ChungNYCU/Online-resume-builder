@@ -234,5 +234,34 @@ namespace UnitTests.Components
         }
         #endregion SubmitRating
 
+        #region Search
+        /// <summary>
+        /// Test for valid Search
+        /// </summary>
+        [Test]
+        public void Search_Valid_Should_Return_Matching_Content()
+        {
+            // Arrange
+            Services.AddSingleton<JsonFileProductService>(TestHelper.ProductService);
+            var id = "MoreInfoButton_1";
+
+            var page = RenderComponent<ProductList>();
+
+            // Find the Buttons (more info)
+            var buttonList = page.FindAll("Button");
+
+            // Find the one that matches the ID looking for and click it
+            var button = buttonList.First(m => m.OuterHtml.Contains(id));
+
+            // Act
+            button.Click();
+
+            // Get the markup to use for the assert
+            var pageMarkup = page.Markup;
+
+            // Assert
+            Assert.AreEqual(true, pageMarkup.Contains("June Liao"));
+        }
+        #endregion Search
     }
 }
