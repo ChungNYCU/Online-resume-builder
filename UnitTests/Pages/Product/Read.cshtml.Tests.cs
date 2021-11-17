@@ -1,5 +1,6 @@
 using NUnit.Framework;
 using ContosoCrafts.WebSite.Pages.Product;
+using Microsoft.AspNetCore.Mvc;
 
 /// <summary>
 /// Unit tests for Product.Read page
@@ -48,17 +49,16 @@ namespace UnitTests.Pages.Product.Read
         /// Invalid OnGet should go to to Index Page
         /// </summary>
         [Test]
-        public void OnGet_Product_NotValid_Should_Go_To_Index_Page()
+        public void OnGet_Product_NotValid_Should_Return_Index_Page()
         {
             // Arrange 11122 is a non_existing Product ID
             string ProductID = "11122";
 
             // Act
-            pageModel.OnGet(ProductID);
+            var result = pageModel.OnGet(ProductID) as RedirectToPageResult;
 
             // Assert
-            Assert.AreEqual(true, pageModel.ModelState.IsValid);
-            Assert.AreEqual(null, pageModel.Product);
+            Assert.AreEqual(true, result.PageName.Contains("Index"));
         }
         #endregion OnGet
     }
