@@ -239,7 +239,7 @@ namespace UnitTests.Components
         /// Test for valid Search
         /// </summary>
         [Test]
-        public void Search_Valid_Empty_Should_Return_All_Content()
+        public void Search_InValid_Empty_Should_Return_All_Content()
         {
             // Arrange
             Services.AddSingleton<JsonFileProductService>(TestHelper.ProductService);
@@ -253,6 +253,37 @@ namespace UnitTests.Components
             var button = buttonList.First(m => m.OuterHtml.Contains(id));
 
             // Act
+            button.Click();
+
+            // Get the markup to use for the assert
+            var pageMarkup = page.Markup;
+
+            // Assert
+            Assert.AreEqual(true, pageMarkup.Contains("June Liao"));
+        }
+
+        /// <summary>
+        /// Test for valid Search
+        /// </summary>
+        [Test]
+        public void Search_InValid_Space_Should_Return_All_Content()
+        {
+            // Arrange
+            Services.AddSingleton<JsonFileProductService>(TestHelper.ProductService);
+            var id = "Search_ID";
+            var id2 = "SearchCriteria_ID";
+            var page = RenderComponent<ProductList>();
+
+            // Find the Buttons (more info)
+            var buttonList = page.FindAll("Button");
+            var inputList = page.FindAll("input");
+
+            // Find the one that matches the ID looking for and click it
+            var button = buttonList.First(m => m.OuterHtml.Contains(id));
+            var search = inputList.First(m => m.OuterHtml.Contains(id2));
+
+            // Act
+            search.Change("     ");
             button.Click();
 
             // Get the markup to use for the assert
@@ -438,7 +469,286 @@ namespace UnitTests.Components
             var search = inputList.First(m => m.OuterHtml.Contains(id2));
 
             // Act
-            search.Change("SU");
+            search.Change("Phi Theta Kappa");
+            button.Click();
+
+            // Get the markup to use for the assert
+            var pageMarkup = page.Markup;
+
+            // Assert
+            Assert.AreEqual(true, pageMarkup.Contains("Bart"));
+        }
+
+        /// <summary>
+        /// Test for valid Search
+        /// </summary>
+        [Test]
+        public void Search_Valid_Work_Title_Should_Return_Matching_Content()
+        {
+            // Arrange
+            Services.AddSingleton<JsonFileProductService>(TestHelper.ProductService);
+            var id = "Search_ID";
+            var id2 = "SearchCriteria_ID";
+            var page = RenderComponent<ProductList>();
+
+            // Find the Buttons (more info)
+            var buttonList = page.FindAll("Button");
+            var inputList = page.FindAll("input");
+
+            // Find the one that matches the ID looking for and click it
+            var button = buttonList.First(m => m.OuterHtml.Contains(id));
+            var search = inputList.First(m => m.OuterHtml.Contains(id2));
+
+            // Act
+            search.Change("PM");
+            button.Click();
+
+            // Get the markup to use for the assert
+            var pageMarkup = page.Markup;
+
+            // Assert
+            Assert.AreEqual(true, pageMarkup.Contains("June Liao"));
+        }
+
+        /// <summary>
+        /// Test for valid Search
+        /// </summary>
+        [Test]
+        public void Search_Valid_Work_Employer_Should_Return_Matching_Content()
+        {
+            // Arrange
+            Services.AddSingleton<JsonFileProductService>(TestHelper.ProductService);
+            var id = "Search_ID";
+            var id2 = "SearchCriteria_ID";
+            var page = RenderComponent<ProductList>();
+
+            // Find the Buttons (more info)
+            var buttonList = page.FindAll("Button");
+            var inputList = page.FindAll("input");
+
+            // Find the one that matches the ID looking for and click it
+            var button = buttonList.First(m => m.OuterHtml.Contains(id));
+            var search = inputList.First(m => m.OuterHtml.Contains(id2));
+
+            // Act
+            search.Change("OPPO");
+            button.Click();
+
+            // Get the markup to use for the assert
+            var pageMarkup = page.Markup;
+
+            // Assert
+            Assert.AreEqual(true, pageMarkup.Contains("June Liao"));
+        }
+
+        /// <summary>
+        /// Test for valid Search
+        /// </summary>
+        [Test]
+        public void Search_Valid_Work_Description_Should_Return_Matching_Content()
+        {
+            // Arrange
+            Services.AddSingleton<JsonFileProductService>(TestHelper.ProductService);
+            var id = "Search_ID";
+            var id2 = "SearchCriteria_ID";
+            var page = RenderComponent<ProductList>();
+
+            // Find the Buttons (more info)
+            var buttonList = page.FindAll("Button");
+            var inputList = page.FindAll("input");
+
+            // Find the one that matches the ID looking for and click it
+            var button = buttonList.First(m => m.OuterHtml.Contains(id));
+            var search = inputList.First(m => m.OuterHtml.Contains(id2));
+
+            // Act
+            search.Change("Manager");
+            button.Click();
+
+            // Get the markup to use for the assert
+            var pageMarkup = page.Markup;
+
+            // Assert
+            Assert.AreEqual(true, pageMarkup.Contains("June Liao"));
+        }
+
+        /// <summary>
+        /// Test for valid Search
+        /// </summary>
+        [Test]
+        public void Search_Valid_Personal_Skill_Should_Return_Matching_Content()
+        {
+            // Arrange
+            Services.AddSingleton<JsonFileProductService>(TestHelper.ProductService);
+            var id = "Search_ID";
+            var id2 = "SearchCriteria_ID";
+            var page = RenderComponent<ProductList>();
+
+            // Find the Buttons (more info)
+            var buttonList = page.FindAll("Button");
+            var inputList = page.FindAll("input");
+
+            // Find the one that matches the ID looking for and click it
+            var button = buttonList.First(m => m.OuterHtml.Contains(id));
+            var search = inputList.First(m => m.OuterHtml.Contains(id2));
+
+            // Act
+            search.Change("Java");
+            button.Click();
+
+            // Get the markup to use for the assert
+            var pageMarkup = page.Markup;
+
+            // Assert
+            Assert.AreEqual(true, pageMarkup.Contains("June Liao"));
+        }
+
+        /// <summary>
+        /// Test for valid Search
+        /// </summary>
+        [Test]
+        public void Search_Valid_About_Me_Should_Return_Matching_Content()
+        {
+            // Arrange
+            Services.AddSingleton<JsonFileProductService>(TestHelper.ProductService);
+            var id = "Search_ID";
+            var id2 = "SearchCriteria_ID";
+            var page = RenderComponent<ProductList>();
+
+            // Find the Buttons (more info)
+            var buttonList = page.FindAll("Button");
+            var inputList = page.FindAll("input");
+
+            // Find the one that matches the ID looking for and click it
+            var button = buttonList.First(m => m.OuterHtml.Contains(id));
+            var search = inputList.First(m => m.OuterHtml.Contains(id2));
+
+            // Act
+            search.Change("Seeking for 2022 intern");
+            button.Click();
+
+            // Get the markup to use for the assert
+            var pageMarkup = page.Markup;
+
+            // Assert
+            Assert.AreEqual(true, pageMarkup.Contains("June Liao"));
+        }
+
+        /// <summary>
+        /// Test for valid Search
+        /// </summary>
+        [Test]
+        public void Search_Valid_Education_University_Should_Return_Matching_Content()
+        {
+            // Arrange
+            Services.AddSingleton<JsonFileProductService>(TestHelper.ProductService);
+            var id = "Search_ID";
+            var id2 = "SearchCriteria_ID";
+            var page = RenderComponent<ProductList>();
+
+            // Find the Buttons (more info)
+            var buttonList = page.FindAll("Button");
+            var inputList = page.FindAll("input");
+
+            // Find the one that matches the ID looking for and click it
+            var button = buttonList.First(m => m.OuterHtml.Contains(id));
+            var search = inputList.First(m => m.OuterHtml.Contains(id2));
+
+            // Act
+            search.Change("Seattle");
+            button.Click();
+
+            // Get the markup to use for the assert
+            var pageMarkup = page.Markup;
+
+            // Assert
+            Assert.AreEqual(true, pageMarkup.Contains("June Liao"));
+        }
+
+        /// <summary>
+        /// Test for valid Search
+        /// </summary>
+        [Test]
+        public void Search_Valid_Education_Location_Should_Return_Matching_Content()
+        {
+            // Arrange
+            Services.AddSingleton<JsonFileProductService>(TestHelper.ProductService);
+            var id = "Search_ID";
+            var id2 = "SearchCriteria_ID";
+            var page = RenderComponent<ProductList>();
+
+            // Find the Buttons (more info)
+            var buttonList = page.FindAll("Button");
+            var inputList = page.FindAll("input");
+
+            // Find the one that matches the ID looking for and click it
+            var button = buttonList.First(m => m.OuterHtml.Contains(id));
+            var search = inputList.First(m => m.OuterHtml.Contains(id2));
+
+            // Act
+            search.Change("WA");
+            button.Click();
+
+            // Get the markup to use for the assert
+            var pageMarkup = page.Markup;
+
+            // Assert
+            Assert.AreEqual(true, pageMarkup.Contains("June Liao"));
+        }
+
+        /// <summary>
+        /// Test for valid Search
+        /// </summary>
+        [Test]
+        public void Search_Valid_Education_Degree_Should_Return_Matching_Content()
+        {
+            // Arrange
+            Services.AddSingleton<JsonFileProductService>(TestHelper.ProductService);
+            var id = "Search_ID";
+            var id2 = "SearchCriteria_ID";
+            var page = RenderComponent<ProductList>();
+
+            // Find the Buttons (more info)
+            var buttonList = page.FindAll("Button");
+            var inputList = page.FindAll("input");
+
+            // Find the one that matches the ID looking for and click it
+            var button = buttonList.First(m => m.OuterHtml.Contains(id));
+            var search = inputList.First(m => m.OuterHtml.Contains(id2));
+
+            // Act
+            search.Change("MS");
+            button.Click();
+
+            // Get the markup to use for the assert
+            var pageMarkup = page.Markup;
+
+            // Assert
+            Assert.AreEqual(true, pageMarkup.Contains("June Liao"));
+        }
+
+        /// <summary>
+        /// Test for valid Search
+        /// </summary>
+        [Test]
+        public void Search_Valid_Education_Major_Should_Return_Matching_Content()
+        {
+            // Arrange
+            Services.AddSingleton<JsonFileProductService>(TestHelper.ProductService);
+            var id = "Search_ID";
+            var id2 = "SearchCriteria_ID";
+            var page = RenderComponent<ProductList>();
+
+            // Find the Buttons (more info)
+            var buttonList = page.FindAll("Button");
+            var inputList = page.FindAll("input");
+
+            // Find the one that matches the ID looking for and click it
+            var button = buttonList.First(m => m.OuterHtml.Contains(id));
+            var search = inputList.First(m => m.OuterHtml.Contains(id2));
+
+            // Act
+            search.Change("CS");
             button.Click();
 
             // Get the markup to use for the assert
