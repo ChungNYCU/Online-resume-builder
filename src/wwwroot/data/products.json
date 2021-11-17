@@ -116,7 +116,15 @@
     "img": "https://scontent-sea1-1.xx.fbcdn.net/v/t31.18172-8/614359_3805111441040_1022959363_o.jpg?_nc_cat=107\u0026ccb=1-5\u0026_nc_sid=de6eea\u0026_nc_ohc=ci5FtlvNUDQAX-3XzxO\u0026_nc_ht=scontent-sea1-1.xx\u0026oh=203dd530235bee131ae4d0351502ae5b\u0026oe=61A4FE47",
     "LinkedinUrl": "https://www.linkedin.com/in/bart-joseph-nadala-517b01a0/",
     "FullName": "Nadala, Bart Joseph",
-    "AwardList": [],
+    "AwardList": [
+      {
+        "ProductID": "4",
+        "ID": "6031eca8-04a9-44bb-9f4d-8f34f11f0732",
+        "Award": "Honor Society Certificate",
+        "Issuer": "Phi Theta Kappa",
+        "AwardDate": "March2012"
+      }
+    ],
     "EducationList": [],
     "WorkExperienceList": [],
     "PersonalSkill": "SQL, C\u002B\u002B, Python, Java, Azure",
