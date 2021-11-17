@@ -8,10 +8,10 @@
 
 <input @bind="searchCriteria" style="width:100%; margin-top:20px; padding:5px; height:40px;" placeholder="Search"><br>
 <div>
-    <button @onclick="(e => Search())" style="margin-top:10px;" class="btn btn-primary" data-toggle="cardRefresh" data-target="#cardRefresh">
+    <button @onclick="(e => Search())" style="margin-top:10px;" class="btn btn-primary" data-toggle="cardRefresh" data-target="#cardRefresh" id="Search_ID">
         Search
     </button>
-    <button @onclick="(e => Clear())" style="margin-top:10px; margin-left:5px;" class="btn btn-primary" data-toggle="cardRefresh" data-target="#cardRefresh">
+    <button @onclick="(e => Clear())" style="margin-top:10px; margin-left:5px;" class="btn btn-primary" data-toggle="cardRefresh" data-target="#cardRefresh" id="Clear_ID">
         Clear
     </button>
 </div>
@@ -315,7 +315,6 @@ else
                     found = true;
                     break;
                 }
-
                 if (product.AwardList != null)
                 {
                     foreach (var award in product.AwardList)
@@ -332,15 +331,8 @@ else
                             found = true;
                             break;
                         }
-                        if (award.AwardDate != null && award.AwardDate.ToLower().Contains(word.ToLower()))
-                        {
-                            returnList.Add(product);
-                            found = true;
-                            break;
-                        }
                     }
                 }
-
                 if (product.WorkExperienceList != null)
                 {
                     foreach (var WorkExperience in product.WorkExperienceList)
@@ -365,8 +357,6 @@ else
                         }
                     }
                 }
-
-
                 if (product.PersonalSkill != null && product.PersonalSkill.ToLower().Contains(word.ToLower()))
                 {
                     returnList.Add(product);
@@ -402,24 +392,6 @@ else
                             break;
                         }
                         if (ed.Major != null && ed.Major.ToLower().Contains(word.ToLower()))
-                        {
-                            returnList.Add(product);
-                            found = true;
-                            break;
-                        }
-                        if (ed.GPA != null && ed.GPA.ToLower().Contains(word.ToLower()))
-                        {
-                            returnList.Add(product);
-                            found = true;
-                            break;
-                        }
-                        if (ed.StartDate != null && ed.StartDate.ToLower().Contains(word.ToLower()))
-                        {
-                            returnList.Add(product);
-                            found = true;
-                            break;
-                        }
-                        if (ed.EndDate != null && ed.EndDate.ToLower().Contains(word.ToLower()))
                         {
                             returnList.Add(product);
                             found = true;
