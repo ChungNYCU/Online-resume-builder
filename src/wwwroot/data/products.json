@@ -77,7 +77,7 @@
     "WorkExperienceList": [],
     "PersonalSkill": null,
     "AboutMe": null,
-    "Ratings": null,
+    "Ratings": [1,2,3,4,5],
     "Password": "/Lh0SDXf6f9nyy8eejvOqg==",
     "Viewed": 1
   },
