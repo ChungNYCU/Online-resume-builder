@@ -44,10 +44,6 @@ namespace ContosoCrafts.WebSite.Pages.Product
         {
             //Get product by id in JSON file
             Product = ProductService.GetAllData().FirstOrDefault(m => m.Id.Equals(id));
-            if (Product == null)
-            {
-                RedirectToPage("./Index");
-            }
         }
 
         /// <summary>

@@ -36,7 +36,7 @@ namespace UnitTests.Pages.Product.Delete
         /// </summary>
         #region OnGet
         [Test]
-        public void OnGet_Valid_Should_should_find_the_Product()
+        public void OnGet_Valid_Should_Return_the_Product()
         {
             // Arrange 1 is an existing Product ID
             string ProductID = "1";
@@ -49,22 +49,6 @@ namespace UnitTests.Pages.Product.Delete
             Assert.AreEqual("June Liao", pageModel.Product.FullName);
         }
 
-        /// <summary>
-        /// Invalid OnGet should go to to Index Page
-        /// </summary>
-        [Test]
-        public void OnGet_Product_NotValid_Should_Go_To_Index_Page()
-        {
-            // Arrange 11122 is a non_existing Product ID
-            string ProductID = "11122";
-
-            // Act
-            pageModel.OnGet(ProductID);
-
-            // Assert
-            Assert.AreEqual(true, pageModel.ModelState.IsValid);
-            Assert.AreEqual(null, pageModel.Product);
-        }
         #endregion OnGet
 
         /// <summary>
