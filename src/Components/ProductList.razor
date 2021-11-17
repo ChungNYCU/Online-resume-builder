@@ -29,8 +29,10 @@
                 </div>
                 <div class="card-footer">
                     <small class="text-muted">
-                        <!-- Delete "more info" button and add the open button to redirect user to "Read" page-->
-                        <a class="btn btn-primary" href="/Product/Read/@product.Id">Open</a>
+                        <button @onclick="(e => SelectProduct(product.Id))" id="MoreInfoButton_@product.Id"
+                                data-toggle="modal" data-target="#productModal" class="btn btn-primary">
+                            More Info
+                        </button>
                     </small>
                 </div>
             </div>
@@ -51,9 +53,10 @@
                 </div>
                 <div class="card-footer">
                     <small class="text-muted">
-                        <!-- Delete "more info" button and add the open button to redirect user to "Read" page-->
-                        <button @onclick="(e => SelectProduct(product.Id))" id="MoreInfoButton_@product.Id" 
-                                data-toggle="modal" data-target="#productModal" class="btn btn-primary">More Info</button>
+                        <button @onclick="(e => SelectProduct(product.Id))" id="MoreInfoButton_@product.Id"
+                                data-toggle="modal" data-target="#productModal" class="btn btn-primary">
+                            More Info
+                        </button>
                     </small>
                 </div>
             </div>
@@ -74,7 +77,6 @@ else
                 </div>
                 <div class="card-footer">
                     <small class="text-muted">
-                        <!-- Delete "more info" button and add the open button to redirect user to "Read" page-->
                         <button @onclick="(e => SelectProduct(product.Id))" id="MoreInfoButton_@product.Id"
                                 data-toggle="modal" data-target="#productModal" class="btn btn-primary">
                             More Info
@@ -182,10 +184,6 @@ else
     {
         selectedProductId = productId;
         selectedProduct = ProductService.GetAllData().First(x => x.Id == productId);
-        if (selectedProduct == null)
-        {
-            return;
-        }
         GetCurrentRating();
     }
 
@@ -255,11 +253,6 @@ else
     /// </summary>
     void Search()
     {
-        if(searchCriteria == null)
-        {
-            searching = false;
-            return;
-        }
         if(searchCriteria.Length <= 0)
         {
             searching = false;
@@ -273,13 +266,6 @@ else
         returnList = new List<ProductModel>();
         // List of products left that had not been matched to a word fromthe search bar
         missedList = new List<ProductModel>();
-
-        // Eliminate search bar without contents
-        if (words.Length <= 0)
-        {
-            return;
-        }
-
 
         // Run through all products stored in the products.json
         foreach (var product in ProductService.GetAllData())
