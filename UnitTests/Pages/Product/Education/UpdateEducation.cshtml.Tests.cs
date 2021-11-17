@@ -48,17 +48,16 @@ namespace UnitTests.Pages.Product.Education
         /// Invalid OnGet should go to to Index Page
         /// </summary>
         [Test]
-        public void OnGet_Product_NotValid_Should_Go_To_Index_Page()
+        public void OnGet_InValid_ProductID_Should_Return_Index_Page()
         {
             // Arrange 11122 is a non_existing Product ID
             string ProductID = "11122";
 
             // Act
-            pageModel.OnGet(ProductID, "11122");
+            var result = pageModel.OnGet(ProductID, "InValidEducationID") as RedirectToPageResult;
 
             // Assert
-            Assert.AreEqual(true, pageModel.ModelState.IsValid);
-            Assert.AreEqual(null, pageModel.Education);
+            Assert.AreEqual(true, result.PageName.Contains("Index"));
         }
         #endregion OnGet
 
