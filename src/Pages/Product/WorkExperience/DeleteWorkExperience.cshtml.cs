@@ -37,16 +37,14 @@ namespace ContosoCrafts.WebSite.Pages.Product.WorkExperience
         /// </summary>
         /// <param name="ProductId"></param>
         /// <param name="WorkExperienceId"></param>
-        public void OnGet(string ProductId, string WorkExperienceId)
+        public IActionResult OnGet(string ProductId, string WorkExperienceId)
         {
             // Get product by looking up product id in JSON file
             var Product = ProductService.GetAllData().FirstOrDefault(m => m.Id.Equals(ProductId));  
             if (Product == null)
             {
-                RedirectToPage("/Product/Index");
-                return;
+                return RedirectToPage("/Product/Index");
             }
-
             // Find coresponding work experience record, assign it to this.WorkExperience
             var WorkExperienceList = Product.WorkExperienceList;
             foreach (WorkExperienceModel WorkExpeirenceRecord in WorkExperienceList)
@@ -54,6 +52,8 @@ namespace ContosoCrafts.WebSite.Pages.Product.WorkExperience
                 if (WorkExpeirenceRecord.ID == WorkExperienceId)
                     WorkExperience = WorkExpeirenceRecord;
             }
+
+            return Page();
         }
 
         /// <summary>
