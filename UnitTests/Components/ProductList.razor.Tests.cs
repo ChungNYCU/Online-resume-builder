@@ -1,18 +1,26 @@
 ﻿
 using Bunit;
 using NUnit.Framework;
-
 using ContosoCrafts.WebSite.Components;
 using Microsoft.Extensions.DependencyInjection;
 using ContosoCrafts.WebSite.Services;
 using System.Linq;
 
+/// <summary>
+/// Unit tests for components
+/// </summary>
 namespace UnitTests.Components
 {
+    /// <summary>
+    /// Unit tests for ProductList razor page
+    /// </summary>
     public class ProductListTests : BunitTestContext
     {
         #region TestSetup
 
+        /// <summary>
+        /// Initializer for unit tests
+        /// </summary>
         [SetUp]
         public void TestInitialize()
         {
@@ -20,6 +28,9 @@ namespace UnitTests.Components
 
         #endregion TestSetup
 
+        /// <summary>
+        /// Tests for simple ProductList loading
+        /// </summary>
         [Test]
         public void ProductList_Default_Should_Return_Content()
         {
@@ -37,6 +48,9 @@ namespace UnitTests.Components
         }
 
         #region SelectProduct
+        /// <summary>
+        /// Test for valid SelectProduc selection
+        /// </summary>
         [Test]
         public void SelectProduct_Valid_ID_1_Should_Return_Content()
         {
@@ -65,6 +79,9 @@ namespace UnitTests.Components
 
         #region SubmitRating
 
+        /// <summary>
+        /// Test for valid Submit rating with no prior rating
+        /// </summary>
         [Test]
         public void SubmitRating_Valid_ID_Click_Unstared_Should_Increment_Count_And_Check_Star()
         {
@@ -139,6 +156,9 @@ namespace UnitTests.Components
             Assert.AreEqual(false, preVoteCountString.Equals(postVoteCountString));
         }
 
+        /// <summary>
+        /// Test for submit rating with prior rating
+        /// </summary>
         [Test]
         public void SubmitRating_Valid_ID_Click_Stared_Should_Increment_Count_And_Leave_Star_Check_Remaining()
         {
