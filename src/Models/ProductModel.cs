@@ -14,11 +14,8 @@ namespace ContosoCrafts.WebSite.Models
     {
         // getting resumes id. Id is identification for resume
         public string Id { get; set; }
-        // getting resumes status
-        public string PersonalStatus { get; set; }
         // getting resume maker
         public string Maker { get; set; }
-
         // pulling resume from json
         [JsonPropertyName("img")]
         // getting photo from ID in json
