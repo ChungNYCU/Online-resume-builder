@@ -214,33 +214,5 @@ namespace ContosoCrafts.WebSite.Services
                 );
             }
         }
-
-        /// <summary>
-        /// Update personal status
-        /// </summary>
-        /// <param name="productId"></param>
-        /// <param name="PersonalStatus"></param>
-        /// <returns></returns>
-        public bool UpdatePersonalStatus(string productId, string PersonalStatus)
-        {
-            // Get all product list, and select product by id
-            var products = GetAllData();
-            var productData = products.FirstOrDefault(x => x.Id.Equals(productId));
-
-            // If productID or PersonalStatus is null, return false
-            if (productId == null)
-                return false;
-            if (PersonalStatus == null)
-                return false;
-
-            // Overwrite old data by new data
-            productData.PersonalStatus = PersonalStatus;
-
-            // Update product to JSON file
-            SaveProducts(products);
-
-            return true;
-        }
-
     }
 }
