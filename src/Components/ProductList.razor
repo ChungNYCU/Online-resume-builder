@@ -120,15 +120,7 @@ else
                     </div>
                 </div>
                 <div class="card-footer">
-                    <p>
-                        <label>
-                            Personal Status:
-                            <input @bind="PersonalStatus" id="PersonalStatus_@selectedProduct.Id"><br>
-                        </label>
-                    </p>
-                    <button @onclick="(e => SubmitPersonalStatus(PersonalStatus))" data-toggle="modal" data-target="#productModal" class="btn btn-primary" id="UpdatePersonalStatus_@selectedProduct.Id"> Update Personal Status </button>
-                    <button @onclick="(e => SubmitPersonalStatus(' '.ToString()))" data-toggle="modal" data-target="#productModal" class="btn btn-primary" id="DeletePersonalStatus_@selectedProduct.Id"> Delete </button>
-                    <a class="btn btn-primary" href="/Product/Read/@selectedProduct.Id">Open</a>
+                   <a class="btn btn-primary" href="/Product/Read/@selectedProduct.Id">Open</a>
 
                 </div>
                 <div class="modal-footer">
@@ -185,19 +177,6 @@ else
         selectedProductId = productId;
         selectedProduct = ProductService.GetAllData().First(x => x.Id == productId);
         GetCurrentRating();
-    }
-
-    // String that signifies the card or products personal status
-    public string PersonalStatus { get; set; }
-
-    /// <summary>
-    /// Saves the personal status to the database
-    /// </summary>
-    /// <param name="PersonalStatus"></param>
-    void SubmitPersonalStatus(string PersonalStatus)
-    {
-        ProductService.UpdatePersonalStatus(selectedProductId, PersonalStatus);
-        SelectProduct(selectedProductId);
     }
 
     // Current rating on display
