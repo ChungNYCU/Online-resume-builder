@@ -37,13 +37,13 @@
             <div class="row">
                 <div class="form-group col-xs-6">
                     <label asp-for="WorkExperience.StartDate" class="control-label"></label>
-                    <input asp-for="WorkExperience.StartDate" class="form-control" input-group-lg reg_name />
+                    <input type="date" asp-for="WorkExperience.StartDate" class="form-control" input-group-lg reg_name />
                     <span asp-validation-for="WorkExperience.StartDate" class="text-danger"></span>
                 </div>
 
                 <div class="form-group col-xs-6">
                     <label asp-for="WorkExperience.EndDate" class="control-label"></label>
-                    <input asp-for="WorkExperience.EndDate" class="form-control" input-group-lg reg_name />
+                    <input type="date" asp-for="WorkExperience.EndDate" class="form-control" input-group-lg reg_name />
                     <span asp-validation-for="WorkExperience.EndDate" class="text-danger"></span>
                 </div>
             </div>
