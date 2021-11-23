@@ -60,7 +60,9 @@
     ],
     "PersonalSkill": "Java, Python, C\u002B\u002B, C#, SQL, Unix, Windows, AWS RDS",
     "AboutMe": "Seeking for 2022 intern\uFF01",
-    "Ratings": null,
+    "Ratings": [
+      3
+    ],
     "Password": "/Oo1nScwK04Vf\u002ByeC2P3Yw==",
     "Viewed": 32
   },
@@ -75,7 +77,9 @@
     "WorkExperienceList": [],
     "PersonalSkill": null,
     "AboutMe": null,
-    "Ratings": null,
+    "Ratings": [
+      4
+    ],
     "Password": "/Lh0SDXf6f9nyy8eejvOqg==",
     "Viewed": 2
   },
@@ -125,7 +129,14 @@
     "WorkExperienceList": [],
     "PersonalSkill": "SQL, C\u002B\u002B, Python, Java, Azure",
     "AboutMe": "Seeking for 2022 intern\uFF01",
-    "Ratings": [1,2,3,4,5],
+    "Ratings": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      5
+    ],
     "Password": null,
     "Viewed": 0
   },
@@ -200,7 +211,9 @@
     "WorkExperienceList": [],
     "PersonalSkill": "C\u002B\u002B, Java, Python, C#",
     "AboutMe": "I jog everyday!",
-    "Ratings": null,
+    "Ratings": [
+      2
+    ],
     "Password": null,
     "Viewed": 0
   },
@@ -215,7 +228,9 @@
     "WorkExperienceList": [],
     "PersonalSkill": "Knife throwing, C#, .Net, Python, scikit-learn, Java, Git, Linux, SQL, HTML/CSS, PHP, JavaScript",
     "AboutMe": "I throw knives at trees when I am bored.",
-    "Ratings": null,
+    "Ratings": [
+      3
+    ],
     "Password": null,
     "Viewed": 0
   },
@@ -320,7 +335,11 @@
     "WorkExperienceList": [],
     "PersonalSkill": "C#, .Net, Python, scikit-learn, Java, Git, Linux, SQL, HTML/CSS, PHP, JavaScript",
     "AboutMe": "I go to the gym on the weekends",
-    "Ratings": null,
+    "Ratings": [
+      4,
+      3,
+      3
+    ],
     "Password": null,
     "Viewed": 0
   },
