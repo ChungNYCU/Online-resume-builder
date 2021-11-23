@@ -268,27 +268,37 @@ else
                     found = true;
                     break;
                 }
-                /*if (product.FullName != null && product.FullName.ToLower().Contains(word.ToLower()))
+
+                if (product.FullName != null)
                 {
-                    returnList.Add(product);
-                    found = true;
-                    break;
+                    if (product.FullName.ToLower().Contains(word.ToLower()))
+                    {
+                        returnList.Add(product);
+                        found = true;
+                        break;
+                    }
                 }
                 if (product.AwardList != null)
                 {
                     foreach (var award in product.AwardList)
                     {
-                        if (award.Award != null && award.Award.ToLower().Contains(word.ToLower()))
+                        if (award.Award != null)
                         {
-                            returnList.Add(product);
-                            found = true;
-                            break;
+                            if (award.Award.ToLower().Contains(word.ToLower()))
+                            {
+                                returnList.Add(product);
+                                found = true;
+                                break;
+                            }
                         }
-                        if (award.Issuer != null && award.Issuer.ToLower().Contains(word.ToLower()))
+                        if (award.Issuer != null)
                         {
-                            returnList.Add(product);
-                            found = true;
-                            break;
+                            if (award.Issuer.ToLower().Contains(word.ToLower()))
+                            {
+                                returnList.Add(product);
+                                found = true;
+                                break;
+                            }
                         }
                     }
                 }
@@ -296,23 +306,32 @@ else
                 {
                     foreach (var WorkExperience in product.WorkExperienceList)
                     {
-                        if (WorkExperience.Title != null && WorkExperience.Title.ToLower().Contains(word.ToLower()))
+                        if (WorkExperience.Title != null)
                         {
-                            returnList.Add(product);
-                            found = true;
-                            break;
+                            if (WorkExperience.Title.ToLower().Contains(word.ToLower()))
+                            {
+                                returnList.Add(product);
+                                found = true;
+                                break;
+                            }
                         }
-                        if (WorkExperience.Employer != null && WorkExperience.Employer.ToLower().Contains(word.ToLower()))
+                        if (WorkExperience.Employer != null)
                         {
-                            returnList.Add(product);
-                            found = true;
-                            break;
+                            if (WorkExperience.Employer.ToLower().Contains(word.ToLower()))
+                            {
+                                returnList.Add(product);
+                                found = true;
+                                break;
+                            }
                         }
-                        if (WorkExperience.Description != null && WorkExperience.Description.ToLower().Contains(word.ToLower()))
+                        if (WorkExperience.Description != null)
                         {
-                            returnList.Add(product);
-                            found = true;
-                            break;
+                            if (WorkExperience.Description.ToLower().Contains(word.ToLower()))
+                            {
+                                returnList.Add(product);
+                                found = true;
+                                break;
+                            }
                         }
                     }
                 }
@@ -320,29 +339,41 @@ else
                 {
                     foreach (var ed in product.EducationList)
                     {
-                        if (ed.University != null && ed.University.ToLower().Contains(word.ToLower()))
+                        if (ed.University != null)
                         {
-                            returnList.Add(product);
-                            found = true;
-                            break;
+                            if (ed.University.ToLower().Contains(word.ToLower()))
+                            {
+                                returnList.Add(product);
+                                found = true;
+                                break;
+                            }
                         }
-                        if (ed.Location != null && ed.Location.ToLower().Contains(word.ToLower()))
+                        if (ed.Location != null)
                         {
-                            returnList.Add(product);
-                            found = true;
-                            break;
+                            if (ed.Location.ToLower().Contains(word.ToLower()))
+                            {
+                                returnList.Add(product);
+                                found = true;
+                                break;
+                            }
                         }
-                        if (ed.Degree != null && ed.Degree.ToLower().Contains(word.ToLower()))
+                        if (ed.Degree != null)
                         {
-                            returnList.Add(product);
-                            found = true;
-                            break;
+                            if (ed.Degree.ToLower().Contains(word.ToLower()))
+                            {
+                                returnList.Add(product);
+                                found = true;
+                                break;
+                            }
                         }
-                        if (ed.Major != null && ed.Major.ToLower().Contains(word.ToLower()))
+                        if (ed.Major != null)
                         {
-                            returnList.Add(product);
-                            found = true;
-                            break;
+                            if (ed.Major.ToLower().Contains(word.ToLower()))
+                            {
+                                returnList.Add(product);
+                                found = true;
+                                break;
+                            }
                         }
                     }
 
@@ -350,7 +381,8 @@ else
                     {
                         break;
                     }
-                }*/
+                }
+
                 if (product.PersonalSkill != null && product.PersonalSkill.ToLower().Contains(word.ToLower()))
                 {
                     returnList.Add(product);
@@ -372,4 +404,4 @@ else
             }
         }
     }
-    }
+}
