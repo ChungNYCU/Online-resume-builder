@@ -1,6 +1,7 @@
 using System.Text.Json;
 using System.Text.Json.Serialization;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 /// <summary>
 /// This is our user's resumes control page
 /// Allow the viewer to see the profile of the resume
@@ -31,8 +32,10 @@ namespace ContosoCrafts.WebSite.Models
         // getting resume Work Experiences
         public List<WorkExperienceModel> WorkExperienceList { get; set; } = new List<WorkExperienceModel>();
         // getting resume personal skill 
+        [StringLength(60, MinimumLength = 3)]
         public string PersonalSkill { get; set; }
         // getting resume about me 
+        [StringLength(60, MinimumLength = 3)]
         public string AboutMe { get; set; }
         // getting resume rating 
         public int[] Ratings { get; set; }
