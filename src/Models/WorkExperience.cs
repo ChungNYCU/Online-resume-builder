@@ -13,17 +13,22 @@ namespace ContosoCrafts.WebSite.Models
         // This is WorkExperience ID so that we know where it is in Product.AwardList
         public string ID { get; set; }
         // getting the work title for the work experience
+        [Required]
         [StringLength(20, MinimumLength = 3)]
         public string Title { get; set; }
         // getting the employer for the work experience
+        [Required]
         [StringLength(20, MinimumLength = 3)]
         public string Employer { get; set; }
         // getting the starting date for the work experience
+        [Required]
         public string StartDate { get; set; }
         // getting the ending date for the work experience
+        [Required]
         public string EndDate { get; set; }
         // getting the description for the work experience
-        [StringLength(120, MinimumLength = 3)]
+        [Required]
+        [StringLength(140, MinimumLength = 3)]
         public string Description { get; set; }
     }
 }
