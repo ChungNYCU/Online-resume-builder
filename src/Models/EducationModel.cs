@@ -17,21 +17,30 @@ namespace ContosoCrafts.WebSite.Models
         public string ID { get; set; }
         // getting the university 
         [StringLength(20, MinimumLength = 3)]
+        [Required]
         public string University { get; set; }
         // getting the university location 
         [StringLength(20, MinimumLength = 3)]
+        [Required]
         public string Location { get; set; }
         // getting the degree earned in university
         [StringLength(20, MinimumLength = 3)]
+        [Required]
+        [RegularExpression(@"^[A-Z]+[a-zA-Z'\s]*$")]
         public string Degree { get; set; }
         // getting the major studied in university
         [StringLength(20, MinimumLength = 3)]
+        [Required]
+        [RegularExpression(@"^[A-Z]+[a-zA-Z'\s]*$")]
         public string Major { get; set; }
         // getting the GPA
+        [Required]
         public string GPA { get; set; }
         // getting the starting date for the university
+        [Required]
         public string StartDate { get; set; }
         // getting  the ending date for the university
+        [Required]
         public string EndDate { get; set; }
     }
 }
