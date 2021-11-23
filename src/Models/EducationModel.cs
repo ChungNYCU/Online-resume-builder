@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using System.ComponentModel.DataAnnotations;
 
 namespace ContosoCrafts.WebSite.Models
 {
@@ -15,12 +16,16 @@ namespace ContosoCrafts.WebSite.Models
         // This is Education ID so that we know where it is in Product.EducationList
         public string ID { get; set; }
         // getting the university 
+        [StringLength(20, MinimumLength = 3)]
         public string University { get; set; }
         // getting the university location 
+        [StringLength(20, MinimumLength = 3)]
         public string Location { get; set; }
         // getting the degree earned in university
+        [StringLength(20, MinimumLength = 3)]
         public string Degree { get; set; }
         // getting the major studied in university
+        [StringLength(20, MinimumLength = 3)]
         public string Major { get; set; }
         // getting the GPA
         public string GPA { get; set; }
