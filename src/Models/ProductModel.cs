@@ -20,10 +20,15 @@ namespace ContosoCrafts.WebSite.Models
         // pulling resume from json
         [JsonPropertyName("img")]
         // getting photo from ID in json
+        [Required]
         public string Photo { get; set; }
         // getting Linkedin data
+        [Required]
         public string LinkedinUrl { get; set; }
         // getting user name
+        [RegularExpression(@"^[A-Z]+[a-zA-Z'\s]*$")]
+        [Required]
+        [StringLength(30)]
         public string FullName { get; set; }
         // getting user awards 
         public List<AwardModel> AwardList { get; set; } = new List<AwardModel>();
@@ -33,13 +38,16 @@ namespace ContosoCrafts.WebSite.Models
         public List<WorkExperienceModel> WorkExperienceList { get; set; } = new List<WorkExperienceModel>();
         // getting resume personal skill 
         [StringLength(60, MinimumLength = 3)]
+        [Required]
         public string PersonalSkill { get; set; }
         // getting resume about me 
         [StringLength(60, MinimumLength = 3)]
+        [Required]
         public string AboutMe { get; set; }
         // getting resume rating 
         public int[] Ratings { get; set; }
         // get user password 
+        [Required]
         public string Password { get; set; }
         // get Viewed
         public int Viewed { get; set; } = 0;
