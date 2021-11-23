@@ -26,6 +26,7 @@ namespace ContosoCrafts.WebSite.Models
         [StringLength(30)]
         public string Issuer { get; set; }
         // getting award date 
+        [Required]
         public string AwardDate { get; set; }
     }
 }
