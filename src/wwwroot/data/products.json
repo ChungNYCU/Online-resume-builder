@@ -125,7 +125,7 @@
     "WorkExperienceList": [],
     "PersonalSkill": "SQL, C\u002B\u002B, Python, Java, Azure",
     "AboutMe": "Seeking for 2022 intern\uFF01",
-    "Ratings": null,
+    "Ratings": [1,2,3,4,5],
     "Password": null,
     "Viewed": 0
   },
