@@ -487,7 +487,7 @@ namespace UnitTests.Components
             // Assert
             Assert.AreEqual(true, pageMarkup.Contains("June Liao"));
         }
-        /*
+        
         /// <summary>
         /// Test for valid Search
         /// </summary>
@@ -796,7 +796,7 @@ namespace UnitTests.Components
 
             // Assert
             Assert.AreEqual(true, pageMarkup.Contains("June Liao"));
-        }*/
+        }
 
         /// <summary>
         /// Test for valid Search
