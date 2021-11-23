@@ -16,10 +16,14 @@ namespace ContosoCrafts.WebSite.Models
         // This is Education ID so that we know where it is in Product.AwardList
         public string ID { get; set; }
         // getting resume award 
-        [StringLength(60, MinimumLength = 3)]
+        [RegularExpression(@"^[A-Z]+[a-zA-Z'\s]*$")]
+        [Required]
+        [StringLength(30)]
         public string Award { get; set; }
         // getting award issuer
-        [StringLength(60, MinimumLength = 3)]
+        [RegularExpression(@"^[A-Z]+[a-zA-Z'\s]*$")]
+        [Required]
+        [StringLength(30)]
         public string Issuer { get; set; }
         // getting award date 
         public string AwardDate { get; set; }
