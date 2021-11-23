@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -15,8 +16,10 @@ namespace ContosoCrafts.WebSite.Models
         // This is Education ID so that we know where it is in Product.AwardList
         public string ID { get; set; }
         // getting resume award 
+        [StringLength(60, MinimumLength = 3)]
         public string Award { get; set; }
         // getting award issuer
+        [StringLength(60, MinimumLength = 3)]
         public string Issuer { get; set; }
         // getting award date 
         public string AwardDate { get; set; }
