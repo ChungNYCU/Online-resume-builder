@@ -54,7 +54,7 @@
 
         <hr class="rounded">
         <div class="divcss5">EDUCATION</div>
-        <a asp-page="./Education/AddEducation" asp-route-id="@Model.Product.Id">+ Add Education</a>
+        <a class="btn btn-primary" asp-page="./Education/AddEducation" asp-route-id="@Model.Product.Id">Add Education</a>
         <table class="table table-bordered table-striped">
             <thead>
                 <tr>
@@ -72,8 +72,8 @@
                         <td>@education.University</td>
                         <td>@education.Degree</td>
                         <td>@education.Major</td>
-                        <td><a asp-page="./Education/UpdateEducation" asp-route-productId="@education.ProductID" asp-route-EducationID="@education.ID">Update</a></td>
-                        <td><a asp-page="./Education/DeleteEducation" asp-route-productId="@education.ProductID" asp-route-EducationID="@education.ID">Delete</a></td>
+                        <td><a class="btn btn-primary" asp-page="./Education/UpdateEducation" asp-route-productId="@education.ProductID" asp-route-EducationID="@education.ID">Update</a></td>
+                        <td><a class="btn btn-primary" asp-page="./Education/DeleteEducation" asp-route-productId="@education.ProductID" asp-route-EducationID="@education.ID">Delete</a></td>
                     </tr>
                 }
             </tbody>
@@ -82,7 +82,7 @@
 
         <hr class="rounded">
         <div class="divcss5">WORK EXPERIENCE</div>
-        <a asp-page="./WorkExperience/AddWorkExperience" asp-route-id="@Model.Product.Id">+ Add Work Experience</a>
+        <a class="btn btn-primary" asp-page="./WorkExperience/AddWorkExperience" asp-route-id="@Model.Product.Id">Add Work Experience</a>
 
         <table class="table table-bordered table-striped">
             <thead>
@@ -99,8 +99,8 @@
                     <tr>
                         <td>@WorkExperience.Title</td>
                         <td>@WorkExperience.Employer</td>
-                        <td><a asp-page="./WorkExperience/UpdateWorkExperience" asp-route-productId="@WorkExperience.ProductID" asp-route-WorkExperienceId="@WorkExperience.ID">Update</a></td>
-                        <td><a asp-page="./WorkExperience/DeleteWorkExperience" asp-route-productId="@WorkExperience.ProductID" asp-route-WorkExperienceId="@WorkExperience.ID">Delete</a></td>
+                        <td><a class="btn btn-primary" asp-page="./WorkExperience/UpdateWorkExperience" asp-route-productId="@WorkExperience.ProductID" asp-route-WorkExperienceId="@WorkExperience.ID">Update</a></td>
+                        <td><a class="btn btn-primary" asp-page="./WorkExperience/DeleteWorkExperience" asp-route-productId="@WorkExperience.ProductID" asp-route-WorkExperienceId="@WorkExperience.ID">Delete</a></td>
                     </tr>
                 }
             </tbody>
@@ -110,7 +110,7 @@
         <hr class="rounded">
         <div class="divcss5">AWARD</div>
 
-        <a asp-page="./Award/AddAward" asp-route-id="@Model.Product.Id">+ Add Award</a>
+        <a class="btn btn-primary" asp-page="./Award/AddAward" asp-route-id="@Model.Product.Id">Add Award</a>
 
         <table class="table table-bordered table-striped">
             <thead>
@@ -129,8 +129,8 @@
                         <td>@award.Award</td>
                         <td>@award.Issuer</td>
                         <td>@award.AwardDate</td>
-                        <td><a asp-page="./Award/UpdateAward" asp-route-productId="@award.ProductID" asp-route-AwardID="@award.ID">Update</a></td>
-                        <td><a asp-page="./Award/DeleteAward" asp-route-productId="@award.ProductID" asp-route-AwardID="@award.ID">Delete</a></td>
+                        <td><a class="btn btn-primary" asp-page="./Award/UpdateAward" asp-route-productId="@award.ProductID" asp-route-AwardID="@award.ID">Update</a></td>
+                        <td><a class="btn btn-primary" asp-page="./Award/DeleteAward" asp-route-productId="@award.ProductID" asp-route-AwardID="@award.ID">Delete</a></td>
                     </tr>
                 }
             </tbody>
