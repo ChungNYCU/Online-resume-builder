@@ -914,6 +914,7 @@ namespace UnitTests.Components
         }
         #endregion Clear
 
+        /*
         #region Personal Status
         /// <summary>
         /// Test for valid Personal Status
@@ -1008,5 +1009,6 @@ namespace UnitTests.Components
             Assert.AreEqual(false, pageMarkup.Contains("Im doing fine!"));
         }
         #endregion Personal Status
+        */
     }
 }
