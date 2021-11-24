@@ -4,16 +4,41 @@
 @{
     ViewData["Title"] = "Home page";
 }
-
+<script src="https://smtpjs.com/v3/smtp.js"></script>
+<script src="index.js"></script>
 
 <body>
     <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
 </body>
+<body>
+
+
+
+    <form id="form1">
+        <div class="container" style="background-color:white">
+            <input type="text" placeholder="Name" name="name" required>
+            <input type="text" placeholder="Email address" email="mail" required>
+            <label>
+                <input type="checkbox" checked="checked" name="subscribe"> Daily Newsletter
+            </label>
+        </div>
+        
+            <input type="button" value="Subscribe" onclick="sendEmail()" />
+  
+        <script>function sendEmail() {
+                    Email.send({
+                    }).then(
+                    message => alert("Subscribe Successfully")
+                );
+            }</script>
+    </form>
+</body>
+
+
 
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <script>
-        //Get the button
+    <script>//Get the button
         var mybutton = document.getElementById("myBtn");
 
         // When the user scrolls down 20px from the top of the document, show the button
@@ -27,12 +52,11 @@
             }
         }
 
-        // When the user clicks on the button, scroll to the top of the document
+        //When the user clicks on the button, scroll to the top of the document
         function topFunction() {
             document.body.scrollTop = 0;
             document.documentElement.scrollTop = 0;
-        }
-    </script>
+        }</script>
 </head>
 
 @(await Html.RenderComponentAsync<ProductList>(RenderMode.ServerPrerendered))
