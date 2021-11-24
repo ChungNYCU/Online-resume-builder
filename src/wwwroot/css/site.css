@@ -223,3 +223,7 @@ body {
     #myBtn:hover {
         background-color: #555;
     }
+
+#form1 {
+    padding-top: 12px;
+}
