@@ -15,16 +15,19 @@ namespace ContosoCrafts.WebSite.Models
         public string ProductID { get; set; }
         // This is Education ID so that we know where it is in Product.AwardList
         public string ID { get; set; }
+
         // getting resume award 
-        [RegularExpression(@"^[A-Z]+[a-zA-Z'\s]*$")]
+        [RegularExpression(@"^[A-Z]+[a-zA-Z'\s]*$", ErrorMessage = "* Only English letters allowed")]
         [Required]
-        [StringLength(30)]
+        [StringLength(50, MinimumLength = 2)]
         public string Award { get; set; }
+
         // getting award issuer
-        [RegularExpression(@"^[A-Z]+[a-zA-Z'\s]*$")]
+        [RegularExpression(@"^[A-Z]+[a-zA-Z'\s]*$", ErrorMessage = "* Only English letters allowed")]
         [Required]
         [StringLength(30)]
         public string Issuer { get; set; }
+
         // getting award date 
         [Required]
         public string AwardDate { get; set; }
