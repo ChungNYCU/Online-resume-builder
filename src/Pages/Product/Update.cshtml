@@ -19,7 +19,7 @@
                Input – the data to store
                Validation – the error message to show
             -->
-            <label asp-for="Product.FullName" class="control-label"></label>
+            <label class="control-label">Full Name</label>
             <input asp-for="Product.FullName" class="form-control" />
             <span asp-validation-for="Product.FullName" class="text-danger"></span>
         </div>
@@ -33,20 +33,20 @@
 
 
         <div class="form-group">
-            <label asp-for="Product.LinkedinUrl" class="control-label"></label>
+            <label class="control-label">Linkedin Url</label>
             <input asp-for="Product.LinkedinUrl" class="form-control" />
             <span asp-validation-for="Product.LinkedinUrl" class="text-danger"></span>
         </div>
 
         <div class="form-group">
-            <label asp-for="Product.AboutMe" class="control-label"></label>
+            <label class="control-label">Introduction</label>
             <textarea rows="2" asp-for="Product.AboutMe" class="form-control"></textarea>
             <span asp-validation-for="Product.AboutMe" class="text-danger"></span>
         </div>
 
 
         <div class="form-group">
-            <label asp-for="Product.PersonalSkill" class="control-label"></label>
+            <label class="control-label">Personal Skills</label>
             <textarea rows="2" asp-for="Product.PersonalSkill" class="form-control"></textarea>
             <span asp-validation-for="Product.PersonalSkill" class="text-danger"></span>
         </div>
