@@ -239,3 +239,8 @@ canvas {
 .about_style {
     color: white;
 }
+
+.padstb10 {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
