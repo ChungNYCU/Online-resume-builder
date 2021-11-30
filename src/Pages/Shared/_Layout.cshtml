@@ -1,4 +1,5 @@
 ﻿<!DOCTYPE html>
+<canvas id=c></canvas>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
@@ -9,79 +10,257 @@
     <link href="https://fonts.googleapis.com/css?family=Yellowtail&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script>
+        var w = c.width = window.innerWidth,
+            h = c.height = document.documentElement.scrollHeight,
+            ctx = c.getContext('2d'),
+
+            minDist = 10,
+            maxDist = 30,
+            initialWidth = 10,
+            maxLines = 100,
+            initialLines = 4,
+            speed = 5,
+
+            lines = [],
+            frame = 0,
+            timeSinceLast = 0,
+
+            dirs = [
+                // straight x, y velocity
+                [0, 1],
+                [1, 0],
+                [0, -1],
+                [-1, 0],
+                // diagonals, 0.7 = sin(PI/4) = cos(PI/4)
+                [.7, .7],
+                [.7, -.7],
+                [-.7, .7],
+                [-.7, -.7]
+            ],
+            starter = { // starting parent line, just a pseudo line
+
+                x: w / 2,
+                y: h / 2,
+                vx: 0,
+                vy: 0,
+                width: initialWidth
+            };
+
+        function init() {
+
+            lines.length = 0;
+
+            for (var i = 0; i < initialLines; ++i)
+                lines.push(new Line(starter));
+
+            ctx.fillStyle = '#222';
+            ctx.fillRect(0, 0, w, h);
+
+            // if you want a cookie ;)
+            // ctx.lineCap = 'round';
+        }
+        function getColor(x) {
+
+            return 'hsl( hue, 80%, 50% )'.replace(
+                'hue', x / w * 360 + frame
+            );
+        }
+        function anim() {
+
+            window.requestAnimationFrame(anim);
+
+            ++frame;
+
+            ctx.shadowBlur = 0;
+            ctx.fillStyle = 'rgba(0,0,0,.02)';
+            ctx.fillRect(0, 0, w, h);
+            ctx.shadowBlur = .5;
+
+            for (var i = 0; i < lines.length; ++i)
+
+                if (lines[i].step()) { // if true it's dead
+
+                    lines.splice(i, 1);
+                    --i;
+
+                }
+
+            // spawn new
+
+            ++timeSinceLast
+
+            if (lines.length < maxLines && timeSinceLast > 10 && Math.random() < .5) {
+
+                timeSinceLast = 0;
+
+                lines.push(new Line(starter));
+
+                // cover the middle;
+                ctx.fillStyle = ctx.shadowColor = getColor(starter.x);
+                ctx.beginPath();
+                ctx.arc(starter.x, starter.y, initialWidth, 0, Math.PI * 2);
+                ctx.fill();
+            }
+        }
+
+        function Line(parent) {
+
+            this.x = parent.x | 0;
+            this.y = parent.y | 0;
+            this.width = parent.width / 1.25;
+
+            do {
+
+                var dir = dirs[(Math.random() * dirs.length) | 0];
+                this.vx = dir[0];
+                this.vy = dir[1];
+
+            } while (
+                (this.vx === -parent.vx && this.vy === -parent.vy) || (this.vx === parent.vx && this.vy === parent.vy));
+
+            this.vx *= speed;
+            this.vy *= speed;
+
+            this.dist = (Math.random() * (maxDist - minDist) + minDist);
+
+        }
+        Line.prototype.step = function () {
+
+            var dead = false;
+
+            var prevX = this.x,
+                prevY = this.y;
+
+            this.x += this.vx;
+            this.y += this.vy;
+
+            --this.dist;
+
+            // kill if out of screen
+            if (this.x < 0 || this.x > w || this.y < 0 || this.y > h)
+                dead = true;
+
+            // make children :D
+            if (this.dist <= 0 && this.width > 1) {
+
+                // keep yo self, sometimes
+                this.dist = Math.random() * (maxDist - minDist) + minDist;
+
+                // add 2 children
+                if (lines.length < maxLines) lines.push(new Line(this));
+                if (lines.length < maxLines && Math.random() < .5) lines.push(new Line(this));
+
+                // kill the poor thing
+                if (Math.random() < .2) dead = true;
+            }
+
+            ctx.strokeStyle = ctx.shadowColor = getColor(this.x);
+            ctx.beginPath();
+            ctx.lineWidth = this.width;
+            ctx.moveTo(this.x, this.y);
+            ctx.lineTo(prevX, prevY);
+            ctx.stroke();
+
+            if (dead) return true
+        }
+
+        init();
+        anim();
+
+        window.addEventListener('resize', function () {
+
+            w = c.width = window.innerWidth;
+            h = c.height = document.documentElement.scrollHeight;
+            starter.x = w / 2;
+            starter.y = h / 2;
+
+            init();
+        })
+    </script>
 </head>
-    <body style="background-image: url('https://unblast.com/wp-content/uploads/2020/05/Light-Wood-Background-Texture.jpg'); background-repeat: no-repeat; background-attachment: fixed; background-size: 100% 100%; ">
-        <style>
+
+<body style="background-color: rgb(25, 25, 25); background-repeat: no-repeat; background-attachment: fixed; background-size: 100% 100%; ">
+    <style>
         body {
             margin: 0;
         }
 
-            .navbar {
-                position: fixed;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 75px;
-                z-index: 999;        }
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 75px;
+            z-index: 999;
+        }
 
         main {
             margin-top: 100px;
             margin-bottom: 100px;
         }
     </style>
-        <header>
-            <nav class="navbar navbar-expand-sm navbar-toggleable-sm  bg-navbar border-bottom box-shadow mb-3">
-                <div id="wrapper">
-                </div>
-                <div class="container">
-                    <a class="navbar-brand text-dark" asp-area="" asp-page="/Index">DreamCrushers</a>
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                            aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
-                        <ul class="navbar-nav flex-grow-1 nav-pills">
-                            <li class="nav-item">
-                                <a class="nav-link text-dark" asp-area="" asp-page="/About">About</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link text-dark" asp-area="" asp-page="/Product/Index">Resumes</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </nav>
-        </header>
-        <div class="container">
-            <main role="main" class="pb-3">
-                <div style="background-image: url('https://backcheckgroup.com/wp-content/uploads/2016/02/banner_documents-verification.jpg'); background-repeat: no-repeat; background-size: 100% 100%; width: 100%; height: 250px;">
-                    <h1 style="padding-left:5%; padding-top:60px; text-align:left;">
-                        Online resume builder
-                    </h1>
-                    <h5 style="padding-left:5%;">
-                        Your best support for the future
-                    </h5>
-                    <h6 style="padding-left:5%;">
-                        Build and add your own resume!
-                    </h6>
-                    <h6 style="padding-left:5%;">
-                        Search for potential employees!
-                    </h6>
-                </div>
-                @RenderBody()
-            </main>
-        </div>
-
-        <footer class="border-top footer text-muted bg-footer">
-            <div class="container text-light">
-                &copy; 2019 - DreamCrushers.WebSite - <a class="text-light" asp-area="" asp-page="/Privacy">Privacy</a>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm  bg-navbar border-bottom box-shadow mb-3">
+            <div id="wrapper">
             </div>
-        </footer>
+            <div class="container">
+                <a class="navbar-brand text-dark" asp-area="" asp-page="/Index">DreamCrushers</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
+                    <ul class="navbar-nav flex-grow-1 nav-pills">
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-page="/About">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-page="/Product/Index">Resumes</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
 
-        <script src="~/lib/jquery/dist/jquery.js"></script>
-        <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.js"></script>
-        <script src="~/js/site.js" asp-append-version="true"></script>
+            <h1 style="padding-left: 5%; padding-top: 60px; text-align: left;">
+                <FONT COLOR=white>
+                    Online resume builder
+                </FONT>
+            </h1>
+            <h5 style="padding-left: 5%;">
+                <FONT COLOR=white>
+                    Your best support for the future
+                </FONT>
+            </h5>
+            <h6 style="padding-left: 5%;">
+                <FONT COLOR=white>
+                    Build and add your own resume!
+                </FONT>
+            </h6>
+            <h6 style="padding-left: 5%;">
+                <FONT COLOR=white>
+                    Search for potential employees!
+                </FONT>
+            </h6>
 
-        @RenderSection("Scripts", required: false)
-    </body>
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-top footer text-muted bg-footer">
+        <div class="container text-light">
+            &copy; 2019 - DreamCrushers.WebSite - <a class="text-light" asp-area="" asp-page="/Privacy">Privacy</a>
+        </div>
+    </footer>
+
+    <script src="~/lib/jquery/dist/jquery.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+
+    @RenderSection("Scripts", required: false)
+</body>
 </html>
