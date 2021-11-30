@@ -9,7 +9,7 @@
 
 <h1>Delete Award</h1>
 
-<div class="container bg-light" style="padding-top:10px; padding-bottom:10px;">
+<div class="container bg-light padstb10">
     <form method="post">
         <div asp-validation-summary="ModelOnly" class="text-danger"></div>
         @Html.HiddenFor(x => x.Award.ID)
@@ -29,7 +29,6 @@
             <label asp-for="Award.AwardDate" class="control-label"></label>
             <input asp-for="Award.AwardDate" class="form-control" disabled />
         </div>
-
 
         <div class="form-group">
             <input type="submit" value="Delete" class="btn btn-primary" />
