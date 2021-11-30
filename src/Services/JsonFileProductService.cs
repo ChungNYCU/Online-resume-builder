@@ -110,6 +110,9 @@ namespace ContosoCrafts.WebSite.Services
                 AboutMe = "",
                 LinkedinUrl = "",
                 Photo = "",
+                Email = "",
+                Phone = "",
+                Address = ""
             };
 
             // Get the current set, and append the new record to it
@@ -181,6 +184,9 @@ namespace ContosoCrafts.WebSite.Services
             productData.AwardList = data.AwardList;
             productData.LinkedinUrl = data.LinkedinUrl;
             productData.Photo = data.Photo;
+            productData.Email = data.Email;
+            productData.Phone = data.Phone;
+            productData.Address = data.Address;
             productData.EducationList = data.EducationList;
             productData.PersonalSkill = data.PersonalSkill;
             productData.WorkExperienceList = data.WorkExperienceList;
