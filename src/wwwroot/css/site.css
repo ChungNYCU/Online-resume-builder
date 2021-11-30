@@ -161,16 +161,16 @@ ul {
 }
 /*Backgrounds*/
 .bg-navbar {
-    background: -webkit-linear-gradient(110deg, #00ccff 60%, #006680 60%);
-    background: -o-linear-gradient(110deg, #00ccff 60%, #006680 60%);
-    background: -moz-linear-gradient(110deg, #00ccff 60%, #006680 60%);
-    background: linear-gradient(110deg, #00ccff 80%, #006680 20%);
+    background: -webkit-linear-gradient(110deg, #FFFFFF 60%, #000000 60%);
+    background: -o-linear-gradient(110deg, #FFFFFF 60%, #000000 60%);
+    background: -moz-linear-gradient(110deg, #FFFFFF 60%, #000000 60%);
+    background: linear-gradient(110deg, #FFFFFF 80%, #000000 20%);
 }
 .bg-footer {
-    background: -webkit-linear-gradient(110deg, #006680 60%, #00ccff 60%);
-    background: -o-linear-gradient(110deg, #006680 60%, #00ccff 60%);
-    background: -moz-linear-gradient(110deg, #006680 60%, #00ccff 60%);
-    background: linear-gradient(110deg, #006680 80%, #00ccff 20%);
+    background: -webkit-linear-gradient(110deg, #FFFFFF 60%, #000000 60%);
+    background: -o-linear-gradient(110deg, #FFFFFF 60%, #000000 60%);
+    background: -moz-linear-gradient(110deg, #FFFFFF 60%, #000000 60%);
+    background: linear-gradient(110deg, #FFFFFF 80%, #000000 20%);
 }
 /*Share*/
 code {
@@ -226,4 +226,16 @@ body {
 
 #form1 {
     padding-top: 12px;
+}
+
+canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: black;
+    z-index: -1;
+}
+
+.about_style {
+    color: white;
 }
