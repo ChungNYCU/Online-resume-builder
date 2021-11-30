@@ -260,6 +260,11 @@ canvas {
 .width100 {
     width: 100px;
 }
+
+.colorw {
+    color: white;
+}
+
 .foot_style {
     color: black;
 }
