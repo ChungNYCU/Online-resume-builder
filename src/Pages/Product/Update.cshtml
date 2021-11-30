@@ -15,10 +15,10 @@
 
         <div class="form-group">
             <!--
-               Label – the string to display as the name
-               Input – the data to store
-               Validation – the error message to show
-            -->
+           Label – the string to display as the name
+           Input – the data to store
+           Validation – the error message to show
+        -->
             <label class="control-label">Full Name</label>
             <input asp-for="Product.FullName" class="form-control" />
             <span asp-validation-for="Product.FullName" class="text-danger"></span>
@@ -44,13 +44,29 @@
             <span asp-validation-for="Product.AboutMe" class="text-danger"></span>
         </div>
 
+        <div class="form-group">
+            <label class="control-label">Email</label>
+            <textarea rows="2" asp-for="Product.Email" class="form-control"></textarea>
+            <span asp-validation-for="Product.Email" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label">Phone</label>
+            <textarea rows="2" asp-for="Product.Phone" class="form-control"></textarea>
+            <span asp-validation-for="Product.Phone" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label">Address</label>
+            <textarea rows="2" asp-for="Product.Address" class="form-control"></textarea>
+            <span asp-validation-for="Product.Address" class="text-danger"></span>
+        </div>
 
         <div class="form-group">
             <label class="control-label">Personal Skills</label>
             <textarea rows="2" asp-for="Product.PersonalSkill" class="form-control"></textarea>
             <span asp-validation-for="Product.PersonalSkill" class="text-danger"></span>
         </div>
-
 
         <hr class="rounded">
         <div class="divcss5">EDUCATION</div>
