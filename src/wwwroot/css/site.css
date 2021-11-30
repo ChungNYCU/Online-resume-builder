@@ -248,3 +248,15 @@ canvas {
 .marginb10 {
     margin-bottom: 10px;
 }
+
+.marginr10 {
+    margin-right: 10px;
+}
+
+.margin10 {
+    margin: 10px;
+}
+
+.width100 {
+    width: 100px;
+}
