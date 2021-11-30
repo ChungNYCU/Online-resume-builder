@@ -105,7 +105,7 @@ namespace UnitTests.Components
             var pageMarkup = page.Markup;
 
             // Assert
-            Assert.AreEqual(true, pageMarkup.Contains("Bart Joseph"));
+            Assert.AreEqual(true, pageMarkup.Contains("Bart"));
 
             // Select from Missed List Selection
             // Arrange
@@ -124,7 +124,7 @@ namespace UnitTests.Components
             pageMarkup = page.Markup;
 
             // Assert
-            Assert.AreEqual(true, pageMarkup.Contains("Bart Joseph"));
+            Assert.AreEqual(true, pageMarkup.Contains("Bart"));
         }
 
         /// <summary>
@@ -156,7 +156,7 @@ namespace UnitTests.Components
             var pageMarkup = page.Markup;
 
             // Assert
-            Assert.AreEqual(true, pageMarkup.Contains("Bart Joseph"));
+            Assert.AreEqual(true, pageMarkup.Contains("Bart"));
 
             // Select from Missed List Selection
             // Arrange
@@ -423,7 +423,7 @@ namespace UnitTests.Components
             var pageMarkup = page.Markup;
 
             // Assert
-            Assert.AreEqual(true, pageMarkup.Contains("Bart Joseph"));
+            Assert.AreEqual(true, pageMarkup.Contains("Bart"));
         }
 
         /// <summary>
@@ -454,7 +454,7 @@ namespace UnitTests.Components
             var pageMarkup = page.Markup;
 
             // Assert
-            Assert.AreEqual(true, pageMarkup.Contains("Bart Joseph"));
+            Assert.AreEqual(true, pageMarkup.Contains("Bart"));
         }
 
         /// <summary>
@@ -891,7 +891,7 @@ namespace UnitTests.Components
             var pageMarkup = page.Markup;
 
             // Assert
-            Assert.AreEqual(true, pageMarkup.Contains("Bart Joseph"));
+            Assert.AreEqual(true, pageMarkup.Contains("Bart"));
 
             // Clear and search for non-Bart
             // Arrange
