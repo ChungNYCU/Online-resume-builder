@@ -6,12 +6,12 @@
 @inject JsonFileProductService ProductService
 
 
-<input @bind="searchCriteria" style="width:100%; margin-top:20px; padding:5px; height:40px;" placeholder="Search" id="SearchCriteria_ID"><br>
+<input @bind="searchCriteria" class="search-criteria" placeholder="Search" id="SearchCriteria_ID"><br>
 <div>
-    <button @onclick="(e => Search())" style="margin-top:10px;" class="btn btn-primary" data-toggle="cardRefresh" data-target="#cardRefresh" id="Search_ID">
+    <button @onclick="(e => Search())" class="btn btn-primary margint10" data-toggle="cardRefresh" data-target="#cardRefresh" id="Search_ID">
         Search
     </button>
-    <button @onclick="(e => Clear())" style="margin-top:10px; margin-left:5px;" class="btn btn-primary" data-toggle="cardRefresh" data-target="#cardRefresh" id="Clear_ID">
+    <button @onclick="(e => Clear())" class="btn btn-primary margint10 marginl5" data-toggle="cardRefresh" data-target="#cardRefresh" id="Clear_ID">
         Clear
     </button>
 </div>
@@ -39,7 +39,7 @@
         }
     </div>
 
-    <hr style="height:3px;border-width:0;color:gray;background-color:gray">
+    <hr class="hr-line">
 
     <div class="card-columns cardRefresh" id="#cardRefresh">
         @foreach (var product in missedList)
