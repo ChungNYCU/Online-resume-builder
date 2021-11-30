@@ -53,12 +53,12 @@ namespace ContosoCrafts.WebSite.Models
         public List<WorkExperienceModel> WorkExperienceList { get; set; } = new List<WorkExperienceModel>();
         
         // getting resume personal skill 
-        [StringLength(150, MinimumLength = 3)]
+        [StringLength(3000, MinimumLength = 3)]
         [Required]
         public string PersonalSkill { get; set; }
 
         // getting resume about me 
-        [StringLength(150, MinimumLength = 3)]
+        [StringLength(3000, MinimumLength = 3)]
         [Required]
         public string AboutMe { get; set; }
 
