@@ -1,7 +1,6 @@
 [
   {
     "Id": "1",
-    "Maker": "@jenlooper",
     "img": "https://c.smartrecruiters.com/sr-smart-profile-avatars-prod-dc5/2e3404d5-15b6-4f8a-b7a1-228c3b8fb38d?r=s3-eu-central-1\u0026refresh=2ebb764d-8acf-4e58-bae8-29a77aad8035",
     "LinkedinUrl": "https://www.linkedin.com/in/june-liao/",
     "FullName": "June Liao",
@@ -59,16 +58,15 @@
       }
     ],
     "PersonalSkill": "Java, Python, C\u002B\u002B, C#, SQL, Unix, Windows, AWS RDS",
-    "AboutMe": "Seeking for 2022 intern\uFF01",
+    "AboutMe": "I Specialize in delivering real value to the customer/market. During my previous role as a Product Manager, the number of my product users was growing 10 times within 3 years.",
     "Ratings": [
       3
     ],
     "Password": "/Oo1nScwK04Vf\u002ByeC2P3Yw==",
-    "Viewed": 32
+    "Viewed": 34
   },
   {
     "Id": "2",
-    "Maker": "jenlooper",
     "img": "https://media.discordapp.net/attachments/541396502262579227/900161062836523049/IMG_0998.jpg?width=752\u0026height=1002",
     "LinkedinUrl": "https://www.linkedin.com/in/jessetw/",
     "FullName": "Chung, Wei-Che",
@@ -76,7 +74,7 @@
     "EducationList": [],
     "WorkExperienceList": [],
     "PersonalSkill": null,
-    "AboutMe": null,
+    "AboutMe": "I am extremely motivated to solve technical puzzles and always sharpen my skill. I am confident in my research ability at the same time I have diverse coding experience so that no matter what the situation, I can get into work proficiently.",
     "Ratings": [
       1,
       2,
@@ -90,7 +88,6 @@
   },
   {
     "Id": "3",
-    "Maker": "jenlooper",
     "img": "https://media-exp1.licdn.com/dms/image/C5603AQEYVsZV6aTsdg/profile-displayphoto-shrink_200_200/0/1602465475326?e=1640217600\u0026v=beta\u0026t=grmM4aBqgzXlYz-4NbyihC7OiBpgRbvWDxPGtM8WmZU",
     "LinkedinUrl": "https://www.linkedin.com/in/benny-wong-ab71b8160/",
     "FullName": "Benny Wong",
@@ -110,14 +107,13 @@
     ],
     "WorkExperienceList": [],
     "PersonalSkill": "C\u002B\u002B, Python, Java",
-    "AboutMe": "Seeking for 2022 intern\uFF01",
+    "AboutMe": "I have quit my job as an assistant business manager and given up a few opportunities at local investment banks to start this new venture. Having tried numerous positions in different sectors ranging from insurance to retail, I have yet to find the motivation and fulfillment to wake up on a Monday morning. It is until I have voluntarily joined a data protection development project during my free time, I have discovered my interest in computer science and programming. Starting from learning basics, I am entirely determined but, at the same time, excited about this new challenge.",
     "Ratings": null,
     "Password": "9UrJvTdIuE6DvqOpFzB3/w==",
     "Viewed": 3
   },
   {
     "Id": "4",
-    "Maker": "jenlooper",
     "img": "https://scontent-sea1-1.xx.fbcdn.net/v/t31.18172-8/614359_3805111441040_1022959363_o.jpg?_nc_cat=107\u0026ccb=1-5\u0026_nc_sid=de6eea\u0026_nc_ohc=ci5FtlvNUDQAX-3XzxO\u0026_nc_ht=scontent-sea1-1.xx\u0026oh=203dd530235bee131ae4d0351502ae5b\u0026oe=61A4FE47",
     "LinkedinUrl": "https://www.linkedin.com/in/bart-joseph-nadala-517b01a0/",
     "FullName": "Nadala, Bart Joseph",
@@ -133,7 +129,7 @@
     "EducationList": [],
     "WorkExperienceList": [],
     "PersonalSkill": "SQL, C\u002B\u002B, Python, Java, Azure",
-    "AboutMe": "Seeking for 2022 intern\uFF01",
+    "AboutMe": "I have worked as an on-site IT, software developer, and web developer. Of the three titles, I am most proud of my work as a software developer. I have experience working with labs making software for their PCR and MicroCycler as well as inventory systems. I have a Maltipoo with abandonment issues and greatly enjoyed staying at home during Covid.",
     "Ratings": [
       1,
       2,
@@ -147,7 +143,6 @@
   },
   {
     "Id": "5",
-    "Maker": "jenlooper",
     "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Seattle_Redhawks_logo.svg/1200px-Seattle_Redhawks_logo.svg.png",
     "LinkedinUrl": "https://www.linkedin.com/in/xinyu-qiu-46b064176/",
     "FullName": "Xinyu, Qiu",
@@ -155,14 +150,13 @@
     "EducationList": [],
     "WorkExperienceList": [],
     "PersonalSkill": "html, css, css, AWS",
-    "AboutMe": "Seeking for 2022 intern!",
+    "AboutMe": "I enjoy a nice cup of coffee in a sunny day to help me battle with job applications and coding practise. I have experience coding mainly in java and C++. I do not have much on-hand coding experience but I am a fast learner and can find out the solutions quickly.",
     "Ratings": null,
     "Password": null,
     "Viewed": 0
   },
   {
     "Id": "6",
-    "Maker": "jenlooper",
     "img": "https://media.istockphoto.com/photos/handsome-afro-student-posing-on-bookshelves-background-picture-id1171062918?k=20\u0026m=1171062918\u0026s=612x612\u0026w=0\u0026h=I6djuMs92BCgJaBv5iIsPALt2oZ8mYQU7ttF1hmhPkE=",
     "LinkedinUrl": null,
     "FullName": "Jamar Baird",
@@ -177,7 +171,6 @@
   },
   {
     "Id": "7",
-    "Maker": "jenlooper",
     "img": "https://media.istockphoto.com/photos/portrait-of-a-young-african-american-male-student-going-to-a-picture-id1269950687?b=1\u0026k=20\u0026m=1269950687\u0026s=170667a\u0026w=0\u0026h=6iM9cnKCBJvOxjiMqRNdXd1Mr7Ngspq2FxRgU2gebac=",
     "LinkedinUrl": null,
     "FullName": "Zavier Mercer",
@@ -192,7 +185,6 @@
   },
   {
     "Id": "8",
-    "Maker": "jenlooper",
     "img": "https://media.gettyimages.com/photos/happy-student-in-class-picture-id539246041?s=612x612",
     "LinkedinUrl": null,
     "FullName": "Wade Nguyen",
@@ -207,7 +199,6 @@
   },
   {
     "Id": "9",
-    "Maker": "jenlooper",
     "img": "https://img.freepik.com/free-photo/front-view-male-student-wearing-black-backpack-holding-copybooks-files-blue-wall_140725-42636.jpg?size=626\u0026ext=jpg",
     "LinkedinUrl": null,
     "FullName": "Brynn Scott",
@@ -224,7 +215,6 @@
   },
   {
     "Id": "10",
-    "Maker": "jenlooper",
     "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUkbbKkIwHB5qCx2P9XdpdDfM1XXbQEsKYgQ\u0026usqp=CAU",
     "LinkedinUrl": "",
     "FullName": "Toby Mccullough",
@@ -241,7 +231,6 @@
   },
   {
     "Id": "11",
-    "Maker": "jenlooper",
     "img": "https://static8.depositphotos.com/1008303/880/i/600/depositphotos_8803246-stock-photo-asian-college-student.jpg",
     "LinkedinUrl": "",
     "FullName": "Aliyah Riddle",
@@ -256,7 +245,6 @@
   },
   {
     "Id": "12",
-    "Maker": "jenlooper",
     "img": "https://images.unsplash.com/photo-1544717305-2782549b5136?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8c3R1ZGVudHxlbnwwfHwwfHw%3D\u0026ixlib=rb-1.2.1\u0026w=1000\u0026q=80",
     "LinkedinUrl": "",
     "FullName": "Jewel Blackburn",
@@ -271,7 +259,6 @@
   },
   {
     "Id": "13",
-    "Maker": "jenlooper",
     "img": "https://st.depositphotos.com/1594308/2419/i/600/depositphotos_24196475-stock-photo-student-with-copybook.jpg",
     "LinkedinUrl": "",
     "FullName": "Emery Richards",
@@ -286,7 +273,6 @@
   },
   {
     "Id": "14",
-    "Maker": "jenlooper",
     "img": "https://img.favpng.com/2/24/9/stock-photography-student-university-royalty-free-college-png-favpng-s8TJuUCFXdgcWThfCJpLSNyKb.jpg",
     "LinkedinUrl": "",
     "FullName": "Henry Pineda",
@@ -301,7 +287,6 @@
   },
   {
     "Id": "15",
-    "Maker": "jenlooper",
     "img": "https://petapixel.com/assets/uploads/2020/03/student-800x534.jpg",
     "LinkedinUrl": "",
     "FullName": "Trevor Dunlap",
@@ -316,7 +301,6 @@
   },
   {
     "Id": "16",
-    "Maker": "jenlooper",
     "img": "https://pngimg.com/uploads/student/student_PNG62560.png",
     "LinkedinUrl": "",
     "FullName": "Amiya Peters",
@@ -331,7 +315,6 @@
   },
   {
     "Id": "17",
-    "Maker": "jenlooper",
     "img": "https://image.shutterstock.com/image-photo/redirected-250nw-18085504.jpg",
     "LinkedinUrl": "",
     "FullName": "Layla Roberts",
@@ -350,7 +333,6 @@
   },
   {
     "Id": "18",
-    "Maker": "jenlooper",
     "img": "https://image.shutterstock.com/image-photo/confident-handsome-student-holding-books-260nw-366568778.jpg",
     "LinkedinUrl": "",
     "FullName": "Conner Romero",
@@ -365,7 +347,6 @@
   },
   {
     "Id": "19",
-    "Maker": "jenlooper",
     "img": "https://image.shutterstock.com/image-photo/confident-handsome-student-holding-books-260nw-366568778.jpg",
     "LinkedinUrl": "",
     "FullName": "Kennedy Lee",
@@ -380,7 +361,6 @@
   },
   {
     "Id": "Unit Test",
-    "Maker": "jenlooper",
     "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQSZTl5YVnfRPBou-SYoPKin1ixm0anKr00dw\u0026usqp=CAU",
     "LinkedinUrl": "",
     "FullName": "Cute Racoon",
@@ -395,7 +375,6 @@
   },
   {
     "Id": "Unit Test2",
-    "Maker": "jenlooper",
     "img": "https://pbs.twimg.com/profile_images/691301949640183809/BUeLHGW7_400x400.jpg",
     "LinkedinUrl": "",
     "FullName": "Cute Racoon",
@@ -410,7 +389,6 @@
   },
   {
     "Id": "0e82dbc7-6b06-4426-a7cc-f4d0a3bf222c",
-    "Maker": null,
     "img": null,
     "LinkedinUrl": "Enter URL",
     "FullName": "Mike",
