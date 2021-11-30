@@ -9,7 +9,7 @@
 
 <h1>Update Education Experience</h1>
 
-<div class="container bg-light" style="padding-top:10px; padding-bottom:10px;">
+<div class="container bg-light padstb10">
     <form method="post">
         <div asp-validation-summary="ModelOnly" class="text-danger"></div>
         <!--
@@ -54,7 +54,6 @@
                     <input asp-for="Education.Location" class="form-control" input-group-lg reg_name />
                     <span asp-validation-for="Education.Location" class="text-danger"></span>
                 </div>
-
                 <div class="form-group col-xs-6">
                     <label asp-for="Education.StartDate" class="control-label"></label>
                     <input type="date" asp-for="Education.StartDate" class="form-control" input-group-lg reg_name />
@@ -68,11 +67,9 @@
             </div>
         </div>
 
-
         <div class="form-group">
             <input type="submit" value="Save" class="btn btn-primary" />
         </div>
-
     </form>
 </div>
 
