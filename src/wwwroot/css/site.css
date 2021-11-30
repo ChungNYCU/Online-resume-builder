@@ -265,6 +265,10 @@ canvas {
     color: white;
 }
 
+.text-alignc {
+    text-align: center;
+}
+
 .foot_style {
     color: black;
 }
