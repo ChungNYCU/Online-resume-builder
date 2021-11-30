@@ -73,6 +73,37 @@ for details on configuring this project to bundle and minify static web assets. 
     padding:20px;
 }
 
+.layout-navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 75px;
+    z-index: 999;
+}
+
+.layout-body {
+    background-color: rgb(25, 25, 25);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+    margin: 0;
+}
+
+.layout-main {
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+.ad-text {
+    padding-left: 5%;
+    padding-top: 60px;
+    text-align: left;
+}
+
+.padsl5 {
+    padding-left: 5%;
+}
 
 a.navbar-brand {
     white-space: normal;
