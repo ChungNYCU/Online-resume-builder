@@ -34,6 +34,15 @@ namespace ContosoCrafts.WebSite.Models
         [StringLength(30)]
         public string FullName { get; set; }
 
+        // getting user email
+        public string Email { get; set; }
+
+        // getting user phone number
+        public string Phone { get; set; }
+
+        // getting user address
+        public string Address { get; set; }
+
         // getting user awards 
         public List<AwardModel> AwardList { get; set; } = new List<AwardModel>();
 
@@ -63,7 +72,4 @@ namespace ContosoCrafts.WebSite.Models
         // get Viewed
         public int Viewed { get; set; } = 0;
     }
-
-
-
 }
