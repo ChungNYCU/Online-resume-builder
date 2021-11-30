@@ -19,7 +19,7 @@
         }
     </script>
 </head>
-<div class="container bg-light" style="padding-top:10px; padding-bottom:10px;">
+<div class="container bg-light padstb10">
 
     <h5 class="title" id="productTitle"><strong>@Model.Product.FullName</strong></h5>
     <p class="card-text"></p>
@@ -96,10 +96,10 @@
         </ul>
     </div>
 
-    <div class="row" style="margin:10px;">
-        <button class="btn btn-primary" onclick="window.print()" style="margin-right: 10px; width: 100px;">Print</button>
-        <a asp-page="Update" asp-route-id="@Model.Product.Id" class="btn btn-primary" style="margin-right: 10px; width: 100px;">Update</a>
-        <a asp-page="Delete" asp-route-id="@Model.Product.Id" class="btn btn-danger" style="width: 100px;">Delete</a>
+    <div class="row margin10">
+        <button class="btn btn-primary marginr10 width100" onclick="window.print()">Print</button>
+        <a asp-page="Update" asp-route-id="@Model.Product.Id" class="btn btn-primary marginr10 width100">Update</a>
+        <a asp-page="Delete" asp-route-id="@Model.Product.Id" class="btn btn-danger width100">Delete</a>
     </div>
 </div>
 
