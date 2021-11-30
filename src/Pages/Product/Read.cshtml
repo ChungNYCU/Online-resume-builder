@@ -20,53 +20,64 @@
     </script>
 </head>
 <div class="container bg-light" style="padding-top:10px; padding-bottom:10px;">
-    <h5 class="title" id="productTitle">@Model.Product.FullName</h5>
 
-
-    <img src='@Model.Product.Photo' alt='Image for @Model.Product.FullName' width="150" height="150">
-
-
-    <p class="card-text">About Me: @Model.Product.AboutMe</p>
-
-
+    <h5 class="title" id="productTitle"><strong>@Model.Product.FullName</strong></h5>
     <p class="card-text"></p>
-    <h5 class="title" id="productTitle">Skills</h5>
+
+    <img src='@Model.Product.Photo' alt='Image for @Model.Product.FullName' width="300" height="300">
+    <p class="card-text"></p>
+
+    <h5 class="title" id="productTitle"><strong>Introduction</strong></h5>
+    <p class="card-text"></p>
+    <div>@Model.Product.AboutMe</div>
+    <p class="card-text"></p>
+    <p class="card-text"></p>
+
     <div> <hr class="dashed"> </div>
-    <div> @Model.Product.PersonalSkill</div>
-
+    <h5 class="title" id="productTitle"><strong>Skills</strong></h5>
     <p class="card-text"></p>
-    <h5 class="title" id="productTitle">Education</h5>
+    <div> @Model.Product.PersonalSkill</div>
+    <p class="card-text"></p>
+    <p class="card-text"></p>
+
+    <div> <hr class="dashed"> </div>
+    <h5 class="title" id="productTitle"><strong>Education</strong></h5>
+    <p class="card-text"></p>
     @foreach (var EducationRecord in @Model.Product.EducationList)
     {
-    <div> <hr class="dashed"> </div>
-    <div> <strong>@EducationRecord.University</strong>, <strong>@EducationRecord.Degree </strong> Degree in <strong>@EducationRecord.Major</strong> </div>
-    <div> From @EducationRecord.StartDate to @EducationRecord.EndDate, @EducationRecord.Location</div>
-
+        <div> @EducationRecord.University, @EducationRecord.Degree Degree in @EducationRecord.Major </div>
+        <div> From @EducationRecord.StartDate to @EducationRecord.EndDate</div>
+        <div> @EducationRecord.Location</div>
+        <p class="card-text"></p>
     }
-
-
     <p class="card-text"></p>
-    <h5 class="title" id="productTitle">Work Experience</h5>
+    <p class="card-text"></p>
+
+    <div> <hr class="dashed"> </div>
+    <h5 class="title" id="productTitle"><strong>Work Experience</strong></h5>
+    <p class="card-text"></p>
     @foreach (var WorkExperience in @Model.Product.WorkExperienceList)
     {
-    <div> <hr class="dashed"> </div>
-    <div> <strong>@WorkExperience.Title</strong> at <strong>@WorkExperience.Employer</strong> from @WorkExperience.StartDate to @WorkExperience.EndDate</div>
-    <div> @WorkExperience.Description </div>
-
+        <div> @WorkExperience.Title at @WorkExperience.Employer </div>
+        <div> From @WorkExperience.StartDate to @WorkExperience.EndDate</div>
+        <div> @WorkExperience.Description </div>
+        <p class="card-text"></p>
     }
-
-
     <p class="card-text"></p>
-    <h5 class="title" id="productTitle">Awards</h5>
+    <p class="card-text"></p>
+
+    <div> <hr class="dashed"> </div>
+    <h5 class="title" id="productTitle"><strong>Awards</strong></h5>
+    <p class="card-text"></p>
     @foreach (var AwardRecord in @Model.Product.AwardList)
     {
-    <div> <hr class="dashed"> </div>
-    <div> Award: <strong>@AwardRecord.Award</strong> </div>
-    <div> Issuer: <strong>@AwardRecord.Issuer </strong> </div>
-    <div> Award Date: <strong>@AwardRecord.AwardDate</strong> </div>
-
+        <div> Award: @AwardRecord.Award</div>
+        <div> Issuer: @AwardRecord.Issuer</div>
+        <div> Award Date: @AwardRecord.AwardDate</div>
+        <p class="card-text"></p>
     }
-
+    <p class="card-text"></p>
+    <p class="card-text"></p>
 
     <div class="links">
         <ul>
