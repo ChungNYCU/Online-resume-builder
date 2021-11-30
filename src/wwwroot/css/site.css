@@ -303,3 +303,25 @@ canvas {
 .foot_style {
     color: black;
 }
+
+.search-criteria {
+    width: 100%;
+    margin-top: 20px;
+    padding: 5px;
+    height: 40px;
+}
+
+.margint10 {
+    margin-top: 10px;
+}
+
+.marginl5 {
+    margin-left: 5px;
+}
+
+.hr-line {
+    height: 3px;
+    border-width: 0;
+    color: gray;
+    background-color: gray
+}
