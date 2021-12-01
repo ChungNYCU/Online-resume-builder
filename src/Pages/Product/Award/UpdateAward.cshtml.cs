@@ -50,8 +50,10 @@ namespace ContosoCrafts.WebSite.Pages.Product.Award
             var AwardList = Product.AwardList;
             foreach (AwardModel AwardRecord in AwardList)
             {
-                if (AwardRecord.ID == AwardId)
+                if (AwardRecord.ID == AwardId) 
+                { 
                     Award = AwardRecord;
+                }
             }
 
             return Page();
