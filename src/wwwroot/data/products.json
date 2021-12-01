@@ -66,7 +66,7 @@
       3
     ],
     "Password": "/Oo1nScwK04Vf\u002ByeC2P3Yw==",
-    "Viewed": 34
+    "Viewed": 36
   },
   {
     "Id": "2",
@@ -179,18 +179,18 @@
     "Id": "5",
     "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Seattle_Redhawks_logo.svg/1200px-Seattle_Redhawks_logo.svg.png",
     "LinkedinUrl": "https://www.linkedin.com/in/xinyu-qiu-46b064176/",
-    "FullName": "Xinyu, Qiu",
-    "Email": null,
-    "Phone": null,
-    "Address": null,
+    "FullName": "Xinyu Qiu",
+    "Email": "qiux1@seattleu.edu",
+    "Phone": "4259803105",
+    "Address": "901 12th Ave, Seattle, WA 98122",
     "AwardList": [],
     "EducationList": [],
     "WorkExperienceList": [],
-    "PersonalSkill": "html, css, css, AWS",
+    "PersonalSkill": "html, css, java, c\u002B\u002B, AWS",
     "AboutMe": "I enjoy a nice cup of coffee in a sunny day to help me battle with job applications and coding practise. I have experience coding mainly in java and C\u002B\u002B. I do not have much on-hand coding experience but I am a fast learner and can find out the solutions quickly.",
     "Ratings": null,
-    "Password": null,
-    "Viewed": 0
+    "Password": "nuiWXkX0DgJbcQgM28Qj9ItjGs1112vRuMPX2Q5Iojo=",
+    "Viewed": 2
   },
   {
     "Id": "6",
@@ -260,7 +260,7 @@
       2
     ],
     "Password": null,
-    "Viewed": 0
+    "Viewed": 1
   },
   {
     "Id": "10",
@@ -313,7 +313,7 @@
     "AboutMe": "Gamer",
     "Ratings": null,
     "Password": null,
-    "Viewed": 0
+    "Viewed": 1
   },
   {
     "Id": "13",
