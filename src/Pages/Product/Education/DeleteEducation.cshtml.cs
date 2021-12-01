@@ -56,7 +56,9 @@ namespace ContosoCrafts.WebSite.Pages.Product.Education
             foreach (EducationModel EducationRecord in EducationList)
             {
                 if (EducationRecord.ID == EducationId)
+                {
                     Education = EducationRecord;
+                }
             }
 
             return Page();
