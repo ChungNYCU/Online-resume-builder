@@ -38,28 +38,29 @@
             <span asp-validation-for="Product.LinkedinUrl" class="text-danger"></span>
         </div>
 
-        <div class="form-group">
-            <label class="control-label">Introduction</label>
-            <textarea rows="2" asp-for="Product.AboutMe" class="form-control"></textarea>
-            <span asp-validation-for="Product.AboutMe" class="text-danger"></span>
-        </div>
 
         <div class="form-group">
             <label class="control-label">Email</label>
-            <textarea rows="2" asp-for="Product.Email" class="form-control"></textarea>
+            <input asp-for="Product.Email" class="form-control" />
             <span asp-validation-for="Product.Email" class="text-danger"></span>
         </div>
 
         <div class="form-group">
             <label class="control-label">Phone</label>
-            <textarea rows="2" asp-for="Product.Phone" class="form-control"></textarea>
+            <input asp-for="Product.Phone" class="form-control" />
             <span asp-validation-for="Product.Phone" class="text-danger"></span>
         </div>
 
         <div class="form-group">
             <label class="control-label">Address</label>
-            <textarea rows="2" asp-for="Product.Address" class="form-control"></textarea>
+            <textarea rows="1" asp-for="Product.Address" class="form-control"></textarea>
             <span asp-validation-for="Product.Address" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label">Introduction</label>
+            <textarea rows="2" asp-for="Product.AboutMe" class="form-control"></textarea>
+            <span asp-validation-for="Product.AboutMe" class="text-danger"></span>
         </div>
 
         <div class="form-group">
