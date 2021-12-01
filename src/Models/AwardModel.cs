@@ -19,13 +19,13 @@ namespace ContosoCrafts.WebSite.Models
         // getting resume award 
         [RegularExpression(@"^[A-Z]+[a-zA-Z'\s]*$", ErrorMessage = "* Only English letters allowed")]
         [Required]
-        [StringLength(50, MinimumLength = 2)]
+        [StringLength(60, MinimumLength = 3)]
         public string Award { get; set; }
 
         // getting award issuer
         [RegularExpression(@"^[A-Z]+[a-zA-Z'\s]*$", ErrorMessage = "* Only English letters allowed")]
         [Required]
-        [StringLength(30)]
+        [StringLength(40)]
         public string Issuer { get; set; }
 
         // getting award date 
