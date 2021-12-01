@@ -64,26 +64,36 @@ namespace ContosoCrafts.WebSite.Services
         public bool AddRating(string productId, int rating)
         {
             if (string.IsNullOrEmpty(productId))
+            {
                 return false;
+            }
 
             // List of all products from the database
             var products = GetAllData();
 
             var data = products.FirstOrDefault(x => x.Id.Equals(productId));
             if (data == null)
+            {
                 return false;
+            }
 
             // Check Rating for boundries, do not allow ratings below 0
             if (rating < 0)
+            {
                 return false;
+            }
 
             // Check Rating for boundries, do not allow ratings above 5
             if (rating > 5)
+            {
                 return false;
+            }
 
             // Check to see if the rating exist, if there are none, then create the array
             if (data.Ratings == null)
+            {
                 data.Ratings = new int[] { };
+            }
 
             // Add the Rating to the Array
             var ratings = data.Ratings.ToList();
