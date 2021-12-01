@@ -35,12 +35,17 @@ namespace ContosoCrafts.WebSite.Models
         public string FullName { get; set; }
 
         // getting user email
+        [RegularExpression("^[\\w-\\.]+@([\\w-]+\\.)+[\\w-]{2,4}$", ErrorMessage = "* Must be an email address")]
+        [DataType(DataType.EmailAddress)]
         public string Email { get; set; }
 
         // getting user phone number
+        [RegularExpression("^[0-9]+$", ErrorMessage = "* Only numbers allowed")]
+        [StringLength(15)]
         public string Phone { get; set; }
 
         // getting user address
+        [StringLength(90)]
         public string Address { get; set; }
 
         // getting user awards 
