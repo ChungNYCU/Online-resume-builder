@@ -17,7 +17,7 @@ namespace ContosoCrafts.WebSite.Models
         public string ID { get; set; }
 
         // getting the university 
-        [RegularExpression(@"^[A-Z]+[a-zA-Z'\s]*$", ErrorMessage = "* Only English letters allowed")]
+        [RegularExpression(@"^[a-zA-Z'\s]*$", ErrorMessage = "* Only English letters allowed")]
         [StringLength(20, MinimumLength = 3)]
         [Required]
         public string University { get; set; }
@@ -30,13 +30,13 @@ namespace ContosoCrafts.WebSite.Models
         // getting the degree earned in university
         [StringLength(20, MinimumLength = 2)]
         [Required]
-        [RegularExpression(@"^[A-Z]+[a-zA-Z'\s]*$", ErrorMessage = "* Only English letters allowed")]
+        [RegularExpression(@"^[a-zA-Z'\s]*$", ErrorMessage = "* Only English letters allowed")]
         public string Degree { get; set; }
 
         // getting the major studied in university
         [Required]
         [StringLength(50, MinimumLength = 2)]
-        [RegularExpression(@"^[A-Z]+[a-zA-Z'\s]*$", ErrorMessage = "* Only English letters allowed")]
+        [RegularExpression(@"^[a-zA-Z'\s]*$", ErrorMessage = "* Only English letters allowed")]
         public string Major { get; set; }
         // getting the GPA
 
